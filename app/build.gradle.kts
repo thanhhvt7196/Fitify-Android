@@ -60,6 +60,7 @@ android {
 }
 
 dependencies {
+    implementation("androidx.paging:paging-runtime-ktx:3.2.0")
     implementation("com.orhanobut:logger:2.2.0")
     implementation("javax.inject:javax.inject:1")
     implementation("com.google.code.gson:gson:2.10.1")
