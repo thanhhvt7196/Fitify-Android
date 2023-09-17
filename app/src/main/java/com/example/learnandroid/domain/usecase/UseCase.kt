@@ -20,7 +20,7 @@ abstract class UseCase<Output, Params> {
             .flowOn(Dispatchers.IO)
     }
 
-    abstract fun buildFlow(param: Params): Flow<State<Output>>
+    abstract fun buildFlow(params: Params): Flow<State<Output>>
 }
 
 abstract class PagingUseCase<Output : Any, Params> {
@@ -28,6 +28,6 @@ abstract class PagingUseCase<Output : Any, Params> {
         return buildFlow(params).flowOn(Dispatchers.IO)
     }
 
-    abstract fun buildFlow(param: Params): Flow<PagingData<Output>>
+    abstract fun buildFlow(params: Params): Flow<PagingData<Output>>
 
 }

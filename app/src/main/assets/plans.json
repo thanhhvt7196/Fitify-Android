@@ -1,0 +1,966 @@
+{
+    "plans": [
+        {
+            "code": "weight_loss_starter",
+            "title_m": "plan_title_1",
+            "title_f": "plan_title_1",
+            "image_m": "plan_img_1_m",
+            "image_f": "plan_img_1_f",
+            "gender": "u",
+            "focus_strength": 1,
+            "focus_cardio": 2,
+            "expectations_m": [
+                "plan_expect_1",
+                "plan_expect_2",
+                "plan_expect_11"
+            ],
+            "expectations_f": [
+                "plan_expect_1",
+                "plan_expect_2",
+                "plan_expect_11"
+            ],
+            "results_m": [
+                "plan_results_27",
+                "plan_results_26",
+                "plan_results_1"
+            ],
+            "results_f": [
+                "plan_results_27",
+                "plan_results_26",
+                "plan_results_1"
+            ],
+            "workout_types": [
+                "ROUNDS",
+                "INTERVAL_TRAINING",
+                "LIGHT_CARDIO",
+                "INTERVAL_TRAINING",
+                "HIIT",
+                "LIGHT_CARDIO"
+            ],
+            "workout_duration_coefficient": 1,
+            "recovery_duration_coefficient": 1,
+            "segments": [
+                {
+                    "code": "assessment",
+                    "weeks": 1,
+                    "difficulty_coefficient": 1
+                },
+                {
+                    "code": "custom_training",
+                    "weeks": 3,
+                    "difficulty_coefficient_min": 1,
+                    "difficulty_coefficient_max": 1.2
+                },
+                {
+                    "code": "final_challenge",
+                    "weeks": 1,
+                    "difficulty_coefficient": 1.4
+                }
+            ]
+        },
+        {
+            "code": "super_cardio_burner",
+            "title_m": "plan_title_2",
+            "title_f": "plan_title_2",
+            "image_m": "plan_img_2_m",
+            "image_f": "plan_img_2_f",
+            "gender": "u",
+            "focus_strength": 1,
+            "focus_cardio": 3,
+            "expectations_m": [
+                "plan_expect_5",
+                "plan_expect_6",
+                "plan_expect_3"
+            ],
+            "expectations_f": [
+                "plan_expect_5",
+                "plan_expect_6",
+                "plan_expect_3"
+            ],
+            "results_m": [
+                "plan_results_5",
+                "plan_results_6",
+                "plan_results_7"
+            ],
+            "results_f": [
+                "plan_results_5",
+                "plan_results_6",
+                "plan_results_7"
+            ],
+            "workout_types": [
+                "TABATA",
+                "PLYOMETRICS",
+                "STRENGTH_CARDIO",
+                "INTERVAL_TRAINING",
+                "HIIT",
+                "ROUNDS",
+                "HIIT",
+                "TABATA",
+                "ROUNDS",
+                "HIIT"
+            ],
+            "workout_duration_coefficient": 1,
+            "recovery_duration_coefficient": 1,
+            "segments": [
+                {
+                    "code": "assessment",
+                    "weeks": 1,
+                    "difficulty_coefficient": 1
+                },
+                {
+                    "code": "custom_training",
+                    "weeks": 10,
+                    "difficulty_coefficient_min": 1,
+                    "difficulty_coefficient_max": 1.2
+                },
+                {
+                    "code": "hard_week",
+                    "weeks": 1,
+                    "difficulty_coefficient": 1.4
+                }
+            ]
+        },
+        {
+            "code": "balanced_fat_loss",
+            "title_m": "plan_title_3",
+            "title_f": "plan_title_3",
+            "image_m": "plan_img_3_m",
+            "image_f": "plan_img_3_f",
+            "gender": "u",
+            "focus_strength": 2,
+            "focus_cardio": 2,
+            "expectations_m": [
+                "plan_expect_5",
+                "plan_expect_6",
+                "plan_expect_3"
+            ],
+            "expectations_f": [
+                "plan_expect_5",
+                "plan_expect_6",
+                "plan_expect_3"
+            ],
+            "results_m": [
+                "plan_results_5",
+                "plan_results_6",
+                "plan_results_7"
+            ],
+            "results_f": [
+                "plan_results_5",
+                "plan_results_6",
+                "plan_results_7"
+            ],
+            "workout_types": [
+                "TABATA",
+                "PLYOMETRICS",
+                "STRENGTH_CARDIO",
+                "INTERVAL_TRAINING",
+                "HIIT",
+                "ROUNDS",
+                "HIIT",
+                "TABATA",
+                "ROUNDS",
+                "HIIT"
+            ],
+            "workout_duration_coefficient": 1,
+            "recovery_duration_coefficient": 1,
+            "segments": [
+                {
+                    "code": "assessment",
+                    "weeks": 1,
+                    "difficulty_coefficient": 1
+                },
+                {
+                    "code": "custom_training",
+                    "weeks": 10,
+                    "difficulty_coefficient_min": 1,
+                    "difficulty_coefficient_max": 1.2
+                },
+                {
+                    "code": "hard_week",
+                    "weeks": 1,
+                    "difficulty_coefficient": 1.4
+                }
+            ]
+        },
+        {
+            "code": "muscle_shredder",
+            "title_m": "plan_title_4_m",
+            "title_f": "plan_title_4_f",
+            "image_m": "plan_img_4_m",
+            "image_f": "plan_img_4_f",
+            "gender": "u",
+            "focus_strength": 3,
+            "focus_cardio": 1,
+            "expectations_m": [
+                "plan_expect_7",
+                "plan_expect_8",
+                "plan_expect_6",
+                "plan_expect_9"
+            ],
+            "expectations_f": [
+                "plan_expect_7",
+                "plan_expect_8",
+                "plan_expect_6",
+                "plan_expect_12"
+            ],
+            "results_m": [
+                "plan_results_8",
+                "plan_results_9",
+                "plan_results_10"
+            ],
+            "results_f": [
+                "plan_results_11",
+                "plan_results_12",
+                "plan_results_13"
+            ],
+            "workout_types": [
+                "ROUNDS",
+                "INTERVAL_TRAINING",
+                "HIIT",
+                "ROUNDS",
+                "HIIT",
+                "TABATA",
+                "INTERVAL_TRAINING",
+                "ROUNDS",
+                "HIIT",
+                "TABATA",
+                "STRENGTH_CARDIO"
+            ],
+            "workout_duration_coefficient": 1,
+            "recovery_duration_coefficient": 1,
+            "segments": [
+                {
+                    "code": "assessment",
+                    "weeks": 1,
+                    "difficulty_coefficient": 1
+                },
+                {
+                    "code": "custom_training",
+                    "weeks": 9,
+                    "difficulty_coefficient_min": 1,
+                    "difficulty_coefficient_max": 1.2
+                },
+                {
+                    "code": "deload_week",
+                    "weeks": 1,
+                    "difficulty_coefficient": 0.7
+                },
+                {
+                    "code": "hard_week",
+                    "weeks": 1,
+                    "difficulty_coefficient": 1.4
+                }
+            ]
+        },
+        {
+            "code": "female_body_special",
+            "title_m": "plan_title_5",
+            "title_f": "plan_title_5",
+            "image_m": "plan_img_5_f",
+            "image_f": "plan_img_5_f",
+            "gender": "f",
+            "focus_strength": 2,
+            "focus_cardio": 2,
+            "expectations_m": [
+                "plan_expect_13",
+                "plan_expect_5",
+                "plan_expect_14"
+            ],
+            "expectations_f": [
+                "plan_expect_13",
+                "plan_expect_5",
+                "plan_expect_14"
+            ],
+            "results_m": [
+                "plan_results_29",
+                "plan_results_2",
+                "plan_results_28"
+            ],
+            "results_f": [
+                "plan_results_29",
+                "plan_results_2",
+                "plan_results_28"
+            ],
+            "workout_types": [
+                "FEM_HIIT",
+                "FEM_TABATA",
+                "FEM_INTERVAL_TRAINING",
+                "FEM_ROUNDS"
+            ],
+            "workout_duration_coefficient": 1,
+            "recovery_duration_coefficient": 1,
+            "segments": [
+                {
+                    "code": "assessment",
+                    "weeks": 1,
+                    "difficulty_coefficient": 1
+                },
+                {
+                    "code": "custom_training",
+                    "weeks": 10,
+                    "difficulty_coefficient_min": 1,
+                    "difficulty_coefficient_max": 1.2
+                },
+                {
+                    "code": "hard_week",
+                    "weeks": 1,
+                    "difficulty_coefficient": 1.4
+                }
+            ]
+        },
+        {
+            "code": "male_body_special",
+            "title_m": "plan_title_6",
+            "title_f": "plan_title_6",
+            "image_m": "plan_img_6_m",
+            "image_f": "plan_img_6_m",
+            "gender": "m",
+            "focus_strength": 2,
+            "focus_cardio": 2,
+            "expectations_m": [
+                "plan_expect_15",
+                "plan_expect_8",
+                "plan_expect_5"
+            ],
+            "expectations_f": [
+                "plan_expect_15",
+                "plan_expect_8",
+                "plan_expect_5"
+            ],
+            "results_m": [
+                "plan_results_30",
+                "plan_results_8",
+                "plan_results_10"
+            ],
+            "results_f": [
+                "plan_results_30",
+                "plan_results_8",
+                "plan_results_10"
+            ],
+            "workout_types": [
+                "MALE_INTERVAL_TRAINING",
+                "MALE_HIIT",
+                "MALE_TABATA",
+                "MALE_ROUNDS"
+            ],
+            "workout_duration_coefficient": 1,
+            "recovery_duration_coefficient": 1,
+            "segments": [
+                {
+                    "code": "assessment",
+                    "weeks": 1,
+                    "difficulty_coefficient": 1
+                },
+                {
+                    "code": "custom_training",
+                    "weeks": 10,
+                    "difficulty_coefficient_min": 1,
+                    "difficulty_coefficient_max": 1.2
+                },
+                {
+                    "code": "hard_week",
+                    "weeks": 1,
+                    "difficulty_coefficient": 1.4
+                }
+            ]
+        },
+        {
+            "code": "fit_life_starter",
+            "title_m": "plan_title_8",
+            "title_f": "plan_title_8",
+            "image_m": "plan_img_8_m",
+            "image_f": "plan_img_8_f",
+            "gender": "u",
+            "focus_strength": 1,
+            "focus_cardio": 1,
+            "expectations_m": [
+                "plan_expect_1",
+                "plan_expect_2",
+                "plan_expect_16",
+                "plan_expect_20"
+            ],
+            "expectations_f": [
+                "plan_expect_1",
+                "plan_expect_2",
+                "plan_expect_16",
+                "plan_expect_20"
+            ],
+            "results_m": [
+                "plan_results_1",
+                "plan_results_27",
+                "plan_results_14",
+                "plan_results_15"
+            ],
+            "results_f": [
+                "plan_results_1",
+                "plan_results_27",
+                "plan_results_14",
+                "plan_results_15"
+            ],
+            "workout_types": [
+                "ROUNDS",
+                "HIIT",
+                "LIGHT_CARDIO",
+                "INTERVAL_TRAINING",
+                "TABATA",
+                "STRENGTH_CARDIO"
+            ],
+            "workout_duration_coefficient": 1,
+            "recovery_duration_coefficient": 1,
+            "segments": [
+                {
+                    "code": "assessment",
+                    "weeks": 1,
+                    "difficulty_coefficient": 1
+                },
+                {
+                    "code": "custom_training",
+                    "weeks": 3,
+                    "difficulty_coefficient_min": 1,
+                    "difficulty_coefficient_max": 1.2
+                },
+                {
+                    "code": "final_challenge",
+                    "weeks": 1,
+                    "difficulty_coefficient": 1.4
+                }
+            ]
+        },
+        {
+            "code": "full_stack_fitness",
+            "title_m": "plan_title_9",
+            "title_f": "plan_title_9",
+            "image_m": "plan_img_9_m",
+            "image_f": "plan_img_9_f",
+            "gender": "u",
+            "focus_strength": 2,
+            "focus_cardio": 2,
+            "expectations_m": [
+                "plan_expect_3",
+                "plan_expect_5",
+                "plan_expect_6",
+                "plan_expect_16"
+            ],
+            "expectations_f": [
+                "plan_expect_3",
+                "plan_expect_5",
+                "plan_expect_6",
+                "plan_expect_16"
+            ],
+            "results_m": [
+                "plan_results_16",
+                "plan_results_17",
+                "plan_results_18"
+            ],
+            "results_f": [
+                "plan_results_16",
+                "plan_results_17",
+                "plan_results_18"
+            ],
+            "workout_types": [
+                "INTERVAL_TRAINING",
+                "HIIT",
+                "ROUNDS",
+                "TABATA",
+                "INTERVAL_TRAINING",
+                "ROUNDS",
+                "HIIT",
+                "TABATA",
+                "PLYOMETRICS",
+                "STRENGTH_CARDIO",
+                "HIIT"
+            ],
+            "workout_duration_coefficient": 1,
+            "recovery_duration_coefficient": 1,
+            "segments": [
+                {
+                    "code": "assessment",
+                    "weeks": 1,
+                    "difficulty_coefficient": 1
+                },
+                {
+                    "code": "custom_training",
+                    "weeks": 9,
+                    "difficulty_coefficient_min": 1,
+                    "difficulty_coefficient_max": 1.2
+                },
+                {
+                    "code": "deload_week",
+                    "weeks": 1,
+                    "difficulty_coefficient": 0.7
+                },
+                {
+                    "code": "hard_week",
+                    "weeks": 1,
+                    "difficulty_coefficient": 1.4
+                }
+            ]
+        },
+        {
+            "code": "endurance_builder",
+            "title_m": "plan_title_10",
+            "title_f": "plan_title_10",
+            "image_m": "plan_img_10_m",
+            "image_f": "plan_img_10_f",
+            "gender": "u",
+            "focus_strength": 1,
+            "focus_cardio": 3,
+            "expectations_m": [
+                "plan_expect_4",
+                "plan_expect_3",
+                "plan_expect_1",
+                "plan_expect_11"
+            ],
+            "expectations_f": [
+                "plan_expect_4",
+                "plan_expect_3",
+                "plan_expect_1",
+                "plan_expect_11"
+            ],
+            "results_m": [
+                "plan_results_20",
+                "plan_results_21",
+                "plan_results_22"
+            ],
+            "results_f": [
+                "plan_results_20",
+                "plan_results_21",
+                "plan_results_22"
+            ],
+            "workout_types": [
+                "STRENGTH_CARDIO",
+                "HIIT",
+                "TABATA",
+                "PLYOMETRICS",
+                "INTERVAL_TRAINING",
+                "STRENGTH_CARDIO",
+                "ROUNDS",
+                "HIIT",
+                "TABATA",
+                "ROUNDS",
+                "HIIT"
+            ],
+            "workout_duration_coefficient": 1,
+            "recovery_duration_coefficient": 1,
+            "segments": [
+                {
+                    "code": "assessment",
+                    "weeks": 1,
+                    "difficulty_coefficient": 1
+                },
+                {
+                    "code": "custom_training",
+                    "weeks": 9,
+                    "difficulty_coefficient_min": 1,
+                    "difficulty_coefficient_max": 1.2
+                },
+                {
+                    "code": "deload_week",
+                    "weeks": 1,
+                    "difficulty_coefficient": 0.7
+                },
+                {
+                    "code": "hard_week",
+                    "weeks": 1,
+                    "difficulty_coefficient": 1.4
+                }
+            ]
+        },
+        {
+            "code": "fit_and_strong",
+            "title_m": "plan_title_11",
+            "title_f": "plan_title_11",
+            "image_m": "plan_img_11_m",
+            "image_f": "plan_img_11_f",
+            "gender": "u",
+            "focus_strength": 3,
+            "focus_cardio": 1,
+            "expectations_m": [
+                "plan_expect_8",
+                "plan_expect_7",
+                "plan_expect_19",
+                "plan_expect_20"
+            ],
+            "expectations_f": [
+                "plan_expect_8",
+                "plan_expect_7",
+                "plan_expect_9",
+                "plan_expect_20"
+            ],
+            "results_m": [
+                "plan_results_31",
+                "plan_results_23",
+                "plan_results_33",
+                "plan_results_10"
+            ],
+            "results_f": [
+                "plan_results_11",
+                "plan_results_23",
+                "plan_results_33",
+                "plan_results_10"
+            ],
+            "workout_types": [
+                "STRENGTH_INTERVALS",
+                "ROUNDS",
+                "TABATA",
+                "STRENGTH_CARDIO",
+                "ROUNDS",
+                "HIIT"
+            ],
+            "workout_duration_coefficient": 0.9,
+            "recovery_duration_coefficient": 1.1,
+            "segments": [
+                {
+                    "code": "assessment",
+                    "weeks": 1,
+                    "difficulty_coefficient": 1
+                },
+                {
+                    "code": "custom_training",
+                    "weeks": 10,
+                    "difficulty_coefficient_min": 1,
+                    "difficulty_coefficient_max": 1.2
+                },
+                {
+                    "code": "hard_week",
+                    "weeks": 1,
+                    "difficulty_coefficient": 1.4
+                }
+            ]
+        },
+        {
+            "code": "just_stay_fit",
+            "title_m": "plan_title_12",
+            "title_f": "plan_title_12",
+            "image_m": "plan_img_12_m",
+            "image_f": "plan_img_12_f",
+            "gender": "u",
+            "focus_strength": 1,
+            "focus_cardio": 1,
+            "expectations_m": [
+                "plan_expect_1",
+                "plan_expect_21",
+                "plan_expect_22",
+                "plan_expect_20"
+            ],
+            "expectations_f": [
+                "plan_expect_1",
+                "plan_expect_21",
+                "plan_expect_22",
+                "plan_expect_20"
+            ],
+            "results_m": [
+                "plan_results_38",
+                "plan_results_39",
+                "plan_results_33"
+            ],
+            "results_f": [
+                "plan_results_38",
+                "plan_results_39",
+                "plan_results_33"
+            ],
+            "workout_types": [
+                "INTERVAL_TRAINING",
+                "PLYOMETRICS",
+                "STRENGTH_INTERVALS",
+                "LIGHT_CARDIO",
+                "HIIT",
+                "TABATA",
+                "ROUNDS"
+            ],
+            "workout_duration_coefficient": 0.6,
+            "recovery_duration_coefficient": 1.4,
+            "segments": [
+                {
+                    "code": "assessment",
+                    "weeks": 1,
+                    "difficulty_coefficient": 0.7
+                },
+                {
+                    "code": "custom_training",
+                    "weeks": 6,
+                    "difficulty_coefficient": 0.7
+                }
+            ]
+        },
+        {
+            "code": "muscle_starter",
+            "title_m": "plan_title_14_m",
+            "title_f": "plan_title_14_f",
+            "image_m": "plan_img_14_m",
+            "image_f": "plan_img_14_f",
+            "gender": "u",
+            "focus_strength": 2,
+            "focus_cardio": 1,
+            "expectations_m": [
+                "plan_expect_1",
+                "plan_expect_19",
+                "plan_expect_2",
+                "plan_expect_8"
+            ],
+            "expectations_f": [
+                "plan_expect_1",
+                "plan_expect_19",
+                "plan_expect_2",
+                "plan_expect_9"
+            ],
+            "results_m": [
+                "plan_results_1",
+                "plan_results_27",
+                "plan_results_13"
+            ],
+            "results_f": [
+                "plan_results_1",
+                "plan_results_27",
+                "plan_results_13"
+            ],
+            "workout_types": [
+                "REPS",
+                "STRENGTH_INTERVALS",
+                "REPS",
+                "STRENGTH_INTERVALS",
+                "TABATA"
+            ],
+            "workout_duration_coefficient": 1,
+            "recovery_duration_coefficient": 1,
+            "segments": [
+                {
+                    "code": "assessment",
+                    "weeks": 1,
+                    "difficulty_coefficient": 1
+                },
+                {
+                    "code": "custom_training",
+                    "weeks": 3,
+                    "difficulty_coefficient_min": 1,
+                    "difficulty_coefficient_max": 1.2
+                },
+                {
+                    "code": "hard_week",
+                    "weeks": 1,
+                    "difficulty_coefficient": 1.4
+                }
+            ]
+        },
+        {
+            "code": "full_body_gainer",
+            "title_m": "plan_title_15_m",
+            "title_f": "plan_title_15_f",
+            "image_m": "plan_img_15_m",
+            "image_f": "plan_img_15_f",
+            "gender": "u",
+            "focus_strength": 3,
+            "focus_cardio": 1,
+            "expectations_m": [
+                "plan_expect_19",
+                "plan_expect_1",
+                "plan_expect_7",
+                "plan_expect_8"
+            ],
+            "expectations_f": [
+                "plan_expect_19",
+                "plan_expect_1",
+                "plan_expect_7",
+                "plan_expect_8"
+            ],
+            "results_m": [
+                "plan_results_24",
+                "plan_results_9",
+                "plan_results_10"
+            ],
+            "results_f": [
+                "plan_results_25",
+                "plan_results_9",
+                "plan_results_13"
+            ],
+            "workout_types": [
+                "REPS",
+                "STRENGTH_INTERVALS",
+                "REPS",
+                "TABATA"
+            ],
+            "workout_duration_coefficient": 1,
+            "recovery_duration_coefficient": 1,
+            "segments": [
+                {
+                    "code": "assessment",
+                    "weeks": 1,
+                    "difficulty_coefficient": 1
+                },
+                {
+                    "code": "custom_training",
+                    "weeks": 9,
+                    "difficulty_coefficient_min": 1,
+                    "difficulty_coefficient_max": 1.2
+                },
+                {
+                    "code": "deload_week",
+                    "weeks": 1,
+                    "difficulty_coefficient": 0.7
+                },
+                {
+                    "code": "hard_week",
+                    "weeks": 1,
+                    "difficulty_coefficient": 1.4
+                }
+            ]
+        },
+        {
+            "code": "split_gainer",
+            "title_m": "plan_title_16_m",
+            "title_f": "plan_title_16_f",
+            "image_m": "plan_img_16_m",
+            "image_f": "plan_img_16_f",
+            "gender": "u",
+            "focus_strength": 3,
+            "focus_cardio": 1,
+            "expectations_m": [
+                "plan_expect_23",
+                "plan_expect_8",
+                "plan_expect_19",
+                "plan_expect_7"
+            ],
+            "expectations_f": [
+                "plan_expect_23",
+                "plan_expect_8",
+                "plan_expect_19",
+                "plan_expect_7"
+            ],
+            "results_m": [
+                "plan_results_36",
+                "plan_results_34",
+                "plan_results_24",
+                "plan_results_9"
+            ],
+            "results_f": [
+                "plan_results_36",
+                "plan_results_34",
+                "plan_results_25",
+                "plan_results_9"
+            ],
+            "workout_types": [
+                "A_UPPER_BODY_REPS",
+                "B_LOWER_BODY_REPS",
+                "A_STRENGTH_INTERVALS",
+                "B_STRENGTH_INTERVALS"
+            ],
+            "workout_duration_coefficient": 1,
+            "recovery_duration_coefficient": 1,
+            "segments": [
+                {
+                    "code": "assessment",
+                    "weeks": 1,
+                    "difficulty_coefficient": 1
+                },
+                {
+                    "code": "custom_training",
+                    "weeks": 9,
+                    "difficulty_coefficient_min": 1,
+                    "difficulty_coefficient_max": 1.2
+                },
+                {
+                    "code": "deload_week",
+                    "weeks": 1,
+                    "difficulty_coefficient": 0.7
+                },
+                {
+                    "code": "hard_week",
+                    "weeks": 1,
+                    "difficulty_coefficient": 1.4
+                }
+            ]
+        },
+        {
+            "code": "explosive_tone_up",
+            "title_m": "plan_title_20",
+            "title_f": "plan_title_20",
+            "image_m": "plan_img_20_m",
+            "image_f": "plan_img_20_f",
+            "gender": "u",
+            "focus_strength": 2,
+            "focus_cardio": 2,
+            "expectations_m": [
+                "plan_expect_24",
+                "plan_expect_6",
+                "plan_expect_8",
+                "plan_expect_5"
+            ],
+            "expectations_f": [
+                "plan_expect_24",
+                "plan_expect_6",
+                "plan_expect_9",
+                "plan_expect_5"
+            ],
+            "results_m": [
+                "plan_results_6",
+                "plan_results_23",
+                "plan_results_32"
+            ],
+            "results_f": [
+                "plan_results_11",
+                "plan_results_23",
+                "plan_results_32"
+            ],
+            "workout_types": [
+                "PLYOMETRICS",
+                "STRENGTH_INTERVALS",
+                "PLYOMETRICS",
+                "HIIT"
+            ],
+            "workout_duration_coefficient": 1,
+            "recovery_duration_coefficient": 1,
+            "segments": [
+                {
+                    "code": "assessment",
+                    "weeks": 1,
+                    "difficulty_coefficient": 1
+                },
+                {
+                    "code": "custom_training",
+                    "weeks": 9,
+                    "difficulty_coefficient_min": 1,
+                    "difficulty_coefficient_max": 1.2
+                },
+                {
+                    "code": "deload_week",
+                    "weeks": 1,
+                    "difficulty_coefficient": 0.7
+                },
+                {
+                    "code": "hard_week",
+                    "weeks": 1,
+                    "difficulty_coefficient": 1.4
+                }
+            ]
+        }
+    ],
+    "goals": {
+        "LOSE_FAT": [
+            "weight_loss_starter",
+            "super_cardio_burner",
+            "balanced_fat_loss",
+            "muscle_shredder",
+            "endurance_builder",
+            "female_body_special",
+            "male_body_special"
+        ],
+        "GET_FITTER": [
+            "fit_life_starter",
+            "full_stack_fitness",
+            "endurance_builder",
+            "fit_and_strong",
+            "just_stay_fit",
+            "balanced_fat_loss"
+        ],
+        "GAIN_MUSCLE": [
+            "muscle_starter",
+            "full_body_gainer",
+            "split_gainer",
+            "explosive_tone_up",
+            "muscle_shredder",
+            "fit_and_strong",
+            "female_body_special",
+            "male_body_special"
+        ]
+    }
+}

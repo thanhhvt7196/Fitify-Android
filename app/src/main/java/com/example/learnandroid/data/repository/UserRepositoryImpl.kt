@@ -7,6 +7,6 @@ import javax.inject.Inject
 
 class UserRepositoryImpl @Inject constructor(private val api: API): UserRepository {
     override suspend fun getUser(): List<UserEntity> {
-        return  api.getUsers()
+        return api.getUsers()
     }
 }

@@ -3,6 +3,7 @@ package com.example.learnandroid.data.remote
 import com.example.learnandroid.data.entity.PhotoEntity
 import com.example.learnandroid.data.entity.TopicEntity
 import com.example.learnandroid.data.entity.UserEntity
+import com.example.learnandroid.domain.usecase.DownloadPhoto
 import okhttp3.ResponseBody
 import retrofit2.http.*
 
@@ -18,5 +19,5 @@ interface API {
 
     @Streaming
     @GET
-    suspend fun downloadPhoto(@Url url: String): ResponseBody
+    suspend fun downloadPhoto(@Url url: DownloadPhoto.Params): ResponseBody
 }

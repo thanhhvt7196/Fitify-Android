@@ -5,6 +5,7 @@ import com.example.learnandroid.data.entity.PhotoEntity
 import com.example.learnandroid.data.entity.TopicEntity
 import com.example.learnandroid.data.remote.API
 import com.example.learnandroid.domain.repository.PhotoRepository
+import com.example.learnandroid.domain.usecase.DownloadPhoto
 import com.example.learnandroid.utils.extensions.FileUtils
 import javax.inject.Inject
 
@@ -17,7 +18,7 @@ class PhotoRepositoryImpl @Inject constructor(private val api: API, private val 
         return api.getTopicPhotos(topicId = topicId, page = page)
     }
 
-    override suspend fun downloadPhoto(url: String, fileName: String): String {
+    override suspend fun downloadPhoto(url: DownloadPhoto.Params, fileName: String): String {
         val body = api.downloadPhoto(url)
         return FileUtils.saveFile(context = context, body = body, path = fileName)
     }

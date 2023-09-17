@@ -18,7 +18,7 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
-        buildConfigField("String", "UNSPLASH_ACCESS_KEY", "Client-ID d132f67143bf64c0c12e5eceb8ab9006bbda519a5857720bf6c68ad0adc4c2a3")
+        buildConfigField("String", "UNSPLASH_ACCESS_KEY", "\"Client-ID d132f67143bf64c0c12e5eceb8ab9006bbda519a5857720bf6c68ad0adc4c2a3\"")
     }
 
     buildTypes {
@@ -34,7 +34,7 @@ android {
 
         debug {
             isDebuggable = true
-            buildConfigField("String", "BASE_URL", "https://api.unsplash.com/")
+            buildConfigField("String", "BASE_URL", "\"https://api.unsplash.com/\"")
             buildConfigField("boolean", "LOGGABLE", true.toString())
         }
     }
