@@ -8,6 +8,7 @@ android {
     compileSdk = 33
 
     defaultConfig {
+        multiDexEnabled = true
         applicationId = "com.example.learnandroid"
         minSdk = 30
         targetSdk = 33
@@ -60,6 +61,7 @@ android {
 }
 
 dependencies {
+    implementation("androidx.multidex:multidex:2.0.1")
     implementation("androidx.paging:paging-runtime-ktx:3.2.0")
     implementation("com.orhanobut:logger:2.2.0")
     implementation("javax.inject:javax.inject:1")
@@ -73,6 +75,9 @@ dependencies {
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.9.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
