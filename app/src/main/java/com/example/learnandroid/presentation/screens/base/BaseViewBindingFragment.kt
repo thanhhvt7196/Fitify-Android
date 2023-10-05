@@ -1,4 +1,4 @@
-package com.example.learnandroid.ui.screens.base
+package com.example.learnandroid.presentation.screens.base
 
 import android.os.Bundle
 import android.view.LayoutInflater

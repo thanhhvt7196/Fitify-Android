@@ -1,26 +1,26 @@
-package com.example.learnandroid.ui.screens.home
+package com.example.learnandroid.presentation.screens.home
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.TextView
-import android.widget.Toast
-import androidx.lifecycle.ViewModelProvider
 import com.example.learnandroid.databinding.FragmentHomeBinding
-import com.example.learnandroid.ui.screens.base.BaseViewBindingFragment
+import com.example.learnandroid.presentation.screens.base.BaseViewBindingFragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HomeFragment : BaseViewBindingFragment<FragmentHomeBinding, HomeViewModel>(FragmentHomeBinding::inflate) {
     override val viewModel: HomeViewModel by viewModel()
 
+    companion object {
+        fun newInstance(): HomeFragment {
+            return HomeFragment()
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        if (savedInstanceState == null) {
-            viewModel.type = arguments?.getInt("key") ?: 0;
-        } else {
-            viewModel.type = savedInstanceState.getInt("key")
-        }
+//        if (savedInstanceState == null) {
+//            viewModel.type = arguments?.getInt("key") ?: 0;
+//        } else {
+//            viewModel.type = savedInstanceState.getInt("key")
+//        }
     }
 
     override fun onSaveInstanceState(outState: Bundle) {

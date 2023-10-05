@@ -1,9 +1,8 @@
-package com.example.learnandroid.ui.screens.dashboard
+package com.example.learnandroid.presentation.screens.dashboard
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import com.example.learnandroid.ui.screens.base.BaseViewModel
+import com.example.learnandroid.presentation.screens.base.BaseViewModel
 
 class DashboardViewModel : BaseViewModel() {
 

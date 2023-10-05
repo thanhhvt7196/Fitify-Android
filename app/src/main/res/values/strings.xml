@@ -1985,6 +1985,7 @@
     <string name="instr_yoga_diff_006">Keep your knee slightly bent if necessary (or loop a towel around your foot).</string>
     <string name="instr_yoga_diff_007">Bend your knees slightly, if necessary.</string>
     <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_main">Main</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
