@@ -1,6 +1,5 @@
 package com.example.learnandroid.presentation.screens.main
 
-import android.content.res.ColorStateList
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.learnandroid.R
@@ -10,7 +9,6 @@ import com.example.learnandroid.presentation.screens.dashboard.DashboardFragment
 import com.example.learnandroid.presentation.screens.home.HomeFragment
 import com.example.learnandroid.presentation.screens.notifications.NotificationsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.snackbar.BaseTransientBottomBar
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainFragment :
@@ -30,22 +28,22 @@ class MainFragment :
         bottomBar.setBackgroundColor(ContextCompat.getColor(requireActivity(), R.color.blue_dark))
         bottomBar.setOnItemSelectedListener {
             when (it.itemId) {
-                R.id.navigation_home -> {
+                R.id.nutrition_tab -> {
                     replaceFragment(homeFragment)
                     true
                 }
-                R.id.navigation_notifications -> {
+                R.id.exercise_tab -> {
                     replaceFragment(notificationFragment)
                     true
                 }
-                R.id.navigation_dashboard -> {
+                R.id.plan_tab -> {
                     replaceFragment(dashboardFragment)
                     true
                 }
                 else -> true
             }
         }
-        bottomBar.selectedItemId = R.id.navigation_home
+        bottomBar.selectedItemId = R.id.nutrition_tab
     }
 
     override suspend fun subscribeData() {
