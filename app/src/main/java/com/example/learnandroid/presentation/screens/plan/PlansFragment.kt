@@ -1,16 +1,16 @@
-package com.example.learnandroid.presentation.screens.home
+package com.example.learnandroid.presentation.screens.plan
 
 import android.os.Bundle
-import com.example.learnandroid.databinding.FragmentHomeBinding
+import com.example.learnandroid.databinding.FragmentPlansBinding
 import com.example.learnandroid.presentation.screens.base.BaseViewBindingFragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class HomeFragment : BaseViewBindingFragment<FragmentHomeBinding, HomeViewModel>(FragmentHomeBinding::inflate) {
-    override val viewModel: HomeViewModel by viewModel()
+class PlansFragment : BaseViewBindingFragment<FragmentPlansBinding, PlansViewModel>(FragmentPlansBinding::inflate) {
+    override val viewModel: PlansViewModel by viewModel()
 
     companion object {
-        fun newInstance(): HomeFragment {
-            return HomeFragment()
+        fun newInstance(): PlansFragment {
+            return PlansFragment()
         }
     }
 

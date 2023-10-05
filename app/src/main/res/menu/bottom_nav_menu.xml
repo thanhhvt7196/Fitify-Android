@@ -3,21 +3,21 @@
 
     <item
         android:id="@+id/plan_tab"
-        android:icon="@drawable/vec_calendar_check"
+        android:icon="@drawable/plan_tab_icons"
         android:title="@string/tab_my_plan" />
 
     <item
-        android:id="@+id/exercise_tab"
-        android:icon="@drawable/ic_notifications_black_24dp"
+        android:id="@+id/workouts_tab"
+        android:icon="@drawable/workout_tab_icons"
         android:title="@string/tab_standalone" />
 
     <item
         android:id="@+id/nutrition_tab"
-        android:icon="@drawable/ic_home_black_24dp"
+        android:icon="@drawable/nutrition_tab_icons"
         android:title="@string/nutrition_title" />
 
     <item
         android:id="@+id/profile_tab"
-        android:icon="@drawable/vec_calendar_check"
-        android:title="@string/profile_progress_pics"/>
+        android:icon="@drawable/profile_tab_icons"
+        android:title="@string/profile_title"/>
 </menu>

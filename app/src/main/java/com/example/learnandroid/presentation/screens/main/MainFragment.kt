@@ -5,18 +5,20 @@ import androidx.fragment.app.Fragment
 import com.example.learnandroid.R
 import com.example.learnandroid.databinding.FragmentMainBinding
 import com.example.learnandroid.presentation.screens.base.BaseViewBindingFragment
-import com.example.learnandroid.presentation.screens.dashboard.DashboardFragment
-import com.example.learnandroid.presentation.screens.home.HomeFragment
-import com.example.learnandroid.presentation.screens.notifications.NotificationsFragment
+import com.example.learnandroid.presentation.screens.profile.ProfileFragment
+import com.example.learnandroid.presentation.screens.plan.PlansFragment
+import com.example.learnandroid.presentation.screens.nutrition.NutritionFragment
+import com.example.learnandroid.presentation.screens.workouts.WorkoutsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainFragment :
     BaseViewBindingFragment<FragmentMainBinding, MainViewModel>(FragmentMainBinding::inflate) {
     override val viewModel: MainViewModel by viewModel()
-    private val homeFragment = HomeFragment.newInstance()
-    private val notificationFragment = NotificationsFragment.newInstance()
-    private val dashboardFragment = DashboardFragment.newInstance()
+    private val plansFragment = PlansFragment.newInstance()
+    private val nutritionFragment = NutritionFragment.newInstance()
+    private val profileFragment = ProfileFragment.newInstance()
+    private val workoutsFragment = WorkoutsFragment.newInstance()
 
     override fun initView() {
         viewBinding.apply {
@@ -29,21 +31,25 @@ class MainFragment :
         bottomBar.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.nutrition_tab -> {
-                    replaceFragment(homeFragment)
+                    replaceFragment(nutritionFragment)
                     true
                 }
-                R.id.exercise_tab -> {
-                    replaceFragment(notificationFragment)
+                R.id.workouts_tab -> {
+                    replaceFragment(workoutsFragment)
                     true
                 }
                 R.id.plan_tab -> {
-                    replaceFragment(dashboardFragment)
+                    replaceFragment(plansFragment)
+                    true
+                }
+                R.id.profile_tab -> {
+                    replaceFragment(profileFragment)
                     true
                 }
                 else -> true
             }
         }
-        bottomBar.selectedItemId = R.id.nutrition_tab
+        bottomBar.selectedItemId = R.id.plan_tab
     }
 
     override suspend fun subscribeData() {

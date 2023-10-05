@@ -1,12 +1,16 @@
-import com.example.learnandroid.presentation.screens.dashboard.DashboardViewModel
-import com.example.learnandroid.presentation.screens.home.HomeViewModel
-import com.example.learnandroid.presentation.screens.notifications.NotificationsViewModel
+package com.example.learnandroid.data.module
+
+import com.example.learnandroid.presentation.screens.profile.ProfileViewModel
+import com.example.learnandroid.presentation.screens.plan.PlansViewModel
+import com.example.learnandroid.presentation.screens.nutrition.NutritionViewModel
 import com.example.learnandroid.presentation.screens.splash.SplashViewModel
+import com.example.learnandroid.presentation.screens.workouts.WorkoutsViewModel
 import org.koin.dsl.module
 
 val viewModelModule = module {
     single { SplashViewModel() }
-    single { HomeViewModel() }
-    single { DashboardViewModel() }
-    single { NotificationsViewModel() }
+    single { PlansViewModel() }
+    single { ProfileViewModel() }
+    single { NutritionViewModel() }
+    single { WorkoutsViewModel() }
 }

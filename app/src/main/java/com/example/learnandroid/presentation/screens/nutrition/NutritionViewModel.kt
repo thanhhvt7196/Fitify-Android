@@ -1,15 +1,13 @@
-package com.example.learnandroid.presentation.screens.home
+package com.example.learnandroid.presentation.screens.nutrition
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.learnandroid.presentation.screens.base.BaseViewModel
 
-class HomeViewModel : BaseViewModel() {
+class NutritionViewModel : BaseViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+        value = "This is notifications Fragment"
     }
     val text: LiveData<String> = _text
-
-    var type = 0
 }

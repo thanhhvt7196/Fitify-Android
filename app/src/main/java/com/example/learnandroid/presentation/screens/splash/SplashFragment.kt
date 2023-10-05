@@ -12,6 +12,12 @@ class SplashFragment :
     BaseViewBindingFragment<FragmentSplashBinding, SplashViewModel>(FragmentSplashBinding::inflate) {
     override val viewModel: SplashViewModel by viewModel<SplashViewModel>()
 
+    companion object {
+        fun newInstance(): SplashFragment {
+            return SplashFragment()
+        }
+    }
+
     override fun initView() {
         Handler(Looper.getMainLooper()).postDelayed({findNavController().navigate(R.id.main_fragment)}, 1000)
     }

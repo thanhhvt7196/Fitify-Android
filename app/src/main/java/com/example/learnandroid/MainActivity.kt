@@ -1,6 +1,7 @@
 package com.example.learnandroid
 
 import android.os.Bundle
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.learnandroid.databinding.ActivityMainBinding
