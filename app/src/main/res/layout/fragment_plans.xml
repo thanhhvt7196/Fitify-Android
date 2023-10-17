@@ -7,28 +7,4 @@
     android:background="@color/colorful_gradient_mid"
     tools:context=".presentation.screens.plan.PlansFragment">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <ImageView
-                android:scaleType="fitXY"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/wsetimg_ps_fem_tabata" />
-
-            <ImageView
-                android:scaleType="fitXY"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/achievement_fitz_roy" />
-
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
-    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

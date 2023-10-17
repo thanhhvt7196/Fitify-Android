@@ -1,6 +1,7 @@
 package com.example.learnandroid.presentation.screens.plan
 
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.learnandroid.databinding.FragmentPlansBinding
 import com.example.learnandroid.presentation.screens.base.BaseViewBindingFragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -29,7 +30,12 @@ class PlansFragment : BaseViewBindingFragment<FragmentPlansBinding, PlansViewMod
     }
 
     override fun initView() {
+        val activity = requireActivity() as? AppCompatActivity
 
+        activity?.supportActionBar?.apply {
+            title = "ahihi"
+            setDisplayHomeAsUpEnabled(true)
+        }
     }
 
     override suspend fun subscribeData() {
