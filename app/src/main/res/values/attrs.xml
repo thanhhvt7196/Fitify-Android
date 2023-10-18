@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="title" format="string"/>
+    <attr name="image" format="reference"/>
+
+    <declare-styleable name="ProfileHeaderStatItem">
+        <attr name="title"/>
+        <attr name="image"/>
+        <attr name="count" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="ProfileHeaderStatView">
+        <attr name="title"/>
+        <attr name="image"/>
+        <attr name="subtitle" format="string"/>
+    </declare-styleable>
+</resources>
