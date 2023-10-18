@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LearnAndroid</string>
+    <string name="app_name">Fitify Android</string>
     <string name="week_x_of_y">Week %1$li of %2$li</string>
     <string name="welcome">Welcome</string>
     <string name="redeem_title">Redeem Voucher</string>
@@ -1984,7 +1984,7 @@
     <string name="instr_yoga_diff_005">Lowering the center of gravity allows you to balance easier.</string>
     <string name="instr_yoga_diff_006">Keep your knee slightly bent if necessary (or loop a towel around your foot).</string>
     <string name="instr_yoga_diff_007">Bend your knees slightly, if necessary.</string>
-    <string name="title_activity_main2">MainActivity2</string>
+    <string name="fitify_android">Fitify Android</string>
     <string name="title_main">Main</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
