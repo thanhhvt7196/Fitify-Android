@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fitify Android</string>
+    <string name="week_x_of_y">Tuần %1$li trong %2$li</string>
+</resources>

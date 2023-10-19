@@ -3,7 +3,7 @@
     <attr name="title" format="string"/>
     <attr name="image" format="reference"/>
 
-    <declare-styleable name="ProfileHeaderStatItem">
+    <declare-styleable name="ProfileMyJourneyItemView">
         <attr name="title"/>
         <attr name="image"/>
         <attr name="count" format="string"/>
@@ -13,5 +13,10 @@
         <attr name="title"/>
         <attr name="image"/>
         <attr name="subtitle" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="SettingItemView">
+        <attr name="title"/>
+        <attr name="image"/>
     </declare-styleable>
 </resources>

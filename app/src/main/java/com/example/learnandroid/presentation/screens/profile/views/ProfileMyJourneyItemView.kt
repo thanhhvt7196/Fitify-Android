@@ -8,14 +8,14 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.learnandroid.R
 
-class ProfileHeaderStatItem(context: Context, attrs: AttributeSet): ConstraintLayout(context, attrs) {
+class ProfileMyJourneyItemView(context: Context, attrs: AttributeSet): ConstraintLayout(context, attrs) {
 
     init {
-        LayoutInflater.from(context).inflate(R.layout.profile_header_stat_item, this, true)
-        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.ProfileHeaderStatItem)
-        val title = typedArray.getString(R.styleable.ProfileHeaderStatItem_title)
-        val value = typedArray.getString(R.styleable.ProfileHeaderStatItem_count)
-        val image = typedArray.getResourceId(R.styleable.ProfileHeaderStatItem_image, 0)
+        LayoutInflater.from(context).inflate(R.layout.profile_my_journey_item_view, this, true)
+        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.ProfileMyJourneyItemView)
+        val title = typedArray.getString(R.styleable.ProfileMyJourneyItemView_title)
+        val value = typedArray.getString(R.styleable.ProfileMyJourneyItemView_count)
+        val image = typedArray.getResourceId(R.styleable.ProfileMyJourneyItemView_image, 0)
         typedArray.recycle()
 
         val titleTextView = findViewById<TextView>(R.id.titleTextView)

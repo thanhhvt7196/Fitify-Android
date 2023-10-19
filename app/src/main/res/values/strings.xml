@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Fitify Android</string>
-    <string name="week_x_of_y">Week %1$li of %2$li</string>
     <string name="welcome">Welcome</string>
     <string name="redeem_title">Redeem Voucher</string>
     <string name="welcome_v3_subtitle">We’ll ask you a few questions to personalize your experience.</string>
@@ -807,6 +806,7 @@
     <string name="stats_total">Total</string>
     <string name="stats_minutes">minutes</string>
     <string name="stats_calories">calories</string>
+    <string name="stats_calories_title">Calories</string>
     <string name="stats_last_7_days">Last 7 days</string>
     <string name="stats_no_data">No data</string>
     <string name="stats_steps_give_permission">Track your daily steps and walk more</string>
@@ -1992,4 +1992,5 @@
     <string name="title_splash">Splash</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="week_x_of_y">Week %1$li of %2$li</string>
 </resources>

@@ -21,13 +21,7 @@ class ProfileFragment : BaseViewBindingFragment<FragmentProfileBinding, ProfileV
     }
 
     override fun initView() {
-        val drawable = ContextCompat.getDrawable(requireActivity(), R.drawable.profile_bg_photo)
-        if (drawable is BitmapDrawable) {
-            val tintColor = ContextCompat.getColor(requireActivity(), R.color.blue_light_0_5)
-            val blendedBitmap = BitmapExtension.blendBitmapWithColor(resources, R.drawable.profile_bg_photo, tintColor)
-            blendedBitmap.alpha = 200
-            viewBinding.imgHeaderBackground.setImageDrawable(blendedBitmap)
-        }
+
     }
 
     override suspend fun subscribeData() {

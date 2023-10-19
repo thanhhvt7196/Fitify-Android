@@ -62,10 +62,10 @@
 
         <ImageView
             android:id="@+id/arrowRight"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:layout_gravity="center"
-            android:src="@drawable/arrow_right"
+            android:src="@drawable/chevron_right"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/iconImageView" />
