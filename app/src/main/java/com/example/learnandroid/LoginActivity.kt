@@ -4,8 +4,10 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
+import androidx.activity.OnBackPressedCallback
 import androidx.core.content.ContextCompat
 import com.example.learnandroid.databinding.ActivityLoginBinding
+import com.example.learnandroid.presentation.screens.login.LoginFragment
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
@@ -25,14 +27,18 @@ class LoginActivity : AppCompatActivity() {
             )
         }
 
-    }
-
-    override fun onResume() {
-        super.onResume()
-        binding.progressLottieView.apply {
-            this.setAnimation("onboarding-loader-blue.json")
-            this.repeatCount = 0
-            this.speed = 1f
-        }
+        onBackPressedDispatcher.addCallback(this, object: OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                val navHostFragment = supportFragmentManager.findFragmentById(R.id.navHostFragment)
+                val loginFragment = navHostFragment?.childFragmentManager?.fragments?.first() as LoginFragment?
+                loginFragment?.let {
+                    if (!it.isBackPressEnabled()) {
+                        finish()
+                    }
+                } ?: run {
+                    finish()
+                }
+            }
+        })
     }
 }

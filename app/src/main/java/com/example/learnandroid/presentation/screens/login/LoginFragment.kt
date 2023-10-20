@@ -5,10 +5,12 @@ import androidx.lifecycle.Observer
 import com.example.learnandroid.LoginActivity
 import com.example.learnandroid.databinding.FragmentLoginBinding
 import com.example.learnandroid.presentation.screens.base.BaseViewBindingFragment
+import com.example.learnandroid.utils.customviews.BackPressable
 
-class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewModel>(FragmentLoginBinding::inflate) {
+class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewModel>(FragmentLoginBinding::inflate), BackPressable {
 
     override val viewModel: LoginViewModel by viewModels()
+    private lateinit var adapter: LoginPagerAdapter
 
     companion object {
         const val tag = "LoginFragment"
@@ -20,7 +22,7 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
     override fun initView() {
         val viewpager = viewBinding.loginViewPager
         viewpager.isUserInputEnabled = false
-        val adapter = LoginPagerAdapter(this)
+        adapter = LoginPagerAdapter(this)
         viewpager.adapter = adapter
 
         viewBinding.toolbar.setOnClickListener {
@@ -33,7 +35,9 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
 
         viewBinding.testButton.setOnClickListener {
             viewModel.currentIndex.value?.let {
-                viewModel.setIndex(it + 1)
+                if (it < adapter.itemCount - 1) {
+                    viewModel.setIndex(it + 1)
+                }
             }
         }
     }
@@ -54,6 +58,19 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
             if (it > 0) {
                 viewModel.setIndex(it - 1)
             }
+        }
+    }
+
+    override fun isBackPressEnabled(): Boolean {
+        viewModel.currentIndex.value?.let {
+            if (it >= 1) {
+                viewModel.setIndex(it - 1)
+                return true
+            } else {
+                return false
+            }
+        } ?: run {
+            return false
         }
     }
 }
