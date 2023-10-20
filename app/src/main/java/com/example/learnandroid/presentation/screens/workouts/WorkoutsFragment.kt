@@ -17,6 +17,7 @@ class WorkoutsFragment: BaseViewBindingFragment<FragmentWorkoutsBinding, Workout
     }
 
     companion object {
+        const val tag = "WorkoutsFragment"
         fun newInstance(): WorkoutsFragment {
             return WorkoutsFragment()
         }

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/splash_fragment">
+    app:startDestination="@+id/main_fragment">
 
     <fragment
         android:id="@+id/main_fragment"
@@ -11,11 +11,4 @@
         android:label="@string/title_home"
         tools:layout="@layout/fragment_main"
         />
-
-    <fragment
-        android:id="@+id/splash_fragment"
-        android:name="com.example.learnandroid.presentation.screens.splash.SplashFragment"
-        android:label="@string/title_splash"
-        tools:layout="@layout/fragment_splash">
-    </fragment>
 </navigation>

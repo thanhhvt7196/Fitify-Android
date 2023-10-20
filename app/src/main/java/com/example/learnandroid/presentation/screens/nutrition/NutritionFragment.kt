@@ -8,6 +8,7 @@ class NutritionFragment : BaseViewBindingFragment<FragmentNutritionBinding, Nutr
     override val viewModel: NutritionViewModel by viewModel()
 
     companion object {
+        const val tag = "NutritionFragment"
         fun newInstance(): NutritionFragment {
             return NutritionFragment()
         }

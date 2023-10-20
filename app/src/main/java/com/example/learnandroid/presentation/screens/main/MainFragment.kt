@@ -20,9 +20,17 @@ class MainFragment :
     private val profileFragment = ProfileFragment.newInstance()
     private val workoutsFragment = WorkoutsFragment.newInstance()
 
+    private lateinit var mainPagerAdapter: MainPagerAdapter
+
     override fun initView() {
         viewBinding.apply {
             setupBottomBar(mainBottomBar)
+            mainPagerAdapter = MainPagerAdapter(this@MainFragment)
+            mainViewPager.apply {
+                isUserInputEnabled = false
+                adapter = mainPagerAdapter
+                offscreenPageLimit = 3
+            }
         }
     }
 
@@ -31,19 +39,19 @@ class MainFragment :
         bottomBar.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.nutrition_tab -> {
-                    replaceFragment(nutritionFragment)
+                    viewBinding.mainViewPager.setCurrentItem(2, false)
                     true
                 }
                 R.id.workouts_tab -> {
-                    replaceFragment(workoutsFragment)
+                    viewBinding.mainViewPager.setCurrentItem(1, false)
                     true
                 }
                 R.id.plan_tab -> {
-                    replaceFragment(plansFragment)
+                    viewBinding.mainViewPager.setCurrentItem(0, false)
                     true
                 }
                 R.id.profile_tab -> {
-                    replaceFragment(profileFragment)
+                    viewBinding.mainViewPager.setCurrentItem(3, false)
                     true
                 }
                 else -> true
@@ -54,11 +62,5 @@ class MainFragment :
 
     override suspend fun subscribeData() {
 
-    }
-
-    private fun replaceFragment(fragment: Fragment) {
-        val transaction = requireActivity().supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.nav_host_fragment_activity_main, fragment)
-        transaction.commit()
     }
 }

@@ -1,6 +1,7 @@
 package com.example.learnandroid.presentation.screens.base
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,6 +25,8 @@ abstract class BaseViewBindingFragment<T : ViewBinding, VM : BaseViewModel>(priv
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        Log.d("BaseFragment", "onCreateView")
+
         _viewBinding = initVb.invoke(inflater, container, false)
         return viewBinding.root
     }
@@ -39,11 +42,14 @@ abstract class BaseViewBindingFragment<T : ViewBinding, VM : BaseViewModel>(priv
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        Log.d("BaseFragment", "onViewCreated")
+
         initView()
     }
 
     override fun onDestroyView() {
         _viewBinding = null
+        Log.d("BaseFragment", "onDestroyView")
         super.onDestroyView()
     }
 

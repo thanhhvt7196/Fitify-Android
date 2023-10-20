@@ -10,6 +10,7 @@ class PlansFragment : BaseViewBindingFragment<FragmentPlansBinding, PlansViewMod
     override val viewModel: PlansViewModel by viewModel()
 
     companion object {
+        const val tag = "PlansFragment"
         fun newInstance(): PlansFragment {
             return PlansFragment()
         }
