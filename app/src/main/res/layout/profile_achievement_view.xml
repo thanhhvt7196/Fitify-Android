@@ -6,6 +6,7 @@
 
     <androidx.cardview.widget.CardView
         app:cardCornerRadius="12dp"
+        app:cardElevation="0dp"
         app:cardBackgroundColor="@color/blue_dark_0_5"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"

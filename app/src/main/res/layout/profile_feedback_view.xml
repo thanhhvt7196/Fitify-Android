@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="@string/profile_title_feedback"
+            android:textColor="@color/blue_light_2"
+            android:layout_marginBottom="20dp"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.example.learnandroid.presentation.screens.settings.views.SettingItemView
+                    app:title="@string/title_rate_the_app"
+                    app:image="@drawable/star_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"/>
+
+                <com.example.learnandroid.presentation.screens.settings.views.SettingItemView
+                    app:showSeparator="false"
+                    app:title="@string/feedback_send_feedback"
+                    app:image="@drawable/feedback_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.cardview.widget.CardView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>

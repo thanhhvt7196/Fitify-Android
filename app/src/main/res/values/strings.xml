@@ -1062,6 +1062,7 @@
     <string name="workout_exercise_view_instructions">View Instructions</string>
     <string name="workout_exercise_replace">Replace Exercise</string>
     <string name="plan_settings_reminders_settings">Reminder Settings</string>
+    <string name="reminders_settings_title">Reminders</string>
     <string name="feedback_send_feedback">Send Feedback</string>
     <string name="feedback_what_can_we_improve">What can we improve?</string>
     <string name="plan_your_goal">Your goal</string>

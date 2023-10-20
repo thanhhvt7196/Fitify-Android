@@ -2,6 +2,8 @@
 <resources>
     <attr name="title" format="string"/>
     <attr name="image" format="reference"/>
+    <attr name="subtitle" format="string"/>
+    <attr name="showSeparator" format="boolean"/>
 
     <declare-styleable name="ProfileMyJourneyItemView">
         <attr name="title"/>
@@ -12,11 +14,12 @@
     <declare-styleable name="ProfileHeaderStatView">
         <attr name="title"/>
         <attr name="image"/>
-        <attr name="subtitle" format="string"/>
+        <attr name="subtitle"/>
     </declare-styleable>
 
     <declare-styleable name="SettingItemView">
         <attr name="title"/>
         <attr name="image"/>
+        <attr name="showSeparator"/>
     </declare-styleable>
 </resources>

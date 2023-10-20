@@ -15,6 +15,7 @@ class ProfileHeaderStatView(context: Context, attrs: AttributeSet): ConstraintLa
         val title = typedArray.getString(R.styleable.ProfileHeaderStatView_title) ?: ""
         val subtitle = typedArray.getString(R.styleable.ProfileHeaderStatView_subtitle) ?: ""
         val image = typedArray.getResourceId(R.styleable.ProfileHeaderStatView_image, 0)
+        typedArray.recycle()
 
         val titleTextView = findViewById<TextView>(R.id.titleTextView)
         titleTextView.text = title
