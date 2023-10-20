@@ -2,8 +2,14 @@
 <resources>
 
     <style name="Theme.LearnAndroid" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentStatus">false</item>
         <item name="android:navigationBarColor">@color/blue_dark</item>
         <item name="android:statusBarColor" >@android:color/transparent</item>
+    </style>
+
+    <style name="Theme.Login" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:navigationBarColor">@color/blue_dark</item>
+<!--        <item name="android:statusBarColor">@color/blue_dark</item>-->
     </style>
 </resources>

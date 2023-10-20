@@ -91,7 +91,7 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
     implementation("io.insert-koin:koin-android:3.5.0")
-
+    implementation("com.airbnb.android:lottie:6.1.0")
 }
 
 tasks.register("clear", Delete:: class) {

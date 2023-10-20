@@ -12,10 +12,10 @@ class MainPagerAdapter(val fragment: Fragment): FragmentStateAdapter(fragment) {
 
     override fun createFragment(position: Int): Fragment {
         return when (position) {
-            0 -> PlansFragment()
-            1 -> WorkoutsFragment()
-            2 -> NutritionFragment()
-            else -> ProfileFragment()
+            0 -> PlansFragment.newInstance()
+            1 -> WorkoutsFragment.newInstance()
+            2 -> NutritionFragment.newInstance()
+            else -> ProfileFragment.newInstance()
         }
     }
 }

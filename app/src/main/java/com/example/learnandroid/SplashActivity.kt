@@ -19,12 +19,12 @@ class SplashActivity : AppCompatActivity() {
         val sharedPreferences = getSharedPreferences(AppConstants.sharedPreferencesName, Context.MODE_PRIVATE)
 
         val isLoggedIn = sharedPreferences.getBoolean(AppConstants.isLoggedInSPKey, false)
-        val intent = if (isLoggedIn) {
-            Intent(this, MainActivity::class.java)
-        } else {
-            Intent(this, LoginActivity::class.java)
-        }
-//        val intent = Intent(this, LoginActivity::class.java)
+//        val intent = if (isLoggedIn) {
+//            Intent(this, MainActivity::class.java)
+//        } else {
+//            Intent(this, LoginActivity::class.java)
+//        }
+        val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
         sharedPreferences.edit {
             this.putBoolean(AppConstants.isLoggedInSPKey, true)
