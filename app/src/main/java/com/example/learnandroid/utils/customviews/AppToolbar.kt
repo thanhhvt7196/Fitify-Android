@@ -12,7 +12,7 @@ class AppToolbar(context: Context, attrs: AttributeSet): ConstraintLayout(contex
         LayoutInflater.from(context).inflate(R.layout.app_toolbar, this, true)
     }
 
-    override fun setOnClickListener(l: OnClickListener?) {
+    fun setBackButtonOnClickListener(l: OnClickListener?) {
         val backButton = findViewById<CardView>(R.id.backButton)
         backButton.setOnClickListener(l)
     }
