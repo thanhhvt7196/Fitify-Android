@@ -4,6 +4,7 @@
     <attr name="image" format="reference"/>
     <attr name="subtitle" format="string"/>
     <attr name="showSeparator" format="boolean"/>
+    <attr name="borderColor" format="color"/>
 
     <declare-styleable name="ProfileMyJourneyItemView">
         <attr name="title"/>
@@ -21,5 +22,11 @@
         <attr name="title"/>
         <attr name="image"/>
         <attr name="showSeparator"/>
+    </declare-styleable>
+
+    <declare-styleable name="OnboardingItemWithImageView">
+        <attr name="title"/>
+        <attr name="image"/>
+        <attr name="borderColor"/>
     </declare-styleable>
 </resources>

@@ -1,8 +1,11 @@
 package com.example.learnandroid
 
+import android.content.Context
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.AttributeSet
+import android.view.View
 import android.view.WindowManager
 import androidx.activity.OnBackPressedCallback
 import androidx.core.content.ContextCompat
@@ -40,5 +43,15 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
         })
+    }
+
+    override fun onResume() {
+        super.onResume()
+        binding.progressLottieView.apply {
+            this.setAnimation("onboarding-loader-blue.json")
+            this.repeatCount = 0
+            this.speed = 1f
+            this.progress = 1f
+        }
     }
 }

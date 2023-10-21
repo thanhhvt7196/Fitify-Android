@@ -3,14 +3,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".presentation.screens.onboarding.gender.OnboardingGenderFragment">
 
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="40sp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:text="Gender" />
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/welcomeTextView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="@color/blue_light_3"
+            android:textStyle="bold"
+            android:text="@string/welcome_title_welcome_to_fitify" />
+
+        <TextView
+            android:id="@+id/genderQuestionTextView"
+            app:layout_constraintTop_toBottomOf="@id/welcomeTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="6dp"
+            android:text="@string/onboarding_gender_title"
+            android:textColor="@color/essential_white"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/genderQuestionTextView"
+            android:layout_marginTop="45dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.example.learnandroid.presentation.screens.onboarding.views.OnboardingItemWithImageView
+                android:id="@+id/femaleButton"
+                app:title="@string/onboarding_gender_female"
+                app:image="@drawable/onboarding_gender_female"
+                app:borderColor="@color/blue_base"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.example.learnandroid.presentation.screens.onboarding.views.OnboardingItemWithImageView
+                android:id="@+id/maleButton"
+                app:title="@string/onboarding_gender_male"
+                app:image="@drawable/onboarding_gender_male"
+                app:borderColor="@color/blue_base"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

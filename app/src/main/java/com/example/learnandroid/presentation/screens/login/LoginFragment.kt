@@ -38,14 +38,6 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
                 backToPreviousPage()
             }
         }
-
-        viewBinding.testButton.setOnClickListener {
-            viewModel.currentIndex.value?.let {
-                if (it < adapter.itemCount - 1) {
-                    viewModel.setIndex(it + 1)
-                }
-            }
-        }
     }
 
     override suspend fun subscribeData() {
