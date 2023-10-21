@@ -29,4 +29,8 @@
         <attr name="image"/>
         <attr name="borderColor"/>
     </declare-styleable>
+
+    <declare-styleable name="RoundedBorderButton">
+        <attr name="title"/>
+    </declare-styleable>
 </resources>

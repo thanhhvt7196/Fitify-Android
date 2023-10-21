@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".presentation.screens.login.LoginFragment">
 
-    <com.example.learnandroid.utils.customviews.AppToolbar
+    <com.example.learnandroid.presentation.components.shared.appToolBar.AppToolbar
         android:id="@+id/toolbar"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"

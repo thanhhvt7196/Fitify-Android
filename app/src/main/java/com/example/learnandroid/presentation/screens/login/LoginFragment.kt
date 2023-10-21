@@ -1,16 +1,22 @@
 package com.example.learnandroid.presentation.screens.login
 
+import android.util.Log
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.lifecycle.viewModelScope
 import com.example.learnandroid.databinding.FragmentLoginBinding
 import com.example.learnandroid.presentation.screens.base.BaseViewBindingFragment
 import com.example.learnandroid.presentation.screens.onboarding.gender.OnboardingGenderFragment
 import com.example.learnandroid.presentation.screens.onboarding.goal.OnboardingGoalFragment
 import com.example.learnandroid.presentation.screens.onboarding.name.OnboardingNameFragment
-import com.example.learnandroid.utils.customviews.BackPressable
+import com.example.learnandroid.presentation.components.shared.backPressable.BackPressable
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.mapNotNull
+import kotlinx.coroutines.launch
 
-class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewModel>(FragmentLoginBinding::inflate), BackPressable {
+class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewModel>(FragmentLoginBinding::inflate),
+    BackPressable {
 
     override val viewModel: LoginViewModel by viewModels()
     private lateinit var adapter: LoginPagerAdapter
@@ -27,48 +33,66 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
     }
 
     override fun initView() {
-        val fragmentItems = arrayOf(genderFragment, nameFragment, goalFragment) as Array<Fragment>
+        val fragmentItems: Array<Fragment> = arrayOf(genderFragment, nameFragment, goalFragment)
         val viewpager = viewBinding.loginViewPager
         viewpager.isUserInputEnabled = false
         adapter = LoginPagerAdapter(this, fragmentItems)
         viewpager.adapter = adapter
 
         viewBinding.toolbar.setBackButtonOnClickListener {
-            viewModel.currentIndex.value?.let {
-                backToPreviousPage()
-            }
+            backToPreviousPage(viewModel.currentIndex.value)
         }
     }
 
     override suspend fun subscribeData() {
-        viewModel.currentIndex.observe(this, Observer { index ->
-            index?.let {
-                viewBinding.toolbar.alpha = if (it == 0) 0f else 1f
-                viewBinding.loginViewPager.currentItem = it
-            } ?: run {
-                viewBinding.toolbar.alpha = 0f
+        viewModel.viewModelScope.launch {
+            viewModel.currentIndex.collect { index ->
+                viewBinding.toolbar.alpha = if (index == 0) 0f else 1f
+                viewBinding.loginViewPager.currentItem = index
             }
-        })
+        }
+
+        viewModel.viewModelScope.launch {
+            viewModel.gender.collect { gender ->
+                gender?.let {
+                    goToNextPage(viewModel.currentIndex.value)
+                }
+            }
+        }
+
+        viewModel.viewModelScope.launch {
+            genderFragment.gender.collect { gender ->
+                gender?.let {
+                    viewModel.setGender(it)
+                }
+            }
+        }
     }
 
-    private fun backToPreviousPage() {
-        viewModel.currentIndex.value?.let {
-            if (it >= 1) {
-                viewModel.setIndex(it - 1)
+    private fun backToPreviousPage(currentIndex: Int) {
+        if (currentIndex >= 1) {
+            viewModel.viewModelScope.launch {
+                viewModel.setIndex(currentIndex - 1)
+            }
+        }
+    }
+
+    private fun goToNextPage(currentIndex: Int) {
+        if (currentIndex < (viewBinding.loginViewPager.adapter?.itemCount ?: 0) - 1) {
+            viewModel.viewModelScope.launch {
+                viewModel.setIndex(currentIndex + 1)
             }
         }
     }
 
     override fun isBackPressEnabled(): Boolean {
-        viewModel.currentIndex.value?.let {
+        viewModel.currentIndex.value.let {
             if (it >= 1) {
                 viewModel.setIndex(it - 1)
                 return true
             } else {
                 return false
             }
-        } ?: run {
-            return false
         }
     }
 }

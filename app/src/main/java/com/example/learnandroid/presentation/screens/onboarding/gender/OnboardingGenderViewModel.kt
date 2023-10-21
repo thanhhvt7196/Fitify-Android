@@ -1,18 +1,16 @@
 package com.example.learnandroid.presentation.screens.onboarding.gender
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import com.example.learnandroid.domain.models.Gender
 import com.example.learnandroid.presentation.screens.base.BaseViewModel
+import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.SharedFlow
+import kotlinx.coroutines.flow.asSharedFlow
 
 class OnboardingGenderViewModel: BaseViewModel() {
-    private val _gender = MutableLiveData<Gender?>().apply {
-        value = null
-    }
+    private val _gender = MutableSharedFlow<Gender?>()
+    val gender: SharedFlow<Gender?> = _gender.asSharedFlow()
 
-    val gender: LiveData<Gender?> = _gender
-
-    fun setGender(gender: Gender?) {
-        _gender.postValue(gender)
+    suspend fun setGender(gender: Gender?) {
+        _gender.emit(gender)
     }
 }

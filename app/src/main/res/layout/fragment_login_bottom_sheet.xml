@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/top_rounded_background"
+    tools:context=".presentation.screens.loginBottomSheet.LoginBottomSheetFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:maxLines="1"
+            android:gravity="center"
+            android:text="@string/sign_in_bottom_sheet_title"
+            android:textColor="@color/essential_white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.example.learnandroid.presentation.screens.onboarding.views.SocialLoginButton
+            android:id="@+id/appleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp" />
+
+        <com.example.learnandroid.presentation.screens.onboarding.views.SocialLoginButton
+            android:id="@+id/googleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" />
+
+        <com.example.learnandroid.presentation.screens.onboarding.views.SocialLoginButton
+            android:id="@+id/facebookButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" />
+
+        <com.example.learnandroid.presentation.screens.onboarding.views.RoundedBorderButton
+            android:id="@+id/emailButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="32dp"
+            app:title="@string/email_log_in_bottom_sheet" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</FrameLayout>
