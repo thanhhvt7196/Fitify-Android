@@ -1,6 +1,8 @@
 package com.example.learnandroid.presentation.screens.login
 
 import android.util.Log
+import android.view.View
+import android.view.View.OnClickListener
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -21,7 +23,7 @@ import kotlinx.coroutines.flow.mapNotNull
 import kotlinx.coroutines.launch
 
 class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewModel>(FragmentLoginBinding::inflate),
-    BackPressable {
+    BackPressable,OnClickListener {
 
     override val viewModel: LoginViewModel by viewModels()
     private lateinit var adapter: LoginPagerAdapter
@@ -47,6 +49,7 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
     }
 
     override fun initView() {
+        genderFragment.setOnclick(this)
         val fragmentItems: Array<Fragment> = arrayOf(genderFragment, nameFragment, goalFragment)
         val viewpager = viewBinding.loginViewPager
         viewpager.isUserInputEnabled = false
@@ -86,10 +89,8 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
             }
         }
 
-        viewLifecycleOwner.lifecycleScope.launch {
-            genderFragment.loginType.collect { loginType ->
-                findNavController().navigate(R.id.action_login_fragment_to_loginWithEmailFragment)
-            }
+        genderFragment.loginType.collect { loginType ->
+            findNavController().navigate(R.id.action_login_fragment_to_loginWithEmailFragment)
         }
     }
 
@@ -118,5 +119,9 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
                 return false
             }
         }
+    }
+
+    override fun onClick(v: View?) {
+        findNavController().navigate(R.id.action_login_fragment_to_loginWithEmailFragment)
     }
 }

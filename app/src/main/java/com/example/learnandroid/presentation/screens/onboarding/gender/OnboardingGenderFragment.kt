@@ -1,6 +1,7 @@
 package com.example.learnandroid.presentation.screens.onboarding.gender
 
 import android.util.Log
+import android.view.View.OnClickListener
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -8,6 +9,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.learnandroid.databinding.FragmentOnboardingGenderBinding
 import com.example.learnandroid.domain.models.Gender
 import com.example.learnandroid.presentation.screens.base.BaseViewBindingFragment
+import com.example.learnandroid.presentation.screens.login.LoginFragment
 import com.example.learnandroid.presentation.screens.loginBottomSheet.LoginBottomSheetFragment
 import com.example.learnandroid.presentation.screens.loginBottomSheet.LoginType
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -19,6 +21,7 @@ class OnboardingGenderFragment :
     BaseViewBindingFragment<FragmentOnboardingGenderBinding, OnboardingGenderViewModel>(
         FragmentOnboardingGenderBinding::inflate
     ) {
+    var loginAction: OnClickListener?=null
     override val viewModel: OnboardingGenderViewModel by viewModels()
 
     private val _gender = MutableSharedFlow<Gender?>()
@@ -48,11 +51,7 @@ class OnboardingGenderFragment :
 
             loginButton.setOnClickListener {
                 val loginBottomSheet = LoginBottomSheetFragment.newInstance()
-                lifecycleScope.launch {
-                    loginBottomSheet.loginType.collect { loginType ->
-                        _loginType.emit(loginType)
-                    }
-                }
+                loginBottomSheet.setOnClick(loginAction)
 
                 loginBottomSheet.show(
                     requireActivity().supportFragmentManager,
@@ -75,5 +74,14 @@ class OnboardingGenderFragment :
                 _gender.emit(it)
             }
         }
+    }
+
+    fun setOnclick(loginFragment: OnClickListener) {
+        this.loginAction = loginFragment
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        this.loginAction =null
     }
 }

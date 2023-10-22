@@ -1,5 +1,6 @@
 package com.example.learnandroid.presentation.screens.loginBottomSheet
 
+import android.view.View.OnClickListener
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.viewModelScope
@@ -12,12 +13,15 @@ import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
 import java.lang.ref.WeakReference
 
-class LoginBottomSheetFragment : BaseBottomSheetViewBindingFragment<FragmentLoginBottomSheetBinding, LoginBottomSheetViewModel>(FragmentLoginBottomSheetBinding::inflate) {
+class LoginBottomSheetFragment :
+    BaseBottomSheetViewBindingFragment<FragmentLoginBottomSheetBinding, LoginBottomSheetViewModel>(
+        FragmentLoginBottomSheetBinding::inflate
+    ) {
     override val viewModel: LoginBottomSheetViewModel by viewModels()
 
     private val _loginType = MutableSharedFlow<LoginType>()
     val loginType: SharedFlow<LoginType> = _loginType.asSharedFlow()
-
+    var onClickListener: OnClickListener? = null
     override fun initView() {
         viewBinding.apply {
             appleButton.config(SocialType.APPLE)
@@ -45,16 +49,23 @@ class LoginBottomSheetFragment : BaseBottomSheetViewBindingFragment<FragmentLogi
             }
 
             emailButton.setOnClickListener {
+                onClickListener?.onClick(it)
                 dismiss()
-                lifecycleScope.launch {
-                    _loginType.emit(LoginType.LoginEmail)
-                }
             }
         }
     }
 
     override suspend fun subscribeData() {
 
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        onClickListener = null
+    }
+
+    fun setOnClick(loginAction: OnClickListener?) {
+        this.onClickListener = loginAction
     }
 
     companion object {
