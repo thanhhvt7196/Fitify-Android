@@ -4,8 +4,12 @@ import android.util.Log
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.viewModelScope
+import androidx.navigation.fragment.findNavController
+import com.example.learnandroid.R
 import com.example.learnandroid.databinding.FragmentLoginBinding
+import com.example.learnandroid.presentation.components.shared.appToolBar.AppToolbar
 import com.example.learnandroid.presentation.screens.base.BaseViewBindingFragment
 import com.example.learnandroid.presentation.screens.onboarding.gender.OnboardingGenderFragment
 import com.example.learnandroid.presentation.screens.onboarding.goal.OnboardingGoalFragment
@@ -39,13 +43,16 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
         adapter = LoginPagerAdapter(this, fragmentItems)
         viewpager.adapter = adapter
 
-        viewBinding.toolbar.setBackButtonOnClickListener {
-            backToPreviousPage(viewModel.currentIndex.value)
+        viewBinding.toolbar.apply {
+            setBackButtonType(AppToolbar.BackButtonType.POP)
+            setBackButtonOnClickListener {
+                backToPreviousPage(viewModel.currentIndex.value)
+            }
         }
     }
 
     override suspend fun subscribeData() {
-        viewModel.viewModelScope.launch {
+        viewLifecycleOwner.lifecycleScope.launch {
             viewModel.currentIndex.collect { index ->
                 viewBinding.toolbar.alpha = if (index == 0) 0f else 1f
                 viewBinding.loginViewPager.currentItem = index
@@ -65,6 +72,12 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
                 gender?.let {
                     viewModel.setGender(it)
                 }
+            }
+        }
+
+        viewModel.viewModelScope.launch {
+            genderFragment.loginType.collect { loginType ->
+                findNavController().navigate(R.id.action_login_fragment_to_loginWithEmailFragment)
             }
         }
     }

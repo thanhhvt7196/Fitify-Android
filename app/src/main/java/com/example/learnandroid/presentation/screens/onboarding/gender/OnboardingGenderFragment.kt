@@ -23,6 +23,8 @@ class OnboardingGenderFragment :
 
     private val _gender = MutableSharedFlow<Gender?>()
     val gender: SharedFlow<Gender?> = _gender.asSharedFlow()
+    private val _loginType = MutableSharedFlow<LoginType>()
+    val loginType: SharedFlow<LoginType> = _loginType.asSharedFlow()
 
     companion object {
         const val tag = "OnboardingGenderFragment"
@@ -48,7 +50,7 @@ class OnboardingGenderFragment :
                 val loginBottomSheet = LoginBottomSheetFragment.newInstance()
                 lifecycleScope.launch {
                     loginBottomSheet.loginType.collect { loginType ->
-                        
+                        _loginType.emit(loginType)
                     }
                 }
 

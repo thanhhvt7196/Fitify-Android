@@ -2,6 +2,7 @@ package com.example.learnandroid.data.module
 
 import com.example.learnandroid.presentation.screens.login.LoginViewModel
 import com.example.learnandroid.presentation.screens.loginBottomSheet.LoginBottomSheetViewModel
+import com.example.learnandroid.presentation.screens.loginWithEmail.LoginWithEmailViewModel
 import com.example.learnandroid.presentation.screens.main.MainViewModel
 import com.example.learnandroid.presentation.screens.profile.ProfileViewModel
 import com.example.learnandroid.presentation.screens.plan.PlansViewModel
@@ -13,6 +14,7 @@ import com.example.learnandroid.presentation.screens.workouts.WorkoutsViewModel
 import org.koin.dsl.module
 
 val viewModelModule = module {
+    single { LoginWithEmailViewModel() }
     single { MainViewModel() }
     single { LoginViewModel() }
     single { LoginBottomSheetViewModel() }

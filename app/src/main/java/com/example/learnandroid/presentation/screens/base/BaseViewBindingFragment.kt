@@ -31,20 +31,13 @@ abstract class BaseViewBindingFragment<T : ViewBinding, VM : BaseViewModel>(priv
         return viewBinding.root
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        lifecycleScope.launch {
-            repeatOnLifecycle(Lifecycle.State.STARTED) {
-                subscribeData()
-            }
-        }
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         Log.d("BaseFragment", "onViewCreated")
-
         initView()
+        lifecycleScope.launch {
+            subscribeData()
+        }
     }
 
     override fun onDestroyView() {

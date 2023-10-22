@@ -9,6 +9,25 @@
         android:id="@+id/login_fragment"
         android:label="@string/login"
         android:name="com.example.learnandroid.presentation.screens.login.LoginFragment"
-        tools:layout="@layout/fragment_login"
-        />
+        tools:layout="@layout/fragment_login">
+        <action
+            app:enterAnim="@anim/default_enter_animation"
+            app:exitAnim="@anim/default_exit_animation"
+            app:popEnterAnim="@anim/default_pop_enter_anim"
+            app:popExitAnim="@anim/default_pop_exit_anim"
+            android:id="@+id/action_login_fragment_to_loginWithEmailFragment"
+            app:destination="@id/loginWithEmailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginWithEmailFragment"
+        android:name="com.example.learnandroid.presentation.screens.loginWithEmail.LoginWithEmailFragment"
+        android:label="fragment_login_with_email"
+        tools:layout="@layout/fragment_login_with_email" >
+        <action
+            android:id="@+id/action_loginWithEmailFragment_to_login_fragment"
+            app:popUpTo="@id/login_fragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/login_fragment" />
+    </fragment>
+
 </navigation>
