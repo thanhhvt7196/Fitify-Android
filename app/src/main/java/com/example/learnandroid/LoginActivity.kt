@@ -30,19 +30,19 @@ class LoginActivity : AppCompatActivity() {
             )
         }
 
-        onBackPressedDispatcher.addCallback(this, object: OnBackPressedCallback(true) {
-            override fun handleOnBackPressed() {
-                val navHostFragment = supportFragmentManager.findFragmentById(R.id.navHostFragment)
-                val loginFragment = navHostFragment?.childFragmentManager?.fragments?.first() as LoginFragment?
-                loginFragment?.let {
-                    if (!it.isBackPressEnabled()) {
-                        finish()
-                    }
-                } ?: run {
-                    finish()
-                }
-            }
-        })
+//        onBackPressedDispatcher.addCallback(this, object: OnBackPressedCallback(true) {
+//            override fun handleOnBackPressed() {
+//                val navHostFragment = supportFragmentManager.findFragmentById(R.id.navHostFragment)
+//                val loginFragment = navHostFragment?.childFragmentManager?.fragments?.first() as LoginFragment?
+//                loginFragment?.let {
+//                    if (!it.isBackPressEnabled()) {
+//                        finish()
+//                    }
+//                } ?: run {
+//                    finish()
+//                }
+//            }
+//        })
     }
 
     override fun onResume() {

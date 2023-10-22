@@ -10,7 +10,7 @@ android {
     defaultConfig {
         multiDexEnabled = true
         applicationId = "com.example.learnandroid"
-        minSdk = 30
+        minSdk = 29
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"

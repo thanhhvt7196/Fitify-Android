@@ -1,6 +1,7 @@
 package com.example.learnandroid.presentation.screens.login
 
 import android.util.Log
+import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
@@ -35,6 +36,15 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
             return LoginFragment()
         }
     }
+    private val onBackPressedCallback = object : OnBackPressedCallback(true) {
+        override fun handleOnBackPressed() {
+          this@LoginFragment.handleOnBackPressed()
+        }
+    }
+
+    private fun handleOnBackPressed() {
+        findNavController().popBackStack()
+    }
 
     override fun initView() {
         val fragmentItems: Array<Fragment> = arrayOf(genderFragment, nameFragment, goalFragment)
@@ -49,6 +59,7 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
                 backToPreviousPage(viewModel.currentIndex.value)
             }
         }
+        requireActivity().onBackPressedDispatcher.addCallback(this, onBackPressedCallback)
     }
 
     override suspend fun subscribeData() {
@@ -75,7 +86,7 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
             }
         }
 
-        viewModel.viewModelScope.launch {
+        viewLifecycleOwner.lifecycleScope.launch {
             genderFragment.loginType.collect { loginType ->
                 findNavController().navigate(R.id.action_login_fragment_to_loginWithEmailFragment)
             }
