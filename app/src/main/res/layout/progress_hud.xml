@@ -9,9 +9,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@android:color/transparent"
+        android:indeterminateTint="@color/essential_white"
+        android:indeterminateTintMode="src_in"
         android:id="@+id/progressBar"
-        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 

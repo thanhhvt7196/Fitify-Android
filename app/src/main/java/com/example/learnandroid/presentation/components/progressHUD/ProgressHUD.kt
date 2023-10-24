@@ -15,7 +15,9 @@ class ProgressHUD {
         private var dialog: Dialog? = null
 
         fun show(context: Context) {
+            dismiss()
             dialog = Dialog(context)
+            dialog?.window?.setBackgroundDrawableResource(android.R.color.transparent)
             dialog?.requestWindowFeature(Window.FEATURE_NO_TITLE)
             dialog?.setContentView(R.layout.progress_hud)
             dialog?.setCancelable(false)

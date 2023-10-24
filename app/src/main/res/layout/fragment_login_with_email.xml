@@ -73,7 +73,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_margin="16dp"
-            app:title="@string/login"
+            app:title="@string/email_login_forgot_btn_sign_in"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
