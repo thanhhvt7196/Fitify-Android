@@ -53,7 +53,7 @@ class LoginWithEmailFragment : BaseViewBindingFragment<FragmentLoginWithEmailBin
 
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.isValidData.collect { isValid ->
-                viewBinding.loginButton.alpha = if (isValid) 1f else 0.3f
+                viewBinding.loginButton.isEnabled = isValid
             }
         }
     }

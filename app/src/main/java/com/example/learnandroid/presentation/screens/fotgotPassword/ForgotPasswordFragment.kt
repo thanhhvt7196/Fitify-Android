@@ -45,7 +45,7 @@ class ForgotPasswordFragment :
 
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.isValidData.collect { isValid ->
-                viewBinding.resetButton.alpha = if (isValid) 1f else 0.3f
+                viewBinding.resetButton.isEnabled = isValid
             }
         }
 

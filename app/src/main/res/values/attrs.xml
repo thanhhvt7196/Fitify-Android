@@ -42,4 +42,8 @@
     <declare-styleable name="BottomWhiteButton">
         <attr name="title"/>
     </declare-styleable>
+
+    <declare-styleable name="BottomAccentGradientButton">
+        <attr name="title"/>
+    </declare-styleable>
 </resources>
