@@ -12,18 +12,18 @@ import androidx.lifecycle.viewModelScope
 import androidx.navigation.fragment.findNavController
 import com.example.learnandroid.R
 import com.example.learnandroid.databinding.FragmentLoginBinding
-import com.example.learnandroid.presentation.components.shared.appToolBar.AppToolbar
+import com.example.learnandroid.domain.models.Gender
+import com.example.learnandroid.presentation.components.appToolBar.AppToolbar
 import com.example.learnandroid.presentation.screens.base.BaseViewBindingFragment
 import com.example.learnandroid.presentation.screens.onboarding.gender.OnboardingGenderFragment
 import com.example.learnandroid.presentation.screens.onboarding.goal.OnboardingGoalFragment
 import com.example.learnandroid.presentation.screens.onboarding.name.OnboardingNameFragment
-import com.example.learnandroid.presentation.components.shared.backPressable.BackPressable
+import com.example.learnandroid.presentation.screens.loginBottomSheet.LoginType
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.mapNotNull
 import kotlinx.coroutines.launch
 
-class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewModel>(FragmentLoginBinding::inflate),
-    BackPressable,OnClickListener {
+class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewModel>(FragmentLoginBinding::inflate) {
 
     override val viewModel: LoginViewModel by viewModels()
     private lateinit var adapter: LoginPagerAdapter
@@ -45,11 +45,12 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
     }
 
     private fun handleOnBackPressed() {
-        findNavController().popBackStack()
+        if (viewModel.currentIndex.value >= 1) {
+            viewModel.setIndex(viewModel.currentIndex.value - 1)
+        }
     }
 
-    override fun initView() {
-        genderFragment.setOnclick(this)
+    override fun setup() {
         val fragmentItems: Array<Fragment> = arrayOf(genderFragment, nameFragment, goalFragment)
         val viewpager = viewBinding.loginViewPager
         viewpager.isUserInputEnabled = false
@@ -63,9 +64,7 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
             }
         }
         requireActivity().onBackPressedDispatcher.addCallback(this, onBackPressedCallback)
-    }
 
-    override suspend fun subscribeData() {
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.currentIndex.collect { index ->
                 viewBinding.toolbar.alpha = if (index == 0) 0f else 1f
@@ -73,7 +72,7 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
             }
         }
 
-        viewModel.viewModelScope.launch {
+        viewLifecycleOwner.lifecycleScope.launch {
             viewModel.gender.collect { gender ->
                 gender?.let {
                     goToNextPage(viewModel.currentIndex.value)
@@ -81,22 +80,24 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
             }
         }
 
-        viewModel.viewModelScope.launch {
-            genderFragment.gender.collect { gender ->
-                gender?.let {
-                    viewModel.setGender(it)
+        val onboardingGenderDelegate = object : OnboardingGenderFragment.OnboardingGenderDelegate {
+            override fun didSelectLoginType(loginType: LoginType) {
+                findNavController().navigate(R.id.action_login_fragment_to_loginWithEmailFragment)
+            }
+
+            override fun didSelectGender(gender: Gender) {
+                viewLifecycleOwner.lifecycleScope.launch {
+                    viewModel.setGender(gender)
                 }
             }
         }
 
-        genderFragment.loginType.collect { loginType ->
-            findNavController().navigate(R.id.action_login_fragment_to_loginWithEmailFragment)
-        }
+        genderFragment.setAction(onboardingGenderDelegate)
     }
 
     private fun backToPreviousPage(currentIndex: Int) {
         if (currentIndex >= 1) {
-            viewModel.viewModelScope.launch {
+            viewLifecycleOwner.lifecycleScope.launch {
                 viewModel.setIndex(currentIndex - 1)
             }
         }
@@ -104,24 +105,9 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
 
     private fun goToNextPage(currentIndex: Int) {
         if (currentIndex < (viewBinding.loginViewPager.adapter?.itemCount ?: 0) - 1) {
-            viewModel.viewModelScope.launch {
+            viewLifecycleOwner.lifecycleScope.launch {
                 viewModel.setIndex(currentIndex + 1)
             }
         }
-    }
-
-    override fun isBackPressEnabled(): Boolean {
-        viewModel.currentIndex.value.let {
-            if (it >= 1) {
-                viewModel.setIndex(it - 1)
-                return true
-            } else {
-                return false
-            }
-        }
-    }
-
-    override fun onClick(v: View?) {
-        findNavController().navigate(R.id.action_login_fragment_to_loginWithEmailFragment)
     }
 }

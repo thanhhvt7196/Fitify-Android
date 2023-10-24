@@ -23,11 +23,14 @@
         android:name="com.example.learnandroid.presentation.screens.loginWithEmail.LoginWithEmailFragment"
         android:label="fragment_login_with_email"
         tools:layout="@layout/fragment_login_with_email" >
-        <action
-            android:id="@+id/action_loginWithEmailFragment_to_login_fragment"
-            app:popUpTo="@id/login_fragment"
-            app:popUpToInclusive="true"
-            app:destination="@id/login_fragment" />
     </fragment>
+
+    <dialog
+        android:id="@+id/loginBottomSheet"
+        android:name="com.example.learnandroid.presentation.screens.loginBottomSheet.LoginBottomSheetFragment"
+        android:label="login_bottom_sheet"
+        tools:layout="@layout/fragment_login_bottom_sheet">
+
+    </dialog>
 
 </navigation>

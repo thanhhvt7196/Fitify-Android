@@ -13,59 +13,62 @@ import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
 import java.lang.ref.WeakReference
 
+interface LoginBottomSheetDelegate {
+    fun didSelectLoginType(type: LoginType)
+}
+
 class LoginBottomSheetFragment :
     BaseBottomSheetViewBindingFragment<FragmentLoginBottomSheetBinding, LoginBottomSheetViewModel>(
         FragmentLoginBottomSheetBinding::inflate
     ) {
     override val viewModel: LoginBottomSheetViewModel by viewModels()
 
-    private val _loginType = MutableSharedFlow<LoginType>()
-    val loginType: SharedFlow<LoginType> = _loginType.asSharedFlow()
-    var onClickListener: OnClickListener? = null
-    override fun initView() {
+    private var delegate: LoginBottomSheetDelegate? = null
+
+    override fun setup() {
+        super.setup()
+        initView()
+    }
+
+    private fun initView() {
         viewBinding.apply {
             appleButton.config(SocialType.APPLE)
             appleButton.setOnClickListener {
                 dismiss()
-                lifecycleScope.launch {
-                    _loginType.emit(LoginType.LoginSocial(SocialType.APPLE))
-                }
+                delegate?.didSelectLoginType(LoginType.LoginSocial(SocialType.APPLE))
             }
 
             googleButton.config(SocialType.GOOGLE)
             googleButton.setOnClickListener {
                 dismiss()
-                lifecycleScope.launch {
-                    _loginType.emit(LoginType.LoginSocial(SocialType.GOOGLE))
-                }
+                delegate?.didSelectLoginType(LoginType.LoginSocial(SocialType.GOOGLE))
             }
 
             facebookButton.config(SocialType.FACEBOOK)
             facebookButton.setOnClickListener {
                 dismiss()
-                lifecycleScope.launch {
-                    _loginType.emit(LoginType.LoginSocial(SocialType.FACEBOOK))
-                }
+                delegate?.didSelectLoginType(LoginType.LoginSocial(SocialType.FACEBOOK))
             }
 
             emailButton.setOnClickListener {
-                onClickListener?.onClick(it)
+                delegate?.didSelectLoginType(LoginType.LoginEmail)
                 dismiss()
             }
         }
     }
 
-    override suspend fun subscribeData() {
-
-    }
-
     override fun onDestroyView() {
         super.onDestroyView()
-        onClickListener = null
+        delegate = null
     }
 
-    fun setOnClick(loginAction: OnClickListener?) {
-        this.onClickListener = loginAction
+    override fun onDestroy() {
+        super.onDestroy()
+        delegate = null
+    }
+
+    fun setAction(delegate: LoginBottomSheetDelegate?) {
+        this.delegate = delegate
     }
 
     companion object {
