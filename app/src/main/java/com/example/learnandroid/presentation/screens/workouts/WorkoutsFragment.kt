@@ -9,11 +9,8 @@ class WorkoutsFragment: BaseViewBindingFragment<FragmentWorkoutsBinding, Workout
     FragmentWorkoutsBinding::inflate) {
     override val viewModel: WorkoutsViewModel by viewModels()
 
-    override fun initView() {
-
-    }
-
-    override suspend fun subscribeData() {
+    override fun setup() {
+        super.setup()
     }
 
     companion object {

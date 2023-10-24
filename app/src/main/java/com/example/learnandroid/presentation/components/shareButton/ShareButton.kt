@@ -1,4 +1,4 @@
-package com.example.learnandroid.presentation.components.shared.shareButton
+package com.example.learnandroid.presentation.components.shareButton
 
 import android.content.Context
 import android.util.AttributeSet

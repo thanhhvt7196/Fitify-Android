@@ -18,7 +18,7 @@ class SplashActivity : AppCompatActivity() {
         super.onResume()
         val sharedPreferences = getSharedPreferences(AppConstants.sharedPreferencesName, Context.MODE_PRIVATE)
 
-        val isLoggedIn = sharedPreferences.getBoolean(AppConstants.isLoggedInSPKey, false)
+//        val isLoggedIn = sharedPreferences.getBoolean(AppConstants.isLoggedInSPKey, false)
 //        val intent = if (isLoggedIn) {
 //            Intent(this, MainActivity::class.java)
 //        } else {

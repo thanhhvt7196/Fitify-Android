@@ -14,11 +14,7 @@ class OnboardingGoalFragment : BaseViewBindingFragment<FragmentOnboardingGoalBin
         }
     }
 
-    override fun initView() {
-
-    }
-
-    override suspend fun subscribeData() {
-
+    override fun setup() {
+        super.setup()
     }
 }

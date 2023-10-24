@@ -14,11 +14,7 @@ class OnboardingNameFragment : BaseViewBindingFragment<FragmentOnboardingNameBin
         }
     }
 
-    override fun initView() {
-
-    }
-
-    override suspend fun subscribeData() {
-
+    override fun setup() {
+        super.setup()
     }
 }

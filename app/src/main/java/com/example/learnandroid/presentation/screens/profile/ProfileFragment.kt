@@ -15,11 +15,7 @@ class ProfileFragment : BaseViewBindingFragment<FragmentProfileBinding, ProfileV
         }
     }
 
-    override fun initView() {
-
-    }
-
-    override suspend fun subscribeData() {
-
+    override fun setup() {
+        super.setup()
     }
 }

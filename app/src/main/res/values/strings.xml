@@ -19,6 +19,7 @@
     <string name="paywall_subscription_active_title">Subscription Active</string>
     <string name="paywall_subscription_active_message">You already have an active subscription.</string>
     <string name="sign_in_bottom_sheet_title">Log in to your account.</string>
+    <string name="sign_in_with_email_title">Log in to your account.</string>
     <string name="sign_up_bottom_sheet_title">Sign up to sync your profile across your devices and Fitify apps.</string>
     <string name="pro_title_save_x_on_future_self">Save <b>%li%%</b> on your future self!</string>
     <string name="huawei_watch_auth_proposal_title">Connect Huawei Watch</string>

@@ -14,11 +14,7 @@ class PlansFragment : BaseViewBindingFragment<FragmentPlansBinding, PlansViewMod
         }
     }
 
-    override fun initView() {
-
-    }
-
-    override suspend fun subscribeData() {
-
+    override fun setup() {
+        super.setup()
     }
 }

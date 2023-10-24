@@ -7,10 +7,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.Window
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.viewbinding.ViewBinding
+import com.example.learnandroid.R
+import com.example.learnandroid.presentation.components.progressHUD.ProgressHUD
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import kotlinx.coroutines.launch
@@ -32,18 +35,17 @@ abstract class BaseBottomSheetViewBindingFragment<T : ViewBinding, VM : BaseView
         return viewBinding.root
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        lifecycleScope.launch {
-            repeatOnLifecycle(Lifecycle.State.STARTED) {
-                subscribeData()
-            }
-        }
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initView()
+        setup()
+    }
+
+    open fun setup() {
+        viewModel.isLoading.observe(viewLifecycleOwner) { isLoading ->
+            context?.let {
+                if (isLoading) ProgressHUD.show(it) else ProgressHUD.dismiss()
+            }
+        }
     }
 
     override fun onDestroyView() {
@@ -53,7 +55,9 @@ abstract class BaseBottomSheetViewBindingFragment<T : ViewBinding, VM : BaseView
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val dialog = super.onCreateDialog(savedInstanceState) as BottomSheetDialog
-        dialog.setOnShowListener { setupBottomSheet(it) }
+        dialog.setOnShowListener {
+            setupBottomSheet(it)
+        }
         return dialog
     }
 
@@ -64,8 +68,4 @@ abstract class BaseBottomSheetViewBindingFragment<T : ViewBinding, VM : BaseView
             ?: return
         bottomSheet.setBackgroundColor(Color.TRANSPARENT)
     }
-
-    abstract fun initView()
-    abstract suspend fun subscribeData()
-
 }

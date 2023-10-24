@@ -1,14 +1,16 @@
-package com.example.learnandroid.presentation.components.shared.roundedFloatingTextField
+package com.example.learnandroid.presentation.components.roundedFloatingTextField
 
 import android.content.Context
 import android.graphics.Color
 import android.text.InputFilter
 import android.text.InputType
+import android.text.TextWatcher
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
+import androidx.core.widget.addTextChangedListener
 import com.example.learnandroid.R
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.textfield.TextInputEditText
@@ -48,6 +50,22 @@ class RoundedFloatingTextField(context: Context, attrs: AttributeSet) :
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.RoundedFloatingTextField)
         textInputLayout.hint = typedArray.getString(R.styleable.RoundedFloatingTextField_placeholder)
         typedArray.recycle()
+    }
+
+    fun setTextChangeHandler(handler: (text:String) -> Unit) {
+        val textField = findViewById<TextInputEditText>(R.id.textField)
+        textField.addTextChangedListener { editable ->
+            editable?.let {
+                handler(it.toString())
+            } ?: handler("")
+        }
+    }
+
+    fun getText(): String {
+        val textField = findViewById<TextInputEditText>(R.id.textField)
+        return textField.text?.let {
+            it.toString()
+        } ?: ""
     }
 
     fun setKeyboardType(keyboardType: Int) {

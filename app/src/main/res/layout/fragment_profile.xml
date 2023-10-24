@@ -39,7 +39,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"/>
 
-                <com.example.learnandroid.presentation.components.shared.shareButton.ShareButton
+                <com.example.learnandroid.presentation.components.shareButton.ShareButton
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"

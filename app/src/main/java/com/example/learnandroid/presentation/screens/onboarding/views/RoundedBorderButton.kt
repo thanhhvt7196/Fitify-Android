@@ -14,6 +14,7 @@ class RoundedBorderButton(context: Context, attrs: AttributeSet): ConstraintLayo
         LayoutInflater.from(context).inflate(R.layout.rounded_border_button, this, true)
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.RoundedBorderButton)
         val title = typedArray.getString(R.styleable.RoundedBorderButton_title)
+        typedArray.recycle()
 
         val titleTextView = findViewById<TextView>(R.id.titleTextView)
         titleTextView.text = title

@@ -1,3 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <style name="floating_text_field_hint_style">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/blue_light_2</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="floating_text_field_placeholder_style">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/essential_white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.AppTheme.TextInputLayout.FilledBox.Dense" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
+        <item name="hintTextColor">@color/blue_light_2</item>
+        <item name="boxBackgroundMode">none</item>
+        <item name="colorControlActivated">@color/blue_dark_0_5</item>
+<item name="boxStrokeColor">@color/stroke_color_textinput</item>
+        <item name="colorOnSurface">@color/white</item>
+        <item name="colorPrimary">@color/white</item>
+    </style>
+
 </resources>

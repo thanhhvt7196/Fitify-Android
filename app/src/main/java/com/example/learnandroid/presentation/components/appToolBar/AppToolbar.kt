@@ -1,4 +1,4 @@
-package com.example.learnandroid.presentation.components.shared.appToolBar
+package com.example.learnandroid.presentation.components.appToolBar
 
 import android.content.Context
 import android.util.AttributeSet

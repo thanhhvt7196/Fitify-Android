@@ -1,16 +1,12 @@
 package com.example.learnandroid.presentation.screens.base
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.repeatOnLifecycle
 import androidx.viewbinding.ViewBinding
-import kotlinx.coroutines.launch
+import com.example.learnandroid.presentation.components.progressHUD.ProgressHUD
 
 abstract class BaseViewBindingFragment<T : ViewBinding, VM : BaseViewModel>(private val initVb: (LayoutInflater, ViewGroup?, Boolean) -> T) :
     Fragment() {
@@ -25,28 +21,25 @@ abstract class BaseViewBindingFragment<T : ViewBinding, VM : BaseViewModel>(priv
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        Log.d("BaseFragment", "onCreateView")
-
         _viewBinding = initVb.invoke(inflater, container, false)
         return viewBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Log.d("BaseFragment", "onViewCreated")
-        initView()
-        lifecycleScope.launch {
-            subscribeData()
+        setup()
+    }
+
+    open fun setup() {
+        viewModel.isLoading.observe(viewLifecycleOwner) { isLoading ->
+            context?.let {
+                if (isLoading) ProgressHUD.show(it) else ProgressHUD.dismiss()
+            }
         }
     }
 
     override fun onDestroyView() {
         _viewBinding = null
-        Log.d("BaseFragment", "onDestroyView")
         super.onDestroyView()
     }
-
-    abstract fun initView()
-    abstract suspend fun subscribeData()
-
 }

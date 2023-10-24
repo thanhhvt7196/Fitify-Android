@@ -5,6 +5,7 @@
     <attr name="subtitle" format="string"/>
     <attr name="showSeparator" format="boolean"/>
     <attr name="borderColor" format="color"/>
+    <attr name="placeholder" format="string"/>
 
     <declare-styleable name="ProfileMyJourneyItemView">
         <attr name="title"/>
@@ -31,6 +32,14 @@
     </declare-styleable>
 
     <declare-styleable name="RoundedBorderButton">
+        <attr name="title"/>
+    </declare-styleable>
+
+    <declare-styleable name="RoundedFloatingTextField">
+        <attr name="placeholder"/>
+    </declare-styleable>
+
+    <declare-styleable name="BottomWhiteButton">
         <attr name="title"/>
     </declare-styleable>
 </resources>

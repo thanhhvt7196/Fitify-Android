@@ -3,22 +3,45 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        app:strokeWidth="2dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@android:color/transparent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:hint="testHint">
+        android:layout_height="60dp">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textField"
+        <com.google.android.material.textfield.TextInputLayout
+            android:paddingTop="4dp"
+            android:id="@+id/textInputLayout"
+            android:background="@color/blue_dark_0_5"
+            android:theme="@style/Widget.AppTheme.TextInputLayout.FilledBox.Dense"
+            android:textColorHint="@color/blue_light_2"
+            app:hintTextAppearance="@style/floating_text_field_hint_style"
+            android:layout_gravity="center_vertical"
+            app:helperTextEnabled="true"
+            app:helperText=" "
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="wrap_content">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_marginBottom="8dp"
+                android:id="@+id/textField"
+                android:background="@android:color/transparent"
+                android:textColor="@color/essential_white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </com.google.android.material.card.MaterialCardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

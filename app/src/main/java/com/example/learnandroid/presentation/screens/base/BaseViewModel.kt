@@ -5,11 +5,11 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.learnandroid.utils.viewmodel.SingleLiveEvent
 
-open class BaseViewModel: ViewModel() {
-    private val _isLoading = MutableLiveData<Boolean>(false)
+open class BaseViewModel(): ViewModel() {
+    protected val _isLoading = MutableLiveData<Boolean>(false)
     val isLoading: LiveData<Boolean> = _isLoading
 
 
-    private val _errorMessage = SingleLiveEvent<String>()
+    protected val _errorMessage = SingleLiveEvent<String>()
     val errorMessage: LiveData<String> get() = _errorMessage
 }

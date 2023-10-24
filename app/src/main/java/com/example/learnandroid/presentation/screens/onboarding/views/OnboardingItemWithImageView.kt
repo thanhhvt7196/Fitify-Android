@@ -19,6 +19,7 @@ class OnboardingItemWithImageView(context: Context, attrs: AttributeSet) :
         val image = typedArray.getResourceId(R.styleable.OnboardingItemWithImageView_image, 0)
         val borderColor =
             typedArray.getColor(R.styleable.OnboardingItemWithImageView_borderColor, 0)
+        typedArray.recycle()
 
         val titleTextView = findViewById<TextView>(R.id.titleTextView)
         val imageView = findViewById<ImageView>(R.id.imageView)

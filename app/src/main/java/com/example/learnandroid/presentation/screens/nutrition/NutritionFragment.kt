@@ -13,9 +13,8 @@ class NutritionFragment : BaseViewBindingFragment<FragmentNutritionBinding, Nutr
             return NutritionFragment()
         }
     }
-    override fun initView() {
-    }
 
-    override suspend fun subscribeData() {
+    override fun setup() {
+        super.setup()
     }
 }

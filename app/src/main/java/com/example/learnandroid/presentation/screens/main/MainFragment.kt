@@ -21,7 +21,8 @@ class MainFragment :
         }
     }
 
-    override fun initView() {
+    override fun setup() {
+        super.setup()
         viewBinding.apply {
             setupBottomBar(mainBottomBar)
             mainPagerAdapter = MainPagerAdapter(this@MainFragment)
@@ -57,9 +58,5 @@ class MainFragment :
             }
         }
         bottomBar.selectedItemId = R.id.plan_tab
-    }
-
-    override suspend fun subscribeData() {
-
     }
 }
