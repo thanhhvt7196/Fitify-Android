@@ -1,5 +1,6 @@
 package com.example.learnandroid.data.module
 
+import com.example.learnandroid.presentation.screens.fotgotPassword.ForgotPasswordViewModel
 import com.example.learnandroid.presentation.screens.login.LoginViewModel
 import com.example.learnandroid.presentation.screens.loginBottomSheet.LoginBottomSheetViewModel
 import com.example.learnandroid.presentation.screens.loginWithEmail.LoginWithEmailViewModel
@@ -11,18 +12,20 @@ import com.example.learnandroid.presentation.screens.onboarding.gender.Onboardin
 import com.example.learnandroid.presentation.screens.onboarding.goal.OnboardingGoalViewModel
 import com.example.learnandroid.presentation.screens.onboarding.name.OnboardingNameViewModel
 import com.example.learnandroid.presentation.screens.workouts.WorkoutsViewModel
+import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val viewModelModule = module {
-    single { LoginWithEmailViewModel() }
-    single { MainViewModel() }
-    single { LoginViewModel() }
-    single { LoginBottomSheetViewModel() }
-    single { OnboardingGenderViewModel() }
-    single { OnboardingGoalViewModel() }
-    single { OnboardingNameViewModel() }
-    single { PlansViewModel() }
-    single { ProfileViewModel() }
-    single { NutritionViewModel() }
-    single { WorkoutsViewModel() }
+    viewModel { ForgotPasswordViewModel() }
+    viewModel { LoginWithEmailViewModel() }
+    viewModel { MainViewModel() }
+    viewModel { LoginViewModel() }
+    viewModel { LoginBottomSheetViewModel() }
+    viewModel { OnboardingGenderViewModel() }
+    viewModel { OnboardingGoalViewModel() }
+    viewModel { OnboardingNameViewModel() }
+    viewModel { PlansViewModel() }
+    viewModel { ProfileViewModel() }
+    viewModel { NutritionViewModel() }
+    viewModel { WorkoutsViewModel() }
 }

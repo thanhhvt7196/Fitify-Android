@@ -1,14 +1,9 @@
 package com.example.learnandroid.presentation.screens.login
 
-import android.util.Log
-import android.view.View
-import android.view.View.OnClickListener
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.viewModelScope
 import androidx.navigation.fragment.findNavController
 import com.example.learnandroid.R
 import com.example.learnandroid.databinding.FragmentLoginBinding
@@ -19,8 +14,6 @@ import com.example.learnandroid.presentation.screens.onboarding.gender.Onboardin
 import com.example.learnandroid.presentation.screens.onboarding.goal.OnboardingGoalFragment
 import com.example.learnandroid.presentation.screens.onboarding.name.OnboardingNameFragment
 import com.example.learnandroid.presentation.screens.loginBottomSheet.LoginType
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.mapNotNull
 import kotlinx.coroutines.launch
 
 class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewModel>(FragmentLoginBinding::inflate) {
@@ -82,7 +75,7 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
 
         val onboardingGenderDelegate = object : OnboardingGenderFragment.OnboardingGenderDelegate {
             override fun didSelectLoginType(loginType: LoginType) {
-                findNavController().navigate(R.id.action_login_fragment_to_loginWithEmailFragment)
+                findNavController().navigate(R.id.login_to_login_email)
             }
 
             override fun didSelectGender(gender: Gender) {

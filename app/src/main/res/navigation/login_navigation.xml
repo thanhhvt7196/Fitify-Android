@@ -15,14 +15,30 @@
             app:exitAnim="@anim/default_exit_animation"
             app:popEnterAnim="@anim/default_pop_enter_anim"
             app:popExitAnim="@anim/default_pop_exit_anim"
-            android:id="@+id/action_login_fragment_to_loginWithEmailFragment"
+            android:id="@+id/login_to_login_email"
             app:destination="@id/loginWithEmailFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/loginWithEmailFragment"
         android:name="com.example.learnandroid.presentation.screens.loginWithEmail.LoginWithEmailFragment"
         android:label="fragment_login_with_email"
         tools:layout="@layout/fragment_login_with_email" >
+        <action
+            app:enterAnim="@anim/default_enter_animation"
+            app:exitAnim="@anim/default_exit_animation"
+            app:popEnterAnim="@anim/default_pop_enter_anim"
+            app:popExitAnim="@anim/default_pop_exit_anim"
+            android:id="@+id/login_email_to_forgot_password"
+            app:destination="@id/forgotPasswordFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.example.learnandroid.presentation.screens.fotgotPassword.ForgotPasswordFragment"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password">
+
     </fragment>
 
     <dialog
@@ -30,7 +46,6 @@
         android:name="com.example.learnandroid.presentation.screens.loginBottomSheet.LoginBottomSheetFragment"
         android:label="login_bottom_sheet"
         tools:layout="@layout/fragment_login_bottom_sheet">
-
     </dialog>
 
 </navigation>

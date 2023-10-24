@@ -1,4 +1,4 @@
-package com.example.learnandroid.presentation.screens.loginWithEmail
+package com.example.learnandroid.presentation.screens.fotgotPassword
 
 import androidx.lifecycle.viewModelScope
 import com.example.learnandroid.presentation.screens.base.BaseViewModel
@@ -7,17 +7,20 @@ import com.example.learnandroid.utils.extensions.isEmail
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.launch
 
-class LoginWithEmailViewModel : BaseViewModel() {
+class ForgotPasswordViewModel: BaseViewModel() {
     private val _email = MutableStateFlow<String>("")
-    private val _password = MutableStateFlow<String>("")
 
     private val _isValidData = MutableStateFlow<Boolean>(false)
     val isValidData: StateFlow<Boolean> = _isValidData.asStateFlow()
+
+    private val _requestSuccess = MutableSharedFlow<Unit>()
+    val requestSuccess: SharedFlow<Unit> = _requestSuccess.asSharedFlow()
 
     init {
         bindingData()
@@ -26,11 +29,8 @@ class LoginWithEmailViewModel : BaseViewModel() {
     private fun bindingData() {
         viewModelScope.launch {
             _email
-                .combine(_password) { newEmail, newPassword ->
-                    Pair(newEmail, newPassword)
-                }
-                .collect { (newEmail, newPassword) ->
-                    validateData(newEmail, newPassword)?.let {
+                .collect { newEmail ->
+                    validateData(newEmail)?.let {
                         _errorMessage.postValue(it)
                         _isValidData.value = false
                     } ?: run {
@@ -40,29 +40,24 @@ class LoginWithEmailViewModel : BaseViewModel() {
         }
     }
 
-    private fun validateData(email: String, password: String): String? {
-        if (!email.isEmail()) {
-            return AppConstants.emailInvalidMessage
-        }
-        if (password.length < AppConstants.passwordMinimumCharacters || password.length > AppConstants.passwordMaximumCharacters) {
-            return AppConstants.passwordShortMessage
-        }
-        return null
+    private fun validateData(email: String): String? {
+        return if (email.isEmail()) null else AppConstants.emailInvalidMessage
     }
 
-    fun requestLogin() {
-        login(_email.value, _password.value)
+    fun requestResetPassword() {
+        resetPassword(_email.value)
     }
 
-    private fun login(email: String, password: String) {
+    private fun resetPassword(email: String) {
         _isLoading.value = true
-        validateData(email, password)?.let { message ->
+        validateData(email)?.let { message ->
             _errorMessage.postValue(message)
             _isLoading.value = false
         } ?: run {
             viewModelScope.launch {
                 delay(3000)
                 _isLoading.value = false
+                _requestSuccess.emit(Unit)
             }
         }
 
@@ -70,9 +65,5 @@ class LoginWithEmailViewModel : BaseViewModel() {
 
     fun setEmail(value: String) {
         _email.value = value
-    }
-
-    fun setPassword(value: String) {
-        _password.value = value
     }
 }
