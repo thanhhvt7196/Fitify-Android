@@ -1,5 +1,6 @@
 package com.example.learnandroid.presentation.screens.login
 
+import android.animation.ValueAnimator
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -14,6 +15,7 @@ import com.example.learnandroid.presentation.screens.onboarding.gender.Onboardin
 import com.example.learnandroid.presentation.screens.onboarding.goal.OnboardingGoalFragment
 import com.example.learnandroid.presentation.screens.onboarding.name.OnboardingNameFragment
 import com.example.learnandroid.presentation.screens.loginBottomSheet.LoginType
+import com.example.learnandroid.utils.extensions.play
 import kotlinx.coroutines.launch
 
 class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewModel>(FragmentLoginBinding::inflate) {
@@ -45,9 +47,18 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
 
     override fun setup() {
         super.setup()
+        setupLottie()
         setupViewPager()
         setupGenderView()
         setupNameView()
+    }
+
+    private fun setupLottie() {
+        viewBinding.progressLottieView.apply {
+            setAnimation("onboarding-loader-blue.json")
+            repeatCount = 0
+            speed = 1f
+        }
     }
 
     private fun setupViewPager() {
@@ -69,6 +80,7 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
             viewModel.currentIndex.collect { index ->
                 viewBinding.toolbar.alpha = if (index == 0) 0f else 1f
                 viewBinding.loginViewPager.currentItem = index
+                setAnimationProgress(index)
             }
         }
     }
@@ -116,7 +128,7 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
                 if (goalFragment.isAdded) {
                     goalFragment.resetData()
                 }
-                
+
                 goalFragment.setGender(gender)
             }
         }
@@ -136,6 +148,17 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
         if (currentIndex < (viewBinding.loginViewPager.adapter?.itemCount ?: 0) - 1) {
             viewLifecycleOwner.lifecycleScope.launch {
                 viewModel.setIndex(currentIndex + 1)
+            }
+        }
+    }
+
+    private fun setAnimationProgress(currentIndex: Int) {
+        viewBinding.loginViewPager.adapter?.let {
+            if (currentIndex > 0 && it.itemCount > 1) {
+                val targetProgress = currentIndex.toFloat() / (it.itemCount.toFloat() - 1)
+                viewBinding.progressLottieView.play(viewBinding.progressLottieView.progress, targetProgress)
+            } else {
+                viewBinding.progressLottieView.play(viewBinding.progressLottieView.progress, 0f)
             }
         }
     }

@@ -10,15 +10,6 @@
     android:paddingBottom="48dp"
     tools:context=".LoginActivity">
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/progressLottieView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_width="28dp"
-        android:layout_height="28dp"/>
-
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/navHostFragment"
         android:name="androidx.navigation.fragment.NavHostFragment"

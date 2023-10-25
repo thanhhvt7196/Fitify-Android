@@ -6,6 +6,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".presentation.screens.login.LoginFragment">
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/progressLottieView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="28dp"
+        android:layout_height="28dp"/>
+
     <com.example.learnandroid.presentation.components.appToolBar.AppToolbar
         android:id="@+id/toolbar"
         app:layout_constraintTop_toTopOf="parent"

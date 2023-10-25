@@ -25,14 +25,4 @@ class LoginActivity : AppCompatActivity() {
             )
         }
     }
-
-    override fun onResume() {
-        super.onResume()
-        binding.progressLottieView.apply {
-            this.setAnimation("onboarding-loader-blue.json")
-            this.repeatCount = 0
-            this.speed = 1f
-            this.progress = 1f
-        }
-    }
 }
