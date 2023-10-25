@@ -12,10 +12,17 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.mapNotNull
 import kotlinx.coroutines.launch
 
+interface OnboardingSalePitchDelegate {
+    fun didContinueTapped()
+}
+
 class OnboardingSalePitchFragment :
     BaseViewBindingFragment<FragmentOnboardingSalePitchBinding, OnboardingSalePitchViewModel>(
         FragmentOnboardingSalePitchBinding::inflate
     ) {
+
+    private var delegate: OnboardingSalePitchDelegate? = null
+
     override val viewModel: OnboardingSalePitchViewModel by viewModels()
 
     private val _goal = MutableStateFlow<OnboardingGoal?>(null)
@@ -37,7 +44,7 @@ class OnboardingSalePitchFragment :
     private fun setupUI() {
         viewBinding.apply {
             continueButton.setOnClickListener {
-
+                delegate?.didContinueTapped()
             }
         }
     }
@@ -72,11 +79,17 @@ class OnboardingSalePitchFragment :
         _gender.value = gender
     }
 
+    fun setAction(delegate: OnboardingSalePitchDelegate) {
+        this.delegate = delegate
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
+        delegate = null
     }
 
     override fun onDestroy() {
         super.onDestroy()
+        delegate = null
     }
 }

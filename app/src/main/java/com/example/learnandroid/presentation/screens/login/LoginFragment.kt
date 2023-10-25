@@ -15,6 +15,7 @@ import com.example.learnandroid.presentation.screens.onboarding.gender.Onboardin
 import com.example.learnandroid.presentation.screens.onboarding.goal.OnboardingGoalFragment
 import com.example.learnandroid.presentation.screens.onboarding.name.OnboardingNameFragment
 import com.example.learnandroid.presentation.screens.loginBottomSheet.LoginType
+import com.example.learnandroid.presentation.screens.onboarding.salePitch.OnboardingSalePitchDelegate
 import com.example.learnandroid.presentation.screens.onboarding.salePitch.OnboardingSalePitchFragment
 import com.example.learnandroid.utils.extensions.play
 import kotlinx.coroutines.launch
@@ -53,6 +54,7 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
         setupGenderView()
         setupNameView()
         setupGoalView()
+        setupSalePitchView()
     }
 
     private fun setupLottie() {
@@ -87,6 +89,15 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
         }
     }
 
+    private fun setupSalePitchView() {
+        val delegate = object : OnboardingSalePitchDelegate {
+            override fun didContinueTapped() {
+                goToNextPage(viewModel.currentIndex.value)
+            }
+        }
+        salePitchFragment.setAction(delegate)
+    }
+
     private fun setupGoalView() {
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.goal.collect { goal ->
@@ -96,7 +107,7 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
             }
         }
 
-        var delegate = object : OnboardingGoalFragment.OnboardingGoalDelegate {
+        val delegate = object : OnboardingGoalFragment.OnboardingGoalDelegate {
             override fun didSelectGoal(goal: OnboardingGoal) {
                 viewLifecycleOwner.lifecycleScope.launch {
                     viewModel.setGoal(goal)
