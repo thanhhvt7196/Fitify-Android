@@ -16,5 +16,10 @@ class PlansFragment : BaseViewBindingFragment<FragmentPlansBinding, PlansViewMod
 
     override fun setup() {
         super.setup()
+        setupUI()
+    }
+
+    private fun setupUI() {
+
     }
 }

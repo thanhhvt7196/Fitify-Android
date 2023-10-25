@@ -38,6 +38,11 @@ class OnboardingGenderFragment :
 
     override fun setup() {
         super.setup()
+        setupUI()
+        setupBinding()
+    }
+
+    private fun setupUI() {
         viewBinding.apply {
             maleButton.setOnClickListener {
                 viewLifecycleOwner.lifecycleScope.launch {
@@ -45,6 +50,7 @@ class OnboardingGenderFragment :
                     delegate?.didSelectGender(Gender.MALE)
                 }
             }
+
             femaleButton.setOnClickListener {
                 viewModel.viewModelScope.launch {
                     viewModel.setGender(Gender.FEMALE)
@@ -67,6 +73,15 @@ class OnboardingGenderFragment :
                     requireActivity().supportFragmentManager,
                     loginBottomSheet.tag
                 )
+            }
+        }
+    }
+
+    private fun setupBinding() {
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewModel.gender.collect { gender ->
+                viewBinding.maleButton.isSelected = gender == Gender.MALE
+                viewBinding.femaleButton.isSelected = gender == Gender.FEMALE
             }
         }
     }

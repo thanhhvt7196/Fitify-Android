@@ -34,14 +34,18 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_marginBottom="8dp"
+                android:focusableInTouchMode="true"
                 android:id="@+id/textField"
+                android:imeOptions="actionDone"
                 android:background="@android:color/transparent"
                 android:textColor="@color/essential_white"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.textfield.TextInputEditText>
         </com.google.android.material.textfield.TextInputLayout>
     </com.google.android.material.card.MaterialCardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,7 +3,7 @@ package com.example.learnandroid.domain.models
 import android.content.Context
 import com.example.learnandroid.R
 
-enum class OnboaringGoal : Iterable<OnboaringGoal> {
+enum class OnboardingGoal : Iterable<OnboardingGoal> {
     GET_TONED {
         override fun getDisplayName(context: Context, gender: Gender): String {
             return when (gender) {
@@ -14,8 +14,8 @@ enum class OnboaringGoal : Iterable<OnboaringGoal> {
 
         override fun getImageResource(context: Context, gender: Gender): Int {
             return when (gender) {
-                Gender.MALE -> R.drawable.img_onboarding_goal_male_gainmuscle
-                Gender.FEMALE -> R.drawable.img_onboarding_goal_female_gettoned
+                Gender.MALE -> R.drawable.onboarding_goal_build_muscle
+                Gender.FEMALE -> R.drawable.onboarding_goal_get_toned
             }
         }
     },
@@ -24,10 +24,7 @@ enum class OnboaringGoal : Iterable<OnboaringGoal> {
             context.getString(R.string.onboarding_goal_lose_weight)
 
         override fun getImageResource(context: Context, gender: Gender): Int {
-            return when (gender) {
-                Gender.MALE -> R.drawable.img_onboarding_goal_male_loseweight
-                Gender.FEMALE -> R.drawable.img_onboarding_goal_female_loseweight
-            }
+            return R.drawable.onboarding_goal_lose_weight
         }
     },
     GET_FITTER {
@@ -45,5 +42,5 @@ enum class OnboaringGoal : Iterable<OnboaringGoal> {
     abstract fun getDisplayName(context: Context, gender: Gender): String
     abstract fun getImageResource(context: Context, gender: Gender): Int
 
-    override fun iterator(): Iterator<OnboaringGoal> = enumValues<OnboaringGoal>().iterator()
+    override fun iterator(): Iterator<OnboardingGoal> = enumValues<OnboardingGoal>().iterator()
 }

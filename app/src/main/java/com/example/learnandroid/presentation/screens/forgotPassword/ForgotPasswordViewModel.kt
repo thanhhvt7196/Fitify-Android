@@ -1,4 +1,4 @@
-package com.example.learnandroid.presentation.screens.fotgotPassword
+package com.example.learnandroid.presentation.screens.forgotPassword
 
 import androidx.lifecycle.viewModelScope
 import com.example.learnandroid.presentation.screens.base.BaseViewModel

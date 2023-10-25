@@ -1,4 +1,4 @@
-package com.example.learnandroid.presentation.screens.fotgotPassword
+package com.example.learnandroid.presentation.screens.forgotPassword
 
 import android.text.InputType
 import androidx.fragment.app.viewModels
@@ -20,6 +20,11 @@ class ForgotPasswordFragment :
 
     override fun setup() {
         super.setup()
+        setupUI()
+        setupBinding()
+    }
+
+    private fun setupUI() {
         viewBinding.apply {
             toolbar.setBackButtonType(AppToolbar.BackButtonType.POP)
             toolbar.setBackButtonOnClickListener {
@@ -35,6 +40,7 @@ class ForgotPasswordFragment :
             emailTextField.setTextChangeHandler { text ->
                 viewModel.setEmail(text)
             }
+            emailTextField.focus(requireActivity())
 
             resetButton.setOnClickListener {
                 viewModel.requestResetPassword()
@@ -42,7 +48,9 @@ class ForgotPasswordFragment :
 
             viewModel.setEmail(emailTextField.getText())
         }
+    }
 
+    private fun setupBinding() {
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.isValidData.collect { isValid ->
                 viewBinding.resetButton.isEnabled = isValid
@@ -51,14 +59,19 @@ class ForgotPasswordFragment :
 
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.requestSuccess.collect {
-                findNavController().popBackStack()
                 AlertHelper.showAlert(
                     requireActivity(),
                     requireActivity().getString(R.string.forgot_password_continue),
                     requireActivity().getString(R.string.forgot_password_continue_email)
                 )
+                findNavController().popBackStack()
             }
         }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        viewBinding.emailTextField.unfocus(requireActivity())
     }
 
     companion object {

@@ -17,5 +17,10 @@ class ProfileFragment : BaseViewBindingFragment<FragmentProfileBinding, ProfileV
 
     override fun setup() {
         super.setup()
+        setupUI()
+    }
+
+    private fun setupUI() {
+
     }
 }

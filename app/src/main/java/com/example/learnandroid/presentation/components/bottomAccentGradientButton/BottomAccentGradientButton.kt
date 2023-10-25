@@ -20,6 +20,6 @@ class BottomAccentGradientButton(context: Context, attrs: AttributeSet): Constra
 
     override fun setEnabled(enabled: Boolean) {
         super.setEnabled(enabled)
-        alpha = if (enabled) 1f else 0f
+        alpha = if (enabled) 1f else 0.3f
     }
 }

@@ -9,14 +9,20 @@ class WorkoutsFragment: BaseViewBindingFragment<FragmentWorkoutsBinding, Workout
     FragmentWorkoutsBinding::inflate) {
     override val viewModel: WorkoutsViewModel by viewModels()
 
-    override fun setup() {
-        super.setup()
-    }
-
     companion object {
         const val tag = "WorkoutsFragment"
         fun newInstance(): WorkoutsFragment {
             return WorkoutsFragment()
         }
     }
+
+    override fun setup() {
+        super.setup()
+        setupUI()
+    }
+
+    private fun setupUI() {
+
+    }
+
 }

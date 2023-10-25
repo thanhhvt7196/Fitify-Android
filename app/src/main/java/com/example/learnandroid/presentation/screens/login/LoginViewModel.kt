@@ -1,7 +1,7 @@
 package com.example.learnandroid.presentation.screens.login
 
 import com.example.learnandroid.domain.models.Gender
-import com.example.learnandroid.domain.models.OnboaringGoal
+import com.example.learnandroid.domain.models.OnboardingGoal
 import com.example.learnandroid.presentation.screens.base.BaseViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -16,11 +16,11 @@ class LoginViewModel: BaseViewModel() {
 
     private val _gender = MutableSharedFlow<Gender?>()
     private val _name = MutableSharedFlow<String?>()
-    private val _goal = MutableSharedFlow<OnboaringGoal?>()
+    private val _goal = MutableSharedFlow<OnboardingGoal?>()
 
     val gender: SharedFlow<Gender?> = _gender.asSharedFlow()
     val name: SharedFlow<String?> = _name.asSharedFlow()
-    val goal: SharedFlow<OnboaringGoal?> = _goal.asSharedFlow()
+    val goal: SharedFlow<OnboardingGoal?> = _goal.asSharedFlow()
 
 
     fun setIndex(index: Int) {
@@ -35,7 +35,7 @@ class LoginViewModel: BaseViewModel() {
         _name.emit(name)
     }
 
-    suspend fun setGoal(goal: OnboaringGoal) {
+    suspend fun setGoal(goal: OnboardingGoal) {
         _goal.emit(goal)
     }
 }

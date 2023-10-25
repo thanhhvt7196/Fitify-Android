@@ -35,7 +35,7 @@
 
     <fragment
         android:id="@+id/forgotPasswordFragment"
-        android:name="com.example.learnandroid.presentation.screens.fotgotPassword.ForgotPasswordFragment"
+        android:name="com.example.learnandroid.presentation.screens.forgotPassword.ForgotPasswordFragment"
         android:label="fragment_forgot_password"
         tools:layout="@layout/fragment_forgot_password">
 

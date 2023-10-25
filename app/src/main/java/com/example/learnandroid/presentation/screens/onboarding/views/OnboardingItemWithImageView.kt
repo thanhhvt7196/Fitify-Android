@@ -35,4 +35,12 @@ class OnboardingItemWithImageView(context: Context, attrs: AttributeSet) :
         cardView.strokeColor =
             if (isSelected) context.getColor(R.color.accent_gradient_end) else context.getColor(R.color.blue_base)
     }
+
+    fun config(title: String, imageResource: Int) {
+        val titleTextView = findViewById<TextView>(R.id.titleTextView)
+        titleTextView.text = title
+
+        val imageView = findViewById<ImageView>(R.id.imageView)
+        imageView.setImageResource(imageResource)
+    }
 }

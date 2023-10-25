@@ -1,6 +1,6 @@
 package com.example.learnandroid.data.module
 
-import com.example.learnandroid.presentation.screens.fotgotPassword.ForgotPasswordViewModel
+import com.example.learnandroid.presentation.screens.forgotPassword.ForgotPasswordViewModel
 import com.example.learnandroid.presentation.screens.login.LoginViewModel
 import com.example.learnandroid.presentation.screens.loginBottomSheet.LoginBottomSheetViewModel
 import com.example.learnandroid.presentation.screens.loginWithEmail.LoginWithEmailViewModel

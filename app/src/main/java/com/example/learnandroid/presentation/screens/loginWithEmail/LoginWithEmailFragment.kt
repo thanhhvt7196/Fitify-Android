@@ -16,6 +16,11 @@ class LoginWithEmailFragment : BaseViewBindingFragment<FragmentLoginWithEmailBin
 
     override fun setup() {
         super.setup()
+        setupUI()
+        setupBinding()
+    }
+
+    private fun setupUI() {
         viewBinding.apply {
             toolbar.setBackButtonType(AppToolbar.BackButtonType.DISMISS)
             toolbar.setBackButtonOnClickListener {
@@ -31,6 +36,7 @@ class LoginWithEmailFragment : BaseViewBindingFragment<FragmentLoginWithEmailBin
             emailTextField.setTextChangeHandler { text ->
                 viewModel.setEmail(text)
             }
+            emailTextField.focus(requireActivity())
 
             passwordTextField.setKeyboardType(InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD)
             passwordTextField.setPlaceholder(context?.getString(R.string.hint_password) ?: "")
@@ -50,12 +56,19 @@ class LoginWithEmailFragment : BaseViewBindingFragment<FragmentLoginWithEmailBin
             viewModel.setEmail(emailTextField.getText())
             viewModel.setPassword(passwordTextField.getText())
         }
+    }
 
+    private fun setupBinding() {
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.isValidData.collect { isValid ->
                 viewBinding.loginButton.isEnabled = isValid
             }
         }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        viewBinding.emailTextField.unfocus(requireActivity())
     }
 
     companion object {

@@ -44,6 +44,13 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
     }
 
     override fun setup() {
+        super.setup()
+        setupViewPager()
+        setupGenderView()
+        setupNameView()
+    }
+
+    private fun setupViewPager() {
         val fragmentItems: Array<Fragment> = arrayOf(genderFragment, nameFragment, goalFragment)
         val viewpager = viewBinding.loginViewPager
         viewpager.isUserInputEnabled = false
@@ -64,7 +71,28 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
                 viewBinding.loginViewPager.currentItem = index
             }
         }
+    }
 
+    private fun setupNameView() {
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewModel.name.collect { name ->
+                name?.let {
+                    goToNextPage(viewModel.currentIndex.value)
+                }
+            }
+        }
+
+        val onboardingNameDelegate = object : OnboardingNameFragment.OnboardingNameDelegate {
+            override fun didSelectName(name: String) {
+                viewLifecycleOwner.lifecycleScope.launch {
+                    viewModel.setName(name)
+                }
+            }
+        }
+        nameFragment.setAction(onboardingNameDelegate)
+    }
+
+    private fun setupGenderView() {
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.gender.collect { gender ->
                 gender?.let {
@@ -82,6 +110,14 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
                 viewLifecycleOwner.lifecycleScope.launch {
                     viewModel.setGender(gender)
                 }
+                if (nameFragment.isAdded) {
+                    nameFragment.resetData()
+                }
+                if (goalFragment.isAdded) {
+                    goalFragment.resetData()
+                }
+                
+                goalFragment.setGender(gender)
             }
         }
 

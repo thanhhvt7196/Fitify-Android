@@ -23,6 +23,10 @@ class MainFragment :
 
     override fun setup() {
         super.setup()
+        setupUI()
+    }
+
+    private fun setupUI() {
         viewBinding.apply {
             setupBottomBar(mainBottomBar)
             mainPagerAdapter = MainPagerAdapter(this@MainFragment)

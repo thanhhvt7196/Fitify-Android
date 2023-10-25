@@ -1,17 +1,9 @@
 package com.example.learnandroid.presentation.screens.loginBottomSheet
 
-import android.view.View.OnClickListener
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.viewModelScope
 import com.example.learnandroid.databinding.FragmentLoginBottomSheetBinding
 import com.example.learnandroid.domain.models.SocialType
 import com.example.learnandroid.presentation.screens.base.BaseBottomSheetViewBindingFragment
-import kotlinx.coroutines.flow.MutableSharedFlow
-import kotlinx.coroutines.flow.SharedFlow
-import kotlinx.coroutines.flow.asSharedFlow
-import kotlinx.coroutines.launch
-import java.lang.ref.WeakReference
 
 interface LoginBottomSheetDelegate {
     fun didSelectLoginType(type: LoginType)
@@ -27,10 +19,10 @@ class LoginBottomSheetFragment :
 
     override fun setup() {
         super.setup()
-        initView()
+        setupUI()
     }
 
-    private fun initView() {
+    private fun setupUI() {
         viewBinding.apply {
             appleButton.config(SocialType.APPLE)
             appleButton.setOnClickListener {

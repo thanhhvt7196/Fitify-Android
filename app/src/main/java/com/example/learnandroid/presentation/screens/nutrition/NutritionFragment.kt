@@ -16,5 +16,10 @@ class NutritionFragment : BaseViewBindingFragment<FragmentNutritionBinding, Nutr
 
     override fun setup() {
         super.setup()
+        setupUI()
+    }
+
+    private fun setupUI() {
+
     }
 }
