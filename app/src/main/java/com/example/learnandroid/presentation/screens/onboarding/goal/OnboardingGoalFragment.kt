@@ -2,8 +2,6 @@ package com.example.learnandroid.presentation.screens.onboarding.goal
 
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.repeatOnLifecycle
-import androidx.lifecycle.viewModelScope
 import com.example.learnandroid.databinding.FragmentOnboardingGoalBinding
 import com.example.learnandroid.domain.models.Gender
 import com.example.learnandroid.domain.models.OnboardingGoal
@@ -17,6 +15,12 @@ class OnboardingGoalFragment :
     ) {
     override val viewModel: OnboardingGoalViewModel by viewModels()
     private val gender = MutableStateFlow<Gender>(Gender.MALE)
+
+    interface OnboardingGoalDelegate {
+        fun didSelectGoal(goal: OnboardingGoal)
+    }
+
+    private var delegate: OnboardingGoalDelegate? = null
 
     companion object {
         const val tag = "OnboardingGoalFragment"
@@ -33,15 +37,14 @@ class OnboardingGoalFragment :
 
     private fun setupUI() {
         viewBinding.apply {
+            getTonedButton.isSelected = false
             getTonedButton.setOnClickListener {
                 viewModel.setGoal(OnboardingGoal.GET_TONED)
             }
 
-            getFitterButton.setOnClickListener {
-                viewModel.setGoal(OnboardingGoal.GET_FITTER)
-            }
-
+            loseWeightButton.isSelected = false
             loseWeightButton.setOnClickListener {
+                viewModel.setGoal(OnboardingGoal.LOSE_WEIGHT)
                 viewModel.setGoal(OnboardingGoal.LOSE_WEIGHT)
             }
         }
@@ -51,8 +54,10 @@ class OnboardingGoalFragment :
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.goal.collect { goal ->
                 viewBinding.getTonedButton.isSelected = goal == OnboardingGoal.GET_TONED
-                viewBinding.getFitterButton.isSelected = goal == OnboardingGoal.GET_FITTER
                 viewBinding.loseWeightButton.isSelected = goal == OnboardingGoal.LOSE_WEIGHT
+                goal?.let {
+                    delegate?.didSelectGoal(it)
+                }
             }
         }
 
@@ -78,13 +83,6 @@ class OnboardingGoalFragment :
                     gender
                 ), OnboardingGoal.LOSE_WEIGHT.getImageResource(requireActivity(), gender)
             )
-
-            getFitterButton.config(
-                OnboardingGoal.GET_FITTER.getDisplayName(
-                    requireActivity(),
-                    gender
-                ), OnboardingGoal.GET_FITTER.getImageResource(requireActivity(), gender)
-            )
         }
     }
 
@@ -94,5 +92,9 @@ class OnboardingGoalFragment :
 
     fun resetData() {
         viewModel.setGoal(null)
+    }
+
+    fun setAction(delegate: OnboardingGoalDelegate) {
+        this.delegate = delegate
     }
 }

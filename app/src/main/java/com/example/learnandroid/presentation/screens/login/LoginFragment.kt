@@ -1,6 +1,5 @@
 package com.example.learnandroid.presentation.screens.login
 
-import android.animation.ValueAnimator
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -9,23 +8,25 @@ import androidx.navigation.fragment.findNavController
 import com.example.learnandroid.R
 import com.example.learnandroid.databinding.FragmentLoginBinding
 import com.example.learnandroid.domain.models.Gender
+import com.example.learnandroid.domain.models.OnboardingGoal
 import com.example.learnandroid.presentation.components.appToolBar.AppToolbar
 import com.example.learnandroid.presentation.screens.base.BaseViewBindingFragment
 import com.example.learnandroid.presentation.screens.onboarding.gender.OnboardingGenderFragment
 import com.example.learnandroid.presentation.screens.onboarding.goal.OnboardingGoalFragment
 import com.example.learnandroid.presentation.screens.onboarding.name.OnboardingNameFragment
 import com.example.learnandroid.presentation.screens.loginBottomSheet.LoginType
+import com.example.learnandroid.presentation.screens.onboarding.salePitch.OnboardingSalePitchFragment
 import com.example.learnandroid.utils.extensions.play
 import kotlinx.coroutines.launch
 
 class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewModel>(FragmentLoginBinding::inflate) {
-
     override val viewModel: LoginViewModel by viewModels()
     private lateinit var adapter: LoginPagerAdapter
 
     private val genderFragment = OnboardingGenderFragment.newInstance()
     private val nameFragment = OnboardingNameFragment.newInstance()
     private val goalFragment = OnboardingGoalFragment.newInstance()
+    private val salePitchFragment = OnboardingSalePitchFragment.newInstance()
 
     companion object {
         const val tag = "LoginFragment"
@@ -51,6 +52,7 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
         setupViewPager()
         setupGenderView()
         setupNameView()
+        setupGoalView()
     }
 
     private fun setupLottie() {
@@ -62,7 +64,7 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
     }
 
     private fun setupViewPager() {
-        val fragmentItems: Array<Fragment> = arrayOf(genderFragment, nameFragment, goalFragment)
+        val fragmentItems: Array<Fragment> = arrayOf(genderFragment, nameFragment, goalFragment, salePitchFragment)
         val viewpager = viewBinding.loginViewPager
         viewpager.isUserInputEnabled = false
         adapter = LoginPagerAdapter(this, fragmentItems)
@@ -83,6 +85,26 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
                 setAnimationProgress(index)
             }
         }
+    }
+
+    private fun setupGoalView() {
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewModel.goal.collect { goal ->
+                goal?.let {
+                    goToNextPage(viewModel.currentIndex.value)
+                }
+            }
+        }
+
+        var delegate = object : OnboardingGoalFragment.OnboardingGoalDelegate {
+            override fun didSelectGoal(goal: OnboardingGoal) {
+                viewLifecycleOwner.lifecycleScope.launch {
+                    viewModel.setGoal(goal)
+                }
+                salePitchFragment.setGoal(goal)
+            }
+        }
+        goalFragment.setAction(delegate)
     }
 
     private fun setupNameView() {
@@ -130,6 +152,7 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
                 }
 
                 goalFragment.setGender(gender)
+                salePitchFragment.setGender(gender)
             }
         }
 

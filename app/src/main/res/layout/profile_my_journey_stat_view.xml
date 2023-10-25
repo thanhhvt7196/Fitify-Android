@@ -16,7 +16,7 @@
         <com.example.learnandroid.presentation.screens.profile.views.ProfileMyJourneyItemView
             app:count="0"
             app:image="@drawable/vec_calories_icon"
-            app:title="@string/stats_calories_title"
+            app:title="@string/stats_calories"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"

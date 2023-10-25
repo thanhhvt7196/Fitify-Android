@@ -11,11 +11,13 @@ import com.example.learnandroid.presentation.screens.nutrition.NutritionViewMode
 import com.example.learnandroid.presentation.screens.onboarding.gender.OnboardingGenderViewModel
 import com.example.learnandroid.presentation.screens.onboarding.goal.OnboardingGoalViewModel
 import com.example.learnandroid.presentation.screens.onboarding.name.OnboardingNameViewModel
+import com.example.learnandroid.presentation.screens.onboarding.salePitch.OnboardingSalePitchViewModel
 import com.example.learnandroid.presentation.screens.workouts.WorkoutsViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val viewModelModule = module {
+    viewModel { OnboardingSalePitchViewModel() }
     viewModel { ForgotPasswordViewModel() }
     viewModel { LoginWithEmailViewModel() }
     viewModel { MainViewModel() }

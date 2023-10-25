@@ -9,7 +9,10 @@ import com.example.learnandroid.utils.extensions.focus
 import com.example.learnandroid.utils.extensions.unfocus
 import kotlinx.coroutines.launch
 
-class OnboardingNameFragment : BaseViewBindingFragment<FragmentOnboardingNameBinding, OnboardingNameViewModel>(FragmentOnboardingNameBinding::inflate) {
+class OnboardingNameFragment :
+    BaseViewBindingFragment<FragmentOnboardingNameBinding, OnboardingNameViewModel>(
+        FragmentOnboardingNameBinding::inflate
+    ) {
     override val viewModel: OnboardingNameViewModel by viewModels()
 
     interface OnboardingNameDelegate {
