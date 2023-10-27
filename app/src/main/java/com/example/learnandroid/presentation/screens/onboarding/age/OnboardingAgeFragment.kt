@@ -9,6 +9,7 @@ import androidx.lifecycle.lifecycleScope
 import com.example.learnandroid.R
 import com.example.learnandroid.databinding.FragmentOnboardingAgeBinding
 import com.example.learnandroid.presentation.screens.base.BaseViewBindingFragment
+import com.example.learnandroid.utils.constants.AppConstants
 import com.example.learnandroid.utils.extensions.firstCapitalize
 import com.example.learnandroid.utils.extensions.focus
 import com.example.learnandroid.utils.extensions.unFocus
@@ -59,10 +60,8 @@ class OnboardingAgeFragment :
                     val intValue = newText.toIntOrNull()
 
                     if (newText.isEmpty() || (intValue != null && intValue > 0)) {
-                        // Update the view model with the new value
                         viewModel.setAge(intValue)
                     } else {
-                        // If the text is "0" and the field was initially empty, keep it empty
                         ageEditText.text = null
                     }
                 } ?: run {
@@ -95,7 +94,7 @@ class OnboardingAgeFragment :
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.age.collect { age ->
                 val isEnabled = age?.let {
-                    it in 11..99
+                    it in AppConstants.minAge..AppConstants.maxAge
                 } ?: run {
                     false
                 }

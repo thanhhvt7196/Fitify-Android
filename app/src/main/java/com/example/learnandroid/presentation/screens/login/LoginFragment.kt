@@ -1,5 +1,6 @@
 package com.example.learnandroid.presentation.screens.login
 
+import android.os.Bundle
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -112,9 +113,18 @@ class LoginFragment :
     }
 
     private fun setupWeightView(fragment: OnboardingWeightFragment) {
+        val args = Bundle()
+        when (fragment) {
+            currentWeightFragment -> args.putString("type", OnboardingWeightFragment.Type.CURRENT_WEIGHT.name)
+            targetWeightFragment -> args.putString("type", OnboardingWeightFragment.Type.TARGET_WEIGHT.name)
+        }
+        fragment.arguments = args
         val delegate = object : OnboardingWeightFragment.OnboardingWeightDelegate {
             override fun didSelectWeight(weight: Float) {
                 viewModel.setWeight(weight)
+                if (fragment == currentWeightFragment) {
+                    targetWeightFragment.setHint(weight)
+                }
                 goToNextPage()
             }
         }
