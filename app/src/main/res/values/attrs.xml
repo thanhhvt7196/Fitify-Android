@@ -28,7 +28,6 @@
     <declare-styleable name="OnboardingItemWithImageView">
         <attr name="title"/>
         <attr name="image"/>
-        <attr name="borderColor"/>
     </declare-styleable>
 
     <declare-styleable name="RoundedBorderButton">

@@ -1,13 +1,19 @@
 package com.example.learnandroid.presentation.screens.onboarding.views
 
 import android.content.Context
+import android.graphics.drawable.GradientDrawable
+import android.graphics.drawable.LayerDrawable
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
 import com.example.learnandroid.R
 import com.google.android.material.card.MaterialCardView
+import kotlin.math.roundToInt
 
 class OnboardingItemWithImageView(context: Context, attrs: AttributeSet) :
     ConstraintLayout(context, attrs) {
@@ -17,23 +23,21 @@ class OnboardingItemWithImageView(context: Context, attrs: AttributeSet) :
             context.obtainStyledAttributes(attrs, R.styleable.OnboardingItemWithImageView)
         val title = typedArray.getString(R.styleable.OnboardingItemWithImageView_title)
         val image = typedArray.getResourceId(R.styleable.OnboardingItemWithImageView_image, 0)
-        val borderColor =
-            typedArray.getColor(R.styleable.OnboardingItemWithImageView_borderColor, 0)
         typedArray.recycle()
 
         val titleTextView = findViewById<TextView>(R.id.titleTextView)
         val imageView = findViewById<ImageView>(R.id.imageView)
-        val cardView = findViewById<MaterialCardView>(R.id.cardView)
-        cardView.strokeColor = borderColor
 
         titleTextView.text = title
         imageView.setImageResource(image)
     }
 
     override fun setSelected(isSelected: Boolean) {
-        val cardView = findViewById<MaterialCardView>(R.id.cardView)
-        cardView.strokeColor =
-            if (isSelected) context.getColor(R.color.accent_gradient_end) else context.getColor(R.color.blue_base)
+        val checkImageView = findViewById<ImageView>(R.id.checkImageView)
+        checkImageView.isVisible = isSelected
+        val containerView = findViewById<ConstraintLayout>(R.id.containerView)
+        containerView.background =
+            context.getDrawable(if (isSelected) R.drawable.gradient_border else R.drawable.blue_base_border)
     }
 
     fun config(title: String, imageResource: Int) {

@@ -6,6 +6,7 @@ import com.example.learnandroid.databinding.FragmentOnboardingGoalBinding
 import com.example.learnandroid.domain.models.Gender
 import com.example.learnandroid.domain.models.OnboardingGoal
 import com.example.learnandroid.presentation.screens.base.BaseViewBindingFragment
+import com.example.learnandroid.presentation.screens.onboarding.views.OnboardingItemWithImageView
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
 
@@ -45,7 +46,6 @@ class OnboardingGoalFragment :
             loseWeightButton.isSelected = false
             loseWeightButton.setOnClickListener {
                 viewModel.setGoal(OnboardingGoal.LOSE_WEIGHT)
-                viewModel.setGoal(OnboardingGoal.LOSE_WEIGHT)
             }
         }
     }
@@ -72,22 +72,22 @@ class OnboardingGoalFragment :
         viewBinding.apply {
             getTonedButton.config(
                 OnboardingGoal.GET_TONED.getDisplayName(
-                    requireActivity(),
-                    gender
-                ), OnboardingGoal.GET_TONED.getImageResource(requireActivity(), gender)
+                    requireActivity(), gender
+                ),
+                OnboardingGoal.GET_TONED.getImageResource(requireActivity(), gender),
             )
 
             loseWeightButton.config(
                 OnboardingGoal.LOSE_WEIGHT.getDisplayName(
-                    requireActivity(),
-                    gender
-                ), OnboardingGoal.LOSE_WEIGHT.getImageResource(requireActivity(), gender)
+                    requireActivity(), gender
+                ),
+                OnboardingGoal.LOSE_WEIGHT.getImageResource(requireActivity(), gender)
             )
         }
     }
 
     fun setGender(gender: Gender) {
-       this.gender.value = gender
+        this.gender.value = gender
     }
 
     fun resetData() {

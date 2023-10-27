@@ -20,7 +20,8 @@ import com.example.learnandroid.presentation.screens.onboarding.salePitch.Onboar
 import com.example.learnandroid.utils.extensions.play
 import kotlinx.coroutines.launch
 
-class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewModel>(FragmentLoginBinding::inflate) {
+class LoginFragment :
+    BaseViewBindingFragment<FragmentLoginBinding, LoginViewModel>(FragmentLoginBinding::inflate) {
     override val viewModel: LoginViewModel by viewModels()
     private lateinit var adapter: LoginPagerAdapter
 
@@ -35,9 +36,10 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
             return LoginFragment()
         }
     }
+
     private val onBackPressedCallback = object : OnBackPressedCallback(true) {
         override fun handleOnBackPressed() {
-          this@LoginFragment.handleOnBackPressed()
+            this@LoginFragment.handleOnBackPressed()
         }
     }
 
@@ -66,11 +68,13 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
     }
 
     private fun setupViewPager() {
-        val fragmentItems: Array<Fragment> = arrayOf(genderFragment, nameFragment, goalFragment, salePitchFragment)
+        val fragmentItems: Array<Fragment> =
+            arrayOf(genderFragment, nameFragment, goalFragment, salePitchFragment)
         val viewpager = viewBinding.loginViewPager
         viewpager.isUserInputEnabled = false
         adapter = LoginPagerAdapter(this, fragmentItems)
         viewpager.adapter = adapter
+        viewpager.offscreenPageLimit = fragmentItems.size
 
         viewBinding.toolbar.apply {
             setBackButtonType(AppToolbar.BackButtonType.POP)
@@ -190,7 +194,10 @@ class LoginFragment : BaseViewBindingFragment<FragmentLoginBinding, LoginViewMod
         viewBinding.loginViewPager.adapter?.let {
             if (currentIndex > 0 && it.itemCount > 1) {
                 val targetProgress = currentIndex.toFloat() / (it.itemCount.toFloat() - 1)
-                viewBinding.progressLottieView.play(viewBinding.progressLottieView.progress, targetProgress)
+                viewBinding.progressLottieView.play(
+                    viewBinding.progressLottieView.progress,
+                    targetProgress
+                )
             } else {
                 viewBinding.progressLottieView.play(viewBinding.progressLottieView.progress, 0f)
             }
