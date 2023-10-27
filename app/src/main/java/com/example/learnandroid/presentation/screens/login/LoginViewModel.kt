@@ -19,6 +19,10 @@ class LoginViewModel: BaseViewModel() {
     private val _gender = MutableSharedFlow<Gender?>()
     private val _name = MutableSharedFlow<String?>()
     private val _goal = MutableSharedFlow<OnboardingGoal?>()
+    private val _age = MutableSharedFlow<Int>()
+    private val _height = MutableSharedFlow<Int>()
+    private val _weight = MutableSharedFlow<Int>()
+
 
     val gender: SharedFlow<Gender?> = _gender.asSharedFlow()
     val name: SharedFlow<String?> = _name.asSharedFlow()

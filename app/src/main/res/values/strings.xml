@@ -432,6 +432,8 @@ Mike\'s humor algorithm ensures that laughter is part of every workout, so your 
     <string name="tool_trx_v2">TRX</string>
     <string name="tool_sandbag">Sandbag</string>
     <string name="tool_gymmachines">Gym Machines</string>
+    <string name="knee_pain_mild_description">It only hurts when doing dynamic jumps</string>
+    <string name="knee_pain_serious_description">Even exercises like squats are painful</string>
     <string name="onboarding_workout_environment_gym">At the gym</string>
     <string name="onboarding_workout_environment_studio_classes">Studio classes</string>
     <string name="onboarding_workout_environment_outdoor">Outdoor</string>
@@ -1035,6 +1037,18 @@ New members only.</string>
     <string name="onboarding_water_intake_x_to_y_glasses">%1$d to %2$d glasses</string>
     <string name="onboarding_weight_title">What is your weight?</string>
     <string name="onboarding_workout_frequency_more_than_x_a_week">More than %d workouts a week</string>
+    <plurals name="onboarding_duration_more_than_x_hours">
+        <item quantity="one">More than %d hour</item>
+        <item quantity="other">More than %d hours</item>
+    </plurals>
+    <plurals name="onboarding_duration_less_than_x_hours">
+        <item quantity="one">Less than %d hour</item>
+        <item quantity="other">Less than %d hours</item>
+    </plurals>
+    <string name="onboarding_energy_level_need_nap_after_meals">I need a nap after meals</string>
+    <string name="onboarding_energy_level_stable">Stable throughout the day</string>
+    <string name="onboarding_energy_level_tired_around_lunchtime">I feel tired around lunchtime</string>
+    <string name="onboarding_duration_x_to_y_hours">%1$d–%2$d hours</string>
     <string name="onboarding_workout_frequency_never">Never</string>
     <string name="onboarding_workout_frequency_title">How often do you exercise?</string>
     <string name="onboarding_workout_frequency_x_to_y_weeks">%1$d–%2$d workouts a week</string>
