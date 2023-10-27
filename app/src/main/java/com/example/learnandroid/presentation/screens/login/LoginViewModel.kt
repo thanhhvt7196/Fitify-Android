@@ -27,6 +27,9 @@ class LoginViewModel: BaseViewModel() {
     val gender: SharedFlow<Gender?> = _gender.asSharedFlow()
     val name: SharedFlow<String?> = _name.asSharedFlow()
     val goal: SharedFlow<OnboardingGoal?> = _goal.asSharedFlow()
+    val age = _age.asSharedFlow()
+    val height = _height.asSharedFlow()
+    val weight = _weight.asSharedFlow()
 
     fun setIndex(index: Int) {
         _currentIndex.value = index
@@ -47,6 +50,24 @@ class LoginViewModel: BaseViewModel() {
     fun setGoal(goal: OnboardingGoal) {
         viewModelScope.launch {
             _goal.emit(goal)
+        }
+    }
+
+    fun setAge(age: Int) {
+        viewModelScope.launch {
+            _age.emit(age)
+        }
+    }
+
+    fun setHeight(height: Int) {
+        viewModelScope.launch {
+            _height.emit(height)
+        }
+    }
+
+    fun setWeight(weight: Int) {
+        viewModelScope.launch {
+            _weight.emit(weight)
         }
     }
 }

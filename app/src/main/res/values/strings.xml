@@ -1045,6 +1045,7 @@ New members only.</string>
         <item quantity="one">Less than %d hour</item>
         <item quantity="other">Less than %d hours</item>
     </plurals>
+    <string name="unit_years">years</string>
     <string name="onboarding_energy_level_need_nap_after_meals">I need a nap after meals</string>
     <string name="onboarding_energy_level_stable">Stable throughout the day</string>
     <string name="onboarding_energy_level_tired_around_lunchtime">I feel tired around lunchtime</string>

@@ -8,6 +8,7 @@ import com.example.learnandroid.presentation.screens.main.MainViewModel
 import com.example.learnandroid.presentation.screens.profile.ProfileViewModel
 import com.example.learnandroid.presentation.screens.plan.PlansViewModel
 import com.example.learnandroid.presentation.screens.nutrition.NutritionViewModel
+import com.example.learnandroid.presentation.screens.onboarding.age.OnboardingAgeViewModel
 import com.example.learnandroid.presentation.screens.onboarding.gender.OnboardingGenderViewModel
 import com.example.learnandroid.presentation.screens.onboarding.goal.OnboardingGoalViewModel
 import com.example.learnandroid.presentation.screens.onboarding.name.OnboardingNameViewModel
@@ -17,6 +18,7 @@ import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val viewModelModule = module {
+    viewModel { OnboardingAgeViewModel() }
     viewModel { OnboardingSalePitchViewModel() }
     viewModel { ForgotPasswordViewModel() }
     viewModel { LoginWithEmailViewModel() }

@@ -1,24 +1,15 @@
 package com.example.learnandroid.presentation.components.roundedFloatingTextField
 
-import android.app.Activity
 import android.content.Context
-import android.graphics.Color
-import android.graphics.Rect
 import android.text.InputFilter
-import android.text.InputType
-import android.text.TextWatcher
 import android.util.AttributeSet
 import android.view.LayoutInflater
-import android.view.inputmethod.InputMethodManager
-import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.WindowInsetsControllerCompat
 import androidx.core.widget.addTextChangedListener
 import com.example.learnandroid.R
 import com.example.learnandroid.utils.extensions.focus
-import com.example.learnandroid.utils.extensions.unfocus
+import com.example.learnandroid.utils.extensions.unFocus
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
@@ -62,7 +53,7 @@ class RoundedFloatingTextField(context: Context, attrs: AttributeSet) :
 
     fun unfocus(context: Context) {
         val textField = findViewById<TextInputEditText>(R.id.textField)
-        textField.unfocus(context)
+        textField.unFocus(context)
     }
 
     fun focus(context: Context) {

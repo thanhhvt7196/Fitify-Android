@@ -15,6 +15,7 @@ import com.example.learnandroid.presentation.screens.onboarding.gender.Onboardin
 import com.example.learnandroid.presentation.screens.onboarding.goal.OnboardingGoalFragment
 import com.example.learnandroid.presentation.screens.onboarding.name.OnboardingNameFragment
 import com.example.learnandroid.presentation.screens.loginBottomSheet.LoginType
+import com.example.learnandroid.presentation.screens.onboarding.age.OnboardingAgeFragment
 import com.example.learnandroid.presentation.screens.onboarding.salePitch.OnboardingSalePitchDelegate
 import com.example.learnandroid.presentation.screens.onboarding.salePitch.OnboardingSalePitchFragment
 import com.example.learnandroid.utils.extensions.play
@@ -29,6 +30,7 @@ class LoginFragment :
     private val nameFragment = OnboardingNameFragment.newInstance()
     private val goalFragment = OnboardingGoalFragment.newInstance()
     private val salePitchFragment = OnboardingSalePitchFragment.newInstance()
+    private val ageFragment = OnboardingAgeFragment.newInstance()
 
     companion object {
         const val tag = "LoginFragment"
@@ -57,6 +59,7 @@ class LoginFragment :
         setupNameView()
         setupGoalView()
         setupSalePitchView()
+        setupAgeView()
     }
 
     private fun setupLottie() {
@@ -69,7 +72,7 @@ class LoginFragment :
 
     private fun setupViewPager() {
         val fragmentItems: Array<Fragment> =
-            arrayOf(genderFragment, nameFragment, goalFragment, salePitchFragment)
+            arrayOf(genderFragment, nameFragment, goalFragment, salePitchFragment, ageFragment)
         val viewpager = viewBinding.loginViewPager
         viewpager.isUserInputEnabled = false
         adapter = LoginPagerAdapter(this, fragmentItems)
@@ -93,10 +96,21 @@ class LoginFragment :
         }
     }
 
+    private fun setupAgeView() {
+        val delegate = object : OnboardingAgeFragment.OnboardingAgeDelegate {
+            override fun didSelectAge(age: Int) {
+                viewModel.setAge(age)
+                goToNextPage()
+            }
+        }
+
+        ageFragment.setAction(delegate)
+    }
+
     private fun setupSalePitchView() {
         val delegate = object : OnboardingSalePitchDelegate {
             override fun didContinueTapped() {
-                goToNextPage(viewModel.currentIndex.value)
+                goToNextPage()
             }
         }
         salePitchFragment.setAction(delegate)
@@ -106,7 +120,7 @@ class LoginFragment :
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.goal.collect { goal ->
                 goal?.let {
-                    goToNextPage(viewModel.currentIndex.value)
+                    goToNextPage()
                 }
             }
         }
@@ -126,7 +140,7 @@ class LoginFragment :
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.name.collect { name ->
                 name?.let {
-                    goToNextPage(viewModel.currentIndex.value)
+                    goToNextPage()
                 }
             }
         }
@@ -145,7 +159,7 @@ class LoginFragment :
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.gender.collect { gender ->
                 gender?.let {
-                    goToNextPage(viewModel.currentIndex.value)
+                    goToNextPage()
                 }
             }
         }
@@ -159,12 +173,7 @@ class LoginFragment :
                 viewLifecycleOwner.lifecycleScope.launch {
                     viewModel.setGender(gender)
                 }
-                if (nameFragment.isAdded) {
-                    nameFragment.resetData()
-                }
-                if (goalFragment.isAdded) {
-                    goalFragment.resetData()
-                }
+                resetData()
 
                 goalFragment.setGender(gender)
                 salePitchFragment.setGender(gender)
@@ -172,6 +181,19 @@ class LoginFragment :
         }
 
         genderFragment.setAction(onboardingGenderDelegate)
+    }
+
+    private fun resetData() {
+        if (nameFragment.isAdded) {
+            nameFragment.resetData()
+        }
+        if (goalFragment.isAdded) {
+            goalFragment.resetData()
+        }
+
+        if (ageFragment.isAdded) {
+            ageFragment.resetData()
+        }
     }
 
     private fun backToPreviousPage(currentIndex: Int) {
@@ -182,7 +204,8 @@ class LoginFragment :
         }
     }
 
-    private fun goToNextPage(currentIndex: Int) {
+    private fun goToNextPage() {
+        val currentIndex = viewModel.currentIndex.value
         if (currentIndex < (viewBinding.loginViewPager.adapter?.itemCount ?: 0) - 1) {
             viewLifecycleOwner.lifecycleScope.launch {
                 viewModel.setIndex(currentIndex + 1)
