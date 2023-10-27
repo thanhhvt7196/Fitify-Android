@@ -1,5 +1,6 @@
 package com.example.learnandroid.presentation.screens.onboarding.name
 
+import android.view.inputmethod.EditorInfo
 import androidx.core.content.ContextCompat
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.viewModels
@@ -53,6 +54,15 @@ class OnboardingNameFragment :
                     viewModel.setName(it.toString())
                 } ?: run {
                     viewModel.setName("")
+                }
+            }
+            nameTextView.setOnEditorActionListener { v, actionId, event ->
+                when (actionId) {
+                    EditorInfo.IME_ACTION_DONE -> {
+                        delegate?.didSelectName(viewModel.name.value)
+                        return@setOnEditorActionListener true
+                    }
+                    else -> false
                 }
             }
 

@@ -396,6 +396,7 @@ Mike\'s humor algorithm ensures that laughter is part of every workout, so your 
     <string name="pitch_onboarding_target_weight_challenging_message">The first 3 months will give us a better idea of what is achievable. Let’s focus on getting maximum results and build from there.</string>
     <string name="onboarding_knee_pain_dialog_v2_title">We will <b>restrict exercises</b> that are hard on your knees</string>
     <string name="onboarding_age_title">How old are you?</string>
+    <string name="onboarding_current_weight_title">What is your current weight?</string>
     <string name="onboarding_bad_habit_eating_late">I eat late at night</string>
     <string name="onboarding_bad_habit_fast_food">I enjoy fast food</string>
     <string name="onboarding_bad_habit_sleep">I don\'t sleep enough</string>

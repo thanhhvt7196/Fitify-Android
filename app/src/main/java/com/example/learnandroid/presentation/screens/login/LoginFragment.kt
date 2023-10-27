@@ -18,6 +18,7 @@ import com.example.learnandroid.presentation.screens.loginBottomSheet.LoginType
 import com.example.learnandroid.presentation.screens.onboarding.age.OnboardingAgeFragment
 import com.example.learnandroid.presentation.screens.onboarding.salePitch.OnboardingSalePitchDelegate
 import com.example.learnandroid.presentation.screens.onboarding.salePitch.OnboardingSalePitchFragment
+import com.example.learnandroid.presentation.screens.onboarding.weight.OnboardingWeightFragment
 import com.example.learnandroid.utils.extensions.play
 import kotlinx.coroutines.launch
 
@@ -31,6 +32,10 @@ class LoginFragment :
     private val goalFragment = OnboardingGoalFragment.newInstance()
     private val salePitchFragment = OnboardingSalePitchFragment.newInstance()
     private val ageFragment = OnboardingAgeFragment.newInstance()
+    private val currentWeightFragment =
+        OnboardingWeightFragment.currentWeightNewInstance()
+    private val targetWeightFragment =
+        OnboardingWeightFragment.targetWeightNewInstance()
 
     companion object {
         const val tag = "LoginFragment"
@@ -60,6 +65,8 @@ class LoginFragment :
         setupGoalView()
         setupSalePitchView()
         setupAgeView()
+        setupWeightView(currentWeightFragment)
+        setupWeightView(targetWeightFragment)
     }
 
     private fun setupLottie() {
@@ -72,7 +79,15 @@ class LoginFragment :
 
     private fun setupViewPager() {
         val fragmentItems: Array<Fragment> =
-            arrayOf(genderFragment, nameFragment, goalFragment, salePitchFragment, ageFragment)
+            arrayOf(
+                genderFragment,
+                nameFragment,
+                goalFragment,
+                salePitchFragment,
+                ageFragment,
+                currentWeightFragment,
+                targetWeightFragment
+            )
         val viewpager = viewBinding.loginViewPager
         viewpager.isUserInputEnabled = false
         adapter = LoginPagerAdapter(this, fragmentItems)
@@ -94,6 +109,16 @@ class LoginFragment :
                 setAnimationProgress(index)
             }
         }
+    }
+
+    private fun setupWeightView(fragment: OnboardingWeightFragment) {
+        val delegate = object : OnboardingWeightFragment.OnboardingWeightDelegate {
+            override fun didSelectWeight(weight: Float) {
+                viewModel.setWeight(weight)
+                goToNextPage()
+            }
+        }
+        fragment.setAction(delegate)
     }
 
     private fun setupAgeView() {
@@ -193,6 +218,14 @@ class LoginFragment :
 
         if (ageFragment.isAdded) {
             ageFragment.resetData()
+        }
+
+        if (currentWeightFragment.isAdded) {
+            currentWeightFragment.resetData()
+        }
+
+        if (targetWeightFragment.isAdded) {
+            targetWeightFragment.resetData()
         }
     }
 

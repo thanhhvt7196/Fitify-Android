@@ -1,6 +1,7 @@
 package com.example.learnandroid.presentation.screens.onboarding.age
 
 import android.util.Log
+import android.view.inputmethod.EditorInfo
 import androidx.core.content.ContextCompat
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.viewModels
@@ -54,10 +55,31 @@ class OnboardingAgeFragment :
             )
             ageEditText.addTextChangedListener { editable ->
                 editable?.let {
-                    viewModel.setAge(it.toString().toIntOrNull())
-                    Log.d("age", it.toString())
+                    val newText = it.toString()
+                    val intValue = newText.toIntOrNull()
+
+                    if (newText.isEmpty() || (intValue != null && intValue > 0)) {
+                        // Update the view model with the new value
+                        viewModel.setAge(intValue)
+                    } else {
+                        // If the text is "0" and the field was initially empty, keep it empty
+                        ageEditText.text = null
+                    }
                 } ?: run {
+                    // If the text is null, update the view model with null
                     viewModel.setAge(null)
+                }
+            }
+
+            ageEditText.setOnEditorActionListener { v, actionId, event ->
+                when (actionId) {
+                    EditorInfo.IME_ACTION_DONE -> {
+                        viewModel.age.value?.let {
+                            delegate?.didSelectAge(it)
+                        }
+                        return@setOnEditorActionListener true
+                    }
+                    else -> false
                 }
             }
 
