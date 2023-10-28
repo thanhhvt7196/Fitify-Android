@@ -1,11 +1,8 @@
 package com.example.learnandroid.presentation.screens.onboarding.kneePain
 
-import android.animation.Animator
-import android.animation.AnimatorListenerAdapter
-import android.animation.AnimatorSet
-import android.animation.ObjectAnimator
-import android.animation.ValueAnimator
+import android.app.Dialog
 import android.view.View
+import android.view.Window
 import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import android.view.animation.AnimationSet
@@ -16,9 +13,7 @@ import androidx.lifecycle.lifecycleScope
 import com.example.learnandroid.R
 import com.example.learnandroid.databinding.FragmentOnboardingKneePainBinding
 import com.example.learnandroid.domain.models.KneePain
-import com.example.learnandroid.domain.models.OnboardingGoal
 import com.example.learnandroid.presentation.screens.base.BaseViewBindingFragment
-import com.example.learnandroid.presentation.screens.onboarding.goal.OnboardingGoalFragment
 import kotlinx.coroutines.launch
 
 class OnboardingKneePainFragment :
@@ -26,6 +21,7 @@ class OnboardingKneePainFragment :
         FragmentOnboardingKneePainBinding::inflate
     ) {
     override val viewModel: OnboardingKneePainViewModel by viewModels()
+    private var dialog: Dialog? = null
 
     interface OnboardingKneePainDelegate {
         fun didSelectKneePain(kneePain: KneePain)
@@ -74,7 +70,7 @@ class OnboardingKneePainFragment :
             )
 
             mildPainButton.setOnClickListener {
-                viewModel.setKneePain(KneePain.MILD_PAIN)
+                showKneePainAlert(KneePain.MILD_PAIN)
                 yesButton.isSelected = true
             }
 
@@ -84,7 +80,7 @@ class OnboardingKneePainFragment :
             )
 
             seriousButton.setOnClickListener {
-                viewModel.setKneePain(KneePain.QUITE_SERIOUS)
+                showKneePainAlert(KneePain.QUITE_SERIOUS)
                 yesButton.isSelected = true
             }
         }
@@ -105,12 +101,30 @@ class OnboardingKneePainFragment :
         }
     }
 
+    private fun showKneePainAlert(kneePain: KneePain) {
+        dialog = Dialog(requireActivity())
+        dialog?.window?.setBackgroundDrawableResource(android.R.color.transparent)
+        dialog?.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        val kneePainAlertView = KneePainAlert(requireActivity(), null)
+        val delegate = object : KneePainAlert.KneePainAlertDelegate {
+            override fun didContinueTapped() {
+                dialog?.dismiss()
+                viewModel.setKneePain(kneePain)
+                dialog = null
+            }
+        }
+        kneePainAlertView.setAction(delegate)
+        dialog?.setContentView(kneePainAlertView)
+        dialog?.setCancelable(false)
+        dialog?.setCanceledOnTouchOutside(false)
+        dialog?.show()
+    }
+
     fun resetData() {
         viewModel.setKneePain(null)
         viewBinding.apply {
             yesButton.isSelected = false
             hideOptionsWithAnimation()
-//            painOptionsContainerView.isVisible = false
         }
     }
 
