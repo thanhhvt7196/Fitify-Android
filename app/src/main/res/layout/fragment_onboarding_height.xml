@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.screens.onboarding.height.OnboardingHeightFragment">
+
+    <TextView
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/titleTextView"
+        android:textColor="@color/essential_white"
+        android:textStyle="bold"
+        android:textSize="36sp"
+        android:text="@string/onboarding_height_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/continueButtonContainer"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/unitTextView"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@android:color/transparent"
+            android:inputType="number"
+            android:id="@+id/heightTextField"
+            android:gravity="center"
+            android:ellipsize="end"
+            android:imeOptions="actionDone"
+            android:hint="0"
+            android:maxLength="3"
+            android:includeFontPadding="false"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            android:textColor="@color/essential_white"
+            android:maxLines="1"
+            android:theme="@style/Widget.AppTheme.TextInputLayout.FilledBox.Dense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:id="@+id/unitTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:textColor="@color/essential_white"
+            android:text="@string/unit_cm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/continueButtonContainer"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.example.learnandroid.presentation.components.bottomAccentGradientButton.BottomAccentGradientButton
+            android:id="@+id/continueButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="16dp"
+            app:title="@string/btn_continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

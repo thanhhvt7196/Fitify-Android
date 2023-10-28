@@ -17,6 +17,7 @@ import com.example.learnandroid.presentation.screens.onboarding.goal.OnboardingG
 import com.example.learnandroid.presentation.screens.onboarding.name.OnboardingNameFragment
 import com.example.learnandroid.presentation.screens.loginBottomSheet.LoginType
 import com.example.learnandroid.presentation.screens.onboarding.age.OnboardingAgeFragment
+import com.example.learnandroid.presentation.screens.onboarding.height.OnboardingHeightFragment
 import com.example.learnandroid.presentation.screens.onboarding.salePitch.OnboardingSalePitchDelegate
 import com.example.learnandroid.presentation.screens.onboarding.salePitch.OnboardingSalePitchFragment
 import com.example.learnandroid.presentation.screens.onboarding.weight.OnboardingWeightFragment
@@ -33,6 +34,7 @@ class LoginFragment :
     private val goalFragment = OnboardingGoalFragment.newInstance()
     private val salePitchFragment = OnboardingSalePitchFragment.newInstance()
     private val ageFragment = OnboardingAgeFragment.newInstance()
+    private val heightFragment = OnboardingHeightFragment.newInstance()
     private val currentWeightFragment =
         OnboardingWeightFragment.currentWeightNewInstance()
     private val targetWeightFragment =
@@ -66,6 +68,7 @@ class LoginFragment :
         setupGoalView()
         setupSalePitchView()
         setupAgeView()
+        setupHeightView()
         setupWeightView(currentWeightFragment)
         setupWeightView(targetWeightFragment)
     }
@@ -86,6 +89,7 @@ class LoginFragment :
                 goalFragment,
                 salePitchFragment,
                 ageFragment,
+                heightFragment,
                 currentWeightFragment,
                 targetWeightFragment
             )
@@ -110,6 +114,16 @@ class LoginFragment :
                 setAnimationProgress(index)
             }
         }
+    }
+
+    private fun setupHeightView() {
+        val delegate = object : OnboardingHeightFragment.OnboardingHeightDelegate {
+            override fun didSelectHeight(height: Int) {
+                viewModel.setHeight(height)
+                goToNextPage()
+            }
+        }
+        heightFragment.setAction(delegate)
     }
 
     private fun setupWeightView(fragment: OnboardingWeightFragment) {
@@ -228,6 +242,10 @@ class LoginFragment :
 
         if (ageFragment.isAdded) {
             ageFragment.resetData()
+        }
+
+        if (heightFragment.isAdded) {
+            heightFragment.resetData()
         }
 
         if (currentWeightFragment.isAdded) {
