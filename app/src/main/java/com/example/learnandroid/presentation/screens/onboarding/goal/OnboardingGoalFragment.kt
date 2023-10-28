@@ -97,4 +97,14 @@ class OnboardingGoalFragment :
     fun setAction(delegate: OnboardingGoalDelegate) {
         this.delegate = delegate
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        delegate = null
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        delegate = null
+    }
 }
