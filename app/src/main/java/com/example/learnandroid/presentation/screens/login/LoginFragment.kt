@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.learnandroid.R
 import com.example.learnandroid.databinding.FragmentLoginBinding
 import com.example.learnandroid.domain.models.ActiveStatus
+import com.example.learnandroid.domain.models.DailyWalk
 import com.example.learnandroid.domain.models.FitnessTool
 import com.example.learnandroid.domain.models.Gender
 import com.example.learnandroid.domain.models.KneePain
@@ -24,6 +25,7 @@ import com.example.learnandroid.presentation.screens.onboarding.name.OnboardingN
 import com.example.learnandroid.presentation.screens.loginBottomSheet.LoginType
 import com.example.learnandroid.presentation.screens.onboarding.activeStatus.OnboardingActiveStatusFragment
 import com.example.learnandroid.presentation.screens.onboarding.age.OnboardingAgeFragment
+import com.example.learnandroid.presentation.screens.onboarding.dailyWalk.OnboardingDailyWalkFragment
 import com.example.learnandroid.presentation.screens.onboarding.fitnessTool.OnboardingFitnessToolFragment
 import com.example.learnandroid.presentation.screens.onboarding.height.OnboardingHeightFragment
 import com.example.learnandroid.presentation.screens.onboarding.kneePain.OnboardingKneePainFragment
@@ -55,6 +57,7 @@ class LoginFragment :
     private val activeStatusFragment = OnboardingActiveStatusFragment.newInstance()
     private val frequencyFragment = OnboardingFrequencyFragment.newInstance()
     private val pushUpFragment = OnboardingPushUpFragment.newInstance()
+    private val dailyWalkFragment = OnboardingDailyWalkFragment.newInstance()
 
     companion object {
         const val tag = "LoginFragment"
@@ -92,6 +95,7 @@ class LoginFragment :
         setupActiveStatusView()
         setupFrequencyView()
         setupPushUpView()
+        setupDailyWalkView()
     }
 
     private fun setupLottie() {
@@ -117,7 +121,8 @@ class LoginFragment :
                 fitnessToolFragment,
                 activeStatusFragment,
                 frequencyFragment,
-                pushUpFragment
+                pushUpFragment,
+                dailyWalkFragment
             )
         val viewpager = viewBinding.loginViewPager
         viewpager.isUserInputEnabled = false
@@ -140,6 +145,16 @@ class LoginFragment :
                 setAnimationProgress(index)
             }
         }
+    }
+
+    private fun setupDailyWalkView() {
+        val delegate = object : OnboardingDailyWalkFragment.OnboardingDailyWalkDelegate {
+            override fun didSelectDailyWalk(dailyWalk: DailyWalk) {
+                viewModel.setDailyWalk(dailyWalk)
+                goToNextPage()
+            }
+        }
+        dailyWalkFragment.setAction(delegate)
     }
 
     private fun setupPushUpView() {
@@ -355,6 +370,10 @@ class LoginFragment :
 
         if (pushUpFragment.isAdded) {
             pushUpFragment.resetData()
+        }
+
+        if (dailyWalkFragment.isAdded) {
+            dailyWalkFragment.resetData()
         }
     }
 

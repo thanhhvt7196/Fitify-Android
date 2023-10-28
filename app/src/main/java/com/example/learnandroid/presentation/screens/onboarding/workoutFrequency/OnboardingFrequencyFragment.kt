@@ -46,25 +46,21 @@ class OnboardingFrequencyFragment :
             moreThanFourButton.config(WorkoutFrequency.MORE_THAN_FOUR.getTitle(requireActivity()))
             moreThanFourButton.setOnClickListener {
                 viewModel.setFrequency(WorkoutFrequency.MORE_THAN_FOUR)
-                delegate?.didSelectFrequency(WorkoutFrequency.MORE_THAN_FOUR)
             }
 
             threeToFourButton.config(WorkoutFrequency.THREE_OR_FOUR.getTitle(requireActivity()))
             threeToFourButton.setOnClickListener {
                 viewModel.setFrequency(WorkoutFrequency.THREE_OR_FOUR)
-                delegate?.didSelectFrequency(WorkoutFrequency.THREE_OR_FOUR)
             }
 
             oneToTwoButton.config(WorkoutFrequency.ONE_OR_TWO.getTitle(requireActivity()))
             oneToTwoButton.setOnClickListener {
                 viewModel.setFrequency(WorkoutFrequency.ONE_OR_TWO)
-                delegate?.didSelectFrequency(WorkoutFrequency.ONE_OR_TWO)
             }
 
             neverButton.config(WorkoutFrequency.NEVER.getTitle(requireActivity()))
             neverButton.setOnClickListener {
                 viewModel.setFrequency(WorkoutFrequency.NEVER)
-                delegate?.didSelectFrequency(WorkoutFrequency.NEVER)
             }
         }
     }

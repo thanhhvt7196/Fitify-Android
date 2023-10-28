@@ -5,7 +5,6 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import com.example.learnandroid.databinding.FragmentOnboardingPushUpBinding
 import com.example.learnandroid.domain.models.PushUp
-import com.example.learnandroid.domain.models.WorkoutFrequency
 import com.example.learnandroid.presentation.screens.base.BaseViewBindingFragment
 import kotlinx.coroutines.launch
 
@@ -49,25 +48,21 @@ class OnboardingPushUpFragment :
             moreThan30Button.config(PushUp.MORE_THAN_30.getTitle(requireActivity()))
             moreThan30Button.setOnClickListener {
                 viewModel.setPushUp(PushUp.MORE_THAN_30)
-                delegate?.didSelectPushUp(PushUp.MORE_THAN_30)
             }
 
             moreThan15Button.config(PushUp.FIFTEEN_TO_TWENTY_NINE.getTitle(requireActivity()))
             moreThan15Button.setOnClickListener {
                 viewModel.setPushUp(PushUp.FIFTEEN_TO_TWENTY_NINE)
-                delegate?.didSelectPushUp(PushUp.FIFTEEN_TO_TWENTY_NINE)
             }
 
             moreThan6Button.config(PushUp.SIX_TO_FOURTEEN.getTitle(requireActivity()))
             moreThan6Button.setOnClickListener {
                 viewModel.setPushUp(PushUp.SIX_TO_FOURTEEN)
-                delegate?.didSelectPushUp(PushUp.SIX_TO_FOURTEEN)
             }
 
             lessThan5Button.config(PushUp.LESS_THAN_FIVE.getTitle(requireActivity()))
             lessThan5Button.setOnClickListener {
                 viewModel.setPushUp(PushUp.LESS_THAN_FIVE)
-                delegate?.didSelectPushUp(PushUp.LESS_THAN_FIVE)
             }
         }
     }
