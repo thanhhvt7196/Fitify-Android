@@ -1,6 +1,7 @@
 package com.example.learnandroid.presentation.screens.login
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -8,6 +9,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.learnandroid.R
 import com.example.learnandroid.databinding.FragmentLoginBinding
+import com.example.learnandroid.domain.models.FitnessTool
 import com.example.learnandroid.domain.models.Gender
 import com.example.learnandroid.domain.models.KneePain
 import com.example.learnandroid.domain.models.OnboardingGoal
@@ -18,6 +20,7 @@ import com.example.learnandroid.presentation.screens.onboarding.goal.OnboardingG
 import com.example.learnandroid.presentation.screens.onboarding.name.OnboardingNameFragment
 import com.example.learnandroid.presentation.screens.loginBottomSheet.LoginType
 import com.example.learnandroid.presentation.screens.onboarding.age.OnboardingAgeFragment
+import com.example.learnandroid.presentation.screens.onboarding.fitnessTool.OnboardingFitnessToolFragment
 import com.example.learnandroid.presentation.screens.onboarding.height.OnboardingHeightFragment
 import com.example.learnandroid.presentation.screens.onboarding.kneePain.OnboardingKneePainFragment
 import com.example.learnandroid.presentation.screens.onboarding.salePitch.OnboardingSalePitchDelegate
@@ -42,6 +45,7 @@ class LoginFragment :
     private val targetWeightFragment =
         OnboardingWeightFragment.targetWeightNewInstance()
     private val kneePainFragment = OnboardingKneePainFragment.newInstance()
+    private val fitnessToolFragment = OnboardingFitnessToolFragment.newInstance()
 
     companion object {
         const val tag = "LoginFragment"
@@ -75,6 +79,7 @@ class LoginFragment :
         setupWeightView(currentWeightFragment)
         setupWeightView(targetWeightFragment)
         setupKneePainView()
+        setupFitnessToolView()
     }
 
     private fun setupLottie() {
@@ -96,7 +101,8 @@ class LoginFragment :
                 heightFragment,
                 currentWeightFragment,
                 targetWeightFragment,
-                kneePainFragment
+                kneePainFragment,
+                fitnessToolFragment
             )
         val viewpager = viewBinding.loginViewPager
         viewpager.isUserInputEnabled = false
@@ -119,6 +125,16 @@ class LoginFragment :
                 setAnimationProgress(index)
             }
         }
+    }
+
+    private fun setupFitnessToolView() {
+        val delegate = object : OnboardingFitnessToolFragment.OnboardingFitnessToolDelegate {
+            override fun didSelectTools(tools: List<FitnessTool>) {
+                viewModel.setFitnessTools(tools)
+                goToNextPage()
+            }
+        }
+        fitnessToolFragment.setAction(delegate)
     }
 
     private fun setupKneePainView() {
@@ -278,6 +294,10 @@ class LoginFragment :
 
         if (kneePainFragment.isAdded) {
             kneePainFragment.resetData()
+        }
+
+        if (fitnessToolFragment.isAdded) {
+            fitnessToolFragment.resetData()
         }
     }
 

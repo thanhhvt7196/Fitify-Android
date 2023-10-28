@@ -9,6 +9,7 @@ import com.example.learnandroid.presentation.screens.profile.ProfileViewModel
 import com.example.learnandroid.presentation.screens.plan.PlansViewModel
 import com.example.learnandroid.presentation.screens.nutrition.NutritionViewModel
 import com.example.learnandroid.presentation.screens.onboarding.age.OnboardingAgeViewModel
+import com.example.learnandroid.presentation.screens.onboarding.fitnessTool.OnboardingFitneesToolViewModel
 import com.example.learnandroid.presentation.screens.onboarding.gender.OnboardingGenderViewModel
 import com.example.learnandroid.presentation.screens.onboarding.goal.OnboardingGoalViewModel
 import com.example.learnandroid.presentation.screens.onboarding.height.OnboardingHeightViewModel
@@ -21,6 +22,7 @@ import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val viewModelModule = module {
+    viewModel { OnboardingFitneesToolViewModel() }
     viewModel { OnboardingKneePainViewModel() }
     viewModel { OnboardingHeightViewModel() }
     viewModel { OnboardingWeightViewModel() }

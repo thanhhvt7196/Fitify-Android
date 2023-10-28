@@ -1,7 +1,6 @@
 package com.example.learnandroid.presentation.screens.onboarding.kneePain
 
 import android.app.Dialog
-import android.view.View
 import android.view.Window
 import android.view.animation.AlphaAnimation
 import android.view.animation.Animation

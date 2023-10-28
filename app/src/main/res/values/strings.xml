@@ -423,7 +423,7 @@ Mike\'s humor algorithm ensures that laughter is part of every workout, so your 
     <string name="unit_km">km</string>
     <string name="unit_mi">mi</string>
     <string name="onboarding_tool_selection_title">Do you have access to any fitness tools?</string>
-    <string name="onboarding_tool_selection_subtitle"><b>You don’t need any tools</b> to use Fitify, but they can be beneficial if available.</string>
+    <string name="onboarding_tool_selection_subtitle"><![CDATA[<font color="#AFFF2D"><b>You don’t need any tools</b></font> to use Fitify, but they can be beneficial if available.]]></string>
     <string name="hc_upsell_push_title_5">🖤 Meet your new personal trainer</string>
     <string name="hc_upsell_push_description_5">Find out who is your top match coach and start the 1-on-1 experience today!</string>
     <string name="hc_upsell_push_title_6">🔵 Your top-match coach is waiting!</string>
@@ -994,7 +994,17 @@ New members only.</string>
     <string name="onboarding_knee_pain_dialog_message">We will restrict exercises that are hard on your knees. You can reset the limitation later.\n\nAlthough, you should still follow your doctor\'s advice.</string>
     <string name="onboarding_knee_pain_dialog_title">We\'ve got you covered!</string>
     <string name="onboarding_knee_pain_subtitle">How serious are your problems?</string>
-    <!-- Knee Pain -->
+    <string name="tool_bosu">BOSU</string>
+    <string name="tool_dumbbell">Dumbbell</string>
+    <string name="tool_foamroller">Foam Roller</string>
+    <string name="tool_bodyweight">Bodyweight</string>
+    <string name="tool_barbell">Barbell</string>
+    <string name="tool_kettlebell">Kettlebell</string>
+    <string name="tool_medicineball">Medicine Ball</string>
+    <string name="tool_pullupbar">Pull Up Bar</string>
+    <string name="tool_resistanceband">Resistance Band</string>
+    <string name="tool_swissball">Swiss Ball</string>
+    <string name="tool_trx">Suspension System</string>
     <string name="onboarding_knee_pain_title">Do you suffer from knee pain?</string>
     <string name="onboarding_latest_ideal_weight_less_than_a_year_ago">Less than a year ago</string>
     <string name="onboarding_latest_ideal_weight_more_than_x_years_ago">More than %d years ago</string>
