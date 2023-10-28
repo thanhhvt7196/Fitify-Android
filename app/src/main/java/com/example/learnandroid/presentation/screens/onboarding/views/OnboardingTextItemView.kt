@@ -15,7 +15,7 @@ class OnboardingTextItemView(context: Context, attrs: AttributeSet?) :
         LayoutInflater.from(context).inflate(R.layout.onboarding_text_item_view, this, true)
     }
 
-    fun config(title: String, description: String?) {
+    fun config(title: String, description: String? = null) {
         val titleTextView = findViewById<TextView>(R.id.titleTextView)
         val descriptionTextView = findViewById<TextView>(R.id.descriptionTextView)
 

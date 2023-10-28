@@ -9,6 +9,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.learnandroid.R
 import com.example.learnandroid.databinding.FragmentLoginBinding
+import com.example.learnandroid.domain.models.ActiveStatus
 import com.example.learnandroid.domain.models.FitnessTool
 import com.example.learnandroid.domain.models.Gender
 import com.example.learnandroid.domain.models.KneePain
@@ -19,6 +20,7 @@ import com.example.learnandroid.presentation.screens.onboarding.gender.Onboardin
 import com.example.learnandroid.presentation.screens.onboarding.goal.OnboardingGoalFragment
 import com.example.learnandroid.presentation.screens.onboarding.name.OnboardingNameFragment
 import com.example.learnandroid.presentation.screens.loginBottomSheet.LoginType
+import com.example.learnandroid.presentation.screens.onboarding.activeStatus.OnboardingActiveStatusFragment
 import com.example.learnandroid.presentation.screens.onboarding.age.OnboardingAgeFragment
 import com.example.learnandroid.presentation.screens.onboarding.fitnessTool.OnboardingFitnessToolFragment
 import com.example.learnandroid.presentation.screens.onboarding.height.OnboardingHeightFragment
@@ -46,6 +48,7 @@ class LoginFragment :
         OnboardingWeightFragment.targetWeightNewInstance()
     private val kneePainFragment = OnboardingKneePainFragment.newInstance()
     private val fitnessToolFragment = OnboardingFitnessToolFragment.newInstance()
+    private val activeStatusFragment = OnboardingActiveStatusFragment.newInstance()
 
     companion object {
         const val tag = "LoginFragment"
@@ -80,6 +83,7 @@ class LoginFragment :
         setupWeightView(targetWeightFragment)
         setupKneePainView()
         setupFitnessToolView()
+        setupActiveStatusView()
     }
 
     private fun setupLottie() {
@@ -102,7 +106,8 @@ class LoginFragment :
                 currentWeightFragment,
                 targetWeightFragment,
                 kneePainFragment,
-                fitnessToolFragment
+                fitnessToolFragment,
+                activeStatusFragment
             )
         val viewpager = viewBinding.loginViewPager
         viewpager.isUserInputEnabled = false
@@ -125,6 +130,16 @@ class LoginFragment :
                 setAnimationProgress(index)
             }
         }
+    }
+
+    private fun setupActiveStatusView() {
+        val delegate = object : OnboardingActiveStatusFragment.OnboardingActiveStatusDelegate {
+            override fun didSelectActiveStatus(status: ActiveStatus) {
+                viewModel.setActiveStatus(status)
+                goToNextPage()
+            }
+        }
+        activeStatusFragment.setAction(delegate)
     }
 
     private fun setupFitnessToolView() {
@@ -298,6 +313,10 @@ class LoginFragment :
 
         if (fitnessToolFragment.isAdded) {
             fitnessToolFragment.resetData()
+        }
+
+        if (activeStatusFragment.isAdded) {
+            activeStatusFragment.resetData()
         }
     }
 

@@ -1,6 +1,7 @@
 package com.example.learnandroid.presentation.screens.login
 
 import androidx.lifecycle.viewModelScope
+import com.example.learnandroid.domain.models.ActiveStatus
 import com.example.learnandroid.domain.models.FitnessTool
 import com.example.learnandroid.domain.models.Gender
 import com.example.learnandroid.domain.models.KneePain
@@ -27,6 +28,7 @@ class LoginViewModel: BaseViewModel() {
     private val _targetWeight = MutableSharedFlow<Float?>()
     private val _kneePain = MutableSharedFlow<KneePain?>()
     private val _fitnessTools = MutableSharedFlow<List<FitnessTool>>()
+    private val _activeStatus = MutableSharedFlow<ActiveStatus?>()
 
     val gender: SharedFlow<Gender?> = _gender.asSharedFlow()
     val name: SharedFlow<String?> = _name.asSharedFlow()
@@ -37,6 +39,7 @@ class LoginViewModel: BaseViewModel() {
     val targetWeight = _targetWeight.asSharedFlow()
     val kneePain = _kneePain.asSharedFlow()
     val fitnessTools = _fitnessTools.asSharedFlow()
+    val activeStatus = _activeStatus.asSharedFlow()
 
     fun setIndex(index: Int) {
         _currentIndex.value = index
@@ -93,6 +96,12 @@ class LoginViewModel: BaseViewModel() {
     fun setFitnessTools(tools: List<FitnessTool>) {
         viewModelScope.launch {
             _fitnessTools.emit(tools)
+        }
+    }
+
+    fun setActiveStatus(status: ActiveStatus?) {
+        viewModelScope.launch {
+            _activeStatus.emit(status)
         }
     }
 }
