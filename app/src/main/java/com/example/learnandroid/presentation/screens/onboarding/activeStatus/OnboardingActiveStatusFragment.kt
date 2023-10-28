@@ -60,25 +60,21 @@ class OnboardingActiveStatusFragment :
             activeButton.config(ActiveStatus.ACTIVE.getTitle(requireActivity()))
             activeButton.setOnClickListener {
                 viewModel.setActiveStatus(ActiveStatus.ACTIVE)
-                delegate?.didSelectActiveStatus(ActiveStatus.ACTIVE)
             }
 
             onFootButton.config(ActiveStatus.ON_FOOT.getTitle(requireActivity()))
             onFootButton.setOnClickListener {
                 viewModel.setActiveStatus(ActiveStatus.ON_FOOT)
-                delegate?.didSelectActiveStatus(ActiveStatus.ON_FOOT)
             }
 
             seatedButton.config(ActiveStatus.SEATED.getTitle(requireActivity()))
             seatedButton.setOnClickListener {
                 viewModel.setActiveStatus(ActiveStatus.SEATED)
-                delegate?.didSelectActiveStatus(ActiveStatus.SEATED)
             }
 
             inactiveButton.config(ActiveStatus.INACTIVE.getTitle(requireActivity()))
             inactiveButton.setOnClickListener {
                 viewModel.setActiveStatus(ActiveStatus.INACTIVE)
-                delegate?.didSelectActiveStatus(ActiveStatus.INACTIVE)
             }
         }
     }

@@ -6,6 +6,7 @@ import com.example.learnandroid.domain.models.FitnessTool
 import com.example.learnandroid.domain.models.Gender
 import com.example.learnandroid.domain.models.KneePain
 import com.example.learnandroid.domain.models.OnboardingGoal
+import com.example.learnandroid.domain.models.PushUp
 import com.example.learnandroid.domain.models.WorkoutFrequency
 import com.example.learnandroid.presentation.screens.base.BaseViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -31,6 +32,7 @@ class LoginViewModel: BaseViewModel() {
     private val _fitnessTools = MutableSharedFlow<List<FitnessTool>>()
     private val _activeStatus = MutableSharedFlow<ActiveStatus?>()
     private val _frequency = MutableSharedFlow<WorkoutFrequency?>()
+    private val _pushUp = MutableSharedFlow<PushUp?>()
 
     val gender: SharedFlow<Gender?> = _gender.asSharedFlow()
     val name: SharedFlow<String?> = _name.asSharedFlow()
@@ -43,6 +45,7 @@ class LoginViewModel: BaseViewModel() {
     val fitnessTools = _fitnessTools.asSharedFlow()
     val activeStatus = _activeStatus.asSharedFlow()
     val frequency = _frequency.asSharedFlow()
+    val pushUp = _pushUp.asSharedFlow()
 
     fun setIndex(index: Int) {
         _currentIndex.value = index
@@ -111,6 +114,12 @@ class LoginViewModel: BaseViewModel() {
     fun setFrequency(frequency: WorkoutFrequency?) {
         viewModelScope.launch {
             _frequency.emit(frequency)
+        }
+    }
+
+    fun setPushUp(pushUp: PushUp?) {
+        viewModelScope.launch {
+            _pushUp.emit(pushUp)
         }
     }
 }

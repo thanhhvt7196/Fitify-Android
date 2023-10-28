@@ -14,6 +14,7 @@ import com.example.learnandroid.domain.models.FitnessTool
 import com.example.learnandroid.domain.models.Gender
 import com.example.learnandroid.domain.models.KneePain
 import com.example.learnandroid.domain.models.OnboardingGoal
+import com.example.learnandroid.domain.models.PushUp
 import com.example.learnandroid.domain.models.WorkoutFrequency
 import com.example.learnandroid.presentation.components.appToolBar.AppToolbar
 import com.example.learnandroid.presentation.screens.base.BaseViewBindingFragment
@@ -26,6 +27,7 @@ import com.example.learnandroid.presentation.screens.onboarding.age.OnboardingAg
 import com.example.learnandroid.presentation.screens.onboarding.fitnessTool.OnboardingFitnessToolFragment
 import com.example.learnandroid.presentation.screens.onboarding.height.OnboardingHeightFragment
 import com.example.learnandroid.presentation.screens.onboarding.kneePain.OnboardingKneePainFragment
+import com.example.learnandroid.presentation.screens.onboarding.pushup.OnboardingPushUpFragment
 import com.example.learnandroid.presentation.screens.onboarding.salePitch.OnboardingSalePitchDelegate
 import com.example.learnandroid.presentation.screens.onboarding.salePitch.OnboardingSalePitchFragment
 import com.example.learnandroid.presentation.screens.onboarding.weight.OnboardingWeightFragment
@@ -52,6 +54,7 @@ class LoginFragment :
     private val fitnessToolFragment = OnboardingFitnessToolFragment.newInstance()
     private val activeStatusFragment = OnboardingActiveStatusFragment.newInstance()
     private val frequencyFragment = OnboardingFrequencyFragment.newInstance()
+    private val pushUpFragment = OnboardingPushUpFragment.newInstance()
 
     companion object {
         const val tag = "LoginFragment"
@@ -88,6 +91,7 @@ class LoginFragment :
         setupFitnessToolView()
         setupActiveStatusView()
         setupFrequencyView()
+        setupPushUpView()
     }
 
     private fun setupLottie() {
@@ -112,7 +116,8 @@ class LoginFragment :
                 kneePainFragment,
                 fitnessToolFragment,
                 activeStatusFragment,
-                frequencyFragment
+                frequencyFragment,
+                pushUpFragment
             )
         val viewpager = viewBinding.loginViewPager
         viewpager.isUserInputEnabled = false
@@ -135,6 +140,16 @@ class LoginFragment :
                 setAnimationProgress(index)
             }
         }
+    }
+
+    private fun setupPushUpView() {
+        val delegate = object : OnboardingPushUpFragment.OnboardingPushUpDelegate {
+            override fun didSelectPushUp(pushUp: PushUp) {
+                viewModel.setPushUp(pushUp)
+                goToNextPage()
+            }
+        }
+        pushUpFragment.setAction(delegate)
     }
 
     private fun setupActiveStatusView() {
@@ -336,6 +351,10 @@ class LoginFragment :
 
         if (frequencyFragment.isAdded) {
             frequencyFragment.resetData()
+        }
+
+        if (pushUpFragment.isAdded) {
+            pushUpFragment.resetData()
         }
     }
 
