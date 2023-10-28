@@ -2,6 +2,7 @@ package com.example.learnandroid.presentation.screens.login
 
 import androidx.lifecycle.viewModelScope
 import com.example.learnandroid.domain.models.Gender
+import com.example.learnandroid.domain.models.KneePain
 import com.example.learnandroid.domain.models.OnboardingGoal
 import com.example.learnandroid.presentation.screens.base.BaseViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -22,7 +23,8 @@ class LoginViewModel: BaseViewModel() {
     private val _age = MutableSharedFlow<Int?>()
     private val _height = MutableSharedFlow<Int?>()
     private val _weight = MutableSharedFlow<Float?>()
-
+    private val _targetWeight = MutableSharedFlow<Float?>()
+    private val _kneePain = MutableSharedFlow<KneePain?>()
 
     val gender: SharedFlow<Gender?> = _gender.asSharedFlow()
     val name: SharedFlow<String?> = _name.asSharedFlow()
@@ -30,6 +32,8 @@ class LoginViewModel: BaseViewModel() {
     val age = _age.asSharedFlow()
     val height = _height.asSharedFlow()
     val weight = _weight.asSharedFlow()
+    val targetWeight = _targetWeight.asSharedFlow()
+    val kneePain = _kneePain.asSharedFlow()
 
     fun setIndex(index: Int) {
         _currentIndex.value = index
@@ -68,6 +72,18 @@ class LoginViewModel: BaseViewModel() {
     fun setWeight(weight: Float?) {
         viewModelScope.launch {
             _weight.emit(weight)
+        }
+    }
+
+    fun setTargetWeight(weight: Float?) {
+        viewModelScope.launch {
+            _targetWeight.emit(weight)
+        }
+    }
+
+    fun setKneePain(kneePain: KneePain?) {
+        viewModelScope.launch {
+            _kneePain.emit(kneePain)
         }
     }
 }

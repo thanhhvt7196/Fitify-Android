@@ -9,6 +9,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.learnandroid.R
 import com.example.learnandroid.databinding.FragmentLoginBinding
 import com.example.learnandroid.domain.models.Gender
+import com.example.learnandroid.domain.models.KneePain
 import com.example.learnandroid.domain.models.OnboardingGoal
 import com.example.learnandroid.presentation.components.appToolBar.AppToolbar
 import com.example.learnandroid.presentation.screens.base.BaseViewBindingFragment
@@ -18,6 +19,7 @@ import com.example.learnandroid.presentation.screens.onboarding.name.OnboardingN
 import com.example.learnandroid.presentation.screens.loginBottomSheet.LoginType
 import com.example.learnandroid.presentation.screens.onboarding.age.OnboardingAgeFragment
 import com.example.learnandroid.presentation.screens.onboarding.height.OnboardingHeightFragment
+import com.example.learnandroid.presentation.screens.onboarding.kneePain.OnboardingKneePainFragment
 import com.example.learnandroid.presentation.screens.onboarding.salePitch.OnboardingSalePitchDelegate
 import com.example.learnandroid.presentation.screens.onboarding.salePitch.OnboardingSalePitchFragment
 import com.example.learnandroid.presentation.screens.onboarding.weight.OnboardingWeightFragment
@@ -39,6 +41,7 @@ class LoginFragment :
         OnboardingWeightFragment.currentWeightNewInstance()
     private val targetWeightFragment =
         OnboardingWeightFragment.targetWeightNewInstance()
+    private val kneePainFragment = OnboardingKneePainFragment.newInstance()
 
     companion object {
         const val tag = "LoginFragment"
@@ -71,6 +74,7 @@ class LoginFragment :
         setupHeightView()
         setupWeightView(currentWeightFragment)
         setupWeightView(targetWeightFragment)
+        setupKneePainView()
     }
 
     private fun setupLottie() {
@@ -91,7 +95,8 @@ class LoginFragment :
                 ageFragment,
                 heightFragment,
                 currentWeightFragment,
-                targetWeightFragment
+                targetWeightFragment,
+                kneePainFragment
             )
         val viewpager = viewBinding.loginViewPager
         viewpager.isUserInputEnabled = false
@@ -116,6 +121,16 @@ class LoginFragment :
         }
     }
 
+    private fun setupKneePainView() {
+        val delegate = object : OnboardingKneePainFragment.OnboardingKneePainDelegate {
+            override fun didSelectKneePain(kneePain: KneePain) {
+                viewModel.setKneePain(kneePain)
+                goToNextPage()
+            }
+        }
+        kneePainFragment.setAction(delegate)
+    }
+
     private fun setupHeightView() {
         val delegate = object : OnboardingHeightFragment.OnboardingHeightDelegate {
             override fun didSelectHeight(height: Int) {
@@ -135,9 +150,14 @@ class LoginFragment :
         fragment.arguments = args
         val delegate = object : OnboardingWeightFragment.OnboardingWeightDelegate {
             override fun didSelectWeight(weight: Float) {
-                viewModel.setWeight(weight)
-                if (fragment == currentWeightFragment) {
-                    targetWeightFragment.setHint(weight)
+                when (fragment) {
+                    currentWeightFragment -> {
+                        viewModel.setWeight(weight)
+                        targetWeightFragment.setHint(weight)
+                    }
+                    targetWeightFragment -> {
+                        viewModel.setTargetWeight(weight)
+                    }
                 }
                 goToNextPage()
             }
@@ -254,6 +274,10 @@ class LoginFragment :
 
         if (targetWeightFragment.isAdded) {
             targetWeightFragment.resetData()
+        }
+
+        if (kneePainFragment.isAdded) {
+            kneePainFragment.resetData()
         }
     }
 
