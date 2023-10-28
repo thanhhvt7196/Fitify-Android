@@ -422,6 +422,7 @@ Mike\'s humor algorithm ensures that laughter is part of every workout, so your 
     <string name="onboarding_leading_more_relaxed">Do you want to be less stressed and more relaxed?</string>
     <string name="unit_km">km</string>
     <string name="unit_mi">mi</string>
+    <string name="onboarding_workout_frequency_title">How often do you work out?</string>
     <string name="onboarding_tool_selection_title">Do you have access to any fitness tools?</string>
     <string name="onboarding_tool_selection_subtitle"><![CDATA[<font color="#AFFF2D"><b>You don’t need any tools</b></font> to use Fitify, but they can be beneficial if available.]]></string>
     <string name="hc_upsell_push_title_5">🖤 Meet your new personal trainer</string>
@@ -1062,7 +1063,6 @@ New members only.</string>
     <string name="onboarding_energy_level_tired_around_lunchtime">I feel tired around lunchtime</string>
     <string name="onboarding_duration_x_to_y_hours">%1$d–%2$d hours</string>
     <string name="onboarding_workout_frequency_never">Never</string>
-    <string name="onboarding_workout_frequency_title">How often do you exercise?</string>
     <string name="onboarding_workout_frequency_x_to_y_weeks">%1$d–%2$d workouts a week</string>
     <string name="title_exercises">Exercise List</string>
     <string name="reminders_settings_title">Reminders</string>

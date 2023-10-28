@@ -14,6 +14,7 @@ import com.example.learnandroid.domain.models.FitnessTool
 import com.example.learnandroid.domain.models.Gender
 import com.example.learnandroid.domain.models.KneePain
 import com.example.learnandroid.domain.models.OnboardingGoal
+import com.example.learnandroid.domain.models.WorkoutFrequency
 import com.example.learnandroid.presentation.components.appToolBar.AppToolbar
 import com.example.learnandroid.presentation.screens.base.BaseViewBindingFragment
 import com.example.learnandroid.presentation.screens.onboarding.gender.OnboardingGenderFragment
@@ -28,6 +29,7 @@ import com.example.learnandroid.presentation.screens.onboarding.kneePain.Onboard
 import com.example.learnandroid.presentation.screens.onboarding.salePitch.OnboardingSalePitchDelegate
 import com.example.learnandroid.presentation.screens.onboarding.salePitch.OnboardingSalePitchFragment
 import com.example.learnandroid.presentation.screens.onboarding.weight.OnboardingWeightFragment
+import com.example.learnandroid.presentation.screens.onboarding.workoutFrequency.OnboardingFrequencyFragment
 import com.example.learnandroid.utils.extensions.play
 import kotlinx.coroutines.launch
 
@@ -49,6 +51,7 @@ class LoginFragment :
     private val kneePainFragment = OnboardingKneePainFragment.newInstance()
     private val fitnessToolFragment = OnboardingFitnessToolFragment.newInstance()
     private val activeStatusFragment = OnboardingActiveStatusFragment.newInstance()
+    private val frequencyFragment = OnboardingFrequencyFragment.newInstance()
 
     companion object {
         const val tag = "LoginFragment"
@@ -84,6 +87,7 @@ class LoginFragment :
         setupKneePainView()
         setupFitnessToolView()
         setupActiveStatusView()
+        setupFrequencyView()
     }
 
     private fun setupLottie() {
@@ -107,7 +111,8 @@ class LoginFragment :
                 targetWeightFragment,
                 kneePainFragment,
                 fitnessToolFragment,
-                activeStatusFragment
+                activeStatusFragment,
+                frequencyFragment
             )
         val viewpager = viewBinding.loginViewPager
         viewpager.isUserInputEnabled = false
@@ -140,6 +145,16 @@ class LoginFragment :
             }
         }
         activeStatusFragment.setAction(delegate)
+    }
+
+    private fun setupFrequencyView() {
+        val delegate = object : OnboardingFrequencyFragment.OnboardingFrequencyDelegate {
+            override fun didSelectFrequency(frequency: WorkoutFrequency) {
+                viewModel.setFrequency(frequency)
+                goToNextPage()
+            }
+        }
+        frequencyFragment.setAction(delegate)
     }
 
     private fun setupFitnessToolView() {
@@ -317,6 +332,10 @@ class LoginFragment :
 
         if (activeStatusFragment.isAdded) {
             activeStatusFragment.resetData()
+        }
+
+        if (frequencyFragment.isAdded) {
+            frequencyFragment.resetData()
         }
     }
 
