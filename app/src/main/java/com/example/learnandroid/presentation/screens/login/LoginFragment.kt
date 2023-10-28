@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.learnandroid.R
 import com.example.learnandroid.databinding.FragmentLoginBinding
 import com.example.learnandroid.domain.models.ActiveStatus
+import com.example.learnandroid.domain.models.BadHabit
 import com.example.learnandroid.domain.models.DailyWalk
 import com.example.learnandroid.domain.models.FitnessTool
 import com.example.learnandroid.domain.models.Gender
@@ -25,6 +26,7 @@ import com.example.learnandroid.presentation.screens.onboarding.name.OnboardingN
 import com.example.learnandroid.presentation.screens.loginBottomSheet.LoginType
 import com.example.learnandroid.presentation.screens.onboarding.activeStatus.OnboardingActiveStatusFragment
 import com.example.learnandroid.presentation.screens.onboarding.age.OnboardingAgeFragment
+import com.example.learnandroid.presentation.screens.onboarding.badHabit.OnboardingBadHabitFragment
 import com.example.learnandroid.presentation.screens.onboarding.dailyWalk.OnboardingDailyWalkFragment
 import com.example.learnandroid.presentation.screens.onboarding.fitnessTool.OnboardingFitnessToolFragment
 import com.example.learnandroid.presentation.screens.onboarding.height.OnboardingHeightFragment
@@ -58,6 +60,7 @@ class LoginFragment :
     private val frequencyFragment = OnboardingFrequencyFragment.newInstance()
     private val pushUpFragment = OnboardingPushUpFragment.newInstance()
     private val dailyWalkFragment = OnboardingDailyWalkFragment.newInstance()
+    private val badHabitFragment = OnboardingBadHabitFragment.newInstance()
 
     companion object {
         const val tag = "LoginFragment"
@@ -96,6 +99,7 @@ class LoginFragment :
         setupFrequencyView()
         setupPushUpView()
         setupDailyWalkView()
+        setupBadHabitView()
     }
 
     private fun setupLottie() {
@@ -122,7 +126,8 @@ class LoginFragment :
                 activeStatusFragment,
                 frequencyFragment,
                 pushUpFragment,
-                dailyWalkFragment
+                dailyWalkFragment,
+                badHabitFragment
             )
         val viewpager = viewBinding.loginViewPager
         viewpager.isUserInputEnabled = false
@@ -145,6 +150,16 @@ class LoginFragment :
                 setAnimationProgress(index)
             }
         }
+    }
+
+    private fun setupBadHabitView() {
+        val delegate = object : OnboardingBadHabitFragment.OnboardingBadHabitDelegate {
+            override fun didSelectBadHabits(badHabits: List<BadHabit>) {
+                viewModel.setBadHabits(badHabits)
+                goToNextPage()
+            }
+        }
+        badHabitFragment.setAction(delegate)
     }
 
     private fun setupDailyWalkView() {
@@ -374,6 +389,10 @@ class LoginFragment :
 
         if (dailyWalkFragment.isAdded) {
             dailyWalkFragment.resetData()
+        }
+
+        if (badHabitFragment.isAdded) {
+            badHabitFragment.resetData()
         }
     }
 

@@ -1,24 +1,25 @@
-package com.example.learnandroid.presentation.screens.onboarding.fitnessTool
+package com.example.learnandroid.presentation.screens.onboarding.badHabit
 
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.example.learnandroid.domain.models.BadHabit
 import com.example.learnandroid.domain.models.FitnessTool
 import com.example.learnandroid.presentation.screens.onboarding.views.OnboardingTextItemView
 
-class FitnessToolAdapter(private val fitnessTools: List<Pair<FitnessTool, Boolean>>) :
-    RecyclerView.Adapter<FitnessToolAdapter.ViewHolder>() {
+class BadHabitAdapter(private val badHabits: List<Pair<BadHabit, Boolean>>) :
+    RecyclerView.Adapter<BadHabitAdapter.ViewHolder>() {
 
-    private var dataSet: List<Pair<FitnessTool, Boolean>> = fitnessTools
+    private var dataSet: List<Pair<BadHabit, Boolean>> = badHabits
 
-    interface FitnessToolAdapterDelegate {
-        fun didSelectTool(tool: FitnessTool)
+    interface BadHabitAdapterDelegate {
+        fun didSelectBadHabit(badHabit: BadHabit)
     }
 
-    private var delegate: FitnessToolAdapterDelegate? = null
+    private var delegate: BadHabitAdapterDelegate? = null
 
-    fun updateData(newData: List<Pair<FitnessTool, Boolean>>) {
+    fun updateData(newData: List<Pair<BadHabit, Boolean>>) {
         val diffResult = DiffUtil.calculateDiff(object : DiffUtil.Callback() {
             override fun getOldListSize(): Int = dataSet.size
             override fun getNewListSize(): Int = newData.size
@@ -34,7 +35,7 @@ class FitnessToolAdapter(private val fitnessTools: List<Pair<FitnessTool, Boolea
         diffResult.dispatchUpdatesTo(this)
     }
 
-    fun setAction(delegate: FitnessToolAdapterDelegate) {
+    fun setAction(delegate: BadHabitAdapterDelegate) {
         this.delegate = delegate
     }
 
@@ -61,12 +62,12 @@ class FitnessToolAdapter(private val fitnessTools: List<Pair<FitnessTool, Boolea
     override fun getItemCount(): Int = dataSet.size
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(item: Pair<FitnessTool, Boolean>) {
+        fun bind(item: Pair<BadHabit, Boolean>) {
             val itemView = itemView as OnboardingTextItemView?
             itemView?.config(item.first.getTitle(itemView.context), null)
             itemView?.isSelected = item.second
             itemView?.setOnClickListener {
-                delegate?.didSelectTool(item.first)
+                delegate?.didSelectBadHabit(item.first)
             }
         }
     }

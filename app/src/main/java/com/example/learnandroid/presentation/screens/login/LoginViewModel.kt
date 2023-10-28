@@ -2,6 +2,7 @@ package com.example.learnandroid.presentation.screens.login
 
 import androidx.lifecycle.viewModelScope
 import com.example.learnandroid.domain.models.ActiveStatus
+import com.example.learnandroid.domain.models.BadHabit
 import com.example.learnandroid.domain.models.DailyWalk
 import com.example.learnandroid.domain.models.FitnessTool
 import com.example.learnandroid.domain.models.Gender
@@ -35,6 +36,7 @@ class LoginViewModel: BaseViewModel() {
     private val _frequency = MutableSharedFlow<WorkoutFrequency?>()
     private val _pushUp = MutableSharedFlow<PushUp?>()
     private val _dailyWalk = MutableSharedFlow<DailyWalk?>()
+    private val _badHabits = MutableSharedFlow<List<BadHabit>>()
 
     val gender: SharedFlow<Gender?> = _gender.asSharedFlow()
     val name: SharedFlow<String?> = _name.asSharedFlow()
@@ -49,6 +51,7 @@ class LoginViewModel: BaseViewModel() {
     val frequency = _frequency.asSharedFlow()
     val pushUp = _pushUp.asSharedFlow()
     val dailyWalk = _dailyWalk.asSharedFlow()
+    val badHabits = _badHabits.asSharedFlow()
 
     fun setIndex(index: Int) {
         _currentIndex.value = index
@@ -129,6 +132,12 @@ class LoginViewModel: BaseViewModel() {
     fun setDailyWalk(dailyWalk: DailyWalk?) {
         viewModelScope.launch {
             _dailyWalk.emit(dailyWalk)
+        }
+    }
+
+    fun setBadHabits(badHabits: List<BadHabit>) {
+        viewModelScope.launch {
+            _badHabits.emit(badHabits)
         }
     }
 }
