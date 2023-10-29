@@ -1,18 +1,10 @@
 package com.example.learnandroid.presentation.screens.onboarding.energyLevel
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
-import com.example.learnandroid.R
 import com.example.learnandroid.databinding.FragmentOnboardingEnergyLevelBinding
 import com.example.learnandroid.domain.models.EnergyLevel
-import com.example.learnandroid.domain.models.PushUp
 import com.example.learnandroid.presentation.screens.base.BaseViewBindingFragment
-import com.example.learnandroid.presentation.screens.onboarding.pushup.OnboardingPushUpFragment
 import kotlinx.coroutines.launch
 
 class OnboardingEnergyLevelFragment : BaseViewBindingFragment<FragmentOnboardingEnergyLevelBinding, OnboardingEnergyLevelViewModel>(FragmentOnboardingEnergyLevelBinding::inflate) {

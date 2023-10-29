@@ -1,7 +1,6 @@
 package com.example.learnandroid.presentation.screens.login
 
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -17,6 +16,7 @@ import com.example.learnandroid.domain.models.FitnessTool
 import com.example.learnandroid.domain.models.Gender
 import com.example.learnandroid.domain.models.KneePain
 import com.example.learnandroid.domain.models.OnboardingGoal
+import com.example.learnandroid.domain.models.PlanPace
 import com.example.learnandroid.domain.models.PushUp
 import com.example.learnandroid.domain.models.WorkoutFrequency
 import com.example.learnandroid.presentation.components.appToolBar.AppToolbar
@@ -33,6 +33,7 @@ import com.example.learnandroid.presentation.screens.onboarding.energyLevel.Onbo
 import com.example.learnandroid.presentation.screens.onboarding.fitnessTool.OnboardingFitnessToolFragment
 import com.example.learnandroid.presentation.screens.onboarding.height.OnboardingHeightFragment
 import com.example.learnandroid.presentation.screens.onboarding.kneePain.OnboardingKneePainFragment
+import com.example.learnandroid.presentation.screens.onboarding.planPace.OnboardingPlanPaceFragment
 import com.example.learnandroid.presentation.screens.onboarding.pushup.OnboardingPushUpFragment
 import com.example.learnandroid.presentation.screens.onboarding.salePitch.OnboardingSalePitchDelegate
 import com.example.learnandroid.presentation.screens.onboarding.salePitch.OnboardingSalePitchFragment
@@ -64,6 +65,7 @@ class LoginFragment :
     private val dailyWalkFragment = OnboardingDailyWalkFragment.newInstance()
     private val badHabitFragment = OnboardingBadHabitFragment.newInstance()
     private val energyLevelFragment = OnboardingEnergyLevelFragment.newInstance()
+    private val planPaceFragment = OnboardingPlanPaceFragment.newInstance()
 
     companion object {
         const val tag = "LoginFragment"
@@ -104,6 +106,7 @@ class LoginFragment :
         setupDailyWalkView()
         setupBadHabitView()
         setupEnergyLevelView()
+        setupPlanPaceView()
     }
 
     private fun setupLottie() {
@@ -132,7 +135,8 @@ class LoginFragment :
                 pushUpFragment,
                 dailyWalkFragment,
                 badHabitFragment,
-                energyLevelFragment
+                energyLevelFragment,
+                planPaceFragment
             )
         val viewpager = viewBinding.loginViewPager
         viewpager.isUserInputEnabled = false
@@ -155,6 +159,16 @@ class LoginFragment :
                 setAnimationProgress(index)
             }
         }
+    }
+
+    private fun setupPlanPaceView() {
+        val delegate = object : OnboardingPlanPaceFragment.OnboardingPlanPaceDelegate {
+            override fun didSelectPlanPace(planPace: PlanPace) {
+                viewModel.setPlanPace(planPace)
+                goToNextPage()
+            }
+        }
+        planPaceFragment.setAction(delegate)
     }
 
     private fun setupEnergyLevelView() {
@@ -292,18 +306,11 @@ class LoginFragment :
     }
 
     private fun setupGoalView() {
-        viewLifecycleOwner.lifecycleScope.launch {
-            viewModel.goal.collect { goal ->
-                goal?.let {
-                    goToNextPage()
-                }
-            }
-        }
-
         val delegate = object : OnboardingGoalFragment.OnboardingGoalDelegate {
             override fun didSelectGoal(goal: OnboardingGoal) {
                 viewLifecycleOwner.lifecycleScope.launch {
                     viewModel.setGoal(goal)
+                    goToNextPage()
                 }
                 salePitchFragment.setGoal(goal)
             }
@@ -312,18 +319,11 @@ class LoginFragment :
     }
 
     private fun setupNameView() {
-        viewLifecycleOwner.lifecycleScope.launch {
-            viewModel.name.collect { name ->
-                name?.let {
-                    goToNextPage()
-                }
-            }
-        }
-
         val onboardingNameDelegate = object : OnboardingNameFragment.OnboardingNameDelegate {
             override fun didSelectName(name: String) {
                 viewLifecycleOwner.lifecycleScope.launch {
                     viewModel.setName(name)
+                    goToNextPage()
                 }
             }
         }
@@ -331,14 +331,6 @@ class LoginFragment :
     }
 
     private fun setupGenderView() {
-        viewLifecycleOwner.lifecycleScope.launch {
-            viewModel.gender.collect { gender ->
-                gender?.let {
-                    goToNextPage()
-                }
-            }
-        }
-
         val onboardingGenderDelegate = object : OnboardingGenderFragment.OnboardingGenderDelegate {
             override fun didSelectLoginType(loginType: LoginType) {
                 findNavController().navigate(R.id.login_to_login_email)
@@ -352,6 +344,7 @@ class LoginFragment :
 
                 goalFragment.setGender(gender)
                 salePitchFragment.setGender(gender)
+                goToNextPage()
             }
         }
 
@@ -412,6 +405,10 @@ class LoginFragment :
 
         if (energyLevelFragment.isAdded) {
             energyLevelFragment.resetData()
+        }
+
+        if (planPaceFragment.isAdded) {
+            planPaceFragment.resetData()
         }
     }
 

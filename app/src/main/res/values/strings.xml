@@ -1050,6 +1050,7 @@ New members only.</string>
     <string name="onboarding_water_intake_x_to_y_glasses">%1$d to %2$d glasses</string>
     <string name="onboarding_weight_title">What is your weight?</string>
     <string name="onboarding_workout_frequency_more_than_x_a_week">More than %d workouts a week</string>
+    <string name="fitness_plan_recommended">Recommended</string>
     <plurals name="onboarding_duration_more_than_x_hours">
         <item quantity="one">More than %d hour</item>
         <item quantity="other">More than %d hours</item>

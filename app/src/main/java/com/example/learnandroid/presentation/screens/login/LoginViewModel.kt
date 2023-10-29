@@ -9,6 +9,7 @@ import com.example.learnandroid.domain.models.FitnessTool
 import com.example.learnandroid.domain.models.Gender
 import com.example.learnandroid.domain.models.KneePain
 import com.example.learnandroid.domain.models.OnboardingGoal
+import com.example.learnandroid.domain.models.PlanPace
 import com.example.learnandroid.domain.models.PushUp
 import com.example.learnandroid.domain.models.WorkoutFrequency
 import com.example.learnandroid.presentation.screens.base.BaseViewModel
@@ -24,37 +25,22 @@ class LoginViewModel: BaseViewModel() {
     private val _currentIndex = MutableStateFlow<Int>(0)
     val currentIndex: StateFlow<Int> = _currentIndex.asStateFlow()
 
-    private val _gender = MutableSharedFlow<Gender?>()
-    private val _name = MutableSharedFlow<String?>()
-    private val _goal = MutableSharedFlow<OnboardingGoal?>()
-    private val _age = MutableSharedFlow<Int?>()
-    private val _height = MutableSharedFlow<Int?>()
-    private val _weight = MutableSharedFlow<Float?>()
-    private val _targetWeight = MutableSharedFlow<Float?>()
-    private val _kneePain = MutableSharedFlow<KneePain?>()
+    private val _gender = MutableSharedFlow<Gender>()
+    private val _name = MutableSharedFlow<String>()
+    private val _goal = MutableSharedFlow<OnboardingGoal>()
+    private val _age = MutableSharedFlow<Int>()
+    private val _height = MutableSharedFlow<Int>()
+    private val _weight = MutableSharedFlow<Float>()
+    private val _targetWeight = MutableSharedFlow<Float>()
+    private val _kneePain = MutableSharedFlow<KneePain>()
     private val _fitnessTools = MutableSharedFlow<List<FitnessTool>>()
-    private val _activeStatus = MutableSharedFlow<ActiveStatus?>()
-    private val _frequency = MutableSharedFlow<WorkoutFrequency?>()
-    private val _pushUp = MutableSharedFlow<PushUp?>()
-    private val _dailyWalk = MutableSharedFlow<DailyWalk?>()
+    private val _activeStatus = MutableSharedFlow<ActiveStatus>()
+    private val _frequency = MutableSharedFlow<WorkoutFrequency>()
+    private val _pushUp = MutableSharedFlow<PushUp>()
+    private val _dailyWalk = MutableSharedFlow<DailyWalk>()
     private val _badHabits = MutableSharedFlow<List<BadHabit>>()
-    private val _eneryLevel = MutableSharedFlow<EnergyLevel?>()
-
-    val gender: SharedFlow<Gender?> = _gender.asSharedFlow()
-    val name: SharedFlow<String?> = _name.asSharedFlow()
-    val goal: SharedFlow<OnboardingGoal?> = _goal.asSharedFlow()
-    val age = _age.asSharedFlow()
-    val height = _height.asSharedFlow()
-    val weight = _weight.asSharedFlow()
-    val targetWeight = _targetWeight.asSharedFlow()
-    val kneePain = _kneePain.asSharedFlow()
-    val fitnessTools = _fitnessTools.asSharedFlow()
-    val activeStatus = _activeStatus.asSharedFlow()
-    val frequency = _frequency.asSharedFlow()
-    val pushUp = _pushUp.asSharedFlow()
-    val dailyWalk = _dailyWalk.asSharedFlow()
-    val badHabits = _badHabits.asSharedFlow()
-    val energyLevel = _eneryLevel.asSharedFlow()
+    private val _energyLevel = MutableSharedFlow<EnergyLevel>()
+    private val _planPace = MutableSharedFlow<PlanPace>()
 
     fun setIndex(index: Int) {
         _currentIndex.value = index
@@ -78,31 +64,31 @@ class LoginViewModel: BaseViewModel() {
         }
     }
 
-    fun setAge(age: Int?) {
+    fun setAge(age: Int) {
         viewModelScope.launch {
             _age.emit(age)
         }
     }
 
-    fun setHeight(height: Int?) {
+    fun setHeight(height: Int) {
         viewModelScope.launch {
             _height.emit(height)
         }
     }
 
-    fun setWeight(weight: Float?) {
+    fun setWeight(weight: Float) {
         viewModelScope.launch {
             _weight.emit(weight)
         }
     }
 
-    fun setTargetWeight(weight: Float?) {
+    fun setTargetWeight(weight: Float) {
         viewModelScope.launch {
             _targetWeight.emit(weight)
         }
     }
 
-    fun setKneePain(kneePain: KneePain?) {
+    fun setKneePain(kneePain: KneePain) {
         viewModelScope.launch {
             _kneePain.emit(kneePain)
         }
@@ -114,25 +100,25 @@ class LoginViewModel: BaseViewModel() {
         }
     }
 
-    fun setActiveStatus(status: ActiveStatus?) {
+    fun setActiveStatus(status: ActiveStatus) {
         viewModelScope.launch {
             _activeStatus.emit(status)
         }
     }
 
-    fun setFrequency(frequency: WorkoutFrequency?) {
+    fun setFrequency(frequency: WorkoutFrequency) {
         viewModelScope.launch {
             _frequency.emit(frequency)
         }
     }
 
-    fun setPushUp(pushUp: PushUp?) {
+    fun setPushUp(pushUp: PushUp) {
         viewModelScope.launch {
             _pushUp.emit(pushUp)
         }
     }
 
-    fun setDailyWalk(dailyWalk: DailyWalk?) {
+    fun setDailyWalk(dailyWalk: DailyWalk) {
         viewModelScope.launch {
             _dailyWalk.emit(dailyWalk)
         }
@@ -146,7 +132,13 @@ class LoginViewModel: BaseViewModel() {
 
     fun setEnergyLevel(energyLevel: EnergyLevel) {
         viewModelScope.launch {
-            _eneryLevel.emit(energyLevel)
+            _energyLevel.emit(energyLevel)
+        }
+    }
+
+    fun setPlanPace(planPace: PlanPace) {
+        viewModelScope.launch {
+            _planPace.emit(planPace)
         }
     }
 }
