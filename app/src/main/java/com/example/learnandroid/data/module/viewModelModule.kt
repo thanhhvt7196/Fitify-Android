@@ -22,6 +22,7 @@ import com.example.learnandroid.presentation.screens.onboarding.name.OnboardingN
 import com.example.learnandroid.presentation.screens.onboarding.planPace.OnboardingPlanPaceViewModel
 import com.example.learnandroid.presentation.screens.onboarding.pushup.OnboardingPushUpViewModel
 import com.example.learnandroid.presentation.screens.onboarding.salePitch.OnboardingSalePitchViewModel
+import com.example.learnandroid.presentation.screens.onboarding.source.OnboardingSourceViewModel
 import com.example.learnandroid.presentation.screens.onboarding.weight.OnboardingWeightViewModel
 import com.example.learnandroid.presentation.screens.onboarding.workoutFrequency.OnboardingFrequencyViewModel
 import com.example.learnandroid.presentation.screens.workouts.WorkoutsViewModel
@@ -29,6 +30,7 @@ import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val viewModelModule = module {
+    viewModel { OnboardingSourceViewModel() }
     viewModel { OnboardingPlanPaceViewModel() }
     viewModel { OnboardingEnergyLevelViewModel() }
     viewModel { OnboardingBadHabitViewModel() }

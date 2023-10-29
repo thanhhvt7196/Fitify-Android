@@ -18,6 +18,7 @@ import com.example.learnandroid.domain.models.KneePain
 import com.example.learnandroid.domain.models.OnboardingGoal
 import com.example.learnandroid.domain.models.PlanPace
 import com.example.learnandroid.domain.models.PushUp
+import com.example.learnandroid.domain.models.Source
 import com.example.learnandroid.domain.models.WorkoutFrequency
 import com.example.learnandroid.presentation.components.appToolBar.AppToolbar
 import com.example.learnandroid.presentation.screens.base.BaseViewBindingFragment
@@ -37,6 +38,7 @@ import com.example.learnandroid.presentation.screens.onboarding.planPace.Onboard
 import com.example.learnandroid.presentation.screens.onboarding.pushup.OnboardingPushUpFragment
 import com.example.learnandroid.presentation.screens.onboarding.salePitch.OnboardingSalePitchDelegate
 import com.example.learnandroid.presentation.screens.onboarding.salePitch.OnboardingSalePitchFragment
+import com.example.learnandroid.presentation.screens.onboarding.source.OnboardingSourceFragment
 import com.example.learnandroid.presentation.screens.onboarding.weight.OnboardingWeightFragment
 import com.example.learnandroid.presentation.screens.onboarding.workoutFrequency.OnboardingFrequencyFragment
 import com.example.learnandroid.utils.extensions.play
@@ -66,6 +68,7 @@ class LoginFragment :
     private val badHabitFragment = OnboardingBadHabitFragment.newInstance()
     private val energyLevelFragment = OnboardingEnergyLevelFragment.newInstance()
     private val planPaceFragment = OnboardingPlanPaceFragment.newInstance()
+    private val sourceFragment = OnboardingSourceFragment.newInstance()
 
     companion object {
         const val tag = "LoginFragment"
@@ -107,6 +110,7 @@ class LoginFragment :
         setupBadHabitView()
         setupEnergyLevelView()
         setupPlanPaceView()
+        setupSourceView()
     }
 
     private fun setupLottie() {
@@ -132,6 +136,7 @@ class LoginFragment :
                 fitnessToolFragment,
                 activeStatusFragment,
                 frequencyFragment,
+                sourceFragment,
                 pushUpFragment,
                 dailyWalkFragment,
                 badHabitFragment,
@@ -159,6 +164,16 @@ class LoginFragment :
                 setAnimationProgress(index)
             }
         }
+    }
+
+    private fun setupSourceView() {
+        val delegate = object : OnboardingSourceFragment.OnboardingSourceDelegate {
+            override fun didSelectSource(source: Source) {
+                viewModel.setSource(source)
+                goToNextPage()
+            }
+        }
+        sourceFragment.setAction(delegate)
     }
 
     private fun setupPlanPaceView() {
@@ -409,6 +424,10 @@ class LoginFragment :
 
         if (planPaceFragment.isAdded) {
             planPaceFragment.resetData()
+        }
+
+        if (sourceFragment.isAdded) {
+            sourceFragment.resetData()
         }
     }
 

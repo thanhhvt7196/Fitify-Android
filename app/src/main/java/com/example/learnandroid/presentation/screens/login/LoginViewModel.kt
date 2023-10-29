@@ -11,6 +11,7 @@ import com.example.learnandroid.domain.models.KneePain
 import com.example.learnandroid.domain.models.OnboardingGoal
 import com.example.learnandroid.domain.models.PlanPace
 import com.example.learnandroid.domain.models.PushUp
+import com.example.learnandroid.domain.models.Source
 import com.example.learnandroid.domain.models.WorkoutFrequency
 import com.example.learnandroid.presentation.screens.base.BaseViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -41,6 +42,7 @@ class LoginViewModel: BaseViewModel() {
     private val _badHabits = MutableSharedFlow<List<BadHabit>>()
     private val _energyLevel = MutableSharedFlow<EnergyLevel>()
     private val _planPace = MutableSharedFlow<PlanPace>()
+    private val _source = MutableSharedFlow<Source>()
 
     fun setIndex(index: Int) {
         _currentIndex.value = index
@@ -139,6 +141,12 @@ class LoginViewModel: BaseViewModel() {
     fun setPlanPace(planPace: PlanPace) {
         viewModelScope.launch {
             _planPace.emit(planPace)
+        }
+    }
+
+    fun setSource(source: Source) {
+        viewModelScope.launch {
+            _source.emit(source)
         }
     }
 }

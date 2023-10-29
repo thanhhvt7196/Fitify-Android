@@ -3,7 +3,7 @@ package com.example.learnandroid.domain.models
 import android.content.Context
 import com.example.learnandroid.R
 
-enum class Source {
+enum class Source: Iterable<Source> {
     GOOGLE_PLAY_STORE {
         override fun getTitle(context: Context): String {
             return context.getString(R.string.onboarding_source_google_play)
@@ -61,4 +61,5 @@ enum class Source {
     };
 
     abstract fun getTitle(context: Context): String
+    override fun iterator(): Iterator<Source> = enumValues<Source>().iterator()
 }
