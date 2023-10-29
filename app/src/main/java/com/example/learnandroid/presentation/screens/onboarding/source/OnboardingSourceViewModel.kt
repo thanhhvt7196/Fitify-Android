@@ -1,7 +1,6 @@
 package com.example.learnandroid.presentation.screens.onboarding.source
 
 import androidx.lifecycle.viewModelScope
-import com.example.learnandroid.domain.models.BadHabit
 import com.example.learnandroid.domain.models.Source
 import com.example.learnandroid.presentation.screens.base.BaseViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -11,7 +10,7 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 
 class OnboardingSourceViewModel: BaseViewModel() {
-    private val _allSources = MutableStateFlow<List<Pair<Source, Boolean>>>(Source.values().map { Pair(it, false) })
+    private val _allSources = MutableStateFlow(Source.values().map { Pair(it, false) })
     val allSources = _allSources.asStateFlow()
 
     private val selectedSource = MutableSharedFlow<Source>()
@@ -24,7 +23,7 @@ class OnboardingSourceViewModel: BaseViewModel() {
         viewModelScope.launch {
             selectedSource
                 .map { selectedSource ->
-                    return@map _allSources.value.map { (source, isSelected) ->
+                    return@map _allSources.value.map { (source, _) ->
                         if (source == selectedSource) {
                             source to true
                         } else {

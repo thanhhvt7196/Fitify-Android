@@ -12,14 +12,16 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.mapNotNull
 import kotlinx.coroutines.launch
 
-interface OnboardingSalePitchDelegate {
-    fun didContinueTapped()
-}
+
 
 class OnboardingSalePitchFragment :
     BaseViewBindingFragment<FragmentOnboardingSalePitchBinding, OnboardingSalePitchViewModel>(
         FragmentOnboardingSalePitchBinding::inflate
     ) {
+
+    interface OnboardingSalePitchDelegate {
+        fun didContinueTapped()
+    }
 
     private var delegate: OnboardingSalePitchDelegate? = null
 

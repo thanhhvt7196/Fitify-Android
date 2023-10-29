@@ -879,9 +879,8 @@ Users with Apple Watch can also see their heart rate during Fitify workouts.</st
     <string name="apple_health_settings_button">Open the Health App</string>
     <string name="apple_health_explained_short">Sync your workouts to Health App where they will appear as a part of your daily activity.</string>
     <string name="onboarding_commit_contract_title">Your commitment</string>
-    <string name="onboarding_commit_contract_message">I have decided I am ready to <b>get fit and stay fit.</b>
-
-I will work consistently towards reaching my fitness goals. I will remain patient with myself and my progress.</string>
+    <string name="onboarding_commit_contract_message"><![CDATA[I have decided I am ready to <font color="#FFFFFF"><b>get fit and stay fit.</b></font>]]></string>
+    <string name="onboarding_commit_contract_submessage">I will work consistently towards reaching my fitness goals. I will remain patient with myself and my progress.</string>
     <string name="onboarding_commit_contract_hint">Tap and hold the button to continue.</string>
     <string name="onboarding_commit_contract_hold_it">Hold it</string>
     <string name="onboarding_commit_contract_keep_going">Keep going...</string>

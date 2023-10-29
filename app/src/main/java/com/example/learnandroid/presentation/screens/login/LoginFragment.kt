@@ -29,6 +29,7 @@ import com.example.learnandroid.presentation.screens.loginBottomSheet.LoginType
 import com.example.learnandroid.presentation.screens.onboarding.activeStatus.OnboardingActiveStatusFragment
 import com.example.learnandroid.presentation.screens.onboarding.age.OnboardingAgeFragment
 import com.example.learnandroid.presentation.screens.onboarding.badHabit.OnboardingBadHabitFragment
+import com.example.learnandroid.presentation.screens.onboarding.commitContract.OnboardingCommitContractFragment
 import com.example.learnandroid.presentation.screens.onboarding.dailyWalk.OnboardingDailyWalkFragment
 import com.example.learnandroid.presentation.screens.onboarding.energyLevel.OnboardingEnergyLevelFragment
 import com.example.learnandroid.presentation.screens.onboarding.fitnessTool.OnboardingFitnessToolFragment
@@ -36,7 +37,6 @@ import com.example.learnandroid.presentation.screens.onboarding.height.Onboardin
 import com.example.learnandroid.presentation.screens.onboarding.kneePain.OnboardingKneePainFragment
 import com.example.learnandroid.presentation.screens.onboarding.planPace.OnboardingPlanPaceFragment
 import com.example.learnandroid.presentation.screens.onboarding.pushup.OnboardingPushUpFragment
-import com.example.learnandroid.presentation.screens.onboarding.salePitch.OnboardingSalePitchDelegate
 import com.example.learnandroid.presentation.screens.onboarding.salePitch.OnboardingSalePitchFragment
 import com.example.learnandroid.presentation.screens.onboarding.source.OnboardingSourceFragment
 import com.example.learnandroid.presentation.screens.onboarding.weight.OnboardingWeightFragment
@@ -69,6 +69,7 @@ class LoginFragment :
     private val energyLevelFragment = OnboardingEnergyLevelFragment.newInstance()
     private val planPaceFragment = OnboardingPlanPaceFragment.newInstance()
     private val sourceFragment = OnboardingSourceFragment.newInstance()
+    private val commitContractFragment = OnboardingCommitContractFragment.newInstance()
 
     companion object {
         const val tag = "LoginFragment"
@@ -111,6 +112,7 @@ class LoginFragment :
         setupEnergyLevelView()
         setupPlanPaceView()
         setupSourceView()
+        setupCommitContractView()
     }
 
     private fun setupLottie() {
@@ -125,6 +127,7 @@ class LoginFragment :
         val fragmentItems: Array<Fragment> =
             arrayOf(
                 genderFragment,
+                commitContractFragment,
                 nameFragment,
                 goalFragment,
                 salePitchFragment,
@@ -164,6 +167,15 @@ class LoginFragment :
                 setAnimationProgress(index)
             }
         }
+    }
+
+    private fun setupCommitContractView() {
+        val delegate = object : OnboardingCommitContractFragment.OnboardingCommitContractDelegate {
+            override fun didCommitted() {
+                goToNextPage()
+            }
+        }
+        commitContractFragment.setAction(delegate)
     }
 
     private fun setupSourceView() {
@@ -279,8 +291,15 @@ class LoginFragment :
     private fun setupWeightView(fragment: OnboardingWeightFragment) {
         val args = Bundle()
         when (fragment) {
-            currentWeightFragment -> args.putString("type", OnboardingWeightFragment.Type.CURRENT_WEIGHT.name)
-            targetWeightFragment -> args.putString("type", OnboardingWeightFragment.Type.TARGET_WEIGHT.name)
+            currentWeightFragment -> args.putString(
+                "type",
+                OnboardingWeightFragment.Type.CURRENT_WEIGHT.name
+            )
+
+            targetWeightFragment -> args.putString(
+                "type",
+                OnboardingWeightFragment.Type.TARGET_WEIGHT.name
+            )
         }
         fragment.arguments = args
         val delegate = object : OnboardingWeightFragment.OnboardingWeightDelegate {
@@ -290,6 +309,7 @@ class LoginFragment :
                         viewModel.setWeight(weight)
                         targetWeightFragment.setHint(weight)
                     }
+
                     targetWeightFragment -> {
                         viewModel.setTargetWeight(weight)
                     }
@@ -312,7 +332,7 @@ class LoginFragment :
     }
 
     private fun setupSalePitchView() {
-        val delegate = object : OnboardingSalePitchDelegate {
+        val delegate = object : OnboardingSalePitchFragment.OnboardingSalePitchDelegate {
             override fun didContinueTapped() {
                 goToNextPage()
             }

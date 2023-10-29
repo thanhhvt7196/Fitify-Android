@@ -4,7 +4,6 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.learnandroid.databinding.FragmentOnboardingSourceBinding
-import com.example.learnandroid.domain.models.BadHabit
 import com.example.learnandroid.domain.models.Source
 import com.example.learnandroid.presentation.screens.base.BaseViewBindingFragment
 import kotlinx.coroutines.launch
