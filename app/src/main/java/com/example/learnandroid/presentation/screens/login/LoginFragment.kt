@@ -12,6 +12,7 @@ import com.example.learnandroid.databinding.FragmentLoginBinding
 import com.example.learnandroid.domain.models.ActiveStatus
 import com.example.learnandroid.domain.models.BadHabit
 import com.example.learnandroid.domain.models.DailyWalk
+import com.example.learnandroid.domain.models.EnergyLevel
 import com.example.learnandroid.domain.models.FitnessTool
 import com.example.learnandroid.domain.models.Gender
 import com.example.learnandroid.domain.models.KneePain
@@ -28,6 +29,7 @@ import com.example.learnandroid.presentation.screens.onboarding.activeStatus.Onb
 import com.example.learnandroid.presentation.screens.onboarding.age.OnboardingAgeFragment
 import com.example.learnandroid.presentation.screens.onboarding.badHabit.OnboardingBadHabitFragment
 import com.example.learnandroid.presentation.screens.onboarding.dailyWalk.OnboardingDailyWalkFragment
+import com.example.learnandroid.presentation.screens.onboarding.energyLevel.OnboardingEnergyLevelFragment
 import com.example.learnandroid.presentation.screens.onboarding.fitnessTool.OnboardingFitnessToolFragment
 import com.example.learnandroid.presentation.screens.onboarding.height.OnboardingHeightFragment
 import com.example.learnandroid.presentation.screens.onboarding.kneePain.OnboardingKneePainFragment
@@ -61,6 +63,7 @@ class LoginFragment :
     private val pushUpFragment = OnboardingPushUpFragment.newInstance()
     private val dailyWalkFragment = OnboardingDailyWalkFragment.newInstance()
     private val badHabitFragment = OnboardingBadHabitFragment.newInstance()
+    private val energyLevelFragment = OnboardingEnergyLevelFragment.newInstance()
 
     companion object {
         const val tag = "LoginFragment"
@@ -100,6 +103,7 @@ class LoginFragment :
         setupPushUpView()
         setupDailyWalkView()
         setupBadHabitView()
+        setupEnergyLevelView()
     }
 
     private fun setupLottie() {
@@ -127,7 +131,8 @@ class LoginFragment :
                 frequencyFragment,
                 pushUpFragment,
                 dailyWalkFragment,
-                badHabitFragment
+                badHabitFragment,
+                energyLevelFragment
             )
         val viewpager = viewBinding.loginViewPager
         viewpager.isUserInputEnabled = false
@@ -150,6 +155,16 @@ class LoginFragment :
                 setAnimationProgress(index)
             }
         }
+    }
+
+    private fun setupEnergyLevelView() {
+        val delegate = object : OnboardingEnergyLevelFragment.OnboardingEnergyLevelDelegate {
+            override fun didSelectEnergyLevel(energyLevel: EnergyLevel) {
+                viewModel.setEnergyLevel(energyLevel)
+                goToNextPage()
+            }
+        }
+        energyLevelFragment.setAction(delegate)
     }
 
     private fun setupBadHabitView() {
@@ -393,6 +408,10 @@ class LoginFragment :
 
         if (badHabitFragment.isAdded) {
             badHabitFragment.resetData()
+        }
+
+        if (energyLevelFragment.isAdded) {
+            energyLevelFragment.resetData()
         }
     }
 

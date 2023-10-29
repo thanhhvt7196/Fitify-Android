@@ -44,6 +44,7 @@ class ForgotPasswordFragment :
 
             resetButton.setOnClickListener {
                 viewModel.requestResetPassword()
+                emailTextField.unfocus(requireActivity())
             }
 
             viewModel.setEmail(emailTextField.getText())

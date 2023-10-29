@@ -185,7 +185,7 @@ class OnboardingWeightFragment() :
     }
 
     fun resetData() {
-        viewModel.setWeight(null)
+        viewBinding.weightTextField.text = null
     }
 
     override fun onResume() {

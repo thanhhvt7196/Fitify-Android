@@ -105,7 +105,7 @@ class OnboardingAgeFragment :
     }
 
     fun resetData() {
-        viewModel.setAge(null)
+        viewBinding.ageEditText.text = null
     }
 
     override fun onResume() {

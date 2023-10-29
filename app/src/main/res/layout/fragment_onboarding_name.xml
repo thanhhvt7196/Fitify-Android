@@ -46,6 +46,7 @@
             android:imeOptions="actionDone"
             android:ellipsize="end"
             android:hint="@string/onboarding_first_name"
+            android:maxLength="32"
             android:textSize="36sp"
             android:textStyle="bold"
             android:textColor="@color/essential_white"

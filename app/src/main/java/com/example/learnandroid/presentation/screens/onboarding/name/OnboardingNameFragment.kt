@@ -75,7 +75,7 @@ class OnboardingNameFragment :
     private fun setupBinding() {
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.name.collect { name ->
-                val isEnabled = name.length >= 3
+                val isEnabled = name.trim().isNotEmpty()
                 viewBinding.continueButton.isEnabled = isEnabled
                 viewBinding.continueButton.alpha = if (isEnabled) 1f else 0.3f
             }
@@ -83,7 +83,7 @@ class OnboardingNameFragment :
     }
 
     fun resetData() {
-        viewBinding.nameTextView.setText("")
+        viewBinding.nameTextView.text = null
     }
 
     override fun onResume() {

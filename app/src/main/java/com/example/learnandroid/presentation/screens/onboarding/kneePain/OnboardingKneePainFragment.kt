@@ -102,7 +102,7 @@ class OnboardingKneePainFragment :
 
     private fun showKneePainAlert(kneePain: KneePain) {
         dialog = Dialog(requireActivity())
-        dialog?.window?.setBackgroundDrawableResource(android.R.color.transparent)
+        dialog?.window?.setBackgroundDrawableResource(R.drawable.dimmed_background)
         dialog?.requestWindowFeature(Window.FEATURE_NO_TITLE)
         val kneePainAlertView = KneePainAlert(requireActivity(), null)
         val delegate = object : KneePainAlert.KneePainAlertDelegate {

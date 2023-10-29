@@ -4,6 +4,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.learnandroid.domain.models.ActiveStatus
 import com.example.learnandroid.domain.models.BadHabit
 import com.example.learnandroid.domain.models.DailyWalk
+import com.example.learnandroid.domain.models.EnergyLevel
 import com.example.learnandroid.domain.models.FitnessTool
 import com.example.learnandroid.domain.models.Gender
 import com.example.learnandroid.domain.models.KneePain
@@ -37,6 +38,7 @@ class LoginViewModel: BaseViewModel() {
     private val _pushUp = MutableSharedFlow<PushUp?>()
     private val _dailyWalk = MutableSharedFlow<DailyWalk?>()
     private val _badHabits = MutableSharedFlow<List<BadHabit>>()
+    private val _eneryLevel = MutableSharedFlow<EnergyLevel?>()
 
     val gender: SharedFlow<Gender?> = _gender.asSharedFlow()
     val name: SharedFlow<String?> = _name.asSharedFlow()
@@ -52,6 +54,7 @@ class LoginViewModel: BaseViewModel() {
     val pushUp = _pushUp.asSharedFlow()
     val dailyWalk = _dailyWalk.asSharedFlow()
     val badHabits = _badHabits.asSharedFlow()
+    val energyLevel = _eneryLevel.asSharedFlow()
 
     fun setIndex(index: Int) {
         _currentIndex.value = index
@@ -138,6 +141,12 @@ class LoginViewModel: BaseViewModel() {
     fun setBadHabits(badHabits: List<BadHabit>) {
         viewModelScope.launch {
             _badHabits.emit(badHabits)
+        }
+    }
+
+    fun setEnergyLevel(energyLevel: EnergyLevel) {
+        viewModelScope.launch {
+            _eneryLevel.emit(energyLevel)
         }
     }
 }

@@ -995,6 +995,7 @@ New members only.</string>
     <string name="onboarding_knee_pain_dialog_message">We will restrict exercises that are hard on your knees. You can reset the limitation later.\n\nAlthough, you should still follow your doctor\'s advice.</string>
     <string name="onboarding_knee_pain_dialog_title">We\'ve got you covered!</string>
     <string name="onboarding_knee_pain_subtitle">How serious are your problems?</string>
+    <string name="onboarding_energy_level_title">How are your energy levels during the day?</string>
     <string name="tool_bosu">BOSU</string>
     <string name="tool_dumbbell">Dumbbell</string>
     <string name="tool_foamroller">Foam Roller</string>

@@ -99,7 +99,7 @@ class OnboardingHeightFragment : BaseViewBindingFragment<FragmentOnboardingHeigh
     }
 
     fun resetData() {
-        viewModel.setHeight(null)
+        viewBinding.heightTextField.text = null
     }
 
     override fun onResume() {

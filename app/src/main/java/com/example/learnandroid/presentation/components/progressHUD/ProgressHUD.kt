@@ -7,9 +7,6 @@ import com.example.learnandroid.FitifyApplication
 import com.example.learnandroid.R
 
 class ProgressHUD {
-    init {
-
-    }
 
     companion object {
         private var dialog: Dialog? = null

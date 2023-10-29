@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- The background color for dimming -->
+    <item android:drawable="@android:color/black" />
+    <!-- The semi-transparent color that covers the content -->
+    <item>
+        <shape>
+            <solid android:color="#88000000" /> <!-- This sets the color and alpha (transparency) -->
+        </shape>
+    </item>
+</layer-list>

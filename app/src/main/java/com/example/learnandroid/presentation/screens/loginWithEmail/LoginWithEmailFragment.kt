@@ -47,6 +47,8 @@ class LoginWithEmailFragment : BaseViewBindingFragment<FragmentLoginWithEmailBin
 
             loginButton.setOnClickListener {
                 viewModel.requestLogin()
+                emailTextField.unfocus(requireActivity())
+                passwordTextField.unfocus(requireActivity())
             }
 
             forgotPasswordButton.setOnClickListener {
