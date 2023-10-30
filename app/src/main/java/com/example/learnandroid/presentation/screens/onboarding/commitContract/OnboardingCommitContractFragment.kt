@@ -6,11 +6,34 @@ import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.animation.PropertyValuesHolder
 import android.annotation.SuppressLint
+import android.content.Context
+import android.graphics.Bitmap
+import android.graphics.Canvas
+import android.graphics.Color
+import android.graphics.ColorFilter
+import android.graphics.Paint
+import android.graphics.Path
+import android.graphics.PixelFormat
+import android.graphics.PorterDuff
+import android.graphics.PorterDuffXfermode
+import android.graphics.RadialGradient
+import android.graphics.Shader
+import android.graphics.drawable.BitmapDrawable
+import android.graphics.drawable.Drawable
+import android.graphics.drawable.LayerDrawable
 import android.os.Handler
 import android.os.Looper
+import android.renderscript.Allocation
+import android.renderscript.Element
+import android.renderscript.RenderScript
+import android.renderscript.ScriptIntrinsicBlur
 import android.text.Html
+import android.util.AttributeSet
+import android.util.Log
 import android.view.MotionEvent
 import android.view.View
+import android.widget.Toast
+import androidx.core.animation.addListener
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -20,15 +43,35 @@ import com.example.learnandroid.presentation.components.circleGradientBackground
 import com.example.learnandroid.presentation.screens.base.BaseViewBindingFragment
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import java.util.Timer
 
 class OnboardingCommitContractFragment :
     BaseViewBindingFragment<FragmentOnboardingCommitContractBinding, OnboardingCommitContractViewModel>(
         FragmentOnboardingCommitContractBinding::inflate
     ) {
+    enum class CommitState: Iterable<CommitState> {
+        NONE {
+            override fun getTitle(context: Context): String = ""
+        },
+        HOLD_IT {
+            override fun getTitle(context: Context): String = context.getString(R.string.onboarding_commit_contract_hold_it)
+        },
+        KEEP_GOING {
+            override fun getTitle(context: Context): String = context.getString(R.string.onboarding_commit_contract_keep_going)
+        },
+        AWESOME {
+            override fun getTitle(context: Context): String = context.getString(R.string.onboarding_commit_contract_awesome)
+        };
+
+        abstract fun getTitle(context: Context): String
+
+        override fun iterator(): Iterator<CommitState> = enumValues<CommitState>().iterator()
+    }
+
     override val viewModel: OnboardingCommitContractViewModel by viewModels()
     private val handler = Handler(Looper.getMainLooper())
     private val commitTextDelay = 800L
-    private lateinit var pulsatingViewScaleAnimator: ObjectAnimator
+    private var pulsatingViewScaleAnimator = ObjectAnimator()
 
     private val commitTextRunnable = object : Runnable {
         override fun run() {
@@ -38,6 +81,7 @@ class OnboardingCommitContractFragment :
     }
 
     private var isAnimationCancelled = false
+    private var state = CommitState.NONE
 
     interface OnboardingCommitContractDelegate {
         fun didCommitted()
@@ -55,7 +99,6 @@ class OnboardingCommitContractFragment :
     override fun setup() {
         super.setup()
         setupUI()
-        setupBinding()
     }
 
     @SuppressLint("ClickableViewAccessibility")
@@ -68,7 +111,6 @@ class OnboardingCommitContractFragment :
                 when (event.action) {
                     MotionEvent.ACTION_DOWN -> {
                         scheduleTimer()
-                        isAnimationCancelled = false
                         hintTextView.visibility = View.INVISIBLE
                         pulsatingOuterBackgroundView.isVisible = false
                         pulsatingOuterView.isVisible = false
@@ -92,20 +134,31 @@ class OnboardingCommitContractFragment :
                 }
             }
 
-            pulsatingView
-
             startPulseAnimation(pulsatingOuterBackgroundView)
             startPulseAnimation(pulsatingOuterView)
         }
     }
 
     private fun startScaleAnimation(view: View) {
+        isAnimationCancelled = false
+        pulsatingViewScaleAnimator.removeAllListeners()
         pulsatingViewScaleAnimator = ObjectAnimator.ofPropertyValuesHolder(
             view,
             PropertyValuesHolder.ofFloat(View.SCALE_X.name, 7f),
             PropertyValuesHolder.ofFloat(View.SCALE_Y.name, 7f)
         )
         pulsatingViewScaleAnimator.duration = 3000
+
+        pulsatingViewScaleAnimator.addListener(object : AnimatorListenerAdapter() {
+            override fun onAnimationEnd(animation: Animator) {
+                state = CommitState.NONE
+                viewBinding.apply {
+                    if (!isAnimationCancelled) {
+                        delegate?.didCommitted()
+                    }
+                }
+            }
+        })
         pulsatingViewScaleAnimator.start()
     }
 
@@ -138,26 +191,19 @@ class OnboardingCommitContractFragment :
         }
     }
 
-    private fun setupBinding() {
-        viewLifecycleOwner.lifecycleScope.launch {
-            viewModel.state.collect { state ->
-                viewBinding.apply {
-                    commitTextView.isVisible = state != OnboardingCommitContractViewModel.CommitState.NONE
-                    commitTextView.text = state.getTitle(requireActivity())
-                    checkImageView.isVisible = state == OnboardingCommitContractViewModel.CommitState.AWESOME
-                }
-            }
-        }
-    }
-
     private fun scheduleTimer() {
         handler.postDelayed(commitTextRunnable, commitTextDelay)
     }
 
     private fun endAnimation() {
+        isAnimationCancelled = true
         pulsatingViewScaleAnimator.cancel()
         handler.removeCallbacks(commitTextRunnable)
-        viewModel.setState(OnboardingCommitContractViewModel.CommitState.NONE)
+        state = CommitState.NONE
+        viewBinding.commitTextView.text = ""
+        viewBinding.checkImageView.isVisible = false
+        viewBinding.hintTextView.visibility = View.VISIBLE
+
 
         val pulseAnimator = ObjectAnimator.ofPropertyValuesHolder(
             viewBinding.pulsatingView,
@@ -167,11 +213,10 @@ class OnboardingCommitContractFragment :
         pulseAnimator.duration = 100
         pulseAnimator.addListener(object : AnimatorListenerAdapter() {
             override fun onAnimationEnd(animation: Animator) {
+                state = CommitState.NONE
                 viewBinding.apply {
                     pulsatingOuterView.isVisible = true
                     pulsatingOuterBackgroundView.isVisible = true
-                    viewModel.setState(OnboardingCommitContractViewModel.CommitState.NONE)
-                    hintTextView.visibility = View.VISIBLE
                 }
             }
         })
@@ -179,21 +224,12 @@ class OnboardingCommitContractFragment :
     }
 
     private fun toggleCommitText() {
-        lifecycleScope.launch (Dispatchers.IO) {
-            val allStates = OnboardingCommitContractViewModel.CommitState.values()
-            val currentState = viewModel.state.value
+        val allStates = CommitState.values()
 
-            if (currentState == OnboardingCommitContractViewModel.CommitState.NONE) {
-                viewModel.setState(OnboardingCommitContractViewModel.CommitState.HOLD_IT)
-            } else {
-                val index = allStates.indexOf(currentState)
-                viewModel.setState(
-                    if (index + 1 < allStates.count()) allStates[index + 1]
-                    else OnboardingCommitContractViewModel.CommitState.NONE
-                )
-            }
-        }
-
+        val index = allStates.indexOf(state)
+        state = if (index + 1 < allStates.count()) allStates[index + 1] else CommitState.NONE
+        viewBinding.commitTextView.text = state.getTitle(requireActivity())
+        viewBinding.checkImageView.isVisible = state == CommitState.AWESOME
     }
 
     fun setAction(delegate: OnboardingCommitContractDelegate) {
@@ -202,12 +238,15 @@ class OnboardingCommitContractFragment :
 
     override fun onResume() {
         super.onResume()
-        viewModel.setState(OnboardingCommitContractViewModel.CommitState.NONE)
+        state = CommitState.NONE
+        viewBinding.commitTextView.text = ""
+        endAnimation()
     }
 
     override fun onPause() {
         super.onPause()
-        viewModel.setState(OnboardingCommitContractViewModel.CommitState.NONE)
+        state = CommitState.NONE
+        viewBinding.commitTextView.text = ""
     }
 
     override fun onDestroyView() {

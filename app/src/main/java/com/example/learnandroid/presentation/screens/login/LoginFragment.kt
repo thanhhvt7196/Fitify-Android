@@ -19,6 +19,7 @@ import com.example.learnandroid.domain.models.OnboardingGoal
 import com.example.learnandroid.domain.models.PlanPace
 import com.example.learnandroid.domain.models.PushUp
 import com.example.learnandroid.domain.models.Source
+import com.example.learnandroid.domain.models.WeekDay
 import com.example.learnandroid.domain.models.WorkoutFrequency
 import com.example.learnandroid.presentation.components.appToolBar.AppToolbar
 import com.example.learnandroid.presentation.screens.base.BaseViewBindingFragment
@@ -35,6 +36,7 @@ import com.example.learnandroid.presentation.screens.onboarding.energyLevel.Onbo
 import com.example.learnandroid.presentation.screens.onboarding.fitnessTool.OnboardingFitnessToolFragment
 import com.example.learnandroid.presentation.screens.onboarding.height.OnboardingHeightFragment
 import com.example.learnandroid.presentation.screens.onboarding.kneePain.OnboardingKneePainFragment
+import com.example.learnandroid.presentation.screens.onboarding.planDay.OnboardingPlanDayFragment
 import com.example.learnandroid.presentation.screens.onboarding.planPace.OnboardingPlanPaceFragment
 import com.example.learnandroid.presentation.screens.onboarding.pushup.OnboardingPushUpFragment
 import com.example.learnandroid.presentation.screens.onboarding.salePitch.OnboardingSalePitchFragment
@@ -70,6 +72,7 @@ class LoginFragment :
     private val planPaceFragment = OnboardingPlanPaceFragment.newInstance()
     private val sourceFragment = OnboardingSourceFragment.newInstance()
     private val commitContractFragment = OnboardingCommitContractFragment.newInstance()
+    private val planDayFragment = OnboardingPlanDayFragment.newInstance()
 
     companion object {
         const val tag = "LoginFragment"
@@ -113,6 +116,7 @@ class LoginFragment :
         setupPlanPaceView()
         setupSourceView()
         setupCommitContractView()
+        setupPlanDayView()
     }
 
     private fun setupLottie() {
@@ -127,7 +131,6 @@ class LoginFragment :
         val fragmentItems: Array<Fragment> =
             arrayOf(
                 genderFragment,
-                commitContractFragment,
                 nameFragment,
                 goalFragment,
                 salePitchFragment,
@@ -144,7 +147,9 @@ class LoginFragment :
                 dailyWalkFragment,
                 badHabitFragment,
                 energyLevelFragment,
-                planPaceFragment
+                planPaceFragment,
+                commitContractFragment,
+                planDayFragment
             )
         val viewpager = viewBinding.loginViewPager
         viewpager.isUserInputEnabled = false
@@ -167,6 +172,17 @@ class LoginFragment :
                 setAnimationProgress(index)
             }
         }
+    }
+
+    private fun setupPlanDayView() {
+        val delegate = object : OnboardingPlanDayFragment.OnboardingPlanDayDelegate {
+            override fun didSelectPlanDays(planDays: List<WeekDay>) {
+                viewModel.setPlanDays(planDays)
+                goToNextPage()
+            }
+        }
+
+        planDayFragment.setAction(delegate)
     }
 
     private fun setupCommitContractView() {
@@ -448,6 +464,10 @@ class LoginFragment :
 
         if (sourceFragment.isAdded) {
             sourceFragment.resetData()
+        }
+
+        if (planPaceFragment.isAdded) {
+            planDayFragment.resetData()
         }
     }
 

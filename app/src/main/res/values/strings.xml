@@ -884,8 +884,7 @@ Users with Apple Watch can also see their heart rate during Fitify workouts.</st
     <string name="onboarding_commit_contract_hint">Tap and hold the button to continue.</string>
     <string name="onboarding_commit_contract_hold_it">Hold it</string>
     <string name="onboarding_commit_contract_keep_going">Keep going...</string>
-    <string name="onboarding_commit_contract_awesome">Awesome!
-Good luck!</string>
+    <string name="onboarding_commit_contract_awesome">Awesome! \nGood luck!</string>
     <string name="redeem_subtitle">Enter the voucher below to activate your Fitify Pro membership.</string>
     <string name="redeem_button">Redeem</string>
     <string name="redeem_placeholder">Voucher code</string>
