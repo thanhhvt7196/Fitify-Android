@@ -37,6 +37,7 @@ import androidx.core.animation.addListener
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import com.example.learnandroid.LoginActivity
 import com.example.learnandroid.R
 import com.example.learnandroid.databinding.FragmentOnboardingCommitContractBinding
 import com.example.learnandroid.presentation.components.circleGradientBackground.CircleGradientBackground
@@ -144,8 +145,8 @@ class OnboardingCommitContractFragment :
         pulsatingViewScaleAnimator.removeAllListeners()
         pulsatingViewScaleAnimator = ObjectAnimator.ofPropertyValuesHolder(
             view,
-            PropertyValuesHolder.ofFloat(View.SCALE_X.name, 7f),
-            PropertyValuesHolder.ofFloat(View.SCALE_Y.name, 7f)
+            PropertyValuesHolder.ofFloat(View.SCALE_X.name, 8f),
+            PropertyValuesHolder.ofFloat(View.SCALE_Y.name, 8f)
         )
         pulsatingViewScaleAnimator.duration = 3000
 

@@ -2,6 +2,7 @@ package com.example.learnandroid.presentation.screens.login
 
 import android.os.Bundle
 import androidx.activity.OnBackPressedCallback
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -43,6 +44,7 @@ import com.example.learnandroid.presentation.screens.onboarding.salePitch.Onboar
 import com.example.learnandroid.presentation.screens.onboarding.source.OnboardingSourceFragment
 import com.example.learnandroid.presentation.screens.onboarding.weight.OnboardingWeightFragment
 import com.example.learnandroid.presentation.screens.onboarding.workoutFrequency.OnboardingFrequencyFragment
+import com.example.learnandroid.utils.extensions.getStatusBarHeight
 import com.example.learnandroid.utils.extensions.play
 import kotlinx.coroutines.launch
 
@@ -93,8 +95,17 @@ class LoginFragment :
         }
     }
 
+    private fun setupToolbar() {
+        val statusBarHeight = getStatusBarHeight(requireActivity())
+        val toolBarLayoutParams = viewBinding.toolbar.layoutParams as ConstraintLayout.LayoutParams?
+        toolBarLayoutParams?.topMargin = statusBarHeight
+        viewBinding.toolbar.layoutParams = toolBarLayoutParams
+        viewBinding.toolbar.requestLayout()
+    }
+
     override fun setup() {
         super.setup()
+        setupToolbar()
         setupLottie()
         setupViewPager()
         setupGenderView()
