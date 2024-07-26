@@ -145,8 +145,8 @@ class OnboardingCommitContractFragment :
         pulsatingViewScaleAnimator.removeAllListeners()
         pulsatingViewScaleAnimator = ObjectAnimator.ofPropertyValuesHolder(
             view,
-            PropertyValuesHolder.ofFloat(View.SCALE_X.name, 8f),
-            PropertyValuesHolder.ofFloat(View.SCALE_Y.name, 8f)
+            PropertyValuesHolder.ofFloat(View.SCALE_X.name, 10f),
+            PropertyValuesHolder.ofFloat(View.SCALE_Y.name, 10f)
         )
         pulsatingViewScaleAnimator.duration = 3000
 

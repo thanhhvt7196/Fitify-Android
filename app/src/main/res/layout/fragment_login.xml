@@ -6,6 +6,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".presentation.screens.login.LoginFragment">
 
+    <ImageView
+        app:layout_constraintTop_toTopOf="@id/progressLottieView"
+        app:layout_constraintBottom_toBottomOf="@id/progressLottieView"
+        app:layout_constraintStart_toStartOf="@id/progressLottieView"
+        app:layout_constraintEnd_toEndOf="@id/progressLottieView"
+        android:scaleX="5"
+        android:scaleY="5"
+        android:src="@drawable/onboarding_progress_gradient_background"
+        android:layout_width="28dp"
+        android:layout_height="28dp"/>
+
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/progressLottieView"
         app:layout_constraintEnd_toEndOf="parent"
