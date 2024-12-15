@@ -6,7 +6,6 @@ import com.example.learnandroid.databinding.FragmentOnboardingGoalBinding
 import com.example.learnandroid.domain.models.Gender
 import com.example.learnandroid.domain.models.OnboardingGoal
 import com.example.learnandroid.presentation.screens.base.BaseViewBindingFragment
-import com.example.learnandroid.presentation.screens.onboarding.views.OnboardingItemWithImageView
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
 
@@ -15,7 +14,7 @@ class OnboardingGoalFragment :
         FragmentOnboardingGoalBinding::inflate
     ) {
     override val viewModel: OnboardingGoalViewModel by viewModels()
-    private val gender = MutableStateFlow<Gender>(Gender.MALE)
+    private val gender = MutableStateFlow(Gender.MALE)
 
     interface OnboardingGoalDelegate {
         fun didSelectGoal(goal: OnboardingGoal)
@@ -24,7 +23,6 @@ class OnboardingGoalFragment :
     private var delegate: OnboardingGoalDelegate? = null
 
     companion object {
-        const val tag = "OnboardingGoalFragment"
         fun newInstance(): OnboardingGoalFragment {
             return OnboardingGoalFragment()
         }

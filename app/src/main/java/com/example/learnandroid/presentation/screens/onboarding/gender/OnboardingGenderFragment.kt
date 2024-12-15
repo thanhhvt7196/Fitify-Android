@@ -26,7 +26,6 @@ class OnboardingGenderFragment :
     override val viewModel: OnboardingGenderViewModel by viewModels()
 
     companion object {
-        const val tag = "OnboardingGenderFragment"
         fun newInstance(): OnboardingGenderFragment {
             return OnboardingGenderFragment()
         }
@@ -61,7 +60,7 @@ class OnboardingGenderFragment :
             loginButton.setOnClickListener {
                 val loginBottomSheet = LoginBottomSheetFragment.newInstance()
 
-                val delegate = object: LoginBottomSheetDelegate {
+                val delegate = object : LoginBottomSheetDelegate {
                     override fun didSelectLoginType(type: LoginType) {
                         delegate?.didSelectLoginType(type)
                     }

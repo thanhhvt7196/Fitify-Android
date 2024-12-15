@@ -2,7 +2,6 @@ package com.example.learnandroid
 
 import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.content.edit
@@ -16,7 +15,8 @@ class SplashActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        val sharedPreferences = getSharedPreferences(AppConstants.sharedPreferencesName, Context.MODE_PRIVATE)
+        val sharedPreferences =
+            getSharedPreferences(AppConstants.SHARED_PREFERENCES_NAME, Context.MODE_PRIVATE)
 
 //        val isLoggedIn = sharedPreferences.getBoolean(AppConstants.isLoggedInSPKey, false)
 //        val intent = if (isLoggedIn) {
@@ -27,7 +27,7 @@ class SplashActivity : AppCompatActivity() {
         val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
         sharedPreferences.edit {
-            this.putBoolean(AppConstants.isLoggedInSPKey, true)
+            this.putBoolean(AppConstants.IS_LOGGED_IN_SP_KEY, true)
         }
         finish()
     }

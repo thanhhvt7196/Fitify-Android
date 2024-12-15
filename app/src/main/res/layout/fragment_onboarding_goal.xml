@@ -19,7 +19,7 @@
         android:textSize="36sp"
         android:text="@string/onboarding_goal_title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
         app:layout_constraintTop_toBottomOf="@id/titleTextView"
@@ -33,16 +33,16 @@
         <com.example.learnandroid.presentation.screens.onboarding.views.OnboardingItemWithImageView
             android:id="@+id/getTonedButton"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
         <com.example.learnandroid.presentation.screens.onboarding.views.OnboardingItemWithImageView
             android:id="@+id/loseWeightButton"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
         <View
             android:background="@android:color/transparent"
             android:layout_width="match_parent"
-            android:layout_height="20dp"/>
+            android:layout_height="20dp" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.constraintlayout.widget.ConstraintLayout>

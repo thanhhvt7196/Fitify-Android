@@ -1,7 +1,6 @@
 package com.example.learnandroid.utils
 
 import android.content.res.Resources
-import android.graphics.Bitmap
 import android.graphics.PorterDuff
 import android.graphics.*
 import android.graphics.drawable.BitmapDrawable
@@ -14,6 +13,6 @@ object BitmapExtension {
 
         val colorFilter = PorterDuffColorFilter(tintColor, PorterDuff.Mode.MULTIPLY)
         bitmapDrawable.colorFilter = colorFilter
-        return  bitmapDrawable
+        return bitmapDrawable
     }
 }

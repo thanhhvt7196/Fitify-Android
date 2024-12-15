@@ -3,7 +3,6 @@ package com.example.learnandroid.presentation.components.progressHUD
 import android.app.Dialog
 import android.content.Context
 import android.view.Window
-import com.example.learnandroid.FitifyApplication
 import com.example.learnandroid.R
 
 class ProgressHUD {

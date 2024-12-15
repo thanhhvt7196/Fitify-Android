@@ -13,7 +13,6 @@ import kotlinx.coroutines.flow.mapNotNull
 import kotlinx.coroutines.launch
 
 
-
 class OnboardingSalePitchFragment :
     BaseViewBindingFragment<FragmentOnboardingSalePitchBinding, OnboardingSalePitchViewModel>(
         FragmentOnboardingSalePitchBinding::inflate
@@ -31,7 +30,6 @@ class OnboardingSalePitchFragment :
     private val _gender = MutableStateFlow<Gender?>(null)
 
     companion object {
-        const val tag = "OnboardingSalePitchFragment"
         fun newInstance(): OnboardingSalePitchFragment {
             return OnboardingSalePitchFragment()
         }
@@ -59,7 +57,8 @@ class OnboardingSalePitchFragment :
                 }
                 .collect { (newGoal, newGender) ->
                     val title = newGoal.getSalePitchTitle(requireActivity(), newGender)
-                    viewBinding.titleTextView.text = Html.fromHtml(title, Html.FROM_HTML_MODE_LEGACY)
+                    viewBinding.titleTextView.text =
+                        Html.fromHtml(title, Html.FROM_HTML_MODE_LEGACY)
 
                     viewBinding.imageView.setImageResource(
                         newGoal.getSalePicthImageResource(

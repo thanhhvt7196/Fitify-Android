@@ -2,7 +2,6 @@ package com.example.learnandroid.presentation.screens.forgotPassword
 
 import androidx.lifecycle.viewModelScope
 import com.example.learnandroid.presentation.screens.base.BaseViewModel
-import com.example.learnandroid.utils.constants.AppConstants
 import com.example.learnandroid.utils.extensions.isEmail
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -13,14 +12,15 @@ import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
-class ForgotPasswordViewModel: BaseViewModel() {
-    private val _email = MutableStateFlow<String>("")
+class ForgotPasswordViewModel : BaseViewModel() {
+    private val _email = MutableStateFlow("")
 
-    private val _isValidData = MutableStateFlow<Boolean>(false)
+    private val _isValidData = MutableStateFlow(false)
     val isValidData: StateFlow<Boolean> = _isValidData.asStateFlow()
 
     private val _requestSuccess = MutableSharedFlow<Unit>()
     val requestSuccess: SharedFlow<Unit> = _requestSuccess.asSharedFlow()
+    var emailInvalidMessage = ""
 
     init {
         bindingData()
@@ -31,7 +31,7 @@ class ForgotPasswordViewModel: BaseViewModel() {
             _email
                 .collect { newEmail ->
                     validateData(newEmail)?.let {
-                        _errorMessage.postValue(it)
+                        errorMessageData.postValue(it)
                         _isValidData.value = false
                     } ?: run {
                         _isValidData.value = true
@@ -41,7 +41,7 @@ class ForgotPasswordViewModel: BaseViewModel() {
     }
 
     private fun validateData(email: String): String? {
-        return if (email.isEmail()) null else AppConstants.emailInvalidMessage
+        return if (email.isEmail()) null else emailInvalidMessage
     }
 
     fun requestResetPassword() {
@@ -49,14 +49,14 @@ class ForgotPasswordViewModel: BaseViewModel() {
     }
 
     private fun resetPassword(email: String) {
-        _isLoading.value = true
+        isLoadingData.value = true
         validateData(email)?.let { message ->
-            _errorMessage.postValue(message)
-            _isLoading.value = false
+            errorMessageData.postValue(message)
+            isLoadingData.value = false
         } ?: run {
             viewModelScope.launch {
                 delay(3000)
-                _isLoading.value = false
+                isLoadingData.value = false
                 _requestSuccess.emit(Unit)
             }
         }

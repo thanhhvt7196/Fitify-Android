@@ -17,14 +17,12 @@ import com.example.learnandroid.domain.models.WorkoutFrequency
 import com.example.learnandroid.presentation.screens.base.BaseViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
-class LoginViewModel: BaseViewModel() {
-    private val _currentIndex = MutableStateFlow<Int>(0)
+class LoginViewModel : BaseViewModel() {
+    private val _currentIndex = MutableStateFlow(0)
     val currentIndex: StateFlow<Int> = _currentIndex.asStateFlow()
 
     private val _gender = MutableSharedFlow<Gender>()

@@ -1,24 +1,10 @@
 package com.example.learnandroid.presentation.screens.onboarding.activeStatus
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.view.inputmethod.EditorInfo
-import androidx.core.content.ContextCompat
-import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
-import com.example.learnandroid.R
 import com.example.learnandroid.databinding.FragmentOnboardingActiveStatusBinding
 import com.example.learnandroid.domain.models.ActiveStatus
 import com.example.learnandroid.presentation.screens.base.BaseViewBindingFragment
-import com.example.learnandroid.presentation.screens.onboarding.age.OnboardingAgeFragment
-import com.example.learnandroid.utils.constants.AppConstants
-import com.example.learnandroid.utils.extensions.firstCapitalize
-import com.example.learnandroid.utils.extensions.focus
-import com.example.learnandroid.utils.extensions.unFocus
 import kotlinx.coroutines.launch
 
 class OnboardingActiveStatusFragment :
@@ -34,7 +20,6 @@ class OnboardingActiveStatusFragment :
     private var delegate: OnboardingActiveStatusDelegate? = null
 
     companion object {
-        const val tag = "OnboardingActiveStatusFragment"
         fun newInstance(): OnboardingActiveStatusFragment {
             return OnboardingActiveStatusFragment()
         }

@@ -5,12 +5,14 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isVisible
 import com.example.learnandroid.R
 
-class OnboardingRecommendationItem(context: Context, attrs: AttributeSet): ConstraintLayout(context, attrs) {
+class OnboardingRecommendationItem(context: Context, attrs: AttributeSet) :
+    ConstraintLayout(context, attrs) {
     init {
         LayoutInflater.from(context).inflate(R.layout.onboarding_recommendation_item, this, true)
     }
@@ -29,6 +31,9 @@ class OnboardingRecommendationItem(context: Context, attrs: AttributeSet): Const
         checkImageView.isVisible = isSelected
         val containerView = findViewById<ConstraintLayout>(R.id.containerView)
         containerView.background =
-            context.getDrawable(if (selected) R.drawable.gradient_border else R.drawable.blue_base_border)
+            AppCompatResources.getDrawable(
+                context,
+                if (selected) R.drawable.gradient_border else R.drawable.blue_base_border
+            )
     }
 }

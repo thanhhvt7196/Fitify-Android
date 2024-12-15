@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Fitify Android</string>
+    <string name="app_name">Fitify</string>
     <plurals name="pro_smallprint_no_trial">
         <item quantity="one"><b>Plan starts today.</b> Only %1$s per month. <b>Cancel anytime.</b></item>
         <item quantity="other"><b>Plan starts today.</b> Only %1$s per %2$d months. <b>Cancel anytime.</b></item>
@@ -220,9 +220,9 @@ Okinaga breathing has been found to suppress the activity of the left amygdala, 
     <string name="onboarding_lifestyle_fairly">Fairly, I want to see improvement</string>
     <string name="onboarding_lifestyle_not_at_all">Not at all, I need a major change</string>
     <string name="onboarding_wakeup_duration_title">How long does it take you to get up from bed?</string>
-    <string name="onboarding_wakeup_duration_10">0-10 minutes</string>
-    <string name="onboarding_wakeup_duration_20">10-20 minutes</string>
-    <string name="onboarding_wakeup_duration_30">20-30 minutes</string>
+    <string name="onboarding_wakeup_duration_10">0–10 minutes</string>
+    <string name="onboarding_wakeup_duration_20">10–20 minutes</string>
+    <string name="onboarding_wakeup_duration_30">20–30 minutes</string>
     <string name="onboarding_wakeup_duration_30_more">More than 30 minutes</string>
     <string name="onboarding_wakeup_feeling_title">How do you usually feel after you wake up?</string>
     <string name="onboarding_wakeup_feeling_fresh">Refreshed and energized</string>
@@ -532,7 +532,7 @@ Better results!</string>
     <string name="hc_coach_detail_select_coach">Select %s</string>
     <string name="hc_coach_detail_certifications">Certifications</string>
     <string name="paywall_dg_feature1">Weekly training plans for maximum results.</string>
-    <string name="paywall_dg_feature2">10-30 minutes daily workouts with over 900 exercises.</string>
+    <string name="paywall_dg_feature2">10–30 minutes daily workouts with over 900 exercises.</string>
     <string name="primary_plus_purchase_review_count">5000+ Reviews</string>
     <string name="hc_paywall_rating_title_digital">Used by millions, personalized for each one.</string>
     <string name="hc_paywall_rating_title_hc">We make fitness work for everyone.</string>
@@ -2029,4 +2029,11 @@ nepřesné - je to spíš Abs &amp; back -->
     <string name="instruction_title_repetitions">Repetitions</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="monday_short">Mon</string>
+    <string name="tuesday_short">Tue</string>
+    <string name="wednesday_short">Wed</string>
+    <string name="thursday_short">Thu</string>
+    <string name="friday_short">Fri</string>
+    <string name="saturday_short">Sat</string>
+    <string name="sunday_short">Sun</string>
 </resources>

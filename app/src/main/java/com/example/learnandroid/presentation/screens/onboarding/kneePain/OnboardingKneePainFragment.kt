@@ -29,7 +29,6 @@ class OnboardingKneePainFragment :
     private var delegate: OnboardingKneePainDelegate? = null
 
     companion object {
-        const val tag = "OnboardingKneePainFragment"
         fun newInstance(): OnboardingKneePainFragment {
             return OnboardingKneePainFragment()
         }
@@ -144,7 +143,8 @@ class OnboardingKneePainFragment :
     private fun showOptionsWithAnimation() {
         viewBinding.painOptionsContainerView.isVisible = true
         val fadeAnimation = AlphaAnimation(0f, 1f)
-        val slideAnimation = TranslateAnimation(0f, 0f, -viewBinding.painOptionsContainerView.height.toFloat(), 0f)
+        val slideAnimation =
+            TranslateAnimation(0f, 0f, -viewBinding.painOptionsContainerView.height.toFloat(), 0f)
         val animationSet = AnimationSet(true)
         animationSet.addAnimation(fadeAnimation)
         animationSet.addAnimation(slideAnimation)
@@ -155,7 +155,8 @@ class OnboardingKneePainFragment :
     private fun hideOptionsWithAnimation() {
         val animationSet = AnimationSet(true)
         val fadeAnimation = AlphaAnimation(1f, 0f)
-        val slideAnimation = TranslateAnimation(0f, 0f, 0f, -viewBinding.painOptionsContainerView.height.toFloat())
+        val slideAnimation =
+            TranslateAnimation(0f, 0f, 0f, -viewBinding.painOptionsContainerView.height.toFloat())
         animationSet.duration = 300 // Animation duration in milliseconds
         animationSet.addAnimation(slideAnimation)
         animationSet.addAnimation(fadeAnimation)

@@ -20,7 +20,6 @@ class OnboardingFrequencyFragment :
     private var delegate: OnboardingFrequencyDelegate? = null
 
     companion object {
-        const val tag = "OnboardingFrequencyFragment"
         fun newInstance(): OnboardingFrequencyFragment {
             return OnboardingFrequencyFragment()
         }

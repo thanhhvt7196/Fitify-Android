@@ -22,7 +22,6 @@ class OnboardingPushUpFragment :
     private var delegate: OnboardingPushUpDelegate? = null
 
     companion object {
-        const val tag = "OnboardingPushUpFragment"
         fun newInstance(): OnboardingPushUpFragment {
             return OnboardingPushUpFragment()
         }

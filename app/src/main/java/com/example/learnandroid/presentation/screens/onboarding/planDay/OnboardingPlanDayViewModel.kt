@@ -6,11 +6,10 @@ import com.example.learnandroid.presentation.screens.base.BaseViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 
-class OnboardingPlanDayViewModel: BaseViewModel() {
+class OnboardingPlanDayViewModel : BaseViewModel() {
     private val _planDays = MutableStateFlow<List<WeekDay>>(emptyList())
     val planDays = _planDays.asStateFlow()
     private val _selectedDay = MutableSharedFlow<WeekDay>()
@@ -23,7 +22,7 @@ class OnboardingPlanDayViewModel: BaseViewModel() {
         viewModelScope.launch {
             _selectedDay
                 .map { day ->
-                    var newPlanDays = _planDays.value.toMutableList()
+                    val newPlanDays = _planDays.value.toMutableList()
                     if (newPlanDays.contains(day)) {
                         newPlanDays.remove(day)
                     } else {

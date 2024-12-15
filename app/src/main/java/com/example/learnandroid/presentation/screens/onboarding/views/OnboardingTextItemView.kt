@@ -5,6 +5,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isVisible
 import com.example.learnandroid.R
@@ -29,7 +30,9 @@ class OnboardingTextItemView(context: Context, attrs: AttributeSet?) :
         val checkImageView = findViewById<ImageView>(R.id.checkImageView)
         checkImageView.isVisible = isSelected
         val containerView = findViewById<ConstraintLayout>(R.id.containerView)
-        containerView.background =
-            context.getDrawable(if (selected) R.drawable.gradient_border else R.drawable.blue_base_border)
+        containerView.background = AppCompatResources.getDrawable(
+            context,
+            if (selected) R.drawable.gradient_border else R.drawable.blue_base_border
+        )
     }
 }

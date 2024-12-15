@@ -1,5 +1,6 @@
 package com.example.learnandroid.presentation.screens.loginWithEmail
 
+import android.content.Context
 import android.text.InputType
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -11,8 +12,17 @@ import com.example.learnandroid.presentation.screens.base.BaseViewBindingFragmen
 import com.example.learnandroid.utils.constants.AppConstants
 import kotlinx.coroutines.launch
 
-class LoginWithEmailFragment : BaseViewBindingFragment<FragmentLoginWithEmailBinding, LoginWithEmailViewModel>(FragmentLoginWithEmailBinding::inflate) {
+class LoginWithEmailFragment :
+    BaseViewBindingFragment<FragmentLoginWithEmailBinding, LoginWithEmailViewModel>(
+        FragmentLoginWithEmailBinding::inflate
+    ) {
     override val viewModel: LoginWithEmailViewModel by viewModels()
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        viewModel.emailInvalidMessage = AppConstants.emailInvalidMessage(context)
+        viewModel.passwordShortMessage = AppConstants.passwordShortMessage(context)
+    }
 
     override fun setup() {
         super.setup()
@@ -32,7 +42,7 @@ class LoginWithEmailFragment : BaseViewBindingFragment<FragmentLoginWithEmailBin
 
             emailTextField.setKeyboardType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS)
             emailTextField.setPlaceholder(context?.getString(R.string.hint_email) ?: "")
-            emailTextField.setMaxLength(AppConstants.emailMaximumCharacters)
+            emailTextField.setMaxLength(AppConstants.EMAIL_MAXIMUM_CHARACTERS)
             emailTextField.setTextChangeHandler { text ->
                 viewModel.setEmail(text)
             }
@@ -40,7 +50,7 @@ class LoginWithEmailFragment : BaseViewBindingFragment<FragmentLoginWithEmailBin
 
             passwordTextField.setKeyboardType(InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD)
             passwordTextField.setPlaceholder(context?.getString(R.string.hint_password) ?: "")
-            passwordTextField.setMaxLength(AppConstants.passwordMaximumCharacters)
+            passwordTextField.setMaxLength(AppConstants.PASSWORD_MAXIMUM_CHARACTERS)
             passwordTextField.setTextChangeHandler { text ->
                 viewModel.setPassword(text)
             }
@@ -74,7 +84,6 @@ class LoginWithEmailFragment : BaseViewBindingFragment<FragmentLoginWithEmailBin
     }
 
     companion object {
-        const val tag = "LoginWithEmailFragment"
         fun newInstance(): LoginWithEmailFragment {
             return LoginWithEmailFragment()
         }

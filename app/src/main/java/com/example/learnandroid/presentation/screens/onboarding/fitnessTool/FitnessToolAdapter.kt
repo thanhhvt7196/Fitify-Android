@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.learnandroid.domain.models.FitnessTool
 import com.example.learnandroid.presentation.screens.onboarding.views.OnboardingTextItemView
 
-class FitnessToolAdapter(private val fitnessTools: List<Pair<FitnessTool, Boolean>>) :
+class FitnessToolAdapter(fitnessTools: List<Pair<FitnessTool, Boolean>>) :
     RecyclerView.Adapter<FitnessToolAdapter.ViewHolder>() {
 
     private var dataSet: List<Pair<FitnessTool, Boolean>> = fitnessTools

@@ -3,7 +3,7 @@ package com.example.learnandroid.presentation.screens.login
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
-class LoginPagerAdapter(private val fragment: Fragment, private val items: Array<Fragment>) :
+class LoginPagerAdapter(fragment: Fragment, private val items: Array<Fragment>) :
     FragmentStateAdapter(fragment) {
 
     override fun getItemCount(): Int {

@@ -19,7 +19,6 @@ class OnboardingPlanDayFragment :
     private var delegate: OnboardingPlanDayDelegate? = null
 
     companion object {
-        const val tag = "OnboardingPlanDayFragment"
         fun newInstance(): OnboardingPlanDayFragment {
             return OnboardingPlanDayFragment()
         }

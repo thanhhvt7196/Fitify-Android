@@ -1,26 +1,30 @@
 package com.example.learnandroid.utils.constants
 
+import android.content.Context
 import com.example.learnandroid.FitifyApplication
 import com.example.learnandroid.R
 
 class AppConstants {
     companion object {
-        const val sharedPreferencesName = "Fitify"
-        const val isLoggedInSPKey = "isLoggedIn"
-        const val passwordMinimumCharacters = 6
-        const val passwordMaximumCharacters = 32
-        const val emailMaximumCharacters = 255
-        const val weightDecimalDigits = 1
-        const val maxWeight = 300f
-        const val maxHeight = 250
-        const val minHeight = 70
-        const val minWeight = 10f
-        const val maxAge = 99
-        const val minAge = 10
+        const val SHARED_PREFERENCES_NAME = "Fitify"
+        const val IS_LOGGED_IN_SP_KEY = "isLoggedIn"
+        const val PASSWORD_MINIMUM_CHARACTERS = 6
+        const val PASSWORD_MAXIMUM_CHARACTERS = 32
+        const val EMAIL_MAXIMUM_CHARACTERS = 255
+        const val WEIGHT_DECIMAL_DIGITS = 1
+        const val MAX_WEIGHT = 300f
+        const val MAX_HEIGHT = 250
+        const val MIN_HEIGHT = 70
+        const val MIN_WEIGHT = 10f
+        const val MAX_AGE = 99
+        const val MIN_AGE = 10
 
-        val emailInvalidMessage: String
-            get() = FitifyApplication.mContext.getString(R.string.error_invalid_email)
-        val passwordShortMessage: String
-            get() = FitifyApplication.mContext.getString(R.string.error_short_password)
+        fun emailInvalidMessage(context: Context): String {
+            return context.getString(R.string.error_invalid_email)
+        }
+
+        fun passwordShortMessage(context: Context): String {
+            return context.getString(R.string.error_short_password)
+        }
     }
 }

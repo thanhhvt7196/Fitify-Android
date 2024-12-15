@@ -5,13 +5,13 @@ plugins {
 
 android {
     namespace = "com.example.learnandroid"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         multiDexEnabled = true
         applicationId = "com.example.learnandroid"
         minSdk = 30
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -19,7 +19,11 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
-        buildConfigField("String", "UNSPLASH_ACCESS_KEY", "\"Client-ID d132f67143bf64c0c12e5eceb8ab9006bbda519a5857720bf6c68ad0adc4c2a3\"")
+        buildConfigField(
+            "String",
+            "UNSPLASH_ACCESS_KEY",
+            "\"Client-ID d132f67143bf64c0c12e5eceb8ab9006bbda519a5857720bf6c68ad0adc4c2a3\""
+        )
     }
 
     buildTypes {
@@ -94,6 +98,6 @@ dependencies {
     implementation("com.airbnb.android:lottie:6.1.0")
 }
 
-tasks.register("clear", Delete:: class) {
+tasks.register("clear", Delete::class) {
     delete(rootProject.buildDir)
 }

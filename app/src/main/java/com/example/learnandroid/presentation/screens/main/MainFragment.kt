@@ -4,7 +4,6 @@ import androidx.core.content.ContextCompat
 import com.example.learnandroid.R
 import com.example.learnandroid.databinding.FragmentMainBinding
 import com.example.learnandroid.presentation.screens.base.BaseViewBindingFragment
-import com.example.learnandroid.presentation.screens.login.LoginFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -15,7 +14,6 @@ class MainFragment :
     private lateinit var mainPagerAdapter: MainPagerAdapter
 
     companion object {
-        const val tag = "MainFragment"
         fun newInstance(): MainFragment {
             return MainFragment()
         }
@@ -46,18 +44,22 @@ class MainFragment :
                     viewBinding.mainViewPager.setCurrentItem(2, false)
                     true
                 }
+
                 R.id.workouts_tab -> {
                     viewBinding.mainViewPager.setCurrentItem(1, false)
                     true
                 }
+
                 R.id.plan_tab -> {
                     viewBinding.mainViewPager.setCurrentItem(0, false)
                     true
                 }
+
                 R.id.profile_tab -> {
                     viewBinding.mainViewPager.setCurrentItem(3, false)
                     true
                 }
+
                 else -> true
             }
         }

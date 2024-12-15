@@ -25,7 +25,6 @@ class OnboardingNameFragment :
     private var delegate: OnboardingNameDelegate? = null
 
     companion object {
-        const val tag = "OnboardingNameFragment"
         fun newInstance(): OnboardingNameFragment {
             return OnboardingNameFragment()
         }
@@ -62,6 +61,7 @@ class OnboardingNameFragment :
                         delegate?.didSelectName(viewModel.name.value)
                         return@setOnEditorActionListener true
                     }
+
                     else -> false
                 }
             }

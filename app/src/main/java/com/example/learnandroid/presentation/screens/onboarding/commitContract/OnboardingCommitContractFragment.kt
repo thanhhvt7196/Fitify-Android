@@ -7,61 +7,37 @@ import android.animation.ObjectAnimator
 import android.animation.PropertyValuesHolder
 import android.annotation.SuppressLint
 import android.content.Context
-import android.graphics.Bitmap
-import android.graphics.Canvas
-import android.graphics.Color
-import android.graphics.ColorFilter
-import android.graphics.Paint
-import android.graphics.Path
-import android.graphics.PixelFormat
-import android.graphics.PorterDuff
-import android.graphics.PorterDuffXfermode
-import android.graphics.RadialGradient
-import android.graphics.Shader
-import android.graphics.drawable.BitmapDrawable
-import android.graphics.drawable.Drawable
-import android.graphics.drawable.LayerDrawable
 import android.os.Handler
 import android.os.Looper
-import android.renderscript.Allocation
-import android.renderscript.Element
-import android.renderscript.RenderScript
-import android.renderscript.ScriptIntrinsicBlur
 import android.text.Html
-import android.util.AttributeSet
-import android.util.Log
 import android.view.MotionEvent
 import android.view.View
-import android.widget.Toast
-import androidx.core.animation.addListener
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.lifecycleScope
-import com.example.learnandroid.LoginActivity
 import com.example.learnandroid.R
 import com.example.learnandroid.databinding.FragmentOnboardingCommitContractBinding
 import com.example.learnandroid.presentation.components.circleGradientBackground.CircleGradientBackground
 import com.example.learnandroid.presentation.screens.base.BaseViewBindingFragment
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import java.util.Timer
 
 class OnboardingCommitContractFragment :
     BaseViewBindingFragment<FragmentOnboardingCommitContractBinding, OnboardingCommitContractViewModel>(
         FragmentOnboardingCommitContractBinding::inflate
     ) {
-    enum class CommitState: Iterable<CommitState> {
+    enum class CommitState : Iterable<CommitState> {
         NONE {
             override fun getTitle(context: Context): String = ""
         },
         HOLD_IT {
-            override fun getTitle(context: Context): String = context.getString(R.string.onboarding_commit_contract_hold_it)
+            override fun getTitle(context: Context): String =
+                context.getString(R.string.onboarding_commit_contract_hold_it)
         },
         KEEP_GOING {
-            override fun getTitle(context: Context): String = context.getString(R.string.onboarding_commit_contract_keep_going)
+            override fun getTitle(context: Context): String =
+                context.getString(R.string.onboarding_commit_contract_keep_going)
         },
         AWESOME {
-            override fun getTitle(context: Context): String = context.getString(R.string.onboarding_commit_contract_awesome)
+            override fun getTitle(context: Context): String =
+                context.getString(R.string.onboarding_commit_contract_awesome)
         };
 
         abstract fun getTitle(context: Context): String
@@ -91,7 +67,6 @@ class OnboardingCommitContractFragment :
     private var delegate: OnboardingCommitContractDelegate? = null
 
     companion object {
-        const val tag = "OnboardingCommitContractFragment"
         fun newInstance(): OnboardingCommitContractFragment {
             return OnboardingCommitContractFragment()
         }

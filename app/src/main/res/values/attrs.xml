@@ -1,48 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <attr name="title" format="string"/>
-    <attr name="image" format="reference"/>
-    <attr name="subtitle" format="string"/>
-    <attr name="showSeparator" format="boolean"/>
-    <attr name="borderColor" format="color"/>
-    <attr name="placeholder" format="string"/>
+    <attr name="title" format="string" />
+    <attr name="image" format="reference" />
+    <attr name="subtitle" format="string" />
+    <attr name="showSeparator" format="boolean" />
+    <attr name="borderColor" format="color" />
+    <attr name="placeholder" format="string" />
 
     <declare-styleable name="ProfileMyJourneyItemView">
-        <attr name="title"/>
-        <attr name="image"/>
-        <attr name="count" format="string"/>
+        <attr name="title" />
+        <attr name="image" />
+        <attr name="count" format="string" />
     </declare-styleable>
 
     <declare-styleable name="ProfileHeaderStatView">
-        <attr name="title"/>
-        <attr name="image"/>
-        <attr name="subtitle"/>
+        <attr name="title" />
+        <attr name="image" />
+        <attr name="subtitle" />
     </declare-styleable>
 
     <declare-styleable name="SettingItemView">
-        <attr name="title"/>
-        <attr name="image"/>
-        <attr name="showSeparator"/>
+        <attr name="title" />
+        <attr name="image" />
+        <attr name="showSeparator" />
     </declare-styleable>
 
     <declare-styleable name="OnboardingItemWithImageView">
-        <attr name="title"/>
-        <attr name="image"/>
+        <attr name="title" />
+        <attr name="image" />
     </declare-styleable>
 
     <declare-styleable name="RoundedBorderButton">
-        <attr name="title"/>
+        <attr name="title" />
     </declare-styleable>
 
     <declare-styleable name="RoundedFloatingTextField">
-        <attr name="placeholder"/>
+        <attr name="placeholder" />
     </declare-styleable>
 
     <declare-styleable name="BottomWhiteButton">
-        <attr name="title"/>
+        <attr name="title" />
     </declare-styleable>
 
     <declare-styleable name="BottomAccentGradientButton">
-        <attr name="title"/>
+        <attr name="title" />
+    </declare-styleable>
+
+    <declare-styleable name="OnboardingTrainingDayItem">
+        <attr name="title" />
     </declare-styleable>
 </resources>

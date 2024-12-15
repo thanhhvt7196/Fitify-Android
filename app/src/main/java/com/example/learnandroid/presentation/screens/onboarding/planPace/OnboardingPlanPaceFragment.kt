@@ -7,7 +7,10 @@ import com.example.learnandroid.domain.models.PlanPace
 import com.example.learnandroid.presentation.screens.base.BaseViewBindingFragment
 import kotlinx.coroutines.launch
 
-class OnboardingPlanPaceFragment : BaseViewBindingFragment<FragmentOnboardingPlanPaceBinding, OnboardingPlanPaceViewModel>(FragmentOnboardingPlanPaceBinding::inflate) {
+class OnboardingPlanPaceFragment :
+    BaseViewBindingFragment<FragmentOnboardingPlanPaceBinding, OnboardingPlanPaceViewModel>(
+        FragmentOnboardingPlanPaceBinding::inflate
+    ) {
     override val viewModel: OnboardingPlanPaceViewModel by viewModels()
 
     interface OnboardingPlanPaceDelegate {
@@ -17,7 +20,6 @@ class OnboardingPlanPaceFragment : BaseViewBindingFragment<FragmentOnboardingPla
     private var delegate: OnboardingPlanPaceDelegate? = null
 
     companion object {
-        const val tag = "OnboardingPlanPaceFragment"
         fun newInstance(): OnboardingPlanPaceFragment {
             return OnboardingPlanPaceFragment()
         }

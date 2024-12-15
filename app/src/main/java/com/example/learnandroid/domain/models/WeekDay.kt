@@ -1,41 +1,42 @@
 package com.example.learnandroid.domain.models
 
 import android.content.Context
+import com.example.learnandroid.R
 
 enum class WeekDay {
     MONDAY {
         override fun getShortName(context: Context): String {
-            return "Mon"
+            return context.getString(R.string.monday_short)
         }
     },
     TUESDAY {
         override fun getShortName(context: Context): String {
-            return "Tue"
+            return context.getString(R.string.tuesday_short)
         }
     },
     WEDNESDAY {
         override fun getShortName(context: Context): String {
-            return "Wed"
+            return context.getString(R.string.wednesday_short)
         }
     },
     THURSDAY {
         override fun getShortName(context: Context): String {
-            return "Thu"
+            return context.getString(R.string.thursday_short)
         }
     },
     FRIDAY {
         override fun getShortName(context: Context): String {
-            return "Fri"
+            return context.getString(R.string.friday_short)
         }
     },
     SATURDAY {
         override fun getShortName(context: Context): String {
-            return "Sat"
+            return context.getString(R.string.saturday_short)
         }
     },
     SUNDAY {
         override fun getShortName(context: Context): String {
-            return "Sun"
+            return context.getString(R.string.sunday_short)
         }
     };
 

@@ -5,7 +5,7 @@ import com.example.learnandroid.R
 
 enum class KneePain {
     NO {
-        override fun getTitle(context: Context): String? {
+        override fun getTitle(context: Context): String {
             return context.getString(R.string.no)
         }
 
@@ -18,7 +18,7 @@ enum class KneePain {
         }
     },
     MILD_PAIN {
-        override fun getTitle(context: Context): String? {
+        override fun getTitle(context: Context): String {
             return context.getString(R.string.yes)
         }
 
@@ -31,7 +31,7 @@ enum class KneePain {
         }
     },
     QUITE_SERIOUS {
-        override fun getTitle(context: Context): String? {
+        override fun getTitle(context: Context): String {
             return context.getString(R.string.yes)
         }
 
@@ -44,7 +44,7 @@ enum class KneePain {
         }
     };
 
-    abstract fun getTitle(context: Context): String?
+    abstract fun getTitle(context: Context): String
     abstract fun subtitle(context: Context): String?
     abstract fun message(context: Context): String?
 }

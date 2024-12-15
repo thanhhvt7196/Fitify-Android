@@ -72,9 +72,7 @@ class RoundedFloatingTextField(context: Context, attrs: AttributeSet) :
 
     fun getText(): String {
         val textField = findViewById<TextInputEditText>(R.id.textField)
-        return textField.text?.let {
-            it.toString()
-        } ?: ""
+        return textField.text?.toString() ?: ""
     }
 
     fun setKeyboardType(keyboardType: Int) {

@@ -4,9 +4,13 @@ import android.content.Context
 import com.example.learnandroid.R
 
 enum class DailyWalk {
-    MORE_THAN_TWO_HOURs {
+    MORE_THAN_TWO_HOURS {
         override fun getTitle(context: Context): String {
-            return context.resources.getQuantityString(R.plurals.onboarding_duration_more_than_x_hours, 2, 2)
+            return context.resources.getQuantityString(
+                R.plurals.onboarding_duration_more_than_x_hours,
+                2,
+                2
+            )
         }
     },
     ONE_TO_TWO_HOURS {
@@ -16,7 +20,11 @@ enum class DailyWalk {
     },
     LESS_THAN_AN_HOUR {
         override fun getTitle(context: Context): String {
-            return context.resources.getQuantityString(R.plurals.onboarding_duration_less_than_x_hours, 1, 1)
+            return context.resources.getQuantityString(
+                R.plurals.onboarding_duration_less_than_x_hours,
+                1,
+                1
+            )
         }
     };
 

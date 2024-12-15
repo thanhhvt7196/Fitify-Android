@@ -1,5 +1,6 @@
 package com.example.learnandroid.presentation.screens.forgotPassword
 
+import android.content.Context
 import android.text.InputType
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -24,6 +25,11 @@ class ForgotPasswordFragment :
         setupBinding()
     }
 
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        viewModel.emailInvalidMessage = AppConstants.emailInvalidMessage(context)
+    }
+
     private fun setupUI() {
         viewBinding.apply {
             toolbar.setBackButtonType(AppToolbar.BackButtonType.POP)
@@ -36,7 +42,7 @@ class ForgotPasswordFragment :
 
             emailTextField.setKeyboardType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS)
             emailTextField.setPlaceholder(context?.getString(R.string.hint_email) ?: "")
-            emailTextField.setMaxLength(AppConstants.emailMaximumCharacters)
+            emailTextField.setMaxLength(AppConstants.EMAIL_MAXIMUM_CHARACTERS)
             emailTextField.setTextChangeHandler { text ->
                 viewModel.setEmail(text)
             }
@@ -76,7 +82,6 @@ class ForgotPasswordFragment :
     }
 
     companion object {
-        const val tag = "ForgotPasswordFragment"
         fun newInstance(): ForgotPasswordFragment {
             return ForgotPasswordFragment()
         }

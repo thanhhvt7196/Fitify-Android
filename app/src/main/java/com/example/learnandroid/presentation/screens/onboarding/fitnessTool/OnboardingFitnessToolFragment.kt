@@ -1,37 +1,20 @@
 package com.example.learnandroid.presentation.screens.onboarding.fitnessTool
 
-import android.os.Bundle
 import android.text.Html
-import android.util.Log
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.view.inputmethod.EditorInfo
-import android.widget.LinearLayout
-import androidx.core.content.ContextCompat
-import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.learnandroid.R
 import com.example.learnandroid.databinding.FragmentOnboardingFitnessToolBinding
 import com.example.learnandroid.domain.models.FitnessTool
 import com.example.learnandroid.presentation.screens.base.BaseViewBindingFragment
-import com.example.learnandroid.presentation.screens.onboarding.age.OnboardingAgeFragment
-import com.example.learnandroid.presentation.screens.onboarding.age.OnboardingAgeViewModel
-import com.example.learnandroid.utils.constants.AppConstants
-import com.example.learnandroid.utils.extensions.firstCapitalize
-import com.example.learnandroid.utils.extensions.focus
-import com.example.learnandroid.utils.extensions.unFocus
 import kotlinx.coroutines.launch
 
 class OnboardingFitnessToolFragment :
-    BaseViewBindingFragment<FragmentOnboardingFitnessToolBinding, OnboardingFitneesToolViewModel>(
+    BaseViewBindingFragment<FragmentOnboardingFitnessToolBinding, OnboardingFitnessToolViewModel>(
         FragmentOnboardingFitnessToolBinding::inflate
     ) {
-    override val viewModel: OnboardingFitneesToolViewModel by viewModels()
+    override val viewModel: OnboardingFitnessToolViewModel by viewModels()
     private var adapter = FitnessToolAdapter(emptyList())
 
     interface OnboardingFitnessToolDelegate {
@@ -41,7 +24,6 @@ class OnboardingFitnessToolFragment :
     private var delegate: OnboardingFitnessToolDelegate? = null
 
     companion object {
-        const val tag = "OnboardingFitnessToolFragment"
         fun newInstance(): OnboardingFitnessToolFragment {
             return OnboardingFitnessToolFragment()
         }

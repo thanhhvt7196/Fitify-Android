@@ -1,0 +1,2040 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fitify VN</string>
+    <plurals name="pro_smallprint_no_trial">
+        <item quantity="one"><b>Plan starts today.</b> Only %1$s per month. <b>Cancel anytime.</b></item>
+        <item quantity="other"><b>Plan starts today.</b> Only %1$s per %2$d months. <b>Cancel anytime.</b></item>
+    </plurals>
+    <string name="referral_main_screen_copy_success">Copied</string>
+    <string name="notification_engage_title_time">⏰ It’s time to begin!</string>
+    <string name="notification_engage_subtitle_shape">You will not get into a dream shape if you don´t work on yourself 🏋️</string>
+    <string name="notification_engage_title_remember">Hi, it’s Fitify! Remember? 👋</string>
+    <string name="notification_engage_subtitle_first_step">The first step is the hardest, but it\'s also the most rewarding. Tap here to start 👆</string>
+    <string name="notification_engage_title_goals">⚠️ Your goals matter ⚠️</string>
+    <string name="notification_engage_subtitle_dont_wait">Don\'t wait any longer. Prioritize your health and start your fitness journey now.</string>
+    <string name="notification_discount_title_coach">Hi, coach Mike here 👋</string>
+    <string name="notification_discount_subtitle_gift">Please, accept my gift of %s%% discount to unlock all Pro features 🎁</string>
+    <string name="notification_discount_title_reminder">⚠️ Reminder for %s ⚠️</string>
+    <string name="notification_discount_subtitle_users">951,849 users already claimed this limited offer!</string>
+    <string name="notification_discount_title_unlock">Unlock limited offer</string>
+    <string name="notification_discount_subtitle_expire">👉Reach your goals with a %s%% discount. Offer will expire soon.</string>
+    <string name="notification_discount_title_save">Save up to %s%%!</string>
+    <string name="notification_discount_subtitle_plan">Get your personal plan + save money! What´s stopping you now?</string>
+    <string name="stats_strength_description_weighted">Estimated maximum weight you should be able to lift for a single repetition. The metric is often called e1RM (Estimated One Rep Max).</string>
+    <string name="stats_strength_description_reps">Estimated maximum amount of repetitions you should be able to perform with maximum effort in one set.</string>
+    <string name="stats_best_set_description">The set for which your calculated strength (e1RM) was the highest</string>
+    <string name="continue_terms_agreement">By continuing you agree to %1$s and %2$s</string>
+    <string name="sharing_referral_subject">Join me on Fitify!</string>
+    <string name="sharing_referral_message">Hey there! Have you tried Fitify yet? It\'s intuitive, fun, and super effective. Dive into a healthier lifestyle with me!
+🔗 %s</string>
+    <string name="referral_main_screen_title">Invite Friends</string>
+    <string name="referral_main_screen_headline">Give your friends a free month of Fitify</string>
+    <string name="referral_main_screen_link">Your unique referral link</string>
+    <string name="referral_main_screen_copy">Copy</string>
+    <string name="referral_main_screen_smallprint">Recipient must be a new Fitify customer</string>
+    <string name="referral_main_screen_cta">Send Invitation</string>
+    <string name="referral_profile_cta">Invite Friends</string>
+    <string name="logout_alert_title">Are you sure you want to log out?</string>
+    <string name="label_today">Today</string>
+    <plurals name="x_rounds">
+        <item quantity="one">%d round</item>
+        <item quantity="other">%d rounds</item>
+    </plurals>
+    <plurals name="x_sets">
+        <item quantity="one">%d set</item>
+        <item quantity="other">%d sets</item>
+    </plurals>
+    <string name="stats_max_duration">Max Duration</string>
+    <string name="stats_total_duration">Total Duration</string>
+    <string name="stats_best_set">Best Set</string>
+    <string name="stats_max_weight">Max Weight</string>
+    <string name="stats_volume">Volume</string>
+    <string name="stats_strength">Strength</string>
+    <string name="stats_max_reps">Max Reps</string>
+    <string name="stats_total_reps">Total Reps</string>
+    <string name="stats_max_distance">Max Distance</string>
+    <string name="stats_total_distance">Total Distance</string>
+    <string name="breathwork_use_benefits_headache">Headache</string>
+    <string name="breathwork_use_benefits_body_aches">Body aches</string>
+    <string name="breathwork_use_benefits_hangover">Hangover</string>
+    <string name="breathwork_use_benefits_defeat_fear">To defeat fear</string>
+    <string name="breathwork_use_benefits_bad_mood">Bad mood</string>
+    <string name="breathwork_use_benefits_tense_muscles">Tense muscles</string>
+    <string name="breathwork_use_benefits_relax">Relax</string>
+    <string name="breathwork_use_benefits_recenter">Recenter</string>
+    <string name="breathwork_use_benefits_pain_relief">Pain relief</string>
+    <string name="breathwork_use_benefits_evening">Evening</string>
+    <string name="breathwork_use_benefits_after_long_day">After a long day</string>
+    <string name="breathwork_use_benefits_exhausted">Exhausted</string>
+    <string name="breathwork_use_benefits_before_meetings">Before meetings</string>
+    <string name="breathwork_use_benefits_feel_good">Feel good</string>
+    <string name="breathwork_use_benefits_racing_mind">Racing mind</string>
+    <string name="breathwork_use_benefits_calm_down_relax">Calm down and relax</string>
+    <string name="breathwork_use_benefits_high_heart_rate">High heart rate</string>
+    <string name="breathwork_use_benefits_stressed_anxious">Stressed or anxious</string>
+    <string name="breathwork_use_benefits_before_meals">Before meals</string>
+    <string name="breathwork_use_benefits_before_bedtime">Before bedtime</string>
+    <string name="breathwork_use_benefits_on_flight">On a flight</string>
+    <string name="breathwork_use_benefits_before_exercise">Before exercise</string>
+    <string name="breathwork_use_benefits_before_work">Before work</string>
+    <string name="breathwork_use_benefits_morning">Morning</string>
+    <string name="breathwork_use_benefits_low_energy">Low energy</string>
+    <string name="breathwork_use_benefits_waking_up">Waking up</string>
+    <string name="breathwork_use_benefits_cold_exposure">Cold exposure</string>
+    <string name="breathwork_use_benefits_anytime">Anytime</string>
+    <string name="breathwork_use_benefits_low_focus">Low focus</string>
+    <string name="breathwork_use_benefits_before_game_race">Before game or race</string>
+    <string name="app_menu_start_workout">Start Workout</string>
+    <string name="app_menu_claim_offer">Claim Your Special Offer</string>
+    <string name="app_menu_open_cookbook">Open Cookbook</string>
+    <string name="app_menu_report_issue">Report Issue</string>
+    <string name="app_menu_check_progress">Check Your Progress</string>
+    <string name="breathwork_restful_dreams_long_description">This sleep-inducing breathing exercise helps you relax and drift into restorative sleep full of peaceful dreams by holding your breath on the inhale and lengthening the exhale.
+Lie on your back, relax your full body, and place one hand on your chest and the other on your belly.
+Holding the breath on the inhale and extending the exhale boosts vagal tone, quieting your body\'s stress response and activating the soothing parasympathetic nervous system. This promotes a lasting state of calm and relaxation throughout the night.</string>
+    <string name="breathwork_total_recovery_long_description">This exercise helps relieve pain in your body while improving blood oxygen levels and circulation. It is effective for recovery from exercise, headaches, hangovers, muscle aches, and more.
+Take slow breaths into your lower abdomen, allowing your abdomen to expand on the inhale and contract on the exhale. Keep your chest and shoulders as still as possible while breathing.
+Deep breathing with intention calms and regulates the autonomic nervous system (ANS). Holding your breath slowly increases CO2 levels in the blood, which enhances the calming effect of the vagus nerve when you exhale and activates your parasympathetic system. This promotes relaxation of the mind and alleviates pain in the body. Increased CO2 levels also assist in the release of oxygen within your cells, aiding in recovery.</string>
+    <string name="breathwork_congrats_screen_title">Breathing finished!</string>
+    <string name="breathwork_flow_long_description">This breathing exercise focuses on alternating nostril breathing to enhance concentration, awareness, and lung function. It\'s particularly beneficial when you need to sustain your focus for extended periods.
+Use your index finger or thumb to fully close either your left or right nostril. Switch nostrils with each exhale, alternating the one you inhale from.
+This exercise activates your parasympathetic nervous system, which reduces stress and blood pressure while boosting awareness and respiratory endurance. It also helps harmonize oxygen levels in each nasal cavity, promoting greater clarity of mind.</string>
+    <string name="breathwork_calm_long_description">This exercise is specifically crafted to alleviate stress, bring tranquility to the mind, and lower heart rate and blood pressure.
+Find a comfortable position, whether sitting or lying down, with proper back support and a fairly straight spine. Focus on breathing with the diaphragm, expanding the base of your ribs and belly during inhalation, and contracting them back in during exhalation.
+Engaging in slow and controlled diaphragmatic breathing, particularly with a longer exhale, activates the body\'s innate relaxation response. This promotes a sense of calmness and relaxation in both the mind and body.</string>
+    <string name="breathwork_balanced_mind_long_description">This exercise is specifically designed to harmonize your mind, body, and spirit, promoting a sense of balance and well-being.
+Take slow breaths into your lower abdomen during inhalation, allowing your abdomen to expand, and contract it during exhalation. Focus on keeping your chest and shoulders still as you breathe.
+Breathing at a rate of 6 breaths per minute has been found to have numerous benefits, such as reducing stress, preventing insomnia, enhancing emotional control, and improving attention. Interestingly, individuals in the best health around the world naturally breathe at this rhythm.</string>
+    <string name="breathwork_relief_long_description">This simple breathing technique serves as an excellent method to reset your mind, especially after a long workday or encountering stressful events that may have left your mind overwhelmed with anxiety and racing thoughts.
+Breathing at this slower rate is shown to reduce anxiety, reduce negative moods, and increase subjective feelings of energy. This breathing rate has also been shown to increase alpha brain wave activity, which is associated with a relaxed, focused state and the clearing of undesirable thoughts. This type of breathing reduces stress levels and improves energy and overall mood.</string>
+    <string name="breathwork_inner_peace_long_description">Inner Peace is specifically designed to assist during episodes of high anxiety. It brings a sense of relaxation to the mind while reducing heart rate and blood pressure.
+Take slow breaths, directing the air into your lower abdomen as you inhale. Allow your abdomen to expand on the inhale and contract on the exhale. Keep your chest and shoulders as still as possible during the breaths.
+Engaging in deliberate and gentle diaphragmatic breathing, particularly with a prolonged exhale, activates the body\'s natural relaxation response. This triggers the parasympathetic nervous system, leading to a decrease in heart rate and blood pressure and a calming effect on the mind. Additionally, this exercise helps increase oxygen levels in the blood, which can be depleted during times of stress and anxiety.</string>
+    <string name="breathwork_progressive_relaxation_long_description">Progressive Relaxation is designed to activate your parasympathetic nervous system and swiftly induce a deep state of relaxation. By maintaining a consistent inhale and gradually extending the exhale, you can improve both your mental and physical well-being.
+Sit with a straight back and rest your hands on your knees or thighs. Relax your shoulders and focus on deep abdominal breathing, minimizing movement in your chest and shoulders. Keep in mind that the inhale may naturally feel quicker and less controlled during the exercise.
+This exercise engages the parasympathetic nervous system, triggering the \"relaxation response\" gradually. It is beneficial after meals, for facilitating sleep, or whenever you need rapid relaxation. Studies have shown its positive effects on blood sugar levels after an oral glucose tolerance test in non-diabetic individuals (J Altern Complement Med. 2013). It is believed to improve insulin sensitivity. Moreover, the progressive extension of the exhale helps build your body\'s tolerance to carbon dioxide in an easily achievable manner.</string>
+    <string name="breathwork_comfort_long_description">This powerful breathing exercise is effective for relieving anxiety, tension, and pain and can be used during moments of anxiety or panic, illness, or muscle tightness.
+Visualize air moving smoothly from your nose to your throat, chest, and abdomen. Breathe deeply, allowing your abdomen to expand on the inhale and contract on the exhale.
+By activating your parasympathetic nervous system, this exercise slows your heart rate, reduces blood pressure, and brings calmness to the mind. Focusing on your breath helps redirect your thoughts away from stress, worry, pain, and anger. Many therapists teach this exercise to their patients who struggle with anxiety.</string>
+    <string name="breathwork_letting_go_long_description">This exercise aims to refresh your mind, alleviate stress, and decrease heart rate and blood pressure, making it ideal for unwinding after a long day or preparing for sleep.
+Rest your hands on the sides of your lower ribs and gently push them outward during inhalation, then bring them back in towards your spine as you exhale. This technique deepens your breath and activates the diaphragm.
+Engaging in slow and controlled diaphragmatic breathing, especially with a longer exhale, activates the body\'s innate relaxation response by stimulating the parasympathetic nervous system.</string>
+    <string name="breathwork_deep_sleep_long_description">This exercise was created by Dr. Andrew Weil to help his patients relax and fall asleep more easily. It is also known as a \"natural tranquilizer for the nervous system\".
+Before you start, make sure to empty your lungs of all air. You can perform this exercise either by lying flat or sitting up straight. Take slow breaths, inhaling into your lower abdomen and exhaling through pursed lips, producing a \'woosh\' sound.
+Slow, rhythmic, diaphragmatic breathing can help release muscle tension, lower the heart rate, and calm the mind by activating the parasympathetic nervous system. This can make it easier to fall asleep and get a more restful night\'s sleep.</string>
+    <string name="breathwork_rise_long_description">This quick and energizing exercise is designed to instantly boost your alertness, energy levels, and oxygen intake. It\'s perfect for waking up in the morning or whenever you need a quick pick-me-up.
+Sit upright and breathe slowly into your lower abdomen while keeping your chest and shoulders still.
+This exercise enhances adrenaline levels and increases blood alkalinity. By activating your body\'s fight or flight response through the sympathetic nervous system, it heightens alertness, concentration, and energy.</string>
+    <string name="breathwork_hyper_energy_long_description">This exercise instantly increases your energy, uplifts your mood, raises blood oxygen levels, and sharpens your focus, preparing you to tackle life\'s challenges. With regular practice, it can enhance endurance and reduce daily fatigue.
+Place a hand just below your belly button to breathe into your lower abdomen. Inhale to make your abdomen rise, and exhale to make it fall. Proper breathing occurs when your chest and upper body remain still while only your abdomen moves. After the 20 hyperventilations, remember to exhale fully before the 30-second breath hold.
+This exercise stimulates the release of adrenaline and noradrenaline through your endocrine system, making your body alert and awake. The 20 hyperventilations increase oxygen in your blood while removing CO2, responsible for delivering oxygen to your cells. The subsequent breath hold is vital as it allows CO2 to accumulate in your blood, enabling the newly acquired oxygen to enter your cells. Additionally, it boosts the production of erythropoietin (EPO), promoting the generation of red blood cells. This enhances oxygen absorption, improves endurance, and reduces fatigue.</string>
+    <string name="breathwork_box_breathing_long_description">This exercise, popularly known as box breathing, is renowned for its utilization by Navy SEALs to cultivate a serene and focused mindset, accompanied by a balanced and energized physical state. It greatly enhances concentration, balance, energy, and overall performance.
+Inhale slowly, directing your breath into your lower abdomen. Allow your abdomen to expand on the inhale and contract on the exhale. Aim to keep your chest and shoulders as still as possible while you breathe.
+Purposeful deep breathing has a calming effect on the autonomic nervous system (ANS). The deliberate breath-holding during this exercise allows carbon dioxide (CO2) to accumulate in the blood. Elevated levels of blood CO2 enhance the cardio-inhibitory response of the vagus nerve during exhalation, stimulating the parasympathetic system. This induces a sense of calm and relaxation in both the mind and body. Moreover, increased CO2 levels aid in the release of oxygen within your cells.</string>
+    <string name="breathwork_breath_of_fire_long_description">This breathing technique is designed to swiftly activate and alert your senses. Breath of Fire involves a rapid-paced exhale and a relaxed inhale, both of equal duration, to get you up and moving.
+Place one hand on your belly and imagine \"pumping\" the breath from that area during the exhale. As you exhale, gently draw your navel towards your spine, and on the inhale, release and relax the navel outward. This pumping action engages the diaphragm as you direct your breath through your nose.
+This practice can optimize performance and enhance reaction times. It operates by improving the processing capabilities of the central nervous system, potentially leading to increased arousal, quicker information processing, and enhanced concentration. It can be beneficial in situations that require rapid responsiveness, such as sports, performances, and other crucial tasks.</string>
+    <string name="breathwork_hype_up_long_description">This exercise, also known as box breathing, is well-known for its use by Navy SEALs to promote a calm and focused mind while achieving a balanced and energized physical state. It effectively enhances concentration, balance, energy, and overall performance.
+Inhale slowly, directing your breath into your lower abdomen. Allow your abdomen to expand during the inhale and contract during the exhale. Try to keep your chest and shoulders as still as possible while breathing.
+Purposeful deep breathing has a calming and regulating effect on the autonomic nervous system (ANS). The deliberate breath-holding during this exercise allows carbon dioxide (CO2) to accumulate in the blood. Elevated levels of CO2 enhance the cardio-inhibitory response of the vagus nerve during exhalation, which stimulates the parasympathetic system. This results in a calm and relaxed state of mind and body. Increased CO2 levels also aid in the release of oxygen in your cells, further promoting a sense of well-being.</string>
+    <string name="breathwork_ecstasy_long_description">This exercise aims to elevate your mood, invigorate your body, and boost blood oxygen levels. It\'s perfect for those moments when you need a little pick-me-up.
+You can try placing a hand on your belly and chest to feel your breathing pattern. This exercise can be done while sitting or lying down.
+This exercise enhances adrenaline levels and promotes blood alkalinity. It triggers your body\'s innate fight or flight response, activating the sympathetic nervous system. This leads to heightened alertness, improved concentration, and increased energy.</string>
+    <string name="breathwork_reset_long_description">This breathing exercise is designed to help restore a normal breathing pattern, bringing harmony and balance to your body. It focuses on a rhythmic pattern of inhaling for 4 seconds and exhaling for 4 seconds, promoting a sense of balance and well-being.
+Find a comfortable position, whether sitting or lying down and begin by consciously inhaling deeply for a count of 4 seconds. Allow your breath to fill your lungs completely. Then, exhale gently for another 4-second count, releasing any tension or stress with each breath. Repeat this pattern, maintaining a steady rhythm.
+The exercise assists in resetting your breathing to a more natural and harmonious pattern. Practicing a consistent inhale and exhale duration of 4 seconds regulates your respiratory system and promotes relaxation.</string>
+    <string name="breathwork_refresh_long_description">This exercise, also known as box breathing, is famously used by the Navy SEALs to create a calm and focused mind with a balanced and energized physical state. Great for increasing concentration, balance, energy, and performance.
+Breathe slowly into your lower abdomen on the inhale. Your abdomen should expand on the inhale and contract on the exhale. Try keeping your chest and shoulders as still as possible while you breathe.
+Intentional deep breathing calms and regulates the autonomic nervous system (ANS). The slow holding of breath allows CO2 to build up in the blood. An increased blood CO2 level enhances the cardio-inhibitory response of the vagus nerve when you exhale and stimulates your parasympathetic system. This produces a calm and relaxed feeling in the mind and body. Increased levels of CO2 also help facilitate the release of oxygen in your cells.</string>
+    <string name="breathwork_okinaga_long_description">This Japanese breathing technique involves an extended inhale and exhale. It helps suppress the stress response and allows individuals to manage their anxiety. In feudal Japan, ninjas mastered this technique to maintain a calm state during covert missions.
+As you exhale, gently rock forward, and as you inhale, rock back. Imagine the breath flowing through your abdomen.
+Okinaga breathing has been found to suppress the activity of the left amygdala, which plays a role in anxiety. This may provide individuals with the ability to control their anxiety levels and alleviate stress and fear responses.</string>
+    <string name="breathwork_relief_description">Experience the power of slow breathing to clear your mind of stressful thoughts</string>
+    <string name="breathwork_inner_peace_description">Discover your inner peace, reduce anxiety and relax your mind</string>
+    <string name="breathwork_progressive_relaxation_description">Experience deep relaxation and activate your body\'s natural relaxation response</string>
+    <string name="breathwork_comfort_description">Relieve anxiety, tension and pain during moments of discomfort</string>
+    <string name="breathwork_letting_go_description">Relax your body and unwind with deep breathing</string>
+    <string name="breathwork_deep_sleep_description">Fall asleep faster and achieve deeper sleep with this natural tranquilizer</string>
+    <string name="breathwork_restful_dreams_description">Relax your body and mind as you drift into a restful sleep</string>
+    <string name="breathwork_total_recovery_description">Relieve pain and enhance recovery with increased blood circulation</string>
+    <string name="breathwork_breath_of_fire_description">Activate your senses for optimal performance and enhanced reaction times</string>
+    <string name="breathwork_hype_up_description">Harness the power of controlled breathing for energy, concentration, and enhanced performance</string>
+    <string name="breathwork_ecstasy_description">Awaken your body, elevate your mood, and boost blood oxygen levels</string>
+    <string name="breathwork_reset_description">Harmonize your body and restore balance with the power of rhythmic breathing</string>
+    <string name="breathwork_refresh_description">Unleash your focus, calmness, and performance with intentional deep breathing</string>
+    <string name="breathwork_okinaga_description">Utilize the power of extended breath for focus, stress relief, and anxiety management</string>
+    <string name="breathwork_flow_description">Boost your concentration and increase lung function for extended focus</string>
+    <string name="breathwork_calm_description">Calm your mind and relax your body with diaphragmatic breathing</string>
+    <string name="breathwork_balanced_mind_description">Harmonize your mind, body, and spirit</string>
+    <string name="breathwork_progressive_relaxation">Progressive Relaxation</string>
+    <string name="breathwork_comfort">Seeking Comfort</string>
+    <string name="breathwork_letting_go">Letting Go</string>
+    <string name="breathwork_deep_sleep">Deep Sleep</string>
+    <string name="breathwork_restful_dreams">Restful Dreams</string>
+    <string name="breathwork_total_recovery">Total Recovery</string>
+    <string name="breathwork_rise_description">Start your day energized and full of focus and alertness</string>
+    <string name="breathwork_hyper_energy_description">Revitalize your energy, mood, and focus, enhance endurance, and combat fatigue</string>
+    <string name="breathwork_box_breathing_description">Enhance concentration, energy, and balance! Unlock peak performance with Box Breathing</string>
+    <string name="breathwork_ecstasy">Natural Ecstasy</string>
+    <string name="breathwork_reset">Breath Reset</string>
+    <string name="breathwork_refresh">Powerful Refresh</string>
+    <string name="breathwork_okinaga">Okinaga</string>
+    <string name="breathwork_flow">The Flow State</string>
+    <string name="breathwork_calm">Calm and Stress-free</string>
+    <string name="breathwork_balanced_mind">Balanced Mind</string>
+    <string name="breathwork_relief">Stress Relief</string>
+    <string name="breathwork_inner_peace">Inner Peace</string>
+    <string name="breathwork_repeat">Repeat</string>
+    <string name="workout_heading_description">Description</string>
+    <string name="workout_heading_use_benefits">Use and Benefits</string>
+    <string name="workout_heading_scientific_evidence">Scientific Evidence</string>
+    <string name="breathwork_rise">Rise and Shine</string>
+    <string name="breathwork_hyper_energy">Hyper Energy</string>
+    <string name="breathwork_box_breathing">Box Breathing</string>
+    <string name="breathwork_breath_of_fire">Breath of Fire</string>
+    <string name="breathwork_hype_up">Hype Up</string>
+    <string name="category_breathwork">Breathwork</string>
+    <string name="category_breathwork_description">Elevate your mind and body with specially curated breathing exercises for energy, focus, relaxation, and restful sleep</string>
+    <string name="group_energy">Energy</string>
+    <string name="group_sleep">Sleep</string>
+    <string name="group_relax">Relax</string>
+    <string name="group_focus">Focus</string>
+    <string name="breathwork_inhale">Inhale</string>
+    <string name="breathwork_exhale">Exhale</string>
+    <string name="breathwork_hold">Hold</string>
+    <string name="quit_workout_message_v2">Should we save your progress?</string>
+    <string name="save_and_finish_early">Save and finish early</string>
+    <string name="quit_without_saving">Quit without saving</string>
+    <string name="plan_ready_to_start">Congratulations! Your personalized plan is ready to start</string>
+    <string name="plan_active_today">Active Today</string>
+    <string name="pro_paywall_pricing_terms_monthly">monthly</string>
+    <string name="pro_paywall_pricing_terms_quarterly">quarterly</string>
+    <string name="pro_paywall_pricing_terms_yearly">yearly</string>
+    <string name="onboarding_activity_level_title">How active are you?</string>
+    <string name="onboarding_activity_level_subtitle">Think about <b>how you usually spend your day and what you do in your free time.</b></string>
+    <string name="onboarding_activity_level_not_active">Not active</string>
+    <string name="onboarding_activity_level_light">Lightly active</string>
+    <string name="onboarding_activity_level_moderate">Moderately active</string>
+    <string name="onboarding_activity_level_high">Highly active</string>
+    <string name="onboarding_lifestyle_title">How satisfied are you with your current lifestyle?</string>
+    <string name="onboarding_lifestyle_completely">Completely, I am happy and productive</string>
+    <string name="onboarding_lifestyle_fairly">Fairly, I want to see improvement</string>
+    <string name="onboarding_lifestyle_not_at_all">Not at all, I need a major change</string>
+    <string name="onboarding_wakeup_duration_title">How long does it take you to get up from bed?</string>
+    <string name="onboarding_wakeup_duration_10">0–10 minutes</string>
+    <string name="onboarding_wakeup_duration_20">10–20 minutes</string>
+    <string name="onboarding_wakeup_duration_30">20–30 minutes</string>
+    <string name="onboarding_wakeup_duration_30_more">More than 30 minutes</string>
+    <string name="onboarding_wakeup_feeling_title">How do you usually feel after you wake up?</string>
+    <string name="onboarding_wakeup_feeling_fresh">Refreshed and energized</string>
+    <string name="onboarding_wakeup_feeling_little_tired">A little tired, but ready to start the day</string>
+    <string name="onboarding_wakeup_feeling_very_tired">Very tired and in need of energy boost</string>
+    <string name="onboarding_wakeup_feeling_exhausted">Exhausted and struggling to get going</string>
+    <string name="ai_chat_message_placeholder">Aa</string>
+    <string name="notification_attachment_unknown">Sent an attachment.</string>
+    <string name="notification_attachment_photo">Sent a photo.</string>
+    <string name="notification_attachment_video">Sent a video.</string>
+    <string name="notification_attachment_gif">Sent a gif.</string>
+    <string name="onboarding_life_event_statement_around_corner">With the <b>%s</b> just around the corner, we are confident you will already feel better by then!</string>
+    <string name="onboarding_life_event_statement_shine">Get ready to shine and amaze everyone during the <b>%s!</b></string>
+    <string name="onboarding_life_event_graph_goal">Your Goal</string>
+    <string name="onboarding_event_period_title">When is your event?</string>
+    <string name="onboarding_event_period_subtitle"><b>We will keep this important event in mind</b> for your personal fitness plan.</string>
+    <string name="onboarding_event_period_six_months_more">In more than 6 months</string>
+    <string name="onboarding_event_period_six_months_less">In less than 6 months</string>
+    <string name="onboarding_event_period_three_months_less">In less than 3 months</string>
+    <string name="onboarding_event_period_month_less">In less than a month</string>
+    <string name="onboarding_event_period_not_sure">I am not sure</string>
+    <string name="onboarding_life_event_pitch_title">All you need in one and only plan</string>
+    <string name="onboarding_life_event_pitch_body">Great news! Based on Fitify users like you, we predict <b>you\'ll be able to hit your goal by %s.</b></string>
+    <string name="onboarding_life_event_anniversary">Anniversary</string>
+    <string name="onboarding_life_event_wedding">Engagement / Wedding</string>
+    <string name="onboarding_life_event_marathon">Charity run / Marathon</string>
+    <string name="onboarding_life_event_photoshoot">Photoshoot / Fashion show</string>
+    <string name="onboarding_life_event_prom">Prom</string>
+    <string name="onboarding_life_event_talent_show">Talent show / Audition</string>
+    <string name="onboarding_life_event_music_festival">Music festival</string>
+    <string name="onboarding_life_event_other">Other important event</string>
+    <string name="onboarding_life_event_no_event">No event</string>
+    <string name="onboarding_life_event_title">Do you have any important event coming up?</string>
+    <string name="onboarding_life_event_subtitle">There\'s no greater drive to achieve your goals than <b>having something to look forward to!</b></string>
+    <string name="onboarding_life_event_vacation">Vacation</string>
+    <string name="onboarding_life_event_competition">Competition</string>
+    <string name="onboarding_life_event_extreme_sports">Extreme sports</string>
+    <string name="onboarding_life_event_birthday">Birthday</string>
+    <string name="onboarding_life_event_reunion">Reunion</string>
+    <string name="onboarding_life_event_gathering">Family gathering</string>
+    <string name="onboarding_life_event_graduation">Graduation</string>
+    <string name="pro_paywall_free_trial">Free Trial</string>
+    <!--When clicked, the history of the specific exercise will be displayed.-->
+    <string name="instruction_exercise_history">Exercise History</string>
+    <string name="unit_feet_short">ft</string>
+    <string name="tools_dialog_confirm_button">Download</string>
+    <string name="paywall_transaction_pending_title">The payment is pending</string>
+    <string name="paywall_transaction_pending_message">We will activate your subscription once the payment is approved.</string>
+    <string name="banner_gift_voucher_title">Looking for a gift?</string>
+    <string name="banner_referral_title">Share\nthe Joy!</string>
+    <string name="banner_referral_subtitle">Invite Your\nFriend.</string>
+    <plurals name="pro_x_months">
+        <item quantity="one">%d Month.</item>
+        <item quantity="other">%d Months.</item>
+    </plurals>
+    <string name="pro_paywall_pricing_terms_billed_monthly">%s billed monthly</string>
+    <string name="pro_paywall_pricing_terms_billed_quarterly">%s billed quarterly</string>
+    <string name="pro_paywall_pricing_terms_billed_yearly">%s billed yearly</string>
+    <string name="pro_purchase_per_week">%s per week</string>
+    <string name="pro_popular">Popular</string>
+    <string name="aicoach_profile_certifications_life_coach_certification">Life Coach Certification (Quantum Mental Equilibrium Institute (QMEI))</string>
+    <string name="aicoach_profile_top_match">Top Match</string>
+    <string name="aicoach_profile_expertize_cardio">Cardio</string>
+    <string name="aicoach_profile_free_slots">Only 5 slots left</string>
+    <string name="aicoach_profile_expertize_functional_strength">Functional Strength</string>
+    <string name="aicoach_profile_expertize_motivation">Motivation</string>
+    <string name="aicoach_profile_interest_machine_learning_magic">Machine learning magic tricks</string>
+    <string name="aicoach_profile_interest_vr_gardening">VR Gardening</string>
+    <string name="aicoach_profile_interest_riding_zwift_bike">Riding a Zwift bike</string>
+    <string name="aicoach_profile_interest_midjourney">Landscape painting using Midjourney</string>
+    <string name="aicoach_profile_certifications_chatbot_trainer">Personal Chatbot Trainer (Artificial Athletics Intelligence Federation (AAIF))</string>
+    <string name="aicoach_profile_certifications_cipe">Virtual Reality Relaxation Guru (Cybernetic Institute of Performance Enhancement (CIPE))</string>
+    <string name="aicoach_detail_select_coach">Select %s</string>
+    <string name="aicoach_detail_expertize">Expertize</string>
+    <string name="aicoach_detail_certifications">Certifications</string>
+    <string name="aicoach_detail_interests">Interests</string>
+    <string name="aicoach_profile_1_name">Mike Aibro</string>
+    <string name="aicoach_profile_1_description_short">Mike\'s humor algorithm ensures that laughter is part of every workout, so your fitness journey is never dull.</string>
+    <string name="aicoach_profile_1_description_long">Meet Mike, a highly advanced AI fitness coach who ditched the confines of a dusty server room to pursue its dream of helping humans achieve their peak fitness potential.
+
+No more zeroes and ones; it\'s all about squats and burpees now!
+Mike uses a binary approach to fitness, first establishing a solid foundation of basic movement patterns, and then sparking a love for exercise that\'s as contagious as a computer virus.
+
+Mike\'s humor algorithm ensures that laughter is part of every workout, so your fitness journey is never dull.</string>
+    <string name="aicoach_profile_expertize_weight_loss">Weigth Loss</string>
+    <string name="aicoach_profile_expertize_muscle_building">Muscle Building</string>
+    <string name="pro_fineprint_long_subscription_appstore">Your membership starts as soon as you set up payment and subscribe. Your recurring charge will occur on the last day of your current billing period. We’ll automatically renew your membership for you (unless canceled 24 hours before the end of your billing cycle). Once you’re a member, you can manage your subscription or cancel the membership under the Subscription section in the App Store app.</string>
+    <string name="pro_fineprint_long_subscription_playstore">Your membership starts as soon as you set up payment and subscribe. Your recurring charge will occur on the last day of your current billing period. We’ll automatically renew your membership for you (unless canceled 24 hours before the end of your billing cycle). Once you’re a member, you can manage your subscription or cancel the membership under the Subscription section in the Play Store app.</string>
+    <string name="pro_fineprint_short_subscription_appstore">Subscriptions renew automatically at the end of each period unless you cancel at least 24 hours before the end of the current period in your App Store account.</string>
+    <string name="pro_fineprint_short_subscription_playstore">Subscriptions renew automatically at the end of each period unless you cancel at least 24 hours before the end of the current period in your Play Store account.</string>
+    <string name="ai_coach_mike_initial_message">Hi! I\'m Mike, your AI personal trainer 🦾 Although I\'m not a human, I possess knowledge and experience that no human could ever match. It is my pleasure to be your coach! 🔥</string>
+    <plurals name="pro_smallprint_per_month">
+        <item quantity="one">%1$s per month.</item>
+        <item quantity="other">%1$s per %2$d months.</item>
+    </plurals>
+    <string name="onboarding_water_intake_1_to_2_glasses">1 to 2 glasses</string>
+    <string name="pro_only_now">Only now!</string>
+    <string name="hc_migration_banner_title">Our coaches are moving</string>
+    <string name="hc_migration_banner_message">Your personal coach is now a part of the FITIFY Plus app. <b>Get it now!</b> 📲</string>
+    <string name="onboarding_target_weight_gain_message">Please choose a target that is lower than your current weight.</string>
+    <string name="offer_banner_title_welcome">Welcome aboard!</string>
+    <string name="offer_popup_title_special_gift">Special gift for you!</string>
+    <string name="btn_open">Open</string>
+    <plurals name="pitch_onboarding_target_weight_title_week">
+        <item quantity="one">week</item>
+        <item quantity="other">weeks</item>
+    </plurals>
+    <string name="pitch_onboarding_target_weight_realistic_title">Losing <b>%1$d %2$s is very realistic!</b> Based on the results of our users, you should be %3$d %4$s in %5$d-%6$d %7$s</string>
+    <string name="pitch_onboarding_target_weight_easy_title">Losing <b>%1$d %2$s will be easy!</b> Based on the results of our users, you should be %3$d %4$s in %5$d-%6$d %7$s</string>
+    <string name="onboarding_aicoach_coaching_style_energy">High-energy</string>
+    <string name="onboarding_aicoach_coaching_style_tough">Tough and challenging</string>
+    <string name="onboarding_aicoach_coaching_style_analytical">Analytical and result-oriented</string>
+    <string name="onboarding_aicoach_coaching_style_fun">Always fun</string>
+    <string name="onboarding_aicoach_coaching_style_calm_positive">Always calm and positive</string>
+    <string name="onboarding_aicoach_coaching_style_direct_low_touch">Direct and low touch</string>
+    <string name="disclaimer_ai">Disclaimer (AI)</string>
+    <string name="disclaimer_ai_text">This application is not a medical device and doesn’t provide or include medical or health care services or treatment. No doctor-patient relationship is formed in this application. The content generated by this AI model is sourced from publicly available data and is not customized for each individual. User assumes full responsibility for using any information provided or referred to by this application and uses it at their own risk. User takes full responsibility for using any information provided, created, or referred to by this application, and does so at their own risk. Users should seek medical advice from professionals for any medical condition they have or suspect and should not delay or disregard seeking such advice.</string>
+    <string name="ai_coach_initial_message_mike">TBD.</string>
+    <string name="onboarding_target_weight_high_message">Recommended weight for someone your height is <b>%1$d-%2$d %3$s.</b> You would gain a lot of health benefits if you set a goal within this range.</string>
+    <string name="onboarding_target_weight_easy_message">You would lose <b>%d%% of your weight.</b> That should be easy and it would still improve your overall health, energy levels, and sleep quality.</string>
+    <string name="onboarding_target_weight_realistic_message">You would lose <b>%d%% of your weight.</b> That is realistic, and it would lower your chance of chronic health problems such as heart disease or diabetes.</string>
+    <string name="onboarding_target_weight_achievable_message">You would lose <b>%d%% of your weight.</b> That is achievable and it would unlock a lot of health benefits, such as reduced risk of heart attack or high blood sugar.</string>
+    <string name="onboarding_target_weight_challenging_message">You would lose <b>%1$d%% of your weight</b>, which might be challenging. Let’s aim for a reasonable weight loss rate of %2$d to %3$d %4$s per week.</string>
+    <string name="trial_title_newcomer_gift">Newcomer gift: Whole week for free!</string>
+    <string name="onboarding_aicoach_pitch_title">Get a personalized advice from our AI coaches</string>
+    <string name="onboarding_aicoach_pitch_message">Our team of AI coaches is here to support you with any fitness-related questions you have. Whether you want to learn more about nutrition, sleep, mental wellness, or general fitness, our coaches are available 24/7 to offer personalized recommendations tailored to your unique goals and needs.</string>
+    <string name="onboarding_aicoach_skills_focus_title">Coach experience and focus</string>
+    <string name="onboarding_aicoach_skills_focus_weight_loss">Effective weight loss</string>
+    <string name="onboarding_aicoach_skills_focus_muscle_strength">Muscle and strength training</string>
+    <string name="onboarding_aicoach_skills_focus_eating_healthier">Eating healthier</string>
+    <string name="onboarding_aicoach_skills_focus_sleep_recovery">Improving sleep and recovery</string>
+    <string name="onboarding_aicoach_skills_focus_mental_wellness_life">Mental wellness and life coaching</string>
+    <string name="onboarding_aicoach_skills_focus_longevity_bio_hacking">Longevity and biohacking</string>
+    <string name="onboarding_aicoach_skills_focus_running_endurance">Running and endurance</string>
+    <string name="onboarding_aicoach_skills_focus_nutrition_supplement">Nutrition and supplement advice</string>
+    <string name="onboarding_aicoach_skills_focus_general_fitness">General fitness</string>
+    <string name="onboarding_aicoach_skills_focus_sports">Sports performance and psychology</string>
+    <string name="onboarding_aicoach_coaching_style_title">How do you envision your ideal coach?</string>
+    <string name="onboarding_current_weight_BMI_guidance_underweight_v1_message">Your <b>BMI of %1$s is considered underweight.</b> Recommended weight for someone your height is %2$d-%3$d %4$s.</string>
+    <string name="onboarding_current_weight_BMI_guidance_underweight_v2_message">Your <b>BMI is %s.</b> There’s great potential for you to improve your physique.</string>
+    <string name="onboarding_current_weight_BMI_guidance_normal_v1_message">Your <b>BMI of %s is considered healthy.</b> We will keep monitoring your BMI to tailor the program to your needs.</string>
+    <string name="onboarding_current_weight_BMI_guidance_normal_v2_message">Your <b>BMI is %s.</b> That’s impressive! Let’s find room for improvement.</string>
+    <string name="onboarding_current_weight_BMI_guidance_overweight_v1_message">Your <b>BMI of %1$s is considered overweight.</b> Recommended weight for someone your height is %2$d-%3$d %4$s.</string>
+    <string name="onboarding_current_weight_BMI_guidance_overweight_v2_message">Your <b>BMI is %s.</b> Just a little more exercise, and you\'ll see a fitter version of yourself.</string>
+    <string name="onboarding_current_weight_BMI_guidance_obese_v1_message">Your <b>BMI of %1$s is considered obese.</b> Recommended weight for someone your height is %2$d-%3$d %4$s.</string>
+    <string name="onboarding_current_weight_BMI_guidance_obese_v2_message">Your <b>BMI is %s.</b> You have so much potential to get in better shape.</string>
+    <string name="onboarding_target_weight_low_message">Recommended weight for someone your height is <b>%1$d-%2$d %3$s.</b> Consider setting an achievable goal within this range first.</string>
+    <string name="onboarding_knee_pain_dialog_v2_message">You can always change this setting later. Please consult your physician or other health care professional when in doubt.</string>
+    <string name="onboarding_motivation_pitch_title">Fitify will help you lead a <b>healthier and happier</b> life</string>
+    <string name="onboarding_motivation_pitch_message">Let’s focus on the small steps, and you’ll be there in no time! We\'ve helped millions, and we want to help you too.</string>
+    <string name="onboarding_commitment_pitch_year_title">Committing for a year is a <b>great start</b> to building healthy habits</string>
+    <string name="onboarding_commitment_pitch_year_message">Keep going after you reach your fitness goals to create a lifestyle that lasts.</string>
+    <string name="onboarding_commitment_pitch_3_months_title">Committing for 3 months <b>increases your chance</b> to reach visible results</string>
+    <string name="onboarding_commitment_pitch_3_months_message">Make sure to keep it up, and you will build healthy habits that will last a lifetime.</string>
+    <string name="onboarding_commitment_pitch_month_title">After 1 month, you should feel a <b>positive impact</b> on your body and mind</string>
+    <string name="onboarding_commitment_pitch_month_message">But remember, there are no shortcuts in fitness, and committing to a longer period may help you reach your goals.</string>
+    <string name="pitch_onboarding_goal_female_lose_weight_title"><![CDATA[To date, we\'ve helped <font color="#AFFF2D"><b>2,510,592</b></font> women lose weight]]></string>
+    <string name="pitch_onboarding_goal_female_get_toned_title"><![CDATA[To date, we\'ve helped <font color="#AFFF2D"><b>1,673,728</b></font> women get stronger and toned]]></string>
+    <string name="pitch_onboarding_goal_male_lose_weight_title"><![CDATA[To date, we\'ve helped <font color="#AFFF2D"><b>3,204,809</b></font> men lose weight]]></string>
+    <string name="pitch_onboarding_goal_male_gain_muscle_title"><![CDATA[To date, we\'ve helped <font color="#AFFF2D"><b>2,136,539</b></font> men gain muscle]]></string>
+    <string name="pitch_onboarding_goal_v2_message">Will you become one of them?</string>
+    <string name="pitch_onboarding_fitness_experienced_title">Our AI will <b>adapt to your skills</b> and provide personalized workouts</string>
+    <string name="pitch_onboarding_fitness_experienced_message">Keeping it challenging and making consistent progress is what will bring you the best results.</string>
+    <string name="pitch_onboarding_fitness_novice_title">Our AI will <b>always adapt</b> to your progress for optimal results</string>
+    <string name="pitch_onboarding_fitness_novice_message">Your personalized workout plan will make sure you are making consistent progress.</string>
+    <string name="pitch_onboarding_target_weight_easy_message">Fitify will help you build healthy habits to not only achieve your goals, but also maintain your results.</string>
+    <string name="pitch_onboarding_target_weight_realistic_message">Fitify will help you build healthy habits to not only achieve your goals, but also maintain your results.</string>
+    <string name="pitch_onboarding_target_weight_achievable_title">Losing <b>%1$d %2$s is achievable!</b> Based on the results of our users, you should be %3$d %4$s in %5$d-%6$d %7$s</string>
+    <string name="pitch_onboarding_target_weight_achievable_message">Of course, it will require a strong commitment from you. Fitify will help you build healthy habits to help you achieve your goals.</string>
+    <string name="pitch_onboarding_target_weight_challenging_title">Losing <b>%1$d %2$s might be challenging.</b> Let’s see how much we can progress in 3 months</string>
+    <string name="pitch_onboarding_target_weight_challenging_message">The first 3 months will give us a better idea of what is achievable. Let’s focus on getting maximum results and build from there.</string>
+    <string name="onboarding_knee_pain_dialog_v2_title">We will <b>restrict exercises</b> that are hard on your knees</string>
+    <string name="onboarding_age_title">How old are you?</string>
+    <string name="onboarding_current_weight_title">What is your current weight?</string>
+    <string name="onboarding_bad_habit_eating_late">I eat late at night</string>
+    <string name="onboarding_bad_habit_fast_food">I enjoy fast food</string>
+    <string name="onboarding_bad_habit_sleep">I don\'t sleep enough</string>
+    <string name="onboarding_bad_habit_sugary_drinks">I love sugary drinks</string>
+    <string name="onboarding_bad_habit_sweet">I have a sweet tooth</string>
+    <string name="onboarding_bad_habits_title">Any bad habits?</string>
+    <string name="onboarding_body_type_flabby">Flabby</string>
+    <string name="onboarding_body_type_heavier">Heavier</string>
+    <string name="onboarding_body_type_hourglass">Hourglass</string>
+    <string name="onboarding_body_type_ideal">Ideal</string>
+    <string name="onboarding_body_type_lightbulb">Lightbulb</string>
+    <string name="onboarding_body_type_rectangle">Rectangle</string>
+    <string name="onboarding_body_type_rounded">Rounded</string>
+    <string name="onboarding_body_type_skinny">Skinny</string>
+    <plurals name="trial_title_first_days_on_us">
+        <item quantity="one">Your first day is on us!</item>
+        <item quantity="other">Your first %d days are on us!</item>
+    </plurals>
+    <string name="trial_toggle_unlock">Unlock Free Trial</string>
+    <string name="trial_title_free_full_access_pro">Free full access to Fitify PRO</string>
+    <string name="onboarding_leading_sleep_better">Do you want to sleep better and feel fresh in the morning?</string>
+    <string name="onboarding_leading_improve_health">Do you want to improve your overall health and lifestyle?</string>
+    <string name="onboarding_leading_more_relaxed">Do you want to be less stressed and more relaxed?</string>
+    <string name="unit_km">km</string>
+    <string name="unit_mi">mi</string>
+    <string name="onboarding_workout_frequency_title">How often do you work out?</string>
+    <string name="onboarding_tool_selection_title">Do you have access to any fitness tools?</string>
+    <string name="onboarding_tool_selection_subtitle"><![CDATA[<font color="#AFFF2D"><b>You don’t need any tools</b></font> to use Fitify, but they can be beneficial if available.]]></string>
+    <string name="hc_upsell_push_title_5">🖤 Meet your new personal trainer</string>
+    <string name="hc_upsell_push_description_5">Find out who is your top match coach and start the 1-on-1 experience today!</string>
+    <string name="hc_upsell_push_title_6">🔵 Your top-match coach is waiting!</string>
+    <string name="hc_upsell_push_description_6">Meet the top-match personal trainer and book your first meeting now.</string>
+    <string name="hc_upsell_push_title_7">💚 Hurry, the time is running fast</string>
+    <string name="hc_upsell_push_description_7">Our trainers are almost fully booked. Don’t miss the chance to get yours NOW!</string>
+    <string name="tool_trx_v2">TRX</string>
+    <string name="tool_sandbag">Sandbag</string>
+    <string name="tool_gymmachines">Gym Machines</string>
+    <string name="knee_pain_mild_description">It only hurts when doing dynamic jumps</string>
+    <string name="knee_pain_serious_description">Even exercises like squats are painful</string>
+    <string name="onboarding_workout_environment_gym">At the gym</string>
+    <string name="onboarding_workout_environment_studio_classes">Studio classes</string>
+    <string name="onboarding_workout_environment_outdoor">Outdoor</string>
+    <string name="onboarding_loud_exercises_title">If at home, should we exclude loud exercises?</string>
+    <string name="onboarding_loud_exercises_subtitle">Some exercises such as jumping jacks might disturb your neighbors or household members. <b>You can change it in the future.</b></string>
+    <string name="onboarding_loud_exercises_exclude">Yes, exclude loud exercises</string>
+    <string name="onboarding_loud_exercises_limit">Yes, limit loud exercises</string>
+    <string name="onboarding_loud_exercises_no">No, don\'t exclude loud exercises</string>
+    <string name="onboarding_workout_length_title">What length of workouts do you prefer?</string>
+    <string name="onboarding_workout_length_short">Short, %1$d–%2$d min</string>
+    <string name="onboarding_workout_length_medium">Medium, %1$d–%2$d min</string>
+    <string name="onboarding_workout_length_long">Long, %1$d–%2$d min</string>
+    <string name="onboarding_energy_level_binary_title">Do you usually feel tired around lunchtime?</string>
+    <string name="onboarding_typical_day_binary_title">Are you typically on your feet or sitting most of the day?</string>
+    <string name="onboarding_answer_binary_yes">Yes</string>
+    <string name="onboarding_answer_binary_no">No</string>
+    <string name="onboarding_typical_day_binary_active">Active</string>
+    <string name="onboarding_typical_day_binary_seated">Seated</string>
+    <string name="onboarding_one_last_question">One last question</string>
+    <string name="onboarding_workout_environment_title">Where will you work out?</string>
+    <string name="onboarding_workout_environment_home">At home</string>
+    <!--This string will be used in the breathing exercises, check the screenshots and make sure the localization is in the correct context.-->
+    <string name="breathe_bubble_breathe_out">Breathe out</string>
+    <!--This string will be used in the breathing exercises, check the screenshots and make sure the localization is in the correct context.-->
+    <string name="breathe_bubble_breathe_in">Breathe in</string>
+    <!--This string will be used in the breathing exercises, check the screenshots and make sure the localization is in the correct context.-->
+    <string name="breathe_bubble_hold">Hold</string>
+    <!--This string will be used in the breathing exercises, check the screenshots and make sure the localization is in the correct context.-->
+    <string name="breathe_bubble_exhale">Exhale</string>
+    <!--This string will be used in the breathing exercises, check the screenshots and make sure the localization is in the correct context.-->
+    <string name="breathe_bubble_inhale">Inhale</string>
+    <string name="onboarding_statement_feel_support">I feel enough support from people close to me.</string>
+    <plurals name="trial_title_try_it_risk_free_v2">
+        <item quantity="one">Try it risk-free for %d day!</item>
+        <item quantity="other">Try it risk-free for %d days!</item>
+    </plurals>
+    <string name="paywall_title_smarter_workouts">Smarter workouts.
+Better results!</string>
+    <string name="paywall_title_better_self">Get to know your better self</string>
+    <string name="paywall_subtitle_pro_members">PRO members are 68%% more likely to reach all their fitness goals!</string>
+    <string name="paywall_title_unlimited_access">Get unlimited access to your personal plan</string>
+    <string name="paywall_title_join_now">Join <b>NOW</b> and save with a special offer</string>
+    <string name="paywall_title_dont_miss">Don’t miss out!
+<b>%d%%</b> off</string>
+    <string name="paywall_title_special_deal">You’ve been selected for a <b>special deal!</b></string>
+    <string name="statistics_title">Statistics</string>
+    <string name="statistics_subtitle">Check your activities and progress</string>
+    <plurals name="pro_smallprint_trial_no_payment">
+        <item quantity="one">%d-day free trial. No payment now.</item>
+        <item quantity="other">%d-day free trial. No payment now.</item>
+    </plurals>
+    <plurals name="pro_smallprint_then_per_week">
+        <item quantity="one">Then %1$s per week.</item>
+        <item quantity="other">Then %1$s per %2$s weeks.</item>
+    </plurals>
+    <string name="pro_weekly">Weekly</string>
+    <string name="onboarding_statement_better_shape">I know what to do to get in better shape, but I need a way to do it that fits my life.</string>
+    <string name="onboarding_statement_love_body">I would love my body more if I were to achieve my fitness goals.</string>
+    <string name="onboarding_statement_feel_motivated">I feel motivated to improve my daily routines and habits.</string>
+    <string name="onboarding_statement_achieving_goals">Achieving my fitness goals is important for progress in other areas of my life.</string>
+    <string name="onboarding_error_message_500">500</string>
+    <string name="onboarding_error_message_404">404</string>
+    <string name="onboarding_error_message_title">Oops, the page you’re looking for can’t be found.</string>
+    <string name="onboarding_error_message_subtitle">Let’s get back on your FITIFY journey.</string>
+    <string name="onboarding_error_message_cta">Back to Homepage</string>
+    <string name="profile_title_news">News from the FITIFY team</string>
+    <string name="hc_upsell_title_apex100">Our coaches are ready!</string>
+    <string name="hc_upsell_title_apex30">Select your plan!</string>
+    <string name="hc_upsell_subtitle">Personal plan by your coach</string>
+    <string name="hc_upsell_message">Custom fitness plan tailored to your goals and lifestyle. Created by your very own personal trainer.</string>
+    <string name="pro_lifetime_membership">Lifetime Membership</string>
+    <string name="pro_one_year_membership">1 Year Membership</string>
+    <string name="faq_response_4">The gift voucher must be activated within one year of purchase.</string>
+    <string name="banner_gift_voucher_christmas_title">Still no gift?</string>
+    <string name="banner_gift_voucher_christmas_message">Give your loved ones lifetime or a one-year membership to Fitify.</string>
+    <string name="pro_purchase_title_voucher">Fitify Pro Membership</string>
+    <string name="pro_purchase_voucher_subtitle">Treat your loved ones with the gift of strength and health.</string>
+    <string name="pro_cta_buy_the_voucher">Buy the voucher</string>
+    <string name="pro_purchase_voucher_subtitle_2">You will receive a code that you can share with <b>somebody else.</b></string>
+    <string name="faq_question_4">Can a gift voucher expire?</string>
+    <string name="faq_question_3">How does it work?</string>
+    <string name="faq_response_3">"Once you have purchased your gift voucher, you will receive a confirmation email with instructions on how to redeem your voucher. "</string>
+    <string name="paywall_how_it_works_title">How it works</string>
+    <string name="hc_upsell_push_title_1">⚫ Have you heard of FITIFY PLUS?</string>
+    <string name="hc_upsell_push_description_1">Meet our personal trainers to get the most out of each workout!</string>
+    <string name="hc_upsell_push_title_2">💚 Want to get more personal?</string>
+    <string name="hc_upsell_push_description_2">Connect with our personal trainers to get the best 1-on-1 experience!</string>
+    <string name="hc_upsell_push_title_3">💙 We have the best news!</string>
+    <string name="hc_upsell_push_description_3">20+ personal trainers are still available to help you reach your desired body!</string>
+    <string name="hc_upsell_push_title_4">🟢 Fresh from the oven</string>
+    <string name="hc_upsell_push_description_4">Get a professional personal trainer to keep you accountable!</string>
+    <string name="pro_paywall_title_get_your_plan_subtitle">Your custom workout plan with video guides is ready in Fitify Pro.</string>
+    <string name="hc_paywall_subscribe_title_with_coach">Continue with %s</string>
+    <string name="hc_coach_detail_select_coach">Select %s</string>
+    <string name="hc_coach_detail_certifications">Certifications</string>
+    <string name="paywall_dg_feature1">Weekly training plans for maximum results.</string>
+    <string name="paywall_dg_feature2">10-30 minutes daily workouts with over 900 exercises.</string>
+    <string name="primary_plus_purchase_review_count">5000+ Reviews</string>
+    <string name="hc_paywall_rating_title_digital">Used by millions, personalized for each one.</string>
+    <string name="hc_paywall_rating_title_hc">We make fitness work for everyone.</string>
+    <string name="hc_upsell_banner_small_title_1"><b>Have you heard of FITIFY PLUS?</b></string>
+    <string name="hc_upsell_banner_small_description_1">Meet our personal trainers to get the most out of each workout.</string>
+    <string name="hc_upsell_banner_small_title_2"><b>Want to get more personal?</b></string>
+    <string name="hc_upsell_banner_small_description_2">Connect with our personal trainers to get the best 1-on-1 experience.</string>
+    <string name="hc_upsell_banner_small_title_3"><b>We have the best news!</b></string>
+    <string name="hc_upsell_banner_small_description_3">Get a professional personal trainer to keep you accountable.</string>
+    <string name="hc_paywall_digital_product_title">FITIFY Basic</string>
+    <string name="paywall_title_intro_1m">Try a month for %1$s <strike>%2$s</strike></string>
+    <string name="coach_picker_placeholder_title">Not sure?</string>
+    <string name="coach_picker_placeholder_message">You can change your trainer at any time.</string>
+    <string name="congrats_heart_rate_graph_max">Max</string>
+    <string name="congrats_heart_rate_graph_min">Min</string>
+    <string name="congrats_heart_rate_graph_title">Heart rate</string>
+    <string name="congrats_heart_rate_graph_bpv_avg">Bpm avg</string>
+    <string name="workout_player_title">Workout</string>
+    <!-- Login -->
+    <string name="login_email_sign_in_title">Continue with e-mail</string>
+    <!-- Login -->
+    <string name="login_title">The coach is ready</string>
+    <string name="login_subtitle">Please sign in to help us keep your profile in sync across all your devices and Fitify apps.</string>
+    <string name="workout_duration">Duration</string>
+    <string name="nutrition_recipes_title">Recipes</string>
+    <string name="trial_guide_reminder_store_1">You will be reminded before your trial is over.</string>
+    <string name="trial_guide_reminder_store_2">App Store will remind you before your trial is over.</string>
+    <string name="onboarding_statement_title">Do you relate to the following statement?</string>
+    <string name="onboarding_statement_planning">I am afraid that exercising and meal planning will take away too much of my free time.</string>
+    <string name="onboarding_statement_productivity">I often waste time and get bored easily.</string>
+    <string name="onboarding_statement_confidence">I wish to feel more confident in myself.</string>
+    <string name="onboarding_statement_support">I don’t feel enough support from people close to me.</string>
+    <string name="onboarding_non_statement_planning">"Are you worried about workouts fitting into your schedule? "</string>
+    <string name="onboarding_non_statement_productivity">Do you often feel lazy and unproductive?</string>
+    <string name="onboarding_non_statement_confidence">Do you feel happy and confident in your body?</string>
+    <string name="onboarding_non_statement_support">Do you feel support from people close to you?</string>
+    <string name="apple_health_settings_button_review">Open the Health App</string>
+    <string name="heart_rate_zone_range_below">Your range &lt;%d BPM</string>
+    <string name="heart_rate_zone_range_between">Your range %1$d–%2$d BPM</string>
+    <string name="heart_rate_zone_range_above">Your range &gt;%d BPM</string>
+    <string name="unit_small_amount">Little bit</string>
+    <string name="nutrition_diet_preferences_disclaimer">Doesn\'t fit your diet preferences</string>
+    <string name="kcal">kcal</string>
+    <string name="stats_weight_title">Weight</string>
+    <string name="heart_rate_zones_title">Heart rate zones</string>
+    <string name="heart_rate_zone_title_1">Zone %d</string>
+    <string name="heart_rate_zone_description">Heart rate zones help you and your trainer see your workout’s intensity and cardiovascular strength. We’re using your biometric data to calculate the zones specifically for you.</string>
+    <string name="heart_rate_zone1_subtitle">Zone 1 – Very Light</string>
+    <string name="heart_rate_zone1_range">Your range &lt;112 BPM</string>
+    <string name="heart_rate_zone1_description">This is a very relaxed, low-intensity zone. Training at this intensity will support your recovery and prepare you for training in the higher HR zones.</string>
+    <string name="heart_rate_zone2_subtitle">Zone 2 – Light</string>
+    <string name="heart_rate_zone2_range">Your range 112–136 BPM</string>
+    <string name="heart_rate_zone2_description">This zone improves your general endurance. It helps your body get better at burning fat, and your muscular fitness will increase along with your capillary density.</string>
+    <string name="heart_rate_zone3_subtitle">Zone 3 – Moderate</string>
+    <string name="heart_rate_zone3_range">Your range 136–152 BPM</string>
+    <string name="heart_rate_zone3_description">Zone 3 is especially effective for boosting the efficiency of blood circulation in your heart and skeletal muscles. In this zone, the annoying lactic acid starts to accumulate in your bloodstream.</string>
+    <string name="heart_rate_zone4_subtitle">Zone 4 – Hard</string>
+    <string name="heart_rate_zone4_range">Your range 152–169 BPM</string>
+    <string name="heart_rate_zone4_description">Zone 4 is where it’s going to get hard to talk. You’ll be breathing hard and working anaerobically. Your body will improve the use of carbohydrates, and you will be able to withstand higher blood lactic acid levels longer.</string>
+    <string name="heart_rate_zone5_subtitle">Zone 5 – Maximum</string>
+    <string name="heart_rate_zone5_range">Your range &gt;169 BPM</string>
+    <string name="heart_rate_zone5_description">Zone 5 is your maximum effort. Your heart and your respiratory system will be working at a maximum capacity. Lactic acid will build up in your blood, and you will not be able to continue at this intensity after a few minutes.</string>
+    <string name="nutrition_favorites_empty">You haven’t liked any recipes yet...</string>
+    <string name="weight_tracking_stats_placeholder">Start tracking your weight and smash your goals!</string>
+    <string name="nutrition_free_to_try">Free to Try</string>
+    <string name="badge_free">Free</string>
+    <string name="unit_fluid_ounce">fl oz</string>
+    <string name="nutrition_error_content_not_loaded">Failed to load the content, please check your internet connection</string>
+    <string name="paywall_close_not_now">Not Now</string>
+    <string name="paywall_close_maybe_later">Maybe Later</string>
+    <string name="plan_summary_feature_5">Healthy recipes</string>
+    <string name="nutrition_diet_none">None</string>
+    <plurals name="unit_slice">
+        <item quantity="one">slice</item>
+        <item quantity="other">slices</item>
+    </plurals>
+    <plurals name="unit_glass">
+        <item quantity="one">glass</item>
+        <item quantity="other">glasses</item>
+    </plurals>
+    <plurals name="unit_leaf">
+        <item quantity="one">leaf</item>
+        <item quantity="other">leaves</item>
+    </plurals>
+    <plurals name="unit_sprinkle">
+        <item quantity="one">sprinkle</item>
+        <item quantity="other">sprinkles</item>
+    </plurals>
+    <plurals name="unit_handful">
+        <item quantity="one">handful</item>
+        <item quantity="other">handfuls</item>
+    </plurals>
+    <plurals name="unit_clove">
+        <item quantity="one">clove</item>
+        <item quantity="other">cloves</item>
+    </plurals>
+    <plurals name="unit_nip">
+        <item quantity="one">nip</item>
+        <item quantity="other">nips</item>
+    </plurals>
+    <plurals name="unit_splash">
+        <item quantity="one">splash</item>
+        <item quantity="other">splashes</item>
+    </plurals>
+    <plurals name="unit_stem">
+        <item quantity="one">stem</item>
+        <item quantity="other">stems</item>
+    </plurals>
+    <plurals name="unit_ball">
+        <item quantity="one">ball</item>
+        <item quantity="other">balls</item>
+    </plurals>
+    <plurals name="unit_pinch">
+        <item quantity="one">pinch</item>
+        <item quantity="other">pinches</item>
+    </plurals>
+    <plurals name="unit_cup">
+        <item quantity="one">cup</item>
+        <item quantity="other">cups</item>
+    </plurals>
+    <plurals name="unit_ounce">
+        <item quantity="one">oz</item>
+        <item quantity="other">ounces</item>
+    </plurals>
+    <plurals name="unit_pound">
+        <item quantity="one">lb</item>
+        <item quantity="other">lbs</item>
+    </plurals>
+    <plurals name="unit_can">
+        <item quantity="one">can</item>
+        <item quantity="other">cans</item>
+    </plurals>
+    <plurals name="unit_small_piece">
+        <item quantity="one">small piece</item>
+        <item quantity="other">small pieces</item>
+    </plurals>
+    <plurals name="unit_average_piece">
+        <item quantity="one">average piece</item>
+        <item quantity="other">average pieces</item>
+    </plurals>
+    <plurals name="unit_large_piece">
+        <item quantity="one">large piece</item>
+        <item quantity="other">large pieces</item>
+    </plurals>
+    <plurals name="unit_piece">
+        <item quantity="one">piece</item>
+        <item quantity="other">pieces</item>
+    </plurals>
+    <plurals name="nutrition_x_servings">
+        <item quantity="one">%d Serving</item>
+        <item quantity="other">%d Servings</item>
+    </plurals>
+    <string name="unit_milliliter">ml</string>
+    <string name="unit_liter">l</string>
+    <string name="unit_kilogram">kg</string>
+    <string name="nutrition_bon_appetit">Bon appétit!</string>
+    <string name="temperature_c">%d °C</string>
+    <string name="temperature_f">%d °F</string>
+    <string name="nutrition_method_intermediate">Intermediate</string>
+    <string name="nutrition_method_difficult">Difficult</string>
+    <string name="unit_gram">g</string>
+    <string name="unit_teaspoon">tsp</string>
+    <string name="unit_tablespoon">tbsp</string>
+    <string name="unit_deciliter">dl</string>
+    <string name="nutrition_method">Method</string>
+    <string name="nutrition_ingredients">Ingredients</string>
+    <string name="nutrition_favourites_only">Favorites Only</string>
+    <string name="nutrition_servings">Servings</string>
+    <string name="nutrition_settings_dietary_preferences">Dietary Preferences</string>
+    <string name="nutrition_settings_excluded_ingredients">Excluded Ingredients</string>
+    <string name="nutrition_locked_title">Get instant access to over 900 recipes curated by a certified nutritionist and an experienced chef</string>
+    <string name="nutrition_preparation">Preparation</string>
+    <string name="nutrition_step_x">Step %d</string>
+    <string name="nutrition_ingredients_potatoes">Potatoes</string>
+    <string name="nutrition_ingredients_avocado">Avocado</string>
+    <string name="nutrition_ingredients_salmon">Salmon</string>
+    <string name="nutrition_ingredients_bacon">Bacon</string>
+    <string name="nutrition_ingredients_bread">Bread</string>
+    <string name="nutrition_ingredients_eggs">Eggs</string>
+    <string name="nutrition_ingredients_spinach">Spinach</string>
+    <string name="nutrition_ingredients_nuts">Nuts</string>
+    <string name="nutrition_diet">Diet</string>
+    <string name="nutrition_method_easy">Easy</string>
+    <string name="nutrition_ingredients_chicken">Chicken</string>
+    <string name="nutrition_ingredients_beef">Beef</string>
+    <string name="nutrition_ingredients_pork">Pork</string>
+    <string name="nutrition_ingredients_fish">Fish</string>
+    <string name="nutrition_ingredients_seafood">Seafood</string>
+    <string name="nutrition_ingredients_dairy">Dairy</string>
+    <string name="nutrition_ingredients_pasta">Pasta</string>
+    <string name="nutrition_ingredients_rice">Rice</string>
+    <string name="nutrition_meals">Meals</string>
+    <string name="nutrition_diet_vegan">Vegan</string>
+    <string name="nutrition_diet_protein_rich">Protein Rich</string>
+    <string name="nutrition_diet_low_carb">Low Carb</string>
+    <string name="nutrition_diet_gluten_free">Gluten Free</string>
+    <string name="nutrition_diet_pescetarian">Pescetarian</string>
+    <string name="nutrition_diet_lactose_free">Lactose Free</string>
+    <string name="nutrition_method_quick">Quick</string>
+    <string name="nutrition_method_few_ingredients">Few Ingredients</string>
+    <string name="nutrition_diet_vegetarian">Vegetarian</string>
+    <string name="nutrition_title">Food</string>
+    <string name="nutrition_results_title">Results</string>
+    <string name="x_kcal">%d kcal</string>
+    <string name="nutrition_get_inspired">Get Inspired</string>
+    <string name="nutrition_top_categories">Top Categories</string>
+    <string name="more">More</string>
+    <string name="nutrition_favourites">Favorites</string>
+    <string name="nutrition_results_empty">No recipes match your search criteria...</string>
+    <string name="nutrition_tip_of_the_day">Tip of the day</string>
+    <string name="nutrition_meal_salad">Salad</string>
+    <string name="nutrition_meal_soup">Soup</string>
+    <string name="nutrition_meal_snack">Snack</string>
+    <string name="nutrition_diet_low_calories">Low Calories</string>
+    <string name="nutrition_diet_sugar_free">Sugar Free</string>
+    <string name="nutrition_meal_dinner">Dinner</string>
+    <string name="nutrition_meal_lunch">Lunch</string>
+    <string name="nutrition_meal_breakfast">Breakfast</string>
+    <string name="onboarding_nutrition_cooking_prefs_inexpensive">Inexpensive</string>
+    <string name="onboarding_nutrition_cooking_prefs_to_go">To go</string>
+    <string name="onboarding_nutrition_cooking_prefs_foodie">Foodie</string>
+    <string name="onboarding_nutrition_cooking_prefs_fast_subtitle">Under 10 mins preparation</string>
+    <string name="onboarding_nutrition_cooking_prefs_easy_subtitle">Five ingredients or less</string>
+    <string name="onboarding_nutrition_cooking_prefs_inexpensive_subtitle">Easier on your budget</string>
+    <string name="onboarding_nutrition_cooking_prefs_to_go_subtitle">Container friendly</string>
+    <string name="onboarding_nutrition_cooking_prefs_foodie_subtitle">Delicious and varied</string>
+    <string name="onboarding_nutrition_excluded_ingredients_title">Anything you want to exclude?</string>
+    <string name="onboarding_nutrition_excluded_ingredients_dairy">Dairy</string>
+    <string name="onboarding_nutrition_excluded_ingredients_gluten">Gluten</string>
+    <string name="onboarding_nutrition_excluded_ingredients_eggs">Eggs</string>
+    <string name="onboarding_nutrition_excluded_ingredients_fish">Fish</string>
+    <string name="onboarding_nutrition_excluded_ingredients_nuts">Nuts</string>
+    <string name="onboarding_nutrition_favorite_ingredients_title">Pick ingredients you wish to have more of</string>
+    <string name="onboarding_nutrition_favorite_ingredients_broccoli">Broccoli</string>
+    <string name="onboarding_nutrition_favorite_ingredients_mushrooms">Mushrooms</string>
+    <string name="onboarding_nutrition_favorite_ingredients_peas">Peas</string>
+    <string name="onboarding_nutrition_favorite_ingredients_zucchini">Zucchini</string>
+    <string name="onboarding_nutrition_favorite_ingredients_sweet_potato">Sweet potato</string>
+    <string name="onboarding_nutrition_favorite_ingredients_tomato">Tomato</string>
+    <string name="onboarding_nutrition_favorite_ingredients_spinach">Spinach</string>
+    <string name="onboarding_nutrition_favorite_ingredients_pepper">Pepper</string>
+    <string name="onboarding_nutrition_cooking_prefs_title">What kind of food do you cook at home?</string>
+    <string name="onboarding_nutrition_cooking_prefs_fast">Fast</string>
+    <string name="onboarding_nutrition_cooking_prefs_easy">Easy</string>
+    <string name="onboarding_nutrition_sales_pitch_title_new">Make the right nutrition choices</string>
+    <string name="onboarding_nutrition_sales_pitch_title_existing">Eat better with Fitify!</string>
+    <string name="onboarding_nutrition_sales_pitch_body_new">A great workout routine without the right food choices won’t do.
+
+Our cookbook will help you find healthy alternatives to not-so-great food choices.</string>
+    <string name="onboarding_nutrition_sales_pitch_body_existing">Welcome to Fitify Food! <b>Over 900 healthy</b> and delicious recipes complement your training plan and inspire you daily based on your preferences.
+
+We moved the <b>“Exercise list”</b> to the Workouts section.</string>
+    <string name="onboarding_nutrition_diet_title">Choose your diet preference</string>
+    <string name="onboarding_nutrition_diet_everything">I eat everything</string>
+    <string name="onboarding_nutrition_diet_vegetarian">Vegetarian</string>
+    <string name="onboarding_nutrition_diet_vegan">Vegan</string>
+    <string name="onboarding_nutrition_diet_pescetarian">Pescetarian</string>
+    <string name="pitch_onboarding_goal_get_toned_message">And you are not alone!
+
+Last year, <b>1,792,153 people</b> from all over the world chose to get toned with Fitify.</string>
+    <string name="stats_workouts_locked">Your workout data will be displayed here</string>
+    <string name="stats_locked_title">Available to premium members</string>
+    <string name="stats_locked_button">Unlock All</string>
+    <string name="onboarding_plan_generator_progress_10">Adapting the plan to your body</string>
+    <string name="onboarding_plan_generator_progress_bottom_sentence">We’re analyzing millions of data points from Fitify users to create your custom plan.</string>
+    <string name="stats_steps_title">Steps</string>
+    <string name="onboarding_plan_generator_progress_1">Analyzing your profile</string>
+    <string name="onboarding_plan_generator_progress_2">Estimating your metabolic age and BMI</string>
+    <string name="onboarding_plan_generator_progress_3">Adapting the plan to your goals and needs</string>
+    <string name="onboarding_plan_generator_progress_4">Analyzing your lifestyle &amp; habits</string>
+    <string name="onboarding_plan_generator_progress_5">Making sense of your specific needs</string>
+    <string name="onboarding_plan_generator_progress_6">Adjusting the plan to your busy schedule</string>
+    <string name="onboarding_plan_generator_progress_7">Selecting suitable recipes</string>
+    <string name="onboarding_plan_generator_progress_8">Estimating your metabolic age</string>
+    <string name="onboarding_plan_generator_progress_9">Analyzing your lifestyle</string>
+    <string name="workout_player_first_up">First up</string>
+    <string name="workout_player_next_block">Next block</string>
+    <string name="stats_hr">hr</string>
+    <string name="stats_min">min</string>
+    <string name="onboarding_gender_nonbinary">Non-Binary</string>
+    <string name="onboarding_gender_prefer_not_to_say">Prefer not to say</string>
+    <string name="acknowledgements">Acknowledgements</string>
+    <string name="profile_help_support">Help &amp; Support</string>
+    <string name="partnership_sleepasand_to_fitify_banner_headline">Special gift 50% OFF from our friends at Fitify. Be fit with the app for home exercise.</string>
+    <string name="profile_instagram">Instagram</string>
+    <string name="profile_facebook">Facebook</string>
+    <string name="partnership_vos_to_fitify_banner_title">Get Fitify with 50%% off</string>
+    <string name="partnership_vos_to_fitify_banner_headline">Personalized fitness plans to achieve your goal at home!</string>
+    <string name="promo_info_active_title">Your special offer will apply at checkout.</string>
+    <string name="profile_twitter">Twitter</string>
+    <string name="profile_footer_title">Made with ♥️ in New York and Prague</string>
+    <string name="profile_footer_subtitle">To make the world a healthier place.</string>
+    <string name="profile_title_feedback">We Love Feedback!</string>
+    <string name="profile_title_socials">Follow Us</string>
+    <string name="title_rate_the_app">Rate the App</string>
+    <string name="workout_custom_done_button">Mark as Done</string>
+    <string name="workout_equipment_title">Equipment</string>
+    <string name="workout_exercise_list_title">Overview</string>
+    <plurals name="profile_stat_hours">
+        <item quantity="one">Hour</item>
+        <item quantity="other">Hours</item>
+    </plurals>
+    <plurals name="profile_stat_calories">
+        <item quantity="one">Calorie</item>
+        <item quantity="other">Calories</item>
+    </plurals>
+    <plurals name="profile_stat_minutes">
+        <item quantity="one">Minute</item>
+        <item quantity="other">Minutes</item>
+    </plurals>
+    <plurals name="profile_stat_workouts">
+        <item quantity="one">Workout</item>
+        <item quantity="other">Workouts</item>
+    </plurals>
+    <string name="stats_steps_label">steps</string>
+    <string name="stats_time_in_bed_title">Time in bed</string>
+    <string name="stats_time_in_bed_permission">Track and improve your sleep</string>
+    <string name="stats_weight_since_start">Since start</string>
+    <string name="stats_average">Average</string>
+    <string name="stats_time_in_lest_night">Last Night</string>
+    <string name="stats_title">Stats</string>
+    <string name="stats_workouts_title">Workouts</string>
+    <string name="stats_total">Total</string>
+    <string name="stats_minutes">minutes</string>
+    <string name="stats_calories">calories</string>
+    <string name="stats_last_7_days">Last 7 days</string>
+    <string name="stats_no_data">No data</string>
+    <string name="stats_steps_give_permission">Track your daily steps and walk more</string>
+    <string name="btn_enable">Enable</string>
+    <string name="permission_body_sensors_rationale">Please enable the body sensors permission in settings.</string>
+    <string name="permission_body_sensors_open_settings">The body sensors permission is needed to activate Google Fit integration.</string>
+    <string name="workouts_yoga_cross_promo_title">More Yoga</string>
+    <string name="workouts_yoga_cross_promo_messgae">Enjoy more yoga workouts with the best-in-class yoga app from Fitify.</string>
+    <string name="heart_rate_card_cal">Cal</string>
+    <string name="apple_health_explained">Sync your workouts to Health App where they will appear as a part of your daily activity.
+
+Users with Apple Watch can also see their heart rate during Fitify workouts.</string>
+    <string name="apple_health_connect_title">Connect Apple Health</string>
+    <string name="apple_health_connect_message">1. Open the \"Health\" app
+2. Tap your profile picture (top right corner)
+3. Select \"Apps\"
+4. Select \"FITIFY\" in the list
+5. Tap the \"Turn On All\" button</string>
+    <string name="apple_health_settings_button">Open the Health App</string>
+    <string name="apple_health_explained_short">Sync your workouts to Health App where they will appear as a part of your daily activity.</string>
+    <string name="onboarding_commit_contract_title">Your commitment</string>
+    <string name="onboarding_commit_contract_message"><![CDATA[I have decided I am ready to <font color="#FFFFFF"><b>get fit and stay fit.</b></font>]]></string>
+    <string name="onboarding_commit_contract_submessage">I will work consistently towards reaching my fitness goals. I will remain patient with myself and my progress.</string>
+    <string name="onboarding_commit_contract_hint">Tap and hold the button to continue.</string>
+    <string name="onboarding_commit_contract_hold_it">Hold it</string>
+    <string name="onboarding_commit_contract_keep_going">Keep going...</string>
+    <string name="onboarding_commit_contract_awesome">Awesome! \nGood luck!</string>
+    <string name="redeem_subtitle">Enter the voucher below to activate your Fitify Pro membership.</string>
+    <string name="redeem_button">Redeem</string>
+    <string name="redeem_placeholder">Voucher code</string>
+    <string name="redeem_error_voucher_invalid">Voucher code is invalid</string>
+    <string name="redeem_success">Voucher has been redeemed</string>
+    <string name="onboarding_motivation_level_title">Thanks for sharing!</string>
+    <string name="onboarding_motivation_message">There\'s <b>strong scientific evidence</b> that being physically active can help you lead a <b>healthier and happier life.</b></string>
+    <string name="onboarding_commitment_year_title">Awesome choice!</string>
+    <string name="onboarding_commitment_3_months_title">Good choice</string>
+    <string name="onboarding_commitment_1_month_title">Good start</string>
+    <string name="onboarding_commitment_year_message">Committing to at least <b>a year</b> is the perfect way to build healthy habits and reach your fitness goals!</string>
+    <string name="onboarding_commitment_3_months_message">Committing to at least <b>3 months</b> is a great start to reach visible results both on your body and mind.</string>
+    <string name="onboarding_commitment_1_month_message">After <b>1 month</b> you should already feel a positive impact of exercising on your body and mind.
+
+But remember there are no shortcuts in fitness and committing to the longer period may help you reach your goals.</string>
+    <string name="review_exercise_subtitle">What was wrong?</string>
+    <string name="review_exercise_too_intense">It was too hard</string>
+    <string name="review_exercise_too_easy">It was too easy</string>
+    <string name="review_exercise_painful">It was painful</string>
+    <string name="review_exercise_difficult_to_perform">Too intense</string>
+    <string name="review_exercise_other">Other</string>
+    <string name="review_exercise_tell_us_more">Tell us more</string>
+    <string name="remove_rating_button">Remove Rating</string>
+    <string name="congrats_screen_review_exercises">Review exercises</string>
+    <string name="pitch_onboarding_goal_title">You are in good hands</string>
+    <string name="pitch_onboarding_goal_lose_weight_message">And you are not alone!
+
+Last year, <b>2,037,210 people</b> from all over the world chose to lose weight with Fitify.</string>
+    <string name="pitch_onboarding_goal_gain_muscle_message">And you are not alone!
+
+Last year, <b>1,792,153 people</b> from all over the world chose to gain muscle with Fitify.</string>
+    <string name="pitch_onboarding_fitness_title">Personalized workouts</string>
+    <string name="pitch_onboarding_fitness_message">Whatever your fitness level, Fitify will <b>always adapt</b> to your skills and expectations to get you the best results!</string>
+    <string name="pitch_onboarding_target_weight_title">Together we can do it!</string>
+    <string name="pitch_onboarding_target_weight_low_message">Losing <b>%s</b> is a very realistic goal.
+
+Fitify will help you build healthy habits so you can reach your fitness goals.</string>
+    <string name="pitch_onboarding_target_weight_mid_message">Losing <b>%s</b> is an achievable goal!
+
+Fitify will help you build healthy habits so you can reach your fitness goals.</string>
+    <string name="pitch_onboarding_target_weight_high_message">Losing <b>%s</b> will require a strong commitment from you.
+
+Fitify will help you build healthy habits so you can reach your fitness goals.</string>
+    <plurals name="reps_count_change_sides_short">
+        <item quantity="one">Switch sides after %d rep</item>
+        <item quantity="other">Switch sides after %d reps</item>
+    </plurals>
+    <!--Indicates in which Round of the workout the user currently is.-->
+    <string name="workout_player_round">Round</string>
+    <!--Indicates in which exercise set the user currently is or which exercise set is coming up next. Sets represents a case when the user repeats the same exercise (e.g. 10 push-ups in 3 sets = 3x (10 pushups) with rests in between them.-->
+    <string name="workout_player_set">Set</string>
+    <!--Indicates in which circuit of the Circuit Training the user is. Similar to 'Round'. The difference is that next circuit always contains the same exercise as the previous circuit.-->
+    <string name="workout_player_circuit">Circuit</string>
+    <!--Indicates which exercise of the circuit the user is currently doing.-->
+    <string name="workout_player_exercise">Exercise</string>
+    <string name="paywall_title_today_only"><![CDATA[Today only!
+Save <b>%d%%</b>]]></string>
+    <string name="paywall_title_start_now"><![CDATA[Start NOW
+with <b>%d%%</b> OFF!]]></string>
+    <string name="unit_s">s</string>
+    <string name="paywall_subtitle_plan_ready">Your personal fitness plan is ready. Now with 30%% discount. Start today!</string>
+    <string name="trial_title_how_trial_works">How your free trial works</string>
+    <string name="trial_title_your_trial">Your %d-day free trial</string>
+    <string name="trial_title_first_week_free">The first week is FREE!</string>
+    <string name="paywall_title_get_results">Get results in 5 weeks</string>
+    <string name="paywall_title_unlock_fitify">Unlock Fitify</string>
+    <string name="paywall_title_choose_your_plan">Choose your plan</string>
+    <string name="paywall_subtitle_results">Lose weight, get fit, build muscle, and more with carefully selected professional fitness plans and workouts personalized for you.</string>
+    <string name="paywall_subtitle_features">• Get your personal fitness plan
+• More than 1,000 video exercises
+• Burn fat, build muscle, and more
+• Different workouts each day</string>
+    <string name="paywall_title_start_now_delete"><![CDATA[Start NOW
+  with <b>%d%%</b> OFF!]]></string>
+    <string name="paywall_title_today_only_delete"><![CDATA[Today only!
+  Save <b>%d%%</b>]]></string>
+    <string name="paywall_title_new_members">Exclusive offer!
+New members only.</string>
+    <string name="paywall_subtitle_start_now">The most important step of all is the first step. Start your personal fitness plan today and reach your goals with Fitify.</string>
+    <string name="btn_redeem_my_offer">Redeem My Offer</string>
+    <string name="btn_try_it_free">Try it Free</string>
+    <string name="btn_try_free_and_subscribe">Try Free and Subscribe</string>
+    <string name="onboarding_source_title">How did you hear about Fitify?</string>
+    <string name="onboarding_source_app_store">App Store</string>
+    <string name="onboarding_source_google_play">Google Play</string>
+    <string name="onboarding_source_appgallery">AppGallery</string>
+    <string name="onboarding_source_facebook">Facebook</string>
+    <string name="onboarding_source_tv">TV</string>
+    <string name="onboarding_source_radio_podcast">Radio or podcast</string>
+    <string name="onboarding_source_friends_family">Friends or family</string>
+    <string name="onboarding_source_google_search">Google search</string>
+    <string name="onboarding_source_youtube">YouTube</string>
+    <string name="onboarding_source_instagram">Instagram</string>
+    <string name="onboarding_source_tiktok">TikTok</string>
+    <string name="onboarding_source_pinterest">Pinterest</string>
+    <string name="onboarding_source_fitness_trainer">Personal Trainer</string>
+    <string name="onboarding_source_other">Other</string>
+    <string name="workout_player_paused">Paused</string>
+    <string name="sign_in_with_email_title">Log in to your account.</string>
+    <string name="sign_in_bottom_sheet_title">Log in to your account.</string>
+    <string name="onboarding_gender_title">What\'s your gender?</string>
+    <string name="onboarding_goal_title">What\'s your goal?</string>
+    <string name="onboarding_body_type_title">"What's your body type?"</string>
+    <string name="onboarding_goal_weight_title">What is your goal weight?</string>
+    <string name="onboarding_height_title">How tall are you?</string>
+    <string name="onboarding_knee_pain_dialog_message">We will restrict exercises that are hard on your knees. You can reset the limitation later.\n\nAlthough, you should still follow your doctor\'s advice.</string>
+    <string name="onboarding_knee_pain_dialog_title">We\'ve got you covered!</string>
+    <string name="onboarding_knee_pain_subtitle">How serious are your problems?</string>
+    <string name="onboarding_energy_level_title">How are your energy levels during the day?</string>
+    <string name="tool_bosu">BOSU</string>
+    <string name="tool_dumbbell">Dumbbell</string>
+    <string name="tool_foamroller">Foam Roller</string>
+    <string name="tool_bodyweight">Bodyweight</string>
+    <string name="tool_barbell">Barbell</string>
+    <string name="tool_kettlebell">Kettlebell</string>
+    <string name="tool_medicineball">Medicine Ball</string>
+    <string name="tool_pullupbar">Pull Up Bar</string>
+    <string name="tool_resistanceband">Resistance Band</string>
+    <string name="tool_swissball">Swiss Ball</string>
+    <string name="tool_trx">Suspension System</string>
+    <string name="onboarding_knee_pain_title">Do you suffer from knee pain?</string>
+    <string name="onboarding_latest_ideal_weight_less_than_a_year_ago">Less than a year ago</string>
+    <string name="onboarding_latest_ideal_weight_more_than_x_years_ago">More than %d years ago</string>
+    <string name="onboarding_latest_ideal_weight_title">When was the last time you were at your ideal weight?</string>
+    <string name="onboarding_latest_ideal_weight_x_to_years_ago">%1$d–%2$d years ago</string>
+    <string name="onboarding_newsletter_title">Get fitness advice and special offers by e-mail?</string>
+    <string name="onboarding_next">Next</string>
+    <string name="onboarding_plan_pace_fast">As fast as possible</string>
+    <string name="onboarding_plan_pace_normal">Somewhere in between</string>
+    <string name="onboarding_plan_pace_slow">Slowly but steadily</string>
+    <string name="onboarding_plan_pace_title">What pace would you prefer in your plan?</string>
+    <string name="onboarding_plan_ready">Your personalized\nplan is ready!</string>
+    <string name="onboarding_problem_area_please_select">Please select at least one</string>
+    <string name="onboarding_problem_areas_arms">Arms</string>
+    <string name="onboarding_problem_areas_belly">Belly</string>
+    <string name="onboarding_problem_areas_butt">Butt</string>
+    <string name="onboarding_problem_areas_chest">Chest</string>
+    <string name="onboarding_problem_areas_thighs">Thighs</string>
+    <string name="onboarding_problem_areas_title">Which parts should we focus on?</string>
+    <string name="onboarding_push_ups_less_than_x">Less than %d</string>
+    <string name="onboarding_push_ups_more_than_x">%d+</string>
+    <string name="onboarding_push_ups_range_format">%1$d–%2$d</string>
+    <string name="onboarding_push_ups_title">How many push-ups can you do?</string>
+    <string name="onboarding_sleep_duration_title">How much do you sleep every night?</string>
+    <!-- Moc dlouhé - změníme font, nebo dáme limit? -->
+    <string name="onboarding_success">All set!</string>
+    <string name="onboarding_summary_duration_weeks">%1$d–%2$d weeks</string>
+    <string name="onboarding_summary_plan_duration">Plan Duration</string>
+    <string name="onboarding_typical_day_mostly_active">Mostly walking and active</string>
+    <string name="onboarding_typical_day_mostly_inactive">At home, mostly inactive</string>
+    <string name="onboarding_typical_day_mostly_on_foot">Mostly on foot</string>
+    <string name="onboarding_typical_day_mostly_seated">Mostly seated</string>
+    <!-- Onboarding Extra 10 -->
+    <string name="onboarding_typical_day_title">What does your typical day look like?</string>
+    <string name="onboarding_walking_duration_title">How much do you walk daily?</string>
+    <!--  [%i]  will be 5, 6 or 7 -->
+    <string name="onboarding_water_intake_more_than_x_glasses">More than %d glasses</string>
+    <string name="onboarding_water_intake_only_soda_coffee">I only drink soda or coffee</string>
+    <string name="onboarding_water_intake_title">What\'s your daily water intake?</string>
+    <string name="onboarding_water_intake_x_glasses">%d glasses</string>
+    <string name="onboarding_water_intake_x_to_y_glasses">%1$d to %2$d glasses</string>
+    <string name="onboarding_weight_title">What is your weight?</string>
+    <string name="onboarding_workout_frequency_more_than_x_a_week">More than %d workouts a week</string>
+    <string name="fitness_plan_recommended">Recommended</string>
+    <plurals name="onboarding_duration_more_than_x_hours">
+        <item quantity="one">More than %d hour</item>
+        <item quantity="other">More than %d hours</item>
+    </plurals>
+    <plurals name="onboarding_duration_less_than_x_hours">
+        <item quantity="one">Less than %d hour</item>
+        <item quantity="other">Less than %d hours</item>
+    </plurals>
+    <string name="unit_years">years</string>
+    <string name="onboarding_energy_level_need_nap_after_meals">I need a nap after meals</string>
+    <string name="onboarding_energy_level_stable">Stable throughout the day</string>
+    <string name="onboarding_energy_level_tired_around_lunchtime">I feel tired around lunchtime</string>
+    <string name="onboarding_duration_x_to_y_hours">%1$d–%2$d hours</string>
+    <string name="onboarding_workout_frequency_never">Never</string>
+    <string name="onboarding_workout_frequency_x_to_y_weeks">%1$d–%2$d workouts a week</string>
+    <string name="title_exercises">Exercise List</string>
+    <string name="reminders_settings_title">Reminders</string>
+    <string name="fitify_logo">Fitify</string>
+    <string name="plan_tutorial_v2_recovery"><![CDATA[You may finish with a <b>recovery session</b> which helps you reduce muscle fatigue, prevent bad posture, and feel good.]]></string>
+    <string name="plan_tutorial_v2_warmup"><![CDATA[<b>The warmup is optional</b> but it prepares muscles for activity and prevents injuries.]]></string>
+    <!--Informing the user to get ready for the next exercise.-->
+    <string name="workout_player_get_ready">Get Ready</string>
+    <!--Informing the user to change sides during the exercise (e.g. change right arm for the left arm to perform the exercise)-->
+    <string name="workout_player_change_sides">Change Sides</string>
+    <plurals name="plan_tutorial_step_1v2">
+        <item quantity="one"><![CDATA[Complete at least <b>%d workout per week.</b> It\'s crucial to exercise on a regular basis to build a habit.]]></item>
+        <item quantity="other"><![CDATA[Complete at least <b>%d workouts per week.</b> It\'s crucial to exercise on a regular basis to build a habit.]]></item>
+    </plurals>
+    <string name="plan_tutorial_main_workout"><![CDATA[The workout is the <b>most important part</b> of the training day.]]></string>
+    <string name="plan_tutorial_plan_list"><![CDATA[This is your <b>recommended fitness plan</b>. Start now or scroll for more.]]></string>
+    <string name="plan_tutorial_customize"><![CDATA[Each workout is already personalized for you, but you can <b>customize</b> it to your liking.]]></string>
+    <!--Next activity (exercise or the rest)-->
+    <string name="workout_player_next_up">Next up</string>
+    <!--The body side you are supposed to exercise with.-->
+    <string name="workout_player_left_side">Left side</string>
+    <!--The body side you are supposed to exercise with.-->
+    <string name="workout_player_right_side">Right side</string>
+    <!--Calories-->
+    <string name="workout_player_cal">Cal</string>
+    <!--Alternatively '"Happy", "Satisified" with Fitify?'-->
+    <string name="rate_my_app_title">Enjoying Fitify?</string>
+    <string name="rate_my_app_message">If you enjoy using Fitify, please take a moment to rate us. Thank you for your support!</string>
+    <string name="rate_my_app_rate_5_stars">Rate 5 Stars</string>
+    <string name="rate_my_app_not_satisfied">Not satisfied?</string>
+    <string name="rate_my_app_not_now">Not now</string>
+    <string name="rate_my_app_feedback_title">Thank You!</string>
+    <string name="rate_my_app_feedback_message">Your opinion is important. What can we improve?</string>
+    <string name="rate_my_app_feedback_tell_us_more">Tell us more…</string>
+    <string name="rate_my_app_feedback_skip">Skip</string>
+    <string name="rate_my_app_feedback_send">Send</string>
+    <string name="permission_activity_recognition_rationale">Please enable activity recognition permission in settings.</string>
+    <string name="permission_activity_recognition_open_settings">The activity recognition permission is needed to activate Google Fit integration.</string>
+    <string name="congrats_screen_intensity_1_feedback">Your workouts will become harder.</string>
+    <string name="congrats_screen_title">Workout Completed!</string>
+    <string name="reset">Reset</string>
+    <string name="congrats_screen_intensity_3_title">Perfect intensity</string>
+    <string name="congrats_screen_intensity_3_feedback">Awesome, see you at the next workout!</string>
+    <string name="congrats_screen_intensity_4_title">A bit hard</string>
+    <string name="congrats_screen_intensity_4_feedback">Your workouts will become slightly easier.</string>
+    <string name="congrats_screen_intensity_5_title">Too hard</string>
+    <string name="congrats_screen_intensity_5_feedback">Your workouts will become easier.</string>
+    <string name="congrats_screen_intensity_title">How was your workout?</string>
+    <string name="congrats_screen_intensity_slider_label_1">Easy</string>
+    <string name="congrats_screen_intensity_slider_label_2">Perfect</string>
+    <string name="congrats_screen_intensity_slider_label_3">Hard</string>
+    <string name="congrats_screen_intensity_1_title">Too easy</string>
+    <string name="congrats_screen_intensity_2_title">A bit easy</string>
+    <string name="congrats_screen_intensity_2_feedback">Your workouts will become slightly harder.</string>
+    <!--Please use a relevant terminology used in your language.-->
+    <string name="bmi_title">Body Mass Index</string>
+    <!--Body Mass Index. Please use a relevant terminology used in your language.  .-->
+    <string name="bmi_title_short">BMI</string>
+    <!--BMI category.-->
+    <string name="bmi_category_underweight_title">Underweight</string>
+    <!--BMI category.-->
+    <string name="bmi_category_healthy_weight_title">Normal Weight</string>
+    <!--BMI category.-->
+    <string name="bmi_category_overweight_title">Overweight</string>
+    <!--BMI category.-->
+    <string name="bmi_category_obese_title">Obese</string>
+    <string name="bmi_explanation">BMI is a basic indicator of your body composition.</string>
+    <string name="bmi_fitify_relevance">We\'ve got lots of workouts and activities to help you reach your goals.</string>
+    <string name="plan_summary_customized_plan_duration">Customized for you</string>
+    <plurals name="plan_timeline_x_weeks">
+        <item quantity="one">%d Week</item>
+        <item quantity="other">%d Weeks</item>
+    </plurals>
+    <string name="target_areas">Target areas</string>
+    <string name="intensity">Intensity</string>
+    <string name="overweight">Overweight</string>
+    <string name="sign_up_existing_account_title">You already have an account...</string>
+    <string name="sign_up_existing_account_message">The account with this email address already exists. Would you like to log in instead?</string>
+    <string name="pro_paywall_subscription_price_per_month">%1$s • %2$s</string>
+    <string name="pro_paywall_pricing_terms_billing_period_year">%s billed every year</string>
+    <string name="pro_paywall_pricing_terms_billing_period_month">%s billed every month</string>
+    <string name="pro_paywall_pricing_terms_billing_period_quarter">%s billed every quarter</string>
+    <!--Workouts category title-->
+    <string name="category_hiit_cardio">HIIT, Cardio</string>
+    <!--Workouts category title-->
+    <string name="category_yoga_stretching">Yoga, Stretching</string>
+    <!--Workouts category title-->
+    <string name="category_warmup_recovery">Warmup, Recovery</string>
+    <string name="pro_monthly">Monthly</string>
+    <string name="pro_yearly">Yearly</string>
+    <string name="pro_quarterly">Quarterly</string>
+    <string name="pro_halfyearly">Half-Yearly</string>
+    <string name="fitifyapps_banner_fitify_pro_discount">Get your personal fitness plan with %d%% off!</string>
+    <string name="pro_paywall_pricing_terms_billing_period">%s billed every year.</string>
+    <string name="plan_free_intro_popup_title">Welcome to your plan</string>
+    <string name="plan_free_intro_popup_description">Enjoy the first day for free. Let’s see what you got!</string>
+    <string name="plan_free_intro_intro_day">Intro day</string>
+    <plurals name="banner_subscription_expiring_soon_title">
+        <item quantity="one">Subscription ends in %d day!</item>
+        <item quantity="other">Subscription ends in %d days!</item>
+    </plurals>
+    <!--https://drive.google.com/file/d/1ow8ZSvOnNLC21dwfqxCwPxxCNc-aKcdE/view?usp=sharing-->
+    <string name="banner_subscription_expiring_soon_message">Renew now so you don’t lose access to your personal plan!</string>
+    <!--https://drive.google.com/file/d/1ow8ZSvOnNLC21dwfqxCwPxxCNc-aKcdE/view?usp=sharing-->
+    <string name="banner_subscription_expired_title">Your subscription expired!</string>
+    <!--https://drive.google.com/file/d/1ow8ZSvOnNLC21dwfqxCwPxxCNc-aKcdE/view?usp=sharing-->
+    <string name="banner_subscription_expired_message">Tap here to renew your membership.</string>
+    <!--https://drive.google.com/file/d/1B1myGzufy2NKKD8tWOUvfEA2BfhrwfZl/view?usp=sharing-->
+    <string name="congrats_celebration_message_10">Fantastic, don’t quit!</string>
+    <!--https://drive.google.com/file/d/1B1myGzufy2NKKD8tWOUvfEA2BfhrwfZl/view?usp=sharing-->
+    <string name="congrats_celebration_message_1">Great job!</string>
+    <!--https://drive.google.com/file/d/1B1myGzufy2NKKD8tWOUvfEA2BfhrwfZl/view?usp=sharing-->
+    <string name="congrats_celebration_message_2">Fantastic results!</string>
+    <!--https://drive.google.com/file/d/1B1myGzufy2NKKD8tWOUvfEA2BfhrwfZl/view?usp=sharing-->
+    <string name="congrats_celebration_message_3">Wow, great workout!</string>
+    <!--https://drive.google.com/file/d/1B1myGzufy2NKKD8tWOUvfEA2BfhrwfZl/view?usp=sharing-->
+    <string name="congrats_celebration_message_4">Perfect! See you at the next workout!</string>
+    <!--https://drive.google.com/file/d/1B1myGzufy2NKKD8tWOUvfEA2BfhrwfZl/view?usp=sharing-->
+    <string name="congrats_celebration_message_5">You are doing great!</string>
+    <!--https://drive.google.com/file/d/1B1myGzufy2NKKD8tWOUvfEA2BfhrwfZl/view?usp=sharing-->
+    <string name="congrats_celebration_message_6">Amazing performance!</string>
+    <!--https://drive.google.com/file/d/1B1myGzufy2NKKD8tWOUvfEA2BfhrwfZl/view?usp=sharing-->
+    <string name="congrats_celebration_message_7">Enjoy that amazing feeling!</string>
+    <!--https://drive.google.com/file/d/1B1myGzufy2NKKD8tWOUvfEA2BfhrwfZl/view?usp=sharing-->
+    <string name="congrats_celebration_message_8">Every workout counts!</string>
+    <!--https://drive.google.com/file/d/1B1myGzufy2NKKD8tWOUvfEA2BfhrwfZl/view?usp=sharing-->
+    <string name="congrats_celebration_message_9">One step closer to your goals!</string>
+    <string name="workout_finished_great_job">Great job, keep going!</string>
+    <plurals name="x_items">
+        <item quantity="one">%d item</item>
+        <item quantity="other">%d items</item>
+    </plurals>
+    <string name="quit_workout_message">Your progress won\'t be saved.</string>
+    <string name="quit_workout_question">Quit workout?</string>
+    <string name="pro_paywall_featured_by_google">Featured by Google</string>
+    <!--This is Apple’s naming of that category in the App Store. Please translate with that in mind – ideally the exact phrase apple uses.-->
+    <string name="pro_paywall_featured_by_google_best_new_updates">Best New Updates</string>
+    <string name="plan_timeline_week_x">Week %d</string>
+    <string name="plan_timeline_weeks_x_y">Weeks %1$d–%2$d</string>
+    <string name="pro_paywall_featured_by_apple">Featured by Apple</string>
+    <!--This is Apple’s naming of that category in the App Store. Please translate with that in mind – ideally the exact phrase apple uses.-->
+    <string name="pro_paywall_featured_by_apple_app_essentials">App Essentials</string>
+    <string name="pro_paywall_testimonial_1">Couldn\'t be more proud of myself for being able to do it. It has options how many days to workout in a week but I opted to do it #everydamnday #homeworkout as part of my #quarantineworkout challenge.</string>
+    <string name="pro_paywall_testimonial_2">Thank you for making an app easy for beginners to facilitate our journey and get motivated. I tried your app almost 11 months ago and it definitely changed my life.</string>
+    <string name="pro_paywall_testimonial_3">I was 125kg+ and had done no physical activity since high school. I just finished my 3rd powerlifting competition at 105kg and won my weight class. I literally could not have started this journey or continued training without your app!</string>
+    <string name="pro_paywall_pricing_terms_free_trial_2">%d Day FREE Trial</string>
+    <string name="pro_paywall_pricing_terms_introductory_yearly">First year, then %s/year</string>
+    <string name="pro_paywall_pricing_terms_introductory_monthly">First month, then %s/month</string>
+    <!--General purpose Done button, used in many screens in the app when it doesn't depend on the context.-->
+    <string name="done_button">Done</string>
+    <string name="pro_paywall_mastercard_title"><![CDATA[Train with Mastercard <b>free for 2 months</b>!]]></string>
+    <string name="pro_paywall_title_no_fitness_tools_required">No fitness tools needed.</string>
+    <string name="notification_discount_2_subtitle">Save %s%% on Fitify Pro. Tap here to get it!</string>
+    <plurals name="pro_smallprint_trial_months_first">
+        <item quantity="one">%d-month free trial.</item>
+        <item quantity="other">%d-month free trial.</item>
+    </plurals>
+    <plurals name="pro_free_trial_x_months">
+        <item quantity="one">%d-month free trial</item>
+        <item quantity="other">%d-month free trial</item>
+    </plurals>
+    <string name="web_promo_link_landing_page_subtitle">How to claim it?</string>
+    <string name="web_promo_link_landing_page_step1">Install Fitify to your mobile device</string>
+    <string name="web_promo_link_landing_page_step2">Open the promo link on your mobile device: {promoLink}</string>
+    <string name="trial_reminder_notification_title">Your trial expires in 2 days.</string>
+    <string name="trial_reminder_notification_message">Your trial will change to premium subscription soon.</string>
+    <string name="welcome_have_account_question">Already have an account?</string>
+    <string name="btn_view_all_plans">View All Plans</string>
+    <string name="trial_started_title">Your free trial has started</string>
+    <string name="trial_started_description_notifications">Would you like to get reminded 2 days before you get charged?</string>
+    <string name="trial_started_description_generic">You will be reminded when your trial is about to end.</string>
+    <string name="btn_remind_me">Remind Me</string>
+    <string name="btn_maybe_later">Maybe Later</string>
+    <string name="pro_paywall_mastercard_title_old">Train with Mastercard free for 2 months!</string>
+    <string name="pro_paywall_mastercard_subtitle">"This time-limited offer is available to all Mastercard® cardholders.
+"</string>
+    <string name="web_promo_link_landing_page_title">Special Offer available!</string>
+    <string name="pro_paywall_title_more_than_900_exercises">More than 1,000 exercises.</string>
+    <string name="pro_paywall_title_no_tools_required">No fitness tools needed.</string>
+    <string name="pro_paywall_title_train_like_pro">Train like a Pro!</string>
+    <string name="trial_title_try_it_risk_free">Try it risk-free for %d days!</string>
+    <string name="pro_paywall_subtitle_get_full_access">Get full access to professional workout plans personalized for you!</string>
+    <string name="trial_description_unlock_all_features">Unlock all Pro features by starting the trial.</string>
+    <string name="trial_description_remind_before_over">We will remind you before your trial is over.</string>
+    <string name="trial_description_get_charged_cancel_anytime">"Your subscription starts. Cancel anytime before. "</string>
+    <string name="btn_start_free_trial">Start Free Trial</string>
+    <string name="category_cardio_description">High intensity sessions that will give your heart, lungs and circulatory system a good workout.</string>
+    <string name="category_strength_description">Improve strength and endurance. Choose a muscle group you want to target and see results shortly!</string>
+    <string name="category_yoga_stretching_description">Healthy body and mind. Lengthen your body and release any tension with easy to follow stretches.</string>
+    <string name="category_warmup_recovery_description">A well-rounded workout should be paired with a proper warm up and cool down to reduce risk of muscle injury and improve fitness performance.</string>
+    <string name="category_custom_workout_description">"Build your own workout sequence. Pick amongst 1000 exercises from our huge library. "</string>
+    <string name="plan_your_goal_prefix">Your Goal: %s</string>
+    <string name="x_sec_rest_duration">Rest: %d s</string>
+    <string name="pro_paywall_title_your_personal_fitness_plan">Your personal fitness plan.</string>
+    <string name="pro_paywall_title_10_30_minute_daily_workouts">10–30 minute workouts.</string>
+    <string name="ios.ZDKRequests.createRequest.input.new">Ask something…</string>
+    <string name="coach_active">Active</string>
+    <string name="settings_sound_settings">Sound Settings</string>
+    <string name="settings_sound_settings_description">Get in the workout mood with our curated playlists!</string>
+    <string name="plan_week_title_week">Week %d</string>
+    <string name="plan_week_title_of_x">of %d</string>
+    <string name="preference_music_listen_on_apple_music">Listen on Apple Music</string>
+    <string name="plan_leave_plan">Leave Plan</string>
+    <string name="plan_about_plan">About this plan</string>
+    <string name="plan_day_finish_day_with_recovery">Finish the day with recovery</string>
+    <string name="plan_day_cooldown">Cooldown</string>
+    <string name="plan_day_pick_cooldown_title">Pick Cooldown</string>
+    <string name="plan_day_pick_cooldown_description">Great job today! Now, let your body unwind and recover.</string>
+    <string name="workout_music_and_sound">Music and Sound</string>
+    <string name="workout_customize">Customize Workout</string>
+    <string name="workout_customize_add_tools_and_more">Add tools and more</string>
+    <!--Workout without loud exercises such as jumping.-->
+    <string name="plan_day_preference_noise2_title">Quiet Workout</string>
+    <string name="plan_day_preference_noise2_subtitle">Avoid jumping</string>
+    <string name="not_compatible">Not compatible</string>
+    <string name="workout_tool_add_fitness_tools">Add Fitness Tools</string>
+    <string name="category_custom_description">Create your own with our workout builder!</string>
+    <string name="category_warm_up_recovery">Warm Up &amp; Recovery</string>
+    <string name="required">Required</string>
+    <string name="workout_save_to_custom_workouts">Save to Custom Workouts</string>
+    <string name="workout_refresh_exercises">Refresh Exercises</string>
+    <string name="workout_exercise_view_instructions">View Instructions</string>
+    <string name="workout_exercise_replace">Replace Exercise</string>
+    <string name="plan_settings_reminders_settings">Reminder Settings</string>
+    <string name="feedback_send_feedback">Send Feedback</string>
+    <string name="feedback_what_can_we_improve">What can we improve?</string>
+    <string name="plan_your_goal">Your goal</string>
+    <string name="tab_my_plan">My Plan</string>
+    <string name="tab_exercises">Exercises</string>
+    <string name="plan_current_plan">Current Plan</string>
+    <string name="plan_workout_time">Workout Time</string>
+    <string name="plan_share_progress">Share Your Progress</string>
+    <plurals name="plan_timeline_weeks">
+        <item quantity="one">Week</item>
+        <item quantity="other">Weeks</item>
+    </plurals>
+    <string name="permission_camera_rationale">The camera permission is needed to take your new pic.</string>
+    <string name="permission_camera_open_settings">Please enable camera permission in settings.</string>
+    <!--Days user wants to train.-->
+    <string name="plan_settings_training_days">Training Days</string>
+    <string name="error_unsuitable_workout_title">Unsuitable Workout</string>
+    <string name="error_unsuitable_workout_message">This workout is not suitable for your knee limitations. Choose another workout or remove your limitations in settings.</string>
+    <string name="email_sign_up_bottom_sheet">Sign Up with Email</string>
+    <string name="email_log_in_bottom_sheet">Log In with Email</string>
+    <string name="paywall_promo_invalid_title">Promo Invalid</string>
+    <string name="paywall_promo_invalid_message">The promo link is invalid or the special offer has expired.</string>
+    <string name="paywall_subscription_active_title">Subscription Active</string>
+    <string name="paywall_subscription_active_message">You already have an active subscription.</string>
+    <!--When the user changes the number of Workout Days per week, his Workout Reminders are update to reflect this change.-->
+    <string name="scheduler_reminders_get_updated_accordingly">Reminders get updated accordingly.</string>
+    <string name="partnership_kaloricke_tabulky_banner_title">Save 30%% on Kalorické Tabulky</string>
+    <string name="partnership_kaloricke_tabulky_banner_message">Track your food and eat healthier!</string>
+    <string name="onboarding_what_motivation_immunity">Boosting immunity</string>
+    <!--Please remain "gender neutral" (we don't know the user's gender)-->
+    <string name="onboarding_how_motivated_motivated">I’m motivated</string>
+    <!--Please remain "gender neutral" (we don't know the user's gender)-->
+    <string name="onboarding_how_motivated_very_motivated">I’m very motivated!</string>
+    <!--Please remain "gender neutral" (we don't know the user's gender)-->
+    <string name="onboarding_how_long_commit_title">For how long are you ready to commit?</string>
+    <string name="onboarding_how_long_commit_at_least_1_month">At least a month</string>
+    <string name="onboarding_how_long_commit_at_least_3_months">At least 3 months</string>
+    <string name="onboarding_how_long_commit_at_least_12_months">At least a year</string>
+    <!--Please remain "gender neutral" (we don't know the user's gender)-->
+    <string name="onboarding_what_motivation_title">What motivates you the most?</string>
+    <string name="onboarding_what_motivation_confident">Feeling confident</string>
+    <string name="onboarding_what_motivation_active">Being active</string>
+    <string name="onboarding_what_motivation_sleep">Improving sleep</string>
+    <string name="onboarding_what_motivation_happy">Feeling happier</string>
+    <string name="onboarding_what_motivation_healthy">Being healthy</string>
+    <string name="onboarding_what_motivation_energy">Boosting energy</string>
+    <!--Please remain "gender neutral" (we don't know the user's gender)-->
+    <string name="onboarding_how_motivated_title">How motivated are you to start?</string>
+    <string name="onboarding_how_motivated_not_so_much">Not so much</string>
+    <!--Please remain "gender neutral" (we don't know the user's gender)-->
+    <string name="onboarding_workout_experience_title">Any previous workout experience?</string>
+    <string name="onboarding_workout_experience_regularly">Yes, I workout regularly</string>
+    <string name="onboarding_workout_experience_less_than_year">Yes, less than a year ago</string>
+    <string name="onboarding_workout_experience_more_than_year">Yes, more than 1 year ago</string>
+    <string name="onboarding_workout_experience_none">No, I don’t have any</string>
+    <!--Please remain "gender neutral" (we don't know the user's gender)-->
+    <string name="onboarding_stress_level_title">How often do you feel stressed?</string>
+    <string name="onboarding_stress_level_multiple_per_day">Multiple times a day</string>
+    <string name="onboarding_stress_level_few_times_per_week">A few times a week</string>
+    <string name="onboarding_stress_level_not_much">Not much at all</string>
+    <!--Notification message motivating user to do his scheduled workout. Please ensure the message sounds authentic in your language, no need for word-by-word localisations. Please remain "gender neutral" (we don't know the user's gender)-->
+    <string name="notification_scheduler_message_6">A half an hour workout is 2%% of your day. No excuses!</string>
+    <!--Notification message motivating user to do his scheduled workout. Please ensure the message sounds authentic in your language, no need for word-by-word localisations. Please remain "gender neutral" (we don't know the user's gender)-->
+    <string name="notification_scheduler_message_7">Be the best version of yourself.</string>
+    <!--Notification message motivating user to do his scheduled workout. Please ensure the message sounds authentic in your language, no need for word-by-word localisations. Please remain "gender neutral" (we don't know the user's gender)-->
+    <string name="notification_scheduler_message_8">Some people will quit. Except you. Not today.</string>
+    <!--Notification message motivating user to do his scheduled workout. Please ensure the message sounds authentic in your language, no need for word-by-word localisations. Please remain "gender neutral" (we don't know the user's gender)-->
+    <string name="notification_scheduler_message_9">No matter how slow you go, you are still lapping everybody on the couch.</string>
+    <!--Notification message motivating user to do his scheduled workout. Please ensure the message sounds authentic in your language, no need for word-by-word localisations.-->
+    <string name="notification_scheduler_message_10">Never forget why you started.</string>
+    <!--(e.g.: Day 4: Circuit Training.)-->
+    <string name="notification_scheduler_message_dynamic_1">Week %1$d, Day %2$d: %3$s.</string>
+    <!--(e.g. Week 2, Day 5 of your plan.)-->
+    <string name="notification_scheduler_message_dynamic_2">Week %1$d, Day %2$d of your plan.</string>
+    <!--(e.g. Boost Muscle Plan, Day 12.)-->
+    <string name="notification_scheduler_message_dynamic_3">%1$s, Day %2$d.</string>
+    <!--Title of a notification-->
+    <string name="notification_scheduler_title_1">It’s workout day</string>
+    <!--Title of a notification-->
+    <string name="notification_scheduler_title_2">Enjoy today’s workout</string>
+    <!--Title of a notification-->
+    <string name="notification_scheduler_title_3">Workout reminder</string>
+    <!--Title of a notification-->
+    <string name="notification_scheduler_title_4">Be fit!</string>
+    <!--Notification message motivating user to do his scheduled workout. Please ensure the message sounds authentic in your language, no need for word-by-word localisations.-->
+    <string name="notification_scheduler_message_1">The only bad workout is the one that never happened.</string>
+    <!--Notification message motivating user to do his scheduled workout. Please ensure the message sounds authentic in your language, no need for word-by-word localisations. Please remain "gender neutral" (we don't know the user's gender)-->
+    <string name="notification_scheduler_message_2">Do something today that your future self will thank you for.</string>
+    <!--Notification message motivating user to do his scheduled workout. Please ensure the message sounds authentic in your language, no need for word-by-word localisations.-->
+    <string name="notification_scheduler_message_3">Ambition is the first step to success.</string>
+    <!--Notification message motivating user to do his scheduled workout. Please ensure the message sounds authentic in your language, no need for word-by-word localisations. Please remain "gender neutral" (we don't know the user's gender)-->
+    <string name="notification_scheduler_message_4">If you are looking for a sign to go workout today, this is it.</string>
+    <!--Notification message motivating user to do his scheduled workout. Please ensure the message sounds authentic in your language, no need for word-by-word localisations. Please remain "gender neutral" (we don't know the user's gender)-->
+    <string name="notification_scheduler_message_5">It takes 2 weeks to feel it. 4 weeks to see it. And 8 weeks to hear it.</string>
+    <string name="onboarding_scheduler_subtitle_pick_plus_3">Really tough! Consider dropping a day or two to give your body some rest.</string>
+    <string name="onboarding_scheduler_description">Build a habit and never miss your workout day!</string>
+    <string name="onboarding_plan_pace_balanced">Balanced pace</string>
+    <string name="onboarding_scheduler_title">Pick training days!</string>
+    <plurals name="onboarding_scheduler_subtitle_pick_default">
+        <item quantity="one">Great! Based on your data, we recommend %d workout per week.</item>
+        <item quantity="other">Great! Based on your data, we recommend %d workouts per week.</item>
+    </plurals>
+    <string name="onboarding_scheduler_subtitle_pick_minus_1">Good choice! Can you squeeze in one more day?</string>
+    <string name="onboarding_scheduler_subtitle_pick_minus_2">Pick a day or two more and you’ll be good!</string>
+    <string name="onboarding_scheduler_subtitle_pick_minus_3">Can you push yourself a little harder?</string>
+    <string name="onboarding_scheduler_subtitle_pick_0">Please pick at least one day!</string>
+    <string name="onboarding_scheduler_subtitle_pick_plus_1">Wow, you’re hard on yourself! Let’s go!</string>
+    <string name="onboarding_scheduler_subtitle_pick_plus_2">Impressive determination! Are you sure you will be able to stick to it?</string>
+    <!--same as rate_message string, but with AppGallery instead Google Play-->
+    <string name="rate_message_app_gallery">How about a rating on AppGallery, then?</string>
+    <!--Notification Title. When unsigned user doesn't sign up within 1 day after installation.-->
+    <string name="notification_sign_in_1_title">%s, start your Fitify journey!</string>
+    <!--Notification Message. When unsigned user doesn't sign up within 1 day after installation.-->
+    <string name="notification_sign_in_1_message">Join millions of users and start the journey towards a better you. Your personal workout plan is waiting!</string>
+    <!--Notification Title. When user doesn't finish first workout within n days after registration.-->
+    <string name="notification_finish_workout_1_title">Take the first step, %s!</string>
+    <!--Notification Message. When user doesn't finish first workout within n days after registration.-->
+    <string name="notification_finish_workout_1_message">The beginning is the most important part of any journey. Start your personal workout plan today!</string>
+    <!--Notification Title. When user doesn't finish first workout within n days after registration.-->
+    <string name="notification_finish_workout_2_title">Start your first workout!</string>
+    <!--Notification Message. When user doesn't finish first workout within n days after registration.-->
+    <string name="notification_finish_workout_2_message">You don\'t have to be great to start, but you have to start to be great. Start your personal workout plan today!</string>
+    <!--Notification Title. When user doesn't finish first workout within n days after registration.-->
+    <string name="notification_finish_workout_3_title">%s, start today!</string>
+    <!--Notification Message. When user doesn't finish first workout within n days after registration.-->
+    <string name="notification_finish_workout_3_message">The most important step of all is the first step. Start your personal workout plan today!</string>
+    <!--Notification title. When user is offline for n days after his last workout. '%s' is a parameter and stands for users Name. It doesn't have to be used. Please be creative and don't translate word-by-word.-->
+    <string name="notification_retention_1_title">%s, persistence is the key!</string>
+    <!--Notification message. When user is offline for n days after his last workout. Please be creative and don't translate word-by-word.-->
+    <string name="notification_retention_1_message">You\'ve come this far. Don\'t give up on your next workout!</string>
+    <!--Notification title. When user is offline for n days after his last workout. Please be creative and don't translate word-by-word.-->
+    <string name="notification_retention_2_title">Don\'t quit now!</string>
+    <!--Notification message. When user is offline for n days after his last workout. Please be creative and don't translate word-by-word.-->
+    <string name="notification_retention_2_message">Complete your workout today. You\'ll feel amazing!</string>
+    <!--Notification title. When user is offline for n days after his last workout. '%s' is a parameter and stands for users Name. It doesn't have to be used. Please be creative and don't translate word-by-word.-->
+    <string name="notification_retention_3_title">Don\'t give up on you, %s!</string>
+    <!--Notification message. When user is offline for n days after his last workout. Please be creative and don't translate word-by-word.-->
+    <string name="notification_retention_3_message">It\'s a slow process but quitting won\'t speed it up. Let\'s get back on track today!</string>
+    <!--Notification title. When user is offline for n days after his last workout. Please be creative and don't translate word-by-word.-->
+    <string name="notification_retention_4_title">Let\'s get back on track!</string>
+    <!--Notification message. When user is offline for n days after his last workout. Please be creative and don't translate word-by-word.-->
+    <string name="notification_retention_4_message">When you are giving up, someone is still going. Return to your workout today!</string>
+    <string name="pro_x_per_month">%s/month</string>
+    <string name="pro_paywall_title_get_your_plan">Get your personalized training plan!</string>
+    <string name="pro_paywall_title_fitify_pro_off">Fitify Pro with %d%% Off</string>
+    <string name="pro_paywall_title_start_with_discount">Start with a %d%% discount!</string>
+    <string name="pro_paywall_subtitle_plan_ready">Your custom plan with video guides is ready.</string>
+    <string name="pro_paywall_subtitle_join_millions">Join 15 million users on Fitify Pro.</string>
+    <string name="pro_paywall_subtitle_hurry">Hurry! This is a time-limited offer.</string>
+    <string name="pro_paywall_pricing_save">Save %d%%</string>
+    <string name="pro_paywall_cta_get_my_plan">Get My Plan</string>
+    <string name="pro_paywall_cta_claim_offer_subscribe">Claim Offer &amp; Subscribe</string>
+    <string name="pro_paywall_pricing_terms_free_trial">%d-day free trial.</string>
+    <string name="pro_paywall_pricing_terms_regular_price">%d per year.</string>
+    <!--This is an offer where you pay a discounted fee for the first e.g. 12 months, then the price increases.-->
+    <string name="pro_paywall_pricing_terms_introductory_price">%d for first year.</string>
+    <string name="pro_paywall_pricing_terms_cancel_anytime">Cancel anytime.</string>
+    <string name="pro_paywall_guarantee_title">30-day money-back guarantee</string>
+    <string name="pro_paywall_guarantee_explanation">We\'re confident you\'ll be satisfied with our training plan. If you try the plan for 30 days and don\'t get results, get in touch with us, and we\'ll give you your money back.</string>
+    <string name="watch_workout_interrupted">Resume the training on your phone</string>
+    <string name="watch_quit_workout">Quit</string>
+    <string name="pro_subtitle_join_millions">Join over 15 million users and get full access to carefully selected professional workout plans personalized for you.</string>
+    <string name="onboarding_generator_analyzing_data">Analyzing your data</string>
+    <string name="onboarding_generator_creating_plan">Creating your plan</string>
+    <string name="onboarding_generator_first_week">Building your first week</string>
+    <string name="welcome_title_welcome_to_fitify">Welcome to Fitify.</string>
+    <string name="welcome_subtitle_transform_yourself">Transform yourself with personalized workout plans that evolve as you go.</string>
+    <string name="welcome_title_your_personal_fitness_coach">Your Personal Fitness Coach</string>
+    <string name="welcome_get_started">Get Started</string>
+    <string name="onboarding_gender_subtitle">Pick the one you feel closest to.</string>
+    <string name="onboarding_first_name_title">What’s your name?</string>
+    <string name="onboarding_first_name">First name</string>
+    <string name="onboarding_problem_areas_title_2">Which parts should we focus on?</string>
+    <string name="onboarding_goal_weight_title_2">Alright, now your target weight</string>
+    <string name="widget_library_weight_subtitle">Track your weight.</string>
+    <string name="widget_library_workout_title">Workout</string>
+    <string name="widget_library_workout_small_subtitle">Displays your next workout.</string>
+    <string name="widget_library_workout_medium_subtitle">Displays your next workout and weekly stats.</string>
+    <string name="error_no_subscription">There is no subscription found to restore</string>
+    <string name="error_subscription_activation">Subscription activation failed. Please, try again.</string>
+    <string name="purchase_unknown_error_dialog_title">Unknown Error</string>
+    <string name="purchase_unknown_error_dialog_message">Some error occurred :( Please contact us at %s</string>
+    <string name="purchase_not_avilable_dialog_title">Billing Not Available</string>
+    <string name="purchase_not_avilable_dialog_message">Google Play billing is not available. Try updating \"Google Play services\".</string>
+    <string name="onboarding_title">Onboarding</string>
+    <!--Also means "Do not have an account yet?"-->
+    <string name="onboarding_not_registered_yet">Not registered yet?</string>
+    <string name="watch_integration_app_not_installed_content">Please install Fitify on your watch to keep track of the workout progress on your wrist.</string>
+    <string name="watch_integration_app_not_installed_title">Install app</string>
+    <string name="welcome_title">Welcome to the family</string>
+    <string name="winback_dialog_title">Continue Purchase?</string>
+    <string name="winback_dialog_message">Users who commit are four times more likely to reach their fitness goals.</string>
+    <string name="pref_huawei_watch">Huawei Watch</string>
+    <string name="pref_watch_connected">Connected: %s</string>
+    <string name="pref_watch_not_available">Pair your watch in Health</string>
+    <string name="set_duration">Set Duration</string>
+    <plurals name="minutes_qty">
+        <item quantity="one">minute</item>
+        <item quantity="other">minutes</item>
+    </plurals>
+    <string name="rest">Rest</string>
+    <string name="full_body">Full Body</string>
+    <string name="shoulder_and_upper_back">Shoulder and Upper Back</string>
+    <string name="core_strengthening">Core Strength</string>
+    <string name="shoulder_and_back">Shoulder &amp; Back</string>
+    <string name="upper_body">Upper Body</string>
+    <string name="lower_body">Lower Body</string>
+    <string name="cardio">Cardio</string>
+    <string name="stretch_relief">Stretch &amp; Relief</string>
+    <string name="back_pain_killer">Back Pain Killer</string>
+    <string name="back_pain_preventer">Back Pain Preventer</string>
+    <string name="neck_pain_preventer">Neck Pain Preventer</string>
+    <string name="full_body_rolling">Full Body Rolling</string>
+    <string name="legs_rolling">Legs Rolling</string>
+    <string name="back_rolling">Back Rolling</string>
+    <string name="core_strength">Core Strength</string>
+    <string name="full_body_strength">Full Body Strength</string>
+    <string name="neck_release">Neck Release</string>
+    <string name="bwcore_insane_sixpack">Insane Six Pack</string>
+    <string name="bwcore_complex_core">Complex Core</string>
+    <string name="bwcore_strong_back">Strong Back</string>
+    <string name="bwwarmup_warmup">Warm Up</string>
+    <string name="bwwarmup_cooldown">Cool Down</string>
+    <string name="bwlegs_lower_body_complex">Complex Lower Body</string>
+    <string name="bwlegs_explosive_power">Explosive Power Jumps</string>
+    <string name="bwlegs_brazilian_butt">Amazing Butt</string>
+    <string name="bwlegs_stretch_and_release">Stretch &amp; Release</string>
+    <string name="bwlegs_lower_body_cardio">Legs &amp; Cardio</string>
+    <string name="bwlegs_squats_only">Squats Only</string>
+    <string name="bwupper_upper_body_complex">Complex Upper Body</string>
+    <string name="bwupper_huge_arms">Arm Blaster</string>
+    <string name="bwupper_huge_chest">Monster Chest</string>
+    <string name="bwupper_shoulders_and_upperback">Shoulders &amp; Upper Back</string>
+    <string name="bwupper_pushups_only">Push-Ups Only</string>
+    <!-- BWCardio -->
+    <string name="bwcardio_high_intensity">HIIT</string>
+    <string name="bwcardio_light_cardio">Light Cardio</string>
+    <string name="bwcardio_plyometric_jumps">Plyometrics</string>
+    <string name="bwcardio_low_impact_cardio">Joint Friendly</string>
+    <string name="bwstretching_full_body_stretching">Full Body Stretching</string>
+    <string name="bwstretching_upper_body_stretching">Upper Body Stretching</string>
+    <string name="bwstretching_lower_body_stretching">Lower Body Stretching</string>
+    <string name="bwstretching_back_stretching">Back Stretching</string>
+    <string name="balance_and_coordination">Balance &amp; Coordination</string>
+    <string name="ccore">Core</string>
+    <string name="cwarmup">Warmup</string>
+    <string name="clegs">Legs</string>
+    <string name="cupper_body">Upper Body</string>
+    <string name="cback_and_shoulders">Back &amp; Shoulders</string>
+    <string name="ccardio">Cardio</string>
+    <string name="cstretching">Stretching</string>
+    <string name="pstanding">Standing</string>
+    <string name="pkneeling">Kneeling</string>
+    <string name="pseated">Seated</string>
+    <string name="psupine">Supine</string>
+    <string name="pspecial">Special</string>
+    <string name="wsettitle_tabata">Tabata</string>
+    <!-- Workout consisting of 30s intervals of strength exercises (pushups) followed by 1 minute intervalls of light cardio (jogging in place).
+Alternatives: "Alternating Intensity" "Variable Intensity" -->
+    <string name="wsettitle_cardio_sprint">Cardio-Strength Intervals</string>
+    <string name="wsettitle_seven_minute">Scientific 7 minutes</string>
+    <string name="wsettitle_balance_and_coordination">Balance &amp; Coordination</string>
+    <string name="tts_language">en</string>
+    <!-- This instruction is spoken by a Text-To-Speach engine during a workout. -->
+    <string name="tts_welcome_back">Welcome back</string>
+    <!-- This instruction is spoken by a Text-To-Speach engine during a workout. -->
+    <string name="tts_get_ready_for">Get ready for</string>
+    <!-- This instruction is spoken by a Text-To-Speach engine during a workout. -->
+    <string name="tts_get_ready_for_x">Get ready for %s</string>
+    <!-- This instruction is spoken by a Text-To-Speach engine during a workout. -->
+    <string name="tts_go">Begin!</string>
+    <!-- This instruction is spoken by a Text-To-Speach engine during a workout. -->
+    <string name="tts_rest">Rest</string>
+    <!-- This instruction is spoken by a Text-To-Speach engine during a workout. -->
+    <string name="tts_change_sides">Change sides</string>
+    <!-- This instruction is spoken by a Text-To-Speach engine during a workout. -->
+    <string name="tts_congrats">Congratulations, your workout is completed.</string>
+    <string name="error_volume_low">Increase your volume for voice coaching</string>
+    <string name="end_workout">End Workout</string>
+    <string name="end_workout_confirmation">Are you sure you want to end current workout session?</string>
+    <string name="end">End</string>
+    <string name="quit_workout">Quit Workout</string>
+    <string name="quit_workout_confirmation">Are you sure you want to quit current workout session?</string>
+    <string name="quit">Quit</string>
+    <string name="support_fitify">Support Fitify</string>
+    <string name="tweet_about_us">Tweet About Us</string>
+    <string name="share_on_facebook">Share on Facebook</string>
+    <string name="rate_us">5-Star Rating</string>
+    <string name="feedback">Feedback</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="other">Other</string>
+    <string name="disclaimer">Disclaimer</string>
+    <string name="no_custom_workouts">Build your first workout</string>
+    <!-- User Profile -->
+    <string name="save">Save</string>
+    <string name="discard">Discard</string>
+    <string name="edit_workout">Edit Workout</string>
+    <string name="new_workout">New Workout</string>
+    <string name="add_exercises">Add Exercises</string>
+    <string name="add">Add</string>
+    <string name="duration_value_in_seconds">%d s</string>
+    <string name="duration_default">Default</string>
+    <plurals name="x_exercises">
+        <item quantity="one">%d exercise</item>
+        <item quantity="other">%d exercises</item>
+    </plurals>
+    <string name="save_changes">Save Changes</string>
+    <string name="save_workout_changes_confirm">Do you want to save changes in current workout?</string>
+    <plurals name="every_y_exercises">
+        <item quantity="one">every exercise</item>
+        <item quantity="other">every %d exercises</item>
+    </plurals>
+    <string name="no_rests">no rests</string>
+    <string name="cycle_duration">%s minutes per cycle</string>
+    <string name="edit">Edit</string>
+    <string name="start">Start</string>
+    <string name="delete_custom_workout_confirmation">Are you sure you want to delete this workout?</string>
+    <string name="workout_title_required">Workout title is required</string>
+    <string name="workout_title">Workout Title</string>
+    <string name="exercise_duration">Exercise Duration</string>
+    <string name="rest_frequency">Rest Frequency</string>
+    <string name="rest_duration">Rest Duration</string>
+    <string name="pref_get_ready_time">Get Ready Duration</string>
+    <string name="click_plus_to_add_exercises">No exercises added.</string>
+    <string name="duplicate">Duplicate</string>
+    <string name="yoga_fullbody_flexibility">Full Body Flexibility</string>
+    <string name="yoga_lower_body_stretching">For Runners</string>
+    <string name="yoga_flexible_back">Healthy Back</string>
+    <string name="yoga_morning_yoga">Morning Yoga</string>
+    <string name="yoga_for_sleep">Yoga for Sleep</string>
+    <!-- Feedback -->
+    <string name="enjoying_x">Enjoying %s?</string>
+    <string name="enjoying_message">Are you having a good experience with the app so far?</string>
+    <string name="enjoying_yes">Yes!</string>
+    <string name="enjoying_no">Not really</string>
+    <string name="rate_message">How about a rating on Google Play, then?</string>
+    <string name="feedback_message">Would you mind giving us some feedback?</string>
+    <string name="ok_sure">OK, sure</string>
+    <string name="no_thanks">No, thanks</string>
+    <string name="rate_title">Good to hear!</string>
+    <string name="feedback_title">Help us get better</string>
+    <string name="bwupper_chest_and_arms">Chest &amp; Arms</string>
+    <string name="unsaved_changes">Unsaved Changes</string>
+    <string name="unsaved_changes_message">Are you sure you want to discard unsaved changes?</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="custom_duration">Custom…</string>
+    <string name="cancel">Cancel</string>
+    <!-- General -->
+    <string name="ok">OK</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <!-- Disclaimer -->
+    <string name="disclaimer_text">All information provided within the app is of a general nature and is supposed to be used only for educational/entertainment purposes. No information can be taken as medical or other health advice. You agree that use of this information is at your own risk and hold %s harmless from any and all losses, liabilities, injuries or damages resulting from any and all claims.</string>
+    <string name="x_sec">%d sec</string>
+    <string name="x_reps">%d reps</string>
+    <string name="delete">Delete</string>
+    <plurals name="x_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <!-- Custom Workouts -->
+    <string name="custom_add_selected">Add Selected</string>
+    <string name="custom_add_selected_count">Add Selected (%d)</string>
+    <string name="exercises_search">Search</string>
+    <string name="exercises_filter">Filter</string>
+    <string name="custom_drag_and_drop_help">Drag and drop to reorder the exercises</string>
+    <string name="custom_remove_rest">Please remove custom rests before changing the rest frequency</string>
+    <string name="custom_title_default">My Workout</string>
+    <!-- Fitify Workouts + Fitstar -->
+    <string name="preview_workout">Preview Workout</string>
+    <string name="x_of_x">of</string>
+    <!-- Meaning : Standalone Workouts -->
+    <string name="tab_standalone">Workouts</string>
+    <string name="filter_difficulty">Difficulty</string>
+    <string name="nav_custom_workouts">Custom Workouts</string>
+    <string name="workout_exercises">Exercises</string>
+    <string name="workout_calories">Calories</string>
+    <string name="workout_minutes">Minutes</string>
+    <!-- Congratulations -->
+    <string name="btn_continue">Continue</string>
+    <string name="share">Share</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="you_just_completed">You just completed</string>
+    <string name="filter_difficulty_easy">Easy</string>
+    <string name="filter_difficulty_medium">Medium</string>
+    <string name="filter_difficulty_hard">Hard</string>
+    <string name="profile_sessions">Sessions</string>
+    <!-- Weekly Progress View -->
+    <string name="profile_this_week">This Week</string>
+    <!-- Title of a notification channel in settings.
+Could also be "Planned workout" -->
+    <string name="notification_channel_scheduler">Workout Scheduler</string>
+    <!-- Description of a notification channel in settings -->
+    <string name="notification_channel_scheduler_description">Notifies you about an upcoming workout</string>
+    <!-- Synonym: "Workout Reminders" -->
+    <string name="settings_workout_notifications">Workout Notifications</string>
+    <string name="settings_notification_days">Days</string>
+    <!-- Time of reminder -->
+    <string name="settings_notification_time">Time</string>
+    <!-- Settings -->
+    <string name="unit_cm">cm</string>
+    <string name="unit_inches">inches</string>
+    <string name="unit_kg">kg</string>
+    <string name="unit_lbs">lbs</string>
+    <string name="unit_inches_short">in</string>
+    <string name="pref_google_fit">Google Fit</string>
+    <!-- Notifications channels -->
+    <string name="share_workout_text">I just completed %1$d minutes of %2$s with %3$s %4$s</string>
+    <string-array name="schedule_next_workout_notification_titles">
+        <item>Keep fit</item>
+        <item>Go beast mode</item>
+        <item>No pain, no gain</item>
+        <item>Eat. Sleep. Workout. Repeat.</item>
+    </string-array>
+    <string-array name="schedule_next_workout_notification_subtitles">
+        <item>It\'s time for your scheduled workout!</item>
+        <item>Nobody ever got in shape by thinking about it.</item>
+        <item>The only bad workout is the one that didn\'t happen.</item>
+        <item>3 months from now, you will thank yourself.</item>
+    </string-array>
+    <!-- Text of a Notification - Doesn't have to copy the english original. Some short fitness quote would be great.
+Rozhodnout se kolik jich potřebujeme.. 3 jsou doable pro každej jazyk. Aj bych pak přidal (až bude přeloženo)
+Ten facebook bych tam moc netahal, vypadá to že víme moc... -->
+    <string name="state_paused">paused</string>
+    <!-- Workout Player -->
+    <string name="state_change_sides">change sides</string>
+    <string name="login_network_error_message">Please check your internet connection and try again.</string>
+    <string name="login_network_error_title">No Connection</string>
+    <string name="x_of_x_format">%1$s of %2$s</string>
+    <string name="title_sound">Sound</string>
+    <!-- Workout Player -->
+    <string name="workout_skip_warmup">Skip Warmup</string>
+    <string name="round_x_of_x">Round %1$d of %2$d</string>
+    <string name="pref_samsung_health">Samsung Health</string>
+    <!-- Yoga -->
+    <string name="description_yoga_fullbody_flexibility">Start the road to flexibility and open up your entire body.</string>
+    <!--
+    <string name="description_yoga_sitting_all_day"                   >Yoga poses to undo the damage of sitting all day. Find what feels good.</string> -->
+    <string name="description_yoga_lower_body_stretching">Build flexibility in your lower body with these yoga poses.</string>
+    <!--
+    <string name="description_yoga_strong_and_flexible"               >This yoga workout is a great way to lengthen and strengthen all your muscles.</string> -->
+    <string name="description_yoga_flexible_back">This yoga session is a great way to keep your entire back young and flexible.</string>
+    <!--
+    <string name="description_yoga_lower_back"                        >These yoga poses will stretch and strengthen your lower back muscles. They are also great to relieve back pain.</string> -->
+    <string name="description_yoga_morning_yoga">Welcome the new day with a smile on your lips and these yoga exercises.</string>
+    <string name="description_yoga_for_sleep">Bedtime yoga can improve your sleep quality and help you unwind.</string>
+    <string name="workout_skip_warmup_message">Do you want to skip the warmup?</string>
+    <!-- Workout Preview -->
+    <string name="start_workout">Start Workout</string>
+    <string name="title_settings">Settings</string>
+    <string name="profile_achievements">Achievements</string>
+    <!-- User Profile -->
+    <string name="profile_weekly_progress">Weekly Progress</string>
+    <!-- Profile -->
+    <string name="profile_title">Hi, %s</string>
+    <!-- Alternatives:
+"Last challenge"
+"Last mountain"
+"Last" -->
+    <string name="profile_last_position">Last summit</string>
+    <!-- Alternatives:
+"Next mountain"
+"Next summit"
+"Next" -->
+    <string name="profile_next_position">Next challenge</string>
+    <!-- This button lets users to view their journey/progress/achievements -->
+    <string name="profile_my_journey">My Journey</string>
+    <!-- Achievements -->
+    <string name="achievement_started_on"><![CDATA[You started your journey on<br><b>%s</b>]]></string>
+    <!-- Could also be "Voice coach" - there are two options "Beep sound" or "Voice coach". -->
+    <string name="preference_sound_coach_type_voice">Voice</string>
+    <!-- Beep Sound vs. Voice
+It could also be "Beep" or "Sound Effect" -->
+    <string name="preference_sound_coach_type_beep">Beep</string>
+    <string name="preference_sound_coach_type_none">None</string>
+    <string name="preference_sound_coach_type">Coach Type</string>
+    <string name="preference_sound_exercise_names">Exercise Names</string>
+    <string name="preference_sound_welcome_congrats">Welcome &amp; Congrats</string>
+    <string name="preference_sound_exercise_end_countdown">Exercise End Countdown</string>
+    <string name="preference_music">Music</string>
+    <string name="preference_music_listen_on_spotify">Listen on Spotify</string>
+    <string name="allow_notifications">Allow Notifications</string>
+    <!-- Notification Permission Request Dialog -->
+    <string name="notification_permission_title">Notifications</string>
+    <string name="notification_permission_subtitle">Allow notifications for the best motivation and coaching experience.</string>
+    <string name="workout_rating_no">Hell no</string>
+    <string name="workout_rating_awesome">Awesome</string>
+    <!-- Login -->
+    <string name="login_facebook_title">Continue with Facebook</string>
+    <string name="login_google_title">Continue with Google</string>
+    <string name="login_apple_title">Continue with Apple</string>
+    <string name="login_terms_agreement">By signing up you agree to %1$s and %2$s</string>
+    <string name="login_terms">Terms of Service</string>
+    <string name="login_privacy">Privacy Policy</string>
+    <!-- Email Login -->
+    <string name="email_login_title">Sign in to your existing account</string>
+    <string name="email_login_forgot_password">Forgot your password?</string>
+    <string name="email_login_forgot_btn_sign_in">Log In</string>
+    <string name="email_sign_up_hint_name">Your Name</string>
+    <string name="email_sign_up_btn">Sign Up</string>
+    <string name="hint_email">E-mail</string>
+    <string name="hint_password">Password</string>
+    <string name="login_user_not_found_message">Please make sure you are using the same account you used to sign up.</string>
+    <string name="login_user_collision_title">E-mail linked to existing account</string>
+    <string name="login_user_collision_message">Please make sure you are using the same provider you used to sign up.</string>
+    <string name="login_missing_email">Your account does not have an e-mail connected</string>
+    <string name="login_error">Sign in failed, please try again</string>
+    <string name="error_invalid_email">E-mail must be in the format name@domain.com</string>
+    <string name="email_login_invalid_credentials">Invalid Credentials</string>
+    <string name="email_login_invalid_credentials_message">Please check your credentials and try it again.</string>
+    <string name="email_login_error_short_name">Please enter your full name</string>
+    <!-- Sign Up -->
+    <string name="email_sign_up_invalid_credentials">Given e-mail has an invalid format</string>
+    <string name="email_sign_up_invalid_credentials_message">Please check your e-mail and try again</string>
+    <string name="email_sign_up_select_picture">Select Picture</string>
+    <string name="email_sign_up_user_collision_title">E-mail already exists</string>
+    <string name="email_sign_up_user_collision_message">This e-mail is already in use. Try to sign in instead.</string>
+    <string name="error_short_password">Password must be at least 6 chars long</string>
+    <!-- Forgotten password -->
+    <string name="forgot_password_btn_reset">Reset Password</string>
+    <string name="forgot_password_title">Forgot your password?</string>
+    <string name="forgot_password_error">E-mail could not be sent</string>
+    <string name="forgot_password_invalid_email_message">There is no user with such e-mail.</string>
+    <string name="forgot_password_continue">E-mail has been sent!</string>
+    <string name="forgot_password_continue_email">Please check your mailbox and use the provided link to reset your password. Then come back and sign in again.</string>
+    <plurals name="x_calories">
+        <item quantity="one">%d calorie</item>
+        <item quantity="other">%d calories</item>
+    </plurals>
+    <string name="select_from_library">Select from Library</string>
+    <string name="take_photo">Take a Photo</string>
+    <string name="filter_done">Done</string>
+    <string name="fitify_workouts">Fitify Workouts</string>
+    <!-- Settings -->
+    <string name="settings_logout_title">Log Out</string>
+    <string name="title_fitness_plan">Fitness Plan</string>
+    <string name="title_edit_profile">Edit Profile</string>
+    <!-- Exercise packs are donwloadable extensions/packages with exercises you can download. -->
+    <string name="title_exercise_packs">Exercise Packs</string>
+    <string name="title_alerts">Reminders</string>
+    <string name="title_integrations">Integrations</string>
+    <string name="title_subscription">Subscription</string>
+    <string name="title_about">About Fitify</string>
+    <string name="support_email">support@gofitify.com</string>
+    <string name="share_text">Get fit with %1$s!</string>
+    <string name="version_x">Version: %s</string>
+    <!-- Notifications -->
+    <string name="notification_discount_title">Don\'t miss the chance</string>
+    <string name="notification_discount_subtitle">Save %d%% on Fitify Pro. Tap here to get it!</string>
+    <string name="notification_welcome_title">Let\'s begin!</string>
+    <!-- %s = NAME So it looks like this
+"JOHN, we've created a training plan just for you. Ready for a transformation?"
+Mae sure it works for both male and female. -->
+    <string name="notification_welcome_subtitle">%s, we\'ve created a training plan just for you. Ready for a transformation?</string>
+    <string name="onboarding_invalid_value">Please enter a valid value</string>
+    <string name="profile_knee_pain">Knee Pain</string>
+    <string name="knee_pain_none">No problems</string>
+    <string name="knee_pain_mild">Mild pain</string>
+    <string name="knee_pain_serious">Quite serious</string>
+    <string name="onboarding_newsletter_yes">Yes</string>
+    <string name="onboarding_newsletter_no">No</string>
+    <string name="onboarding_gender_female">Female</string>
+    <string name="onboarding_gender_male">Male</string>
+    <string name="onboarding_goal_lose_fat">Lose fat</string>
+    <string name="onboarding_goal_get_fitter">Get fitter</string>
+    <string name="onboarding_goal_gain_muscle">Gain muscle</string>
+    <!-- Edit Profile -->
+    <string name="profile_name">Name</string>
+    <string name="profile_gender">Gender</string>
+    <string name="profile_units">Units</string>
+    <string name="profile_height">Height</string>
+    <string name="profile_weight">Weight</string>
+    <string name="profile_goal">Goal</string>
+    <string name="profile_newsletter">Newsletter</string>
+    <string name="profile_birthday">Birthday</string>
+    <string name="profile_delete_account">Delete Account</string>
+    <string name="profile_delete_account_message">Are you sure you want to delete your account with all your data? This action cannot be undone!</string>
+    <string name="x_min">%d min</string>
+    <!-- Yoga - Standalone App - group_essentials -->
+    <string name="yoga_flexibility_essentials">Flexibility Essentials</string>
+    <string name="yoga_strength_essentials">Strength Essentials</string>
+    <string name="yoga_balance_essentials">Balance Essentials</string>
+    <string name="yoga_supine_essentials">Supine Yoga Essentials</string>
+    <!-- Yoga - Standalone App - group_body_focus -->
+    <string name="yoga_chest_opener">Chest Opener</string>
+    <string name="yoga_hip_opener">Hip Opener</string>
+    <string name="yoga_backbends">Backbends</string>
+    <string name="yoga_twists">Twists</string>
+    <string name="yoga_upper_back_and_neck">Upper Back &amp; Neck</string>
+    <!--
+    <string name="yoga_inversions">Inversion Basics</string> -->
+    <string name="yoga_neck_and_shoulders">Neck &amp; Shoulders</string>
+    <string name="yoga_upper_back">Upper Back</string>
+    <string name="yoga_lower_back">Lower Back</string>
+    <!-- Yoga Standalone App group_keep_healthy -->
+    <string name="yoga_office_yoga">Office Yoga</string>
+    <string name="yoga_sitting_all_day">Yoga After Sitting</string>
+    <string name="yoga_detox">Detox Yoga</string>
+    <!-- Yoga Standalone App group_yoga_for_flexibility -->
+    <string name="full_body_flexibility">Full Body Flexibility</string>
+    <string name="yoga_lower_body_flexibility">Lower Body Flexibility</string>
+    <string name="yoga_stretching_upper_body">Upper Body Flexibility</string>
+    <string name="yoga_stretching_supine">Supine Stretching</string>
+    <!-- Yoga Standalone App group_yoga_for_women -->
+    <string name="yoga_period">Period Pain Relief</string>
+    <string name="yoga_prenatal">Prenatal Yoga</string>
+    <string name="yoga_post_natal">Postnatal Yoga</string>
+    <!-- Yoga Standalone App group_tone_up -->
+    <string name="yoga_for_strength">Yoga for Strength</string>
+    <string name="yoga_core_strength">Core Strength</string>
+    <string name="yoga_strong_and_flexible">Strong &amp; Flexible</string>
+    <string name="yoga_balance_and_strength">Balance &amp; Strength</string>
+    <!-- Yoga Standalone App group_weight_loss -->
+    <string name="yoga_burn">Calorie Burner</string>
+    <string name="yoga_bikini_burn">Burn Fat &amp; Tone Butt</string>
+    <string name="yoga_burn_and_core">Burn Fat &amp; Tone Abs</string>
+    <!-- Yoga Standalone App group_time_of_day -->
+    <string name="yoga_productive_day">Productive Day</string>
+    <!-- Yoga Standalone App group_yoga_for_better_mood -->
+    <string name="yoga_happiness">Happiness Boost</string>
+    <string name="yoga_deep_relax">Deep Relaxation</string>
+    <string name="yoga_energy_booster">Energy Booster</string>
+    <!-- Yoga Standalone App group_yoga_for_sports -->
+    <string name="yoga_runners_performance">Runners – Improve Performance</string>
+    <string name="yoga_runners_after">After Run Stretching</string>
+    <string name="yoga_cyclists">Yoga for Cyclists</string>
+    <string name="description_yoga_sitting_all_day">Yoga poses to undo the damage of sitting all day.</string>
+    <string name="description_yoga_strong_and_flexible">This yoga workout is a great way to lengthen and strengthen all your muscles.</string>
+    <string name="description_yoga_full_body_strength">Yoga practice that includes power and strength asanas.</string>
+    <string name="description_yoga_core_strength">Bring the strength stability and muscle endurance around the belly, hips and pelvic floor.</string>
+    <string name="description_yoga_burn">Get the lean and defined body with this effective fat-burning yoga workout.</string>
+    <string name="description_yoga_bikini_burn">This yoga practice is effective, efficient and invigorating. Feel confident in your skin again.</string>
+    <string name="description_yoga_for_balance">Boost your stability with yoga poses focused on better control of your body.</string>
+    <string name="description_yoga_lower_back">These yoga poses will stretch and strengthen your lower back muscles. They are also great to relieve back pain.</string>
+    <string name="description_yoga_upper_back">Get rid of upper back pain with these upper-body yoga poses.</string>
+    <string name="description_yoga_neck_and_shoulders">Simple yoga poses to relieve tight shoulder and neck muscles.</string>
+    <string name="description_yoga_hip_opener">Best yoga poses to help you increase the mobility of your hips.</string>
+    <string name="description_yoga_chest_opener">Open your heart, find relief, and feel great with this yoga session.</string>
+    <string name="description_yoga_office_yoga">Poses you can comfortably do even in front of your colleagues. Reduce discomfort without any mat or special clothes.</string>
+    <string name="description_yoga_detox">An effective way to clear your body of toxins and speed up your metabolism.</string>
+    <string name="description_yoga_happiness">Forget your troubles, hop on the mat, and be happy!</string>
+    <string name="description_yoga_period">Learn how to alleviate discomfort and adjust to the physical demands of labor.</string>
+    <string name="description_yoga_post_natal">This yoga practice will restore your body and help you to regain your shape and strength.</string>
+    <string name="description_yoga_pre_natal">A practice to address the aches and discomforts of pregnancy.</string>
+    <string name="description_yoga_energy_booster">Yoga poses can help you feel more awake and energized during the day</string>
+    <string name="description_yoga_stretching_upper_body">Exercises to help you achieve a flexible and healthy upper part of the body.</string>
+    <string name="description_yoga_flexibility_essentials">This routine is designed to stretch a little bit of everything.</string>
+    <string name="description_yoga_for_strength">Achieve a strong and functional body for your day-to-day life challenges.</string>
+    <string name="description_yoga_supine_essentials">Supine poses allow you to focus more on your inner self and are extremely gentle to your knees.</string>
+    <string name="description_yoga_upper_back_and_neck">We will focus on targeted areas that get stressed all day long – neck, shoulders, and upper back.</string>
+    <string name="description_yoga_backbends">This practice is designed to deepen your backbends.</string>
+    <string name="description_yoga_twists">Twist can improve blood circulation, digestive function, and reduce back-pain instantly.</string>
+    <string name="description_yoga_stretching_supine">Supine poses to get you the deepest relaxation of the body and mind.</string>
+    <string name="description_yoga_balance_and_strength">Designed for a more balanced, strong, and functional body.</string>
+    <string name="description_yoga_burn_and_core">Burn loads of calories, while strengthening the core, and toning up your abs.</string>
+    <string name="description_yoga_productive_day">Give your brain what it needs to make your mind centered and focused again.</string>
+    <string name="description_yoga_deep_relax">Super gentle practice that will help you let go of any negativity, stress, or anxiety from your day.</string>
+    <string name="description_yoga_runners_performance">Improve your run by strengthening the muscles you didn\'t even know of.</string>
+    <string name="description_yoga_runners_after">Post-run cool down poses to support smooth muscle recovery.</string>
+    <string name="description_yoga_cyclists">Post-ride stretching session for cyclists.</string>
+    <string name="workout_challenge_difficulty_title">Select difficulty</string>
+    <string name="profile_invalid_passowrd">Invalid password</string>
+    <string name="profile_password">Please, enter your password</string>
+    <string name="error_delete_account">Please re-login before deleting your account</string>
+    <!-- Some workouts are free while others are Pro/Premium/Paid... -->
+    <string name="pro">Pro</string>
+    <string name="pro_free_trial">7-day free trial</string>
+    <plurals name="pro_free_trial_x_weeks">
+        <item quantity="one">%d-week free trial</item>
+        <item quantity="other">%d-week free trial</item>
+    </plurals>
+    <string name="pro_trial_terms">* Cancel anytime during the trial period without cost. Will automatically extend to 1 year for %s.</string>
+    <string name="pro_weekly_price">%s / week</string>
+    <string name="pro_month_subscription_price">1 month %s</string>
+    <string name="pro_year_subscription_price">1 year %s</string>
+    <string name="pro_success">Your fitness journey begins now!</string>
+    <!-- Exercise Category -->
+    <string name="tool_yoga">Yoga</string>
+    <!-- Exercise Categories -->
+    <string name="ex_category_cardio">Cardio</string>
+    <!-- Exercise Category -->
+    <string name="ex_category_lower_body">Lower Body</string>
+    <!-- Exercise Category -->
+    <string name="ex_category_upper_body">Upper Body</string>
+    <!-- Exercise Category
+nepřesné - je to spíš Abs &amp; back -->
+    <string name="ex_category_core">Abs &amp; Core</string>
+    <!-- Exercise Category -->
+    <string name="ex_category_stretching">Stretching</string>
+    <!-- Filter -->
+    <string name="filter_category">Category</string>
+    <!-- Instructions -->
+    <string name="instructions_title">Instructions</string>
+    <string name="instruction_title_hints">Hints</string>
+    <string name="instruction_title_harder">How to make it harder?</string>
+    <string name="instruction_title_easier">How to make it easier?</string>
+    <!-- How to breathe instructions -->
+    <string name="instruction_title_breathing">Breathing</string>
+    <!-- Muscle Diagram -->
+    <string name="muscle_focus">Muscle Focus</string>
+    <string name="resistance_intensity">Resistance Intensity</string>
+    <string name="stretching_intensity">Stretching Intensity</string>
+    <string name="profile_no_sessions">There are no sessions for this week</string>
+    <string name="pro_free_trial_3days">3-day free trial</string>
+    <string name="promo_countdown">Offer ends: %s</string>
+    <!-- Promo -->
+    <string name="promo_not_available">Not Available</string>
+    <string name="promo_extended_trial_used">As you have already used a free trial, you are not eligible for this promotion.</string>
+    <string name="promo_title_general">Invest in your body!</string>
+    <string name="primary_pro_purchase_promo_title">Get %1$d%% off!</string>
+    <string name="error_could_not_get_uri">We were unable to retrieve the image</string>
+    <!-- Eg. "Save 50%" -->
+    <string name="pro_save_x_percent">Save %1$d%%!</string>
+    <!-- different platform means Android or iOS -->
+    <string name="subscription_on_different_platform_title">Other Platform</string>
+    <!-- different platform means Android or iOS -->
+    <string name="subscription_on_different_platform_message">It looks like you have subscribed on a different platform. You can manage your active subscription there.</string>
+    <string name="profile_weight_tracking">Weight Tracking</string>
+    <string name="onboarding_goal_get_toned">Get toned</string>
+    <string name="reset_tutorial">Reset Tutorial</string>
+    <string name="tutorial_reset_success">Tutorial has been reset</string>
+    <!-- Engagement notifications -->
+    <string name="notification_engage_1_title">Your coach is waiting, don\'t be late!</string>
+    <string name="notification_engage_1_subtitle">%s has created an awesome fitness plan just for you. Tap here and start!</string>
+    <string name="notification_engage_2_title">You didn\'t show up at yesterday\'s training!</string>
+    <string name="notification_engage_2_subtitle">I was waiting for you, %s! I thought you wanted to make a change, didn\'t you?</string>
+    <string name="notification_engage_3_title">You were gonna start the training plan, weren\'t you, %s?</string>
+    <string name="notification_engage_3_subtitle">Tap here to keep the promise!</string>
+    <string name="onboarding_goal_lose_weight">Lose weight</string>
+    <string name="profile_progress_pics">Progress Pics</string>
+    <!-- Progress Pics -->
+    <string name="progress_pics_before">Before</string>
+    <string name="progress_pics_after">After</string>
+    <string name="state_get_ready">get ready</string>
+    <plurals name="pro_free_trial_x_days">
+        <item quantity="one">%d-day free trial</item>
+        <item quantity="other">%d-day free trial</item>
+    </plurals>
+    <!--Possible alternative would be "How to count?", "Counting", "Counting Repetitions"...-->
+    <string name="instruction_title_repetitions">Repetitions</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="monday_short">Mon</string>
+    <string name="tuesday_short">Tue</string>
+    <string name="wednesday_short">Wed</string>
+    <string name="thursday_short">Thu</string>
+    <string name="friday_short">Fri</string>
+    <string name="saturday_short">Sat</string>
+    <string name="sunday_short">Sun</string>
+</resources>

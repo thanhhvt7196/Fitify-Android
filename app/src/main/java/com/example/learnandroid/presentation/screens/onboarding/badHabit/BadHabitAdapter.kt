@@ -5,10 +5,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.learnandroid.domain.models.BadHabit
-import com.example.learnandroid.domain.models.FitnessTool
 import com.example.learnandroid.presentation.screens.onboarding.views.OnboardingTextItemView
 
-class BadHabitAdapter(private val badHabits: List<Pair<BadHabit, Boolean>>) :
+class BadHabitAdapter(badHabits: List<Pair<BadHabit, Boolean>>) :
     RecyclerView.Adapter<BadHabitAdapter.ViewHolder>() {
 
     private var dataSet: List<Pair<BadHabit, Boolean>> = badHabits

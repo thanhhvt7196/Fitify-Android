@@ -1,6 +1,5 @@
 package com.example.learnandroid.presentation.screens.onboarding.age
 
-import android.util.Log
 import android.view.inputmethod.EditorInfo
 import androidx.core.content.ContextCompat
 import androidx.core.widget.addTextChangedListener
@@ -29,7 +28,6 @@ class OnboardingAgeFragment :
     private var delegate: OnboardingAgeDelegate? = null
 
     companion object {
-        const val tag = "OnboardingAgeFragment"
         fun newInstance(): OnboardingAgeFragment {
             return OnboardingAgeFragment()
         }
@@ -78,6 +76,7 @@ class OnboardingAgeFragment :
                         }
                         return@setOnEditorActionListener true
                     }
+
                     else -> false
                 }
             }
@@ -94,7 +93,7 @@ class OnboardingAgeFragment :
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.age.collect { age ->
                 val isEnabled = age?.let {
-                    it in AppConstants.minAge..AppConstants.maxAge
+                    it in AppConstants.MIN_AGE..AppConstants.MAX_AGE
                 } ?: run {
                     false
                 }

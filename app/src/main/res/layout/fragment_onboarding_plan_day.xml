@@ -19,7 +19,7 @@
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/messageTextView"
@@ -32,10 +32,10 @@
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:orientation="horizontal"
+        android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@id/messageTextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,6 +43,12 @@
         android:layout_marginHorizontal="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
+
+        <com.example.learnandroid.presentation.screens.onboarding.views.OnboardingTrainingDayItem
+            android:id="@+id/mondayButton"
+            app:title="@string/monday_short"
+            android:layout_width="75dp"
+            android:layout_height="64dp" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

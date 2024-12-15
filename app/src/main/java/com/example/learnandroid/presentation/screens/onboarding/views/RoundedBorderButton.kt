@@ -5,11 +5,10 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.content.ContextCompat
 import com.example.learnandroid.R
-import com.google.android.material.card.MaterialCardView
 
-class RoundedBorderButton(context: Context, attrs: AttributeSet): ConstraintLayout(context, attrs) {
+class RoundedBorderButton(context: Context, attrs: AttributeSet) :
+    ConstraintLayout(context, attrs) {
     init {
         LayoutInflater.from(context).inflate(R.layout.rounded_border_button, this, true)
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.RoundedBorderButton)

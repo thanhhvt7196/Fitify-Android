@@ -8,7 +8,10 @@ import com.example.learnandroid.domain.models.Source
 import com.example.learnandroid.presentation.screens.base.BaseViewBindingFragment
 import kotlinx.coroutines.launch
 
-class OnboardingSourceFragment : BaseViewBindingFragment<FragmentOnboardingSourceBinding, OnboardingSourceViewModel>(FragmentOnboardingSourceBinding::inflate) {
+class OnboardingSourceFragment :
+    BaseViewBindingFragment<FragmentOnboardingSourceBinding, OnboardingSourceViewModel>(
+        FragmentOnboardingSourceBinding::inflate
+    ) {
     override val viewModel: OnboardingSourceViewModel by viewModels()
 
     private var adapter = SourceAdapter(emptyList())
@@ -20,7 +23,6 @@ class OnboardingSourceFragment : BaseViewBindingFragment<FragmentOnboardingSourc
     private var delegate: OnboardingSourceDelegate? = null
 
     companion object {
-        const val tag = "OnboardingSourceFragment"
         fun newInstance(): OnboardingSourceFragment {
             return OnboardingSourceFragment()
         }

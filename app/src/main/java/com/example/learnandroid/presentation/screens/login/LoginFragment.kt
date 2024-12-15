@@ -77,7 +77,6 @@ class LoginFragment :
     private val planDayFragment = OnboardingPlanDayFragment.newInstance()
 
     companion object {
-        const val tag = "LoginFragment"
         fun newInstance(): LoginFragment {
             return LoginFragment()
         }

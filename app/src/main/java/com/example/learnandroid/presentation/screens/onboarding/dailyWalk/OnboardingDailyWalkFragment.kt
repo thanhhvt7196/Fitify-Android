@@ -20,7 +20,6 @@ class OnboardingDailyWalkFragment :
     private var delegate: OnboardingDailyWalkDelegate? = null
 
     companion object {
-        const val tag = "OnboardingDailyWalkFragment"
         fun newInstance(): OnboardingDailyWalkFragment {
             return OnboardingDailyWalkFragment()
         }
@@ -42,9 +41,9 @@ class OnboardingDailyWalkFragment :
             oneToTwoButton.isSelected = false
             lessThanOneButton.isSelected = false
 
-            moreThanTwoButton.config(DailyWalk.MORE_THAN_TWO_HOURs.getTitle(requireActivity()))
+            moreThanTwoButton.config(DailyWalk.MORE_THAN_TWO_HOURS.getTitle(requireActivity()))
             moreThanTwoButton.setOnClickListener {
-                viewModel.setDailyWalk(DailyWalk.MORE_THAN_TWO_HOURs)
+                viewModel.setDailyWalk(DailyWalk.MORE_THAN_TWO_HOURS)
             }
 
             oneToTwoButton.config(DailyWalk.ONE_TO_TWO_HOURS.getTitle(requireActivity()))
@@ -63,7 +62,7 @@ class OnboardingDailyWalkFragment :
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.dailyWalk.collect { dailyWalk ->
                 viewBinding.apply {
-                    moreThanTwoButton.isSelected = dailyWalk == DailyWalk.MORE_THAN_TWO_HOURs
+                    moreThanTwoButton.isSelected = dailyWalk == DailyWalk.MORE_THAN_TWO_HOURS
                     oneToTwoButton.isSelected = dailyWalk == DailyWalk.ONE_TO_TWO_HOURS
                     lessThanOneButton.isSelected = dailyWalk == DailyWalk.LESS_THAN_AN_HOUR
                 }

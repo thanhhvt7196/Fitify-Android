@@ -23,7 +23,6 @@ class OnboardingBadHabitFragment :
     private var delegate: OnboardingBadHabitDelegate? = null
 
     companion object {
-        const val tag = "OnboardingBadHabitFragment"
         fun newInstance(): OnboardingBadHabitFragment {
             return OnboardingBadHabitFragment()
         }

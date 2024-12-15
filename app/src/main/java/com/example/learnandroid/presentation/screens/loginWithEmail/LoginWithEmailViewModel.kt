@@ -5,7 +5,6 @@ import com.example.learnandroid.presentation.screens.base.BaseViewModel
 import com.example.learnandroid.utils.constants.AppConstants
 import com.example.learnandroid.utils.extensions.isEmail
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -13,11 +12,14 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.launch
 
 class LoginWithEmailViewModel : BaseViewModel() {
-    private val _email = MutableStateFlow<String>("")
-    private val _password = MutableStateFlow<String>("")
+    private val _email = MutableStateFlow("")
+    private val _password = MutableStateFlow("")
 
-    private val _isValidData = MutableStateFlow<Boolean>(false)
+    private val _isValidData = MutableStateFlow(false)
     val isValidData: StateFlow<Boolean> = _isValidData.asStateFlow()
+
+    var emailInvalidMessage = ""
+    var passwordShortMessage = ""
 
     init {
         bindingData()
@@ -31,7 +33,7 @@ class LoginWithEmailViewModel : BaseViewModel() {
                 }
                 .collect { (newEmail, newPassword) ->
                     validateData(newEmail, newPassword)?.let {
-                        _errorMessage.postValue(it)
+                        errorMessageData.postValue(it)
                         _isValidData.value = false
                     } ?: run {
                         _isValidData.value = true
@@ -42,10 +44,10 @@ class LoginWithEmailViewModel : BaseViewModel() {
 
     private fun validateData(email: String, password: String): String? {
         if (!email.isEmail()) {
-            return AppConstants.emailInvalidMessage
+            return emailInvalidMessage
         }
-        if (password.length < AppConstants.passwordMinimumCharacters || password.length > AppConstants.passwordMaximumCharacters) {
-            return AppConstants.passwordShortMessage
+        if (password.length < AppConstants.PASSWORD_MINIMUM_CHARACTERS || password.length > AppConstants.PASSWORD_MAXIMUM_CHARACTERS) {
+            return passwordShortMessage
         }
         return null
     }
@@ -55,14 +57,14 @@ class LoginWithEmailViewModel : BaseViewModel() {
     }
 
     private fun login(email: String, password: String) {
-        _isLoading.value = true
+        isLoadingData.value = true
         validateData(email, password)?.let { message ->
-            _errorMessage.postValue(message)
-            _isLoading.value = false
+            errorMessageData.postValue(message)
+            isLoadingData.value = false
         } ?: run {
             viewModelScope.launch {
                 delay(3000)
-                _isLoading.value = false
+                isLoadingData.value = false
             }
         }
 

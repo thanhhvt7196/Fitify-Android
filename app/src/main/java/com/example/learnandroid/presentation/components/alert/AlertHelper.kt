@@ -1,7 +1,6 @@
 package com.example.learnandroid.presentation.components.alert
 
 import android.content.Context
-import android.content.DialogInterface.OnShowListener
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import com.example.learnandroid.FitifyApplication
@@ -13,7 +12,7 @@ object AlertHelper {
         context: Context,
         title: String?,
         message: String?,
-        confirmTitle: String? = FitifyApplication.mContext.getString(
+        confirmTitle: String? = context.getString(
             R.string.ok
         )
     ) {

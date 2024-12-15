@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.learnandroid.domain.models.Source
 import com.example.learnandroid.presentation.screens.onboarding.views.OnboardingTextItemView
 
-class SourceAdapter(private val sources: List<Pair<Source, Boolean>>) :
+class SourceAdapter(sources: List<Pair<Source, Boolean>>) :
     RecyclerView.Adapter<SourceAdapter.ViewHolder>() {
 
     private var dataSet: List<Pair<Source, Boolean>> = sources

@@ -9,12 +9,14 @@ import com.example.learnandroid.R
 import com.example.learnandroid.databinding.FragmentOnboardingHeightBinding
 import com.example.learnandroid.presentation.screens.base.BaseViewBindingFragment
 import com.example.learnandroid.utils.constants.AppConstants
-import com.example.learnandroid.utils.extensions.firstCapitalize
 import com.example.learnandroid.utils.extensions.focus
 import com.example.learnandroid.utils.extensions.unFocus
 import kotlinx.coroutines.launch
 
-class OnboardingHeightFragment : BaseViewBindingFragment<FragmentOnboardingHeightBinding, OnboardingHeightViewModel>(FragmentOnboardingHeightBinding::inflate) {
+class OnboardingHeightFragment :
+    BaseViewBindingFragment<FragmentOnboardingHeightBinding, OnboardingHeightViewModel>(
+        FragmentOnboardingHeightBinding::inflate
+    ) {
     override val viewModel: OnboardingHeightViewModel by viewModels()
 
     interface OnboardingHeightDelegate {
@@ -24,7 +26,6 @@ class OnboardingHeightFragment : BaseViewBindingFragment<FragmentOnboardingHeigh
     private var delegate: OnboardingHeightDelegate? = null
 
     companion object {
-        const val tag = "OnboardingHeightFragment"
         fun newInstance(): OnboardingHeightFragment {
             return OnboardingHeightFragment()
         }
@@ -72,6 +73,7 @@ class OnboardingHeightFragment : BaseViewBindingFragment<FragmentOnboardingHeigh
                         }
                         return@setOnEditorActionListener true
                     }
+
                     else -> false
                 }
             }
@@ -88,7 +90,7 @@ class OnboardingHeightFragment : BaseViewBindingFragment<FragmentOnboardingHeigh
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.height.collect { height ->
                 val isEnabled = height?.let {
-                    it in AppConstants.minHeight..AppConstants.maxHeight
+                    it in AppConstants.MIN_HEIGHT..AppConstants.MAX_HEIGHT
                 } ?: run {
                     false
                 }

@@ -21,7 +21,7 @@ import com.example.learnandroid.utils.extensions.unFocus
 import kotlinx.coroutines.launch
 
 
-class OnboardingWeightFragment() :
+class OnboardingWeightFragment :
     BaseViewBindingFragment<FragmentOnboardingWeightBinding, OnboardingWeightViewModel>(
         FragmentOnboardingWeightBinding::inflate
     ) {
@@ -34,7 +34,6 @@ class OnboardingWeightFragment() :
     }
 
     companion object {
-        const val tag = "OnboardingWeightFragment"
         fun currentWeightNewInstance(): OnboardingWeightFragment {
             return OnboardingWeightFragment()
         }
@@ -65,18 +64,22 @@ class OnboardingWeightFragment() :
             arguments?.getString("type")?.let { type ->
                 when (type) {
                     Type.TARGET_WEIGHT.name -> {
-                        titleTextView.text = requireActivity().getString(R.string.onboarding_goal_weight_title_2)
+                        titleTextView.text =
+                            requireActivity().getString(R.string.onboarding_goal_weight_title_2)
                         minusButton.isVisible = true
                         plusButton.isVisible = true
                     }
+
                     else -> {
-                        titleTextView.text = requireActivity().getString(R.string.onboarding_current_weight_title)
+                        titleTextView.text =
+                            requireActivity().getString(R.string.onboarding_current_weight_title)
                         minusButton.isVisible = false
                         plusButton.isVisible = false
                     }
                 }
             } ?: run {
-                titleTextView.text = requireActivity().getString(R.string.onboarding_current_weight_title)
+                titleTextView.text =
+                    requireActivity().getString(R.string.onboarding_current_weight_title)
                 minusButton.isVisible = false
                 plusButton.isVisible = false
             }
@@ -108,11 +111,20 @@ class OnboardingWeightFragment() :
             }
 
             val inputFilter = object : InputFilter {
-                override fun filter(source: CharSequence?, start: Int, end: Int, dest: Spanned?, dstart: Int, dend: Int): CharSequence? {
-                    val newText = dest.toString().substring(0, dstart) + source.toString() + dest.toString().substring(dend)
-                    if (newText.isFloat && newText.toFloat() < AppConstants.maxWeight) {
+                override fun filter(
+                    source: CharSequence?,
+                    start: Int,
+                    end: Int,
+                    dest: Spanned?,
+                    dstart: Int,
+                    dend: Int
+                ): CharSequence? {
+                    val newText =
+                        dest.toString().substring(0, dstart) + source.toString() + dest.toString()
+                            .substring(dend)
+                    if (newText.isFloat && newText.toFloat() < AppConstants.MAX_WEIGHT) {
                         newText.countDecimalPlaces()?.let {
-                            return if (it > AppConstants.weightDecimalDigits) "" else null
+                            return if (it > AppConstants.WEIGHT_DECIMAL_DIGITS) "" else null
                         } ?: run {
                             return ""
                         }
@@ -124,7 +136,7 @@ class OnboardingWeightFragment() :
 
             weightTextField.filters = arrayOf(inputFilter)
 
-            weightTextField.addTextChangedListener{ editable ->
+            weightTextField.addTextChangedListener { editable ->
                 editable?.let {
                     val newText = it.toString()
                     val floatValue = newText.toFloatOrNull()
@@ -160,7 +172,7 @@ class OnboardingWeightFragment() :
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.weight.collect { weight ->
                 val isEnabled = weight?.let {
-                    it in AppConstants.minWeight..AppConstants.maxWeight
+                    it in AppConstants.MIN_WEIGHT..AppConstants.MAX_WEIGHT
                 } ?: run {
                     false
                 }
@@ -173,9 +185,10 @@ class OnboardingWeightFragment() :
     private fun addWeight(value: Float) {
         val currentWeight = viewModel.weight.value ?: hintWeight ?: 0f
         val newWeight = (currentWeight + value).roundTo(1)
-        if (newWeight >= AppConstants.minWeight && newWeight <= AppConstants.maxWeight) {
+        if (newWeight >= AppConstants.MIN_WEIGHT && newWeight <= AppConstants.MAX_WEIGHT) {
             viewBinding.apply {
-                val cursorStartFromEnd = weightTextField.text.length - weightTextField.selectionStart
+                val cursorStartFromEnd =
+                    weightTextField.text.length - weightTextField.selectionStart
                 weightTextField.setText(newWeight.toStringWithoutTrailingZero())
                 if (cursorStartFromEnd >= 0 && cursorStartFromEnd <= weightTextField.text.length) {
                     weightTextField.setSelection(weightTextField.text.length - cursorStartFromEnd)

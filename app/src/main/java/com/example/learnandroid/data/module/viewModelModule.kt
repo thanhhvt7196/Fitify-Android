@@ -14,7 +14,7 @@ import com.example.learnandroid.presentation.screens.onboarding.badHabit.Onboard
 import com.example.learnandroid.presentation.screens.onboarding.commitContract.OnboardingCommitContractViewModel
 import com.example.learnandroid.presentation.screens.onboarding.dailyWalk.OnboardingDailyWalkViewModel
 import com.example.learnandroid.presentation.screens.onboarding.energyLevel.OnboardingEnergyLevelViewModel
-import com.example.learnandroid.presentation.screens.onboarding.fitnessTool.OnboardingFitneesToolViewModel
+import com.example.learnandroid.presentation.screens.onboarding.fitnessTool.OnboardingFitnessToolViewModel
 import com.example.learnandroid.presentation.screens.onboarding.gender.OnboardingGenderViewModel
 import com.example.learnandroid.presentation.screens.onboarding.goal.OnboardingGoalViewModel
 import com.example.learnandroid.presentation.screens.onboarding.height.OnboardingHeightViewModel
@@ -42,7 +42,7 @@ val viewModelModule = module {
     viewModel { OnboardingPushUpViewModel() }
     viewModel { OnboardingFrequencyViewModel() }
     viewModel { OnboardingActiveStatusViewModel() }
-    viewModel { OnboardingFitneesToolViewModel() }
+    viewModel { OnboardingFitnessToolViewModel() }
     viewModel { OnboardingKneePainViewModel() }
     viewModel { OnboardingHeightViewModel() }
     viewModel { OnboardingWeightViewModel() }

@@ -9,8 +9,8 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 
-class OnboardingBadHabitViewModel: BaseViewModel() {
-    private val _allBadHabits = MutableStateFlow<List<Pair<BadHabit, Boolean>>>(BadHabit.values().map { Pair(it, false) })
+class OnboardingBadHabitViewModel : BaseViewModel() {
+    private val _allBadHabits = MutableStateFlow(BadHabit.values().map { Pair(it, false) })
     val allBadHabits = _allBadHabits.asStateFlow()
 
     private val selectedHabit = MutableSharedFlow<BadHabit>()

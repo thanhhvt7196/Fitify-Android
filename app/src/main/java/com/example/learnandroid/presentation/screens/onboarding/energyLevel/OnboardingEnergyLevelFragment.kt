@@ -7,7 +7,10 @@ import com.example.learnandroid.domain.models.EnergyLevel
 import com.example.learnandroid.presentation.screens.base.BaseViewBindingFragment
 import kotlinx.coroutines.launch
 
-class OnboardingEnergyLevelFragment : BaseViewBindingFragment<FragmentOnboardingEnergyLevelBinding, OnboardingEnergyLevelViewModel>(FragmentOnboardingEnergyLevelBinding::inflate) {
+class OnboardingEnergyLevelFragment :
+    BaseViewBindingFragment<FragmentOnboardingEnergyLevelBinding, OnboardingEnergyLevelViewModel>(
+        FragmentOnboardingEnergyLevelBinding::inflate
+    ) {
     override val viewModel: OnboardingEnergyLevelViewModel by viewModels()
 
     interface OnboardingEnergyLevelDelegate {
@@ -17,7 +20,6 @@ class OnboardingEnergyLevelFragment : BaseViewBindingFragment<FragmentOnboarding
     private var delegate: OnboardingEnergyLevelDelegate? = null
 
     companion object {
-        const val tag = "OnboardingEnergyLevelFragment"
         fun newInstance(): OnboardingEnergyLevelFragment {
             return OnboardingEnergyLevelFragment()
         }

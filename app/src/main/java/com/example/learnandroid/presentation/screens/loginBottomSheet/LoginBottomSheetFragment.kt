@@ -64,7 +64,6 @@ class LoginBottomSheetFragment :
     }
 
     companion object {
-        const val tag = "LoginBottomSheet"
         fun newInstance(): LoginBottomSheetFragment {
             return LoginBottomSheetFragment()
         }

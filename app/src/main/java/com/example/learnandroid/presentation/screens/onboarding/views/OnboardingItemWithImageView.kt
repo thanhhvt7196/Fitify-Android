@@ -1,19 +1,14 @@
 package com.example.learnandroid.presentation.screens.onboarding.views
 
 import android.content.Context
-import android.graphics.drawable.GradientDrawable
-import android.graphics.drawable.LayerDrawable
 import android.util.AttributeSet
 import android.view.LayoutInflater
-import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import com.example.learnandroid.R
-import com.google.android.material.card.MaterialCardView
-import kotlin.math.roundToInt
 
 class OnboardingItemWithImageView(context: Context, attrs: AttributeSet) :
     ConstraintLayout(context, attrs) {
@@ -37,7 +32,10 @@ class OnboardingItemWithImageView(context: Context, attrs: AttributeSet) :
         checkImageView.isVisible = isSelected
         val containerView = findViewById<ConstraintLayout>(R.id.containerView)
         containerView.background =
-            context.getDrawable(if (isSelected) R.drawable.gradient_border else R.drawable.blue_base_border)
+            AppCompatResources.getDrawable(
+                context,
+                if (isSelected) R.drawable.gradient_border else R.drawable.blue_base_border
+            )
     }
 
     fun config(title: String, imageResource: Int) {
