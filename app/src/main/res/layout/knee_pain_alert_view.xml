@@ -46,7 +46,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-            <com.example.learnandroid.presentation.components.bottomAccentGradientButton.BottomAccentGradientButton
+            <com.example.fitifyandroid.presentation.components.bottomAccentGradientButton.BottomAccentGradientButton
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginBottom="20dp"

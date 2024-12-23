@@ -17,7 +17,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <com.example.learnandroid.presentation.screens.profile.views.ProfileHeaderView
+            <com.example.fitifyandroid.presentation.screens.profile.views.ProfileHeaderView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
@@ -39,7 +39,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"/>
 
-                <com.example.learnandroid.presentation.components.shareButton.ShareButton
+                <com.example.fitifyandroid.presentation.components.shareButton.ShareButton
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -49,14 +49,14 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <com.example.learnandroid.presentation.screens.profile.views.ProfileMyJourneyStatView
+            <com.example.fitifyandroid.presentation.screens.profile.views.ProfileMyJourneyStatView
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="12dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
-            <com.example.learnandroid.presentation.screens.profile.views.ProfileAchievementView
+            <com.example.fitifyandroid.presentation.screens.profile.views.ProfileAchievementView
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_width="match_parent"
@@ -83,27 +83,27 @@
                     android:layout_height="wrap_content"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <com.example.learnandroid.presentation.screens.profile.views.ProfileSettingsView
+            <com.example.fitifyandroid.presentation.screens.profile.views.ProfileSettingsView
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
-            <com.example.learnandroid.presentation.screens.profile.views.ProfileInstructionsView
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-            <com.example.learnandroid.presentation.screens.profile.views.ProfileFeedbackView
+            <com.example.fitifyandroid.presentation.screens.profile.views.ProfileInstructionsView
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
-            <com.example.learnandroid.presentation.screens.profile.views.ProfileFollowUsView
+            <com.example.fitifyandroid.presentation.screens.profile.views.ProfileFeedbackView
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.example.fitifyandroid.presentation.screens.profile.views.ProfileFollowUsView
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginTop="20dp"
@@ -128,7 +128,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <com.example.learnandroid.presentation.screens.settings.views.SettingItemView
+                    <com.example.fitifyandroid.presentation.screens.settings.views.SettingItemView
                         app:title="@string/settings_logout_title"
                         app:image="@drawable/log_out"
                         app:showSeparator="false"
@@ -137,7 +137,7 @@
                 </androidx.cardview.widget.CardView>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <com.example.learnandroid.presentation.screens.profile.views.ProfilePrivacyView
+            <com.example.fitifyandroid.presentation.screens.profile.views.ProfilePrivacyView
                 android:layout_marginTop="20dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"

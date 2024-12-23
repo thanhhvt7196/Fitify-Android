@@ -49,7 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <com.example.learnandroid.presentation.screens.onboarding.views.OnboardingItemWithImageView
+            <com.example.fitifyandroid.presentation.screens.onboarding.views.OnboardingItemWithImageView
                 android:id="@+id/femaleButton"
                 app:title="@string/onboarding_gender_female"
                 app:image="@drawable/onboarding_gender_female"
@@ -57,7 +57,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-            <com.example.learnandroid.presentation.screens.onboarding.views.OnboardingItemWithImageView
+            <com.example.fitifyandroid.presentation.screens.onboarding.views.OnboardingItemWithImageView
                 android:id="@+id/maleButton"
                 app:title="@string/onboarding_gender_male"
                 app:image="@drawable/onboarding_gender_male"

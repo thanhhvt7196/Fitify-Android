@@ -7,7 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".presentation.screens.loginWithEmail.LoginWithEmailFragment">
 
-    <com.example.learnandroid.presentation.components.appToolBar.AppToolbar
+    <com.example.fitifyandroid.presentation.components.appToolBar.AppToolbar
         android:id="@+id/toolbar"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,14 +43,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
-            <com.example.learnandroid.presentation.components.roundedFloatingTextField.RoundedFloatingTextField
+            <com.example.fitifyandroid.presentation.components.roundedFloatingTextField.RoundedFloatingTextField
                 android:layout_marginTop="40dp"
                 android:id="@+id/emailTextField"
                 android:layout_width="match_parent"
                 app:placeholder="@string/hint_email"
                 android:layout_height="wrap_content"/>
 
-            <com.example.learnandroid.presentation.components.roundedFloatingTextField.RoundedFloatingTextField
+            <com.example.fitifyandroid.presentation.components.roundedFloatingTextField.RoundedFloatingTextField
                 android:layout_marginTop="20dp"
                 android:id="@+id/passwordTextField"
                 app:placeholder="@string/hint_password"
@@ -80,7 +80,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.example.learnandroid.presentation.components.bottomWhiteButton.BottomWhiteButton
+        <com.example.fitifyandroid.presentation.components.bottomWhiteButton.BottomWhiteButton
             android:id="@+id/loginButton"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"

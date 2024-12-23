@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.screens.onboarding.gender.OnboardingGenderFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/welcomeTextView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="@color/blue_light_3"
+            android:textStyle="bold"
+            android:text="@string/welcome_title_welcome_to_fitify" />
+
+        <TextView
+            android:id="@+id/genderQuestionTextView"
+            app:layout_constraintTop_toBottomOf="@id/welcomeTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="6dp"
+            android:text="@string/onboarding_gender_title"
+            android:textColor="@color/essential_white"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/genderQuestionTextView"
+            android:layout_marginTop="45dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.example.learnandroid.presentation.screens.onboarding.views.OnboardingItemWithImageView
+                android:id="@+id/femaleButton"
+                app:title="@string/onboarding_gender_female"
+                app:image="@drawable/onboarding_gender_female"
+                app:borderColor="@color/blue_base"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.example.learnandroid.presentation.screens.onboarding.views.OnboardingItemWithImageView
+                android:id="@+id/maleButton"
+                app:title="@string/onboarding_gender_male"
+                app:image="@drawable/onboarding_gender_male"
+                app:borderColor="@color/blue_base"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <TextView
+            app:layout_constraintBottom_toTopOf="@id/loginButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="12dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:textColor="@color/blue_light_3"
+            android:text="@string/welcome_have_account_question"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/loginButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="12dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:cardCornerRadius="18dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp">
+
+            <TextView
+                android:gravity="center"
+                android:text="@string/email_login_forgot_btn_sign_in"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="18dp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

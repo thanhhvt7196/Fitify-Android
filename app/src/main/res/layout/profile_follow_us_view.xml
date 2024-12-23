@@ -35,19 +35,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <com.example.learnandroid.presentation.screens.settings.views.SettingItemView
+                <com.example.fitifyandroid.presentation.screens.settings.views.SettingItemView
                     app:title="@string/profile_instagram"
                     app:image="@drawable/instagram"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"/>
 
-                <com.example.learnandroid.presentation.screens.settings.views.SettingItemView
+                <com.example.fitifyandroid.presentation.screens.settings.views.SettingItemView
                     app:title="@string/profile_facebook"
                     app:image="@drawable/facebook"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"/>
 
-                <com.example.learnandroid.presentation.screens.settings.views.SettingItemView
+                <com.example.fitifyandroid.presentation.screens.settings.views.SettingItemView
                     app:showSeparator="false"
                     app:title="@string/profile_twitter"
                     app:image="@drawable/twitter_icon"

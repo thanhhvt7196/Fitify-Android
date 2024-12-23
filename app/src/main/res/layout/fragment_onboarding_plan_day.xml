@@ -48,25 +48,25 @@
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="80dp">
-            <com.example.learnandroid.presentation.screens.onboarding.views.OnboardingTrainingDayItem
+            <com.example.fitifyandroid.presentation.screens.onboarding.views.OnboardingTrainingDayItem
                 android:id="@+id/mondayButton"
                 app:title="@string/monday_short"
                 android:layout_width="90dp"
                 android:layout_height="match_parent" />
 
-            <com.example.learnandroid.presentation.screens.onboarding.views.OnboardingTrainingDayItem
+            <com.example.fitifyandroid.presentation.screens.onboarding.views.OnboardingTrainingDayItem
                 android:id="@+id/tuesdayButton"
                 app:title="@string/tuesday_short"
                 android:layout_width="90dp"
                 android:layout_height="match_parent" />
 
-            <com.example.learnandroid.presentation.screens.onboarding.views.OnboardingTrainingDayItem
+            <com.example.fitifyandroid.presentation.screens.onboarding.views.OnboardingTrainingDayItem
                 android:id="@+id/wednesdayButton"
                 app:title="@string/wednesday_short"
                 android:layout_width="90dp"
                 android:layout_height="match_parent" />
 
-            <com.example.learnandroid.presentation.screens.onboarding.views.OnboardingTrainingDayItem
+            <com.example.fitifyandroid.presentation.screens.onboarding.views.OnboardingTrainingDayItem
                 android:id="@+id/thursdayButton"
                 app:title="@string/thursday_short"
                 android:layout_width="90dp"
@@ -78,19 +78,19 @@
             android:layout_marginTop="12dp"
             android:layout_width="wrap_content"
             android:layout_height="80dp">
-            <com.example.learnandroid.presentation.screens.onboarding.views.OnboardingTrainingDayItem
+            <com.example.fitifyandroid.presentation.screens.onboarding.views.OnboardingTrainingDayItem
                 android:id="@+id/fridayButton"
                 app:title="@string/friday_short"
                 android:layout_width="90dp"
                 android:layout_height="match_parent" />
 
-            <com.example.learnandroid.presentation.screens.onboarding.views.OnboardingTrainingDayItem
+            <com.example.fitifyandroid.presentation.screens.onboarding.views.OnboardingTrainingDayItem
                 android:id="@+id/saturdayButton"
                 app:title="@string/saturday_short"
                 android:layout_width="90dp"
                 android:layout_height="match_parent" />
 
-            <com.example.learnandroid.presentation.screens.onboarding.views.OnboardingTrainingDayItem
+            <com.example.fitifyandroid.presentation.screens.onboarding.views.OnboardingTrainingDayItem
                 android:id="@+id/sundayButton"
                 app:title="@string/sunday_short"
                 android:layout_width="90dp"
@@ -108,7 +108,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.example.learnandroid.presentation.components.bottomAccentGradientButton.BottomAccentGradientButton
+        <com.example.fitifyandroid.presentation.components.bottomAccentGradientButton.BottomAccentGradientButton
             android:id="@+id/continueButton"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"

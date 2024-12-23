@@ -25,25 +25,25 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <com.example.learnandroid.presentation.screens.onboarding.views.SocialLoginButton
+        <com.example.fitifyandroid.presentation.screens.onboarding.views.SocialLoginButton
             android:id="@+id/appleButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp" />
 
-        <com.example.learnandroid.presentation.screens.onboarding.views.SocialLoginButton
+        <com.example.fitifyandroid.presentation.screens.onboarding.views.SocialLoginButton
             android:id="@+id/googleButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp" />
 
-        <com.example.learnandroid.presentation.screens.onboarding.views.SocialLoginButton
+        <com.example.fitifyandroid.presentation.screens.onboarding.views.SocialLoginButton
             android:id="@+id/facebookButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp" />
 
-        <com.example.learnandroid.presentation.screens.onboarding.views.RoundedBorderButton
+        <com.example.fitifyandroid.presentation.screens.onboarding.views.RoundedBorderButton
             android:id="@+id/emailButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

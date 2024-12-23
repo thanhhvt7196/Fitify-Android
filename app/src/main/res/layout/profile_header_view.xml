@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.example.learnandroid.presentation.screens.profile.views.ProfileHeaderStatView
+        <com.example.fitifyandroid.presentation.screens.profile.views.ProfileHeaderStatView
             app:title="Statistics"
             app:subtitle="Check you activities and progress"
             app:image="@drawable/profile_header_stat_icon"

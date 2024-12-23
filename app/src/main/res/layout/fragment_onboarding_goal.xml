@@ -30,12 +30,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.example.learnandroid.presentation.screens.onboarding.views.OnboardingItemWithImageView
+        <com.example.fitifyandroid.presentation.screens.onboarding.views.OnboardingItemWithImageView
             android:id="@+id/getTonedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <com.example.learnandroid.presentation.screens.onboarding.views.OnboardingItemWithImageView
+        <com.example.fitifyandroid.presentation.screens.onboarding.views.OnboardingItemWithImageView
             android:id="@+id/loseWeightButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />

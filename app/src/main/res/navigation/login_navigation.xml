@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/login_fragment"
         android:label="login"
-        android:name="com.example.learnandroid.presentation.screens.login.LoginFragment"
+        android:name="com.example.fitifyandroid.presentation.screens.login.LoginFragment"
         tools:layout="@layout/fragment_login">
         <action
             app:enterAnim="@anim/default_enter_animation"
@@ -21,7 +21,7 @@
 
     <fragment
         android:id="@+id/loginWithEmailFragment"
-        android:name="com.example.learnandroid.presentation.screens.loginWithEmail.LoginWithEmailFragment"
+        android:name="com.example.fitifyandroid.presentation.screens.loginWithEmail.LoginWithEmailFragment"
         android:label="fragment_login_with_email"
         tools:layout="@layout/fragment_login_with_email" >
         <action
@@ -35,7 +35,7 @@
 
     <fragment
         android:id="@+id/forgotPasswordFragment"
-        android:name="com.example.learnandroid.presentation.screens.forgotPassword.ForgotPasswordFragment"
+        android:name="com.example.fitifyandroid.presentation.screens.forgotPassword.ForgotPasswordFragment"
         android:label="fragment_forgot_password"
         tools:layout="@layout/fragment_forgot_password">
 
@@ -43,7 +43,7 @@
 
     <dialog
         android:id="@+id/loginBottomSheet"
-        android:name="com.example.learnandroid.presentation.screens.loginBottomSheet.LoginBottomSheetFragment"
+        android:name="com.example.fitifyandroid.presentation.screens.loginBottomSheet.LoginBottomSheetFragment"
         android:label="login_bottom_sheet"
         tools:layout="@layout/fragment_login_bottom_sheet">
     </dialog>

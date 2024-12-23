@@ -52,7 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.example.learnandroid.presentation.components.bottomAccentGradientButton.BottomAccentGradientButton
+        <com.example.fitifyandroid.presentation.components.bottomAccentGradientButton.BottomAccentGradientButton
             android:id="@+id/continueButton"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -30,17 +30,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.example.learnandroid.presentation.screens.onboarding.views.OnboardingTextItemView
+        <com.example.fitifyandroid.presentation.screens.onboarding.views.OnboardingTextItemView
             android:id="@+id/moreThanTwoButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-        <com.example.learnandroid.presentation.screens.onboarding.views.OnboardingTextItemView
+        <com.example.fitifyandroid.presentation.screens.onboarding.views.OnboardingTextItemView
             android:id="@+id/oneToTwoButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-        <com.example.learnandroid.presentation.screens.onboarding.views.OnboardingTextItemView
+        <com.example.fitifyandroid.presentation.screens.onboarding.views.OnboardingTextItemView
             android:id="@+id/lessThanOneButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>

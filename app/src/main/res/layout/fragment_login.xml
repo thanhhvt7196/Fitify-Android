@@ -27,7 +27,7 @@
         android:layout_width="28dp"
         android:layout_height="28dp" />
 
-    <com.example.learnandroid.presentation.components.appToolBar.AppToolbar
+    <com.example.fitifyandroid.presentation.components.appToolBar.AppToolbar
         android:id="@+id/toolbar"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
