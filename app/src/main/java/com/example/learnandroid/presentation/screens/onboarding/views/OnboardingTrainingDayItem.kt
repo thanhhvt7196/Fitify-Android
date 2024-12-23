@@ -12,6 +12,13 @@ import com.example.learnandroid.R
 
 class OnboardingTrainingDayItem(context: Context, attrs: AttributeSet?) :
     ConstraintLayout(context, attrs) {
+    var isToday: Boolean = false
+        set(value) {
+            val todayMarker = findViewById<ConstraintLayout>(R.id.todayMarker)
+            todayMarker.isVisible = value
+            field = value
+        }
+
     init {
         LayoutInflater.from(context).inflate(R.layout.onboarding_training_day_item, this, true)
         val typedArray =

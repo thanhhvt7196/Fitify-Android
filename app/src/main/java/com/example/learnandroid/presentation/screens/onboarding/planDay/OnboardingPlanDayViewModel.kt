@@ -12,6 +12,8 @@ import kotlinx.coroutines.launch
 class OnboardingPlanDayViewModel : BaseViewModel() {
     private val _planDays = MutableStateFlow<List<WeekDay>>(emptyList())
     val planDays = _planDays.asStateFlow()
+    private val _notificationOn = MutableStateFlow(false)
+    var notificationOn = _notificationOn.asStateFlow()
     private val _selectedDay = MutableSharedFlow<WeekDay>()
 
     init {
@@ -39,6 +41,12 @@ class OnboardingPlanDayViewModel : BaseViewModel() {
     fun selectDay(day: WeekDay) {
         viewModelScope.launch {
             _selectedDay.emit(day)
+        }
+    }
+
+    fun setNotificationOn(isSelected: Boolean) {
+        viewModelScope.launch {
+            _notificationOn.value = isSelected
         }
     }
 

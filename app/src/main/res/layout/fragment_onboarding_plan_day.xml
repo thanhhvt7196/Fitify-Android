@@ -39,17 +39,148 @@
         app:layout_constraintTop_toBottomOf="@id/messageTextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center_horizontal"
         android:layout_marginTop="40dp"
-        android:layout_marginHorizontal="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <com.example.learnandroid.presentation.screens.onboarding.views.OnboardingTrainingDayItem
-            android:id="@+id/mondayButton"
-            app:title="@string/monday_short"
-            android:layout_width="75dp"
-            android:layout_height="64dp" />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp">
+            <com.example.learnandroid.presentation.screens.onboarding.views.OnboardingTrainingDayItem
+                android:id="@+id/mondayButton"
+                app:title="@string/monday_short"
+                android:layout_width="90dp"
+                android:layout_height="match_parent" />
+
+            <com.example.learnandroid.presentation.screens.onboarding.views.OnboardingTrainingDayItem
+                android:id="@+id/tuesdayButton"
+                app:title="@string/tuesday_short"
+                android:layout_width="90dp"
+                android:layout_height="match_parent" />
+
+            <com.example.learnandroid.presentation.screens.onboarding.views.OnboardingTrainingDayItem
+                android:id="@+id/wednesdayButton"
+                app:title="@string/wednesday_short"
+                android:layout_width="90dp"
+                android:layout_height="match_parent" />
+
+            <com.example.learnandroid.presentation.screens.onboarding.views.OnboardingTrainingDayItem
+                android:id="@+id/thursdayButton"
+                app:title="@string/thursday_short"
+                android:layout_width="90dp"
+                android:layout_height="match_parent" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp">
+            <com.example.learnandroid.presentation.screens.onboarding.views.OnboardingTrainingDayItem
+                android:id="@+id/fridayButton"
+                app:title="@string/friday_short"
+                android:layout_width="90dp"
+                android:layout_height="match_parent" />
+
+            <com.example.learnandroid.presentation.screens.onboarding.views.OnboardingTrainingDayItem
+                android:id="@+id/saturdayButton"
+                app:title="@string/saturday_short"
+                android:layout_width="90dp"
+                android:layout_height="match_parent" />
+
+            <com.example.learnandroid.presentation.screens.onboarding.views.OnboardingTrainingDayItem
+                android:id="@+id/sundayButton"
+                app:title="@string/sunday_short"
+                android:layout_width="90dp"
+                android:layout_height="match_parent" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/continueButtonContainer"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.example.learnandroid.presentation.components.bottomAccentGradientButton.BottomAccentGradientButton
+            android:id="@+id/continueButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="16dp"
+            app:title="@string/btn_continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/blue_dark_0_5"
+        app:cardCornerRadius="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/continueButtonContainer"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/textContainer"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/switchControl">
+
+                <TextView
+                    android:id="@+id/reminderTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reminders_settings_title"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/reminderDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/onboarding_scheduler_description"
+                    android:textColor="@color/blue_light_3"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchControl"
+                android:checked="true"
+                android:layout_width="48dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/textContainer"
+                android:thumb="@drawable/switch_thumb"
+                app:track="@drawable/switch_track" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

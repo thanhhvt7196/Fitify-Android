@@ -38,6 +38,7 @@ import com.example.learnandroid.presentation.screens.onboarding.fitnessTool.Onbo
 import com.example.learnandroid.presentation.screens.onboarding.height.OnboardingHeightFragment
 import com.example.learnandroid.presentation.screens.onboarding.kneePain.OnboardingKneePainFragment
 import com.example.learnandroid.presentation.screens.onboarding.planDay.OnboardingPlanDayFragment
+import com.example.learnandroid.presentation.screens.onboarding.planEstimate.OnboardingGoogleFitFragment
 import com.example.learnandroid.presentation.screens.onboarding.planPace.OnboardingPlanPaceFragment
 import com.example.learnandroid.presentation.screens.onboarding.pushup.OnboardingPushUpFragment
 import com.example.learnandroid.presentation.screens.onboarding.salePitch.OnboardingSalePitchFragment
@@ -75,6 +76,7 @@ class LoginFragment :
     private val sourceFragment = OnboardingSourceFragment.newInstance()
     private val commitContractFragment = OnboardingCommitContractFragment.newInstance()
     private val planDayFragment = OnboardingPlanDayFragment.newInstance()
+    private val planEstimateFragment = OnboardingGoogleFitFragment.newInstance()
 
     companion object {
         fun newInstance(): LoginFragment {
@@ -127,6 +129,7 @@ class LoginFragment :
         setupSourceView()
         setupCommitContractView()
         setupPlanDayView()
+        setupPlanEstimateView()
     }
 
     private fun setupLottie() {
@@ -140,7 +143,9 @@ class LoginFragment :
     private fun setupViewPager() {
         val fragmentItems: Array<Fragment> =
             arrayOf(
+                planDayFragment,
                 genderFragment,
+                planEstimateFragment,
                 nameFragment,
                 goalFragment,
                 salePitchFragment,
@@ -159,7 +164,6 @@ class LoginFragment :
                 energyLevelFragment,
                 planPaceFragment,
                 commitContractFragment,
-                planDayFragment
             )
         val viewpager = viewBinding.loginViewPager
         viewpager.isUserInputEnabled = false
@@ -182,6 +186,15 @@ class LoginFragment :
                 setAnimationProgress(index)
             }
         }
+    }
+
+    private fun setupPlanEstimateView() {
+        val delegate = object : OnboardingGoogleFitFragment.OnboardingPlanEstimateDelegate {
+            override fun didSelectEstimate() {
+                goToNextPage()
+            }
+        }
+        planEstimateFragment.setAction(delegate)
     }
 
     private fun setupPlanDayView() {
@@ -476,8 +489,12 @@ class LoginFragment :
             sourceFragment.resetData()
         }
 
-        if (planPaceFragment.isAdded) {
+        if (planDayFragment.isAdded) {
             planDayFragment.resetData()
+        }
+
+        if (planEstimateFragment.isAdded) {
+            planEstimateFragment.resetData()
         }
     }
 

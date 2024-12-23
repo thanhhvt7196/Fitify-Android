@@ -14,6 +14,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "LearnAndroid"
+rootProject.name = "FitifyAndroid"
 include(":app")
  

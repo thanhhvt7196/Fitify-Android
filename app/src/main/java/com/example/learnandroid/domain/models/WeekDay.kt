@@ -2,6 +2,8 @@ package com.example.learnandroid.domain.models
 
 import android.content.Context
 import com.example.learnandroid.R
+import java.time.DayOfWeek
+import java.time.LocalDate
 
 enum class WeekDay {
     MONDAY {
@@ -41,4 +43,16 @@ enum class WeekDay {
     };
 
     abstract fun getShortName(context: Context): String
+
+    fun isToday(): Boolean {
+        return when (LocalDate.now().dayOfWeek) {
+            DayOfWeek.MONDAY -> this == MONDAY
+            DayOfWeek.TUESDAY -> this == TUESDAY
+            DayOfWeek.WEDNESDAY -> this == WEDNESDAY
+            DayOfWeek.THURSDAY -> this == THURSDAY
+            DayOfWeek.FRIDAY -> this == FRIDAY
+            DayOfWeek.SATURDAY -> this == SATURDAY
+            DayOfWeek.SUNDAY -> this == SUNDAY
+        }
+    }
 }
